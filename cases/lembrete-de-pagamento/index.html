@@ -88,6 +88,7 @@ a:hover{color:#4c1d95}
 .cmp th,.cmp td{padding:8px}
 }
 </style>
+<link rel="stylesheet" href="../../assets/nav.css">
 </head>
 <body>
 <div class="cs" style="background: #f2f2f5; color: #292929; font-family: 'Work Sans',sans-serif; padding: 64px 0 96px; position: relative; overflow: hidden">
@@ -114,7 +115,7 @@ a:hover{color:#4c1d95}
 </header>
 
 <div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
-<section aria-labelledby="bn">
+<section data-dir-section="big-numbers" aria-labelledby="bn">
 <p class="lbl">big numbers</p>
 <h2 class="h2" id="bn">grupo que recebeu o e-mail contra o controle</h2>
 <div class="big">
@@ -126,7 +127,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
-<section aria-labelledby="ctx">
+<section data-dir-section="contexto" aria-labelledby="ctx">
 <p class="lbl">contexto</p>
 <h2 class="h2" id="ctx">o dinheiro que chegava tarde</h2>
 <div class="two">
@@ -142,7 +143,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
-<section aria-labelledby="ori">
+<section data-dir-section="origem" aria-labelledby="ori">
 <p class="lbl">origem</p>
 <h2 class="h2" id="ori">começou num post-it</h2>
 <p class="txt" style="margin-bottom: 32px">Conduzi um brainstorm com o time usando o método Disney: dez minutos na sala dos sonhadores, quinze na dos realistas e vinte na dos críticos. Três desafios na mesa: reduzir a provisão para devedores duvidosos, reduzir a inadimplência e antecipar o recebimento de pagamentos. No fim, as ideias foram organizadas por esforço.</p>
@@ -163,7 +164,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
-<section aria-labelledby="papel">
+<section data-dir-section="meu-papel" aria-labelledby="papel">
 <p class="lbl">meu papel</p>
 <h2 class="h2" id="papel">se ninguém abrir, o teste não existe</h2>
 <p class="txt" style="margin-bottom: 48px">O experimento dependia de uma coisa antes de qualquer Pix: a pessoa abrir o e-mail e chegar até o botão. Minha parte foi desenhar essa mensagem, da linha de assunto ao último clique.</p>
@@ -180,7 +181,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
-<section aria-labelledby="res">
+<section data-dir-section="resultados" aria-labelledby="res">
 <p class="lbl">resultados</p>
 <h2 class="h2" id="res">o pagamento subiu nos dois produtos</h2>
 <table class="cmp">
@@ -204,7 +205,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
-<section aria-labelledby="vir">
+<section data-dir-section="a-virada" aria-labelledby="vir">
 <p class="lbl">a virada</p>
 <h2 class="h2" id="vir">não foi o pix. foi o lembrete.</h2>
 <p class="lead">A análise mostrou que a principal causa do aumento não foi o Pix em si, e sim o reforço do lembrete. O teste nasceu para validar um meio de pagamento e acabou provando o peso da mensagem.</p>
@@ -217,7 +218,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
-<section aria-labelledby="apr">
+<section data-dir-section="aprendizados" aria-labelledby="apr">
 <p class="lbl">aprendizados</p>
 <h2 class="h2" id="apr">o que eu levo daqui</h2>
 <ul class="list">
@@ -231,5 +232,18 @@ a:hover{color:#4c1d95}
 </div>
 </div>
 
+<nav class="tnav" aria-label="menu" data-base="~/cases/lembrete">
+<div class="tnav-win">
+<ul class="tnav-out" id="tnav-out"><li><a href="../../"><span>~</span>../ (portfólio)</a></li><li><a href="./" aria-current="page"><span>case</span>lembrete-de-pagamento.case</a></li><li><a href="../refinanciamento-em-dia/"><span>case</span>refinanciamento-em-dia.case</a></li></ul>
+<div class="tnav-line">
+<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:<span class="tnav-path">~/cases/lembrete</span> $</span>
+<span class="tnav-cmd" aria-hidden="true">cd</span>
+<ul class="tnav-list"><li><a href="../../">..</a></li><li><a href="./" aria-current="page">lembrete.case</a></li><li><a href="../refinanciamento-em-dia/">refin.case</a></li></ul>
+<button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out">ls</button>
+</div>
+</div>
+</nav>
+<script src="../../assets/nav.js"></script>
 </body>
 </html>

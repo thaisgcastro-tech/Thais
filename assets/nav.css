@@ -1,0 +1,35 @@
+/* menu: linha de comando flutuante */
+.tnav{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);font-family:'Roboto Mono',monospace;color:#f2f2f5}
+.tnav *{box-sizing:border-box}
+.tnav-win{background:#292929;border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #1847e3;overflow:hidden}
+.tnav-line{display:flex;align-items:center;gap:16px;padding:8px 8px 8px 16px;min-height:56px}
+.tnav-dots{display:flex;gap:8px;flex-shrink:0}
+.tnav-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;display:block}
+.tnav-prompt{flex-shrink:0;font-size:14px;white-space:nowrap}
+.tnav-prompt b{font-weight:500;color:#ffff8d}
+.tnav-path{color:#f2f2f5}
+.tnav-cmd{color:#e97045;font-size:14px;flex-shrink:0}
+.tnav-list{display:flex;align-items:center;gap:8px;margin:0;padding:0;list-style:none;min-width:0;overflow-x:auto;scrollbar-width:none}
+.tnav-list::-webkit-scrollbar{display:none}
+.tnav-list a{display:inline-flex;align-items:center;min-height:40px;padding:0 8px;font-size:14px;font-weight:500;color:#f2f2f5;text-decoration:none;text-transform:lowercase;white-space:nowrap;border:1px dashed transparent}
+.tnav-list a:hover{border-color:#ffff8d;color:#ffff8d}
+.tnav-list a[aria-current]{background:#ffff8d;color:#292929}
+.tnav-list a[aria-current]::after{content:'_';animation:tnav-blink 1s steps(1) infinite}
+.tnav-list .tnav-sep{color:#a3a3a3;font-size:14px}
+.tnav-ls{display:none;flex-shrink:0;margin-left:auto;min-width:48px;min-height:40px;padding:0 16px;background:#ffff8d;color:#292929;border:0;font:inherit;font-size:14px;font-weight:500;cursor:pointer}
+.tnav-out{display:none;margin:0;padding:8px 16px 16px;list-style:none;border-top:1px dashed #a3a3a3;font-size:14px}
+.tnav-out a{display:flex;gap:16px;align-items:center;min-height:44px;color:#f2f2f5;text-decoration:none;text-transform:lowercase}
+.tnav-out a span{color:#a3a3a3;font-size:12px;width:40px;flex-shrink:0}
+.tnav-out a[aria-current]{color:#ffff8d}
+.tnav :focus-visible{outline:3px solid #ffff8d;outline-offset:2px}
+body{padding-bottom:104px}
+@keyframes tnav-blink{50%{opacity:0}}
+@media (max-width:1000px){
+.tnav{bottom:16px}
+.tnav-win{box-shadow:4px 4px 0 #1847e3}
+.tnav-dots,.tnav-cmd,.tnav-list{display:none}
+.tnav-prompt{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.tnav-ls{display:inline-flex;align-items:center}
+.tnav.open .tnav-out{display:block}
+}
+@media (prefers-reduced-motion:reduce){.tnav-list a[aria-current]::after{animation:none}}

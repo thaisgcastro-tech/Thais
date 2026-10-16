@@ -107,19 +107,20 @@ a:hover{color:#4c1d95}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<link rel="stylesheet" href="assets/nav.css">
 </head>
 <body>
 <div class="v2" style="background: #f2f2f5; color: #292929; font-family: 'Work Sans',sans-serif; padding: 64px 0 96px; position: relative; overflow: hidden">
 
 <div class="wrap" style="position: relative">
 <div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px; margin: 0 0 64px; height: 24px"></div>
-<section class="hero" aria-labelledby="hero-t">
+<section class="hero" id="inicio" aria-labelledby="hero-t">
 <div>
 <p class="lbl">product designer</p>
 <h1 class="hero-t" id="hero-t">thais<br>castro</h1>
 <p class="txt" style="font-size: 20px; line-height: 1.45">Transformo regras de negócio e linguagem técnica de crédito em jornadas claras, da simulação ao pós-venda.</p>
 <div class="acts">
-<a class="btn" href="#sec-pacote-wrap" style="background: #1847e3; color: #fffefe; border: 1px solid #292929; box-shadow: 4px 4px 0 #292929">ver cases</a>
+<a class="btn" href="#grandes-feitos" style="background: #1847e3; color: #fffefe; border: 1px solid #292929; box-shadow: 4px 4px 0 #292929">ver cases</a>
 <a href="#por-onde-andei" style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 16px; text-transform: lowercase">por onde andei</a>
 </div>
 </div>
@@ -130,7 +131,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
-<section aria-labelledby="sec-jeito">
+<section id="jeito-pra-coisa" data-dir-section="jeito-pra-coisa" aria-labelledby="sec-jeito">
 <p class="lbl">características e competências</p>
 <h2 class="h2" id="sec-jeito">jeito pra coisa</h2>
 <div class="row">
@@ -156,7 +157,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
-<section id="sec-pacote-wrap" aria-labelledby="sec-pacote">
+<section id="grandes-feitos" data-dir-section="grandes-feitos" aria-labelledby="sec-pacote">
 <p class="lbl">pride</p>
 <h2 class="h2" id="sec-pacote" style="margin-bottom: 32px">grandes feitos</h2>
 <p class="txt" style="font-size: 20px; line-height: 1.45; margin-bottom: 48px">E tenho como provar. Aqui vai o comprovante:</p>
@@ -220,7 +221,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
-<section id="por-onde-andei" aria-labelledby="sec-resume">
+<section id="por-onde-andei" data-dir-section="por-onde-andei" aria-labelledby="sec-resume">
 <p class="lbl">resume</p>
 <h2 class="h2" id="sec-resume">por onde andei_</h2>
 <div class="tl">
@@ -301,7 +302,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
-<section aria-labelledby="sec-dep" style="position: relative">
+<section id="como-diz-o-outro" data-dir-section="como-diz-o-outro" aria-labelledby="sec-dep" style="position: relative">
 <p class="lbl">they like me</p>
 <h2 class="h2" id="sec-dep">como diz<br>o outro_</h2>
 <div class="dep">
@@ -531,5 +532,18 @@ html{scroll-behavior:smooth}
   });
 })();
 </script>
+<nav class="tnav" aria-label="menu" data-base="~">
+<div class="tnav-win">
+<ul class="tnav-out" id="tnav-out"><li><a href="#jeito-pra-coisa" data-dir="jeito-pra-coisa"><span>01</span>jeito-pra-coisa/</a></li><li><a href="#grandes-feitos" data-dir="grandes-feitos"><span>02</span>grandes-feitos/</a></li><li><a href="#por-onde-andei" data-dir="por-onde-andei"><span>03</span>por-onde-andei/</a></li><li><a href="#como-diz-o-outro" data-dir="como-diz-o-outro"><span>04</span>como-diz-o-outro/</a></li><li><a href="cases/refinanciamento-em-dia/"><span>case</span>refinanciamento-em-dia.case</a></li><li><a href="cases/lembrete-de-pagamento/"><span>case</span>lembrete-de-pagamento.case</a></li></ul>
+<div class="tnav-line">
+<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:<span class="tnav-path">~</span> $</span>
+<span class="tnav-cmd" aria-hidden="true">cd</span>
+<ul class="tnav-list"><li><a href="#jeito-pra-coisa" data-dir="jeito-pra-coisa">jeito/</a></li><li><a href="#grandes-feitos" data-dir="grandes-feitos">feitos/</a></li><li><a href="#por-onde-andei" data-dir="por-onde-andei">andei/</a></li><li><a href="#como-diz-o-outro" data-dir="como-diz-o-outro">dizem/</a></li><li><a href="cases/refinanciamento-em-dia/">refin.case</a></li><li><a href="cases/lembrete-de-pagamento/">lembrete.case</a></li></ul>
+<button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out">ls</button>
+</div>
+</div>
+</nav>
+<script src="assets/nav.js"></script>
 </body>
 </html>

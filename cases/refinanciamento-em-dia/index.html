@@ -78,6 +78,7 @@ a:hover{color:#4c1d95}
 .spec-r{grid-template-columns:112px minmax(0,1fr)}
 }
 </style>
+<link rel="stylesheet" href="../../assets/nav.css">
 </head>
 <body>
 <div class="cs" style="background: #f2f2f5; color: #292929; font-family: 'Work Sans',sans-serif; padding: 64px 0 96px; position: relative; overflow: hidden">
@@ -104,7 +105,7 @@ a:hover{color:#4c1d95}
 </header>
 
 <div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
-<section aria-labelledby="bn">
+<section data-dir-section="big-numbers" aria-labelledby="bn">
 <p class="lbl">big numbers</p>
 <h2 class="h2" id="bn">em 5 meses de produto</h2>
 <div class="big">
@@ -117,7 +118,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
-<section aria-labelledby="ctx">
+<section data-dir-section="contexto" aria-labelledby="ctx">
 <p class="lbl">contexto</p>
 <h2 class="h2" id="ctx">estávamos punindo bons clientes</h2>
 <div class="two">
@@ -134,7 +135,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
-<section aria-labelledby="papel">
+<section data-dir-section="meu-papel" aria-labelledby="papel">
 <p class="lbl">meu papel</p>
 <h2 class="h2" id="papel">dois trabalhos ao mesmo tempo</h2>
 <ul class="list">
@@ -146,7 +147,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
-<section aria-labelledby="exp">
+<section data-dir-section="validacao" aria-labelledby="exp">
 <p class="lbl">validação</p>
 <h2 class="h2" id="exp">um fake door que não parecia pesquisa</h2>
 <p class="txt" style="margin-bottom: 48px">Coloquei um botão “Renegociar” dentro do acompanhamento do contrato. Só chegava nele quem estava procurando. O botão levava a um questionário desenhado para parecer o fluxo real, e a pessoa só descobria que era pesquisa no final. Isso deu mais confiança às respostas de quem chegava até o fim.</p>
@@ -164,7 +165,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
-<section aria-labelledby="dec">
+<section data-dir-section="decisoes" aria-labelledby="dec">
 <p class="lbl">decisões</p>
 <h2 class="h2" id="dec">o que eu escolhi e por quê</h2>
 <div class="dec">
@@ -194,7 +195,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
-<section aria-labelledby="sol">
+<section data-dir-section="solucao" aria-labelledby="sol">
 <p class="lbl">solução</p>
 <h2 class="h2" id="sol">do piloto à oferta flexível</h2>
 <div class="win">
@@ -205,7 +206,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
-<section aria-labelledby="res">
+<section data-dir-section="resultados" aria-labelledby="res">
 <p class="lbl">resultados</p>
 <h2 class="h2" id="res">a previsão contra a realidade</h2>
 <table class="cmp">
@@ -223,7 +224,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
-<section aria-labelledby="apr">
+<section data-dir-section="aprendizados" aria-labelledby="apr">
 <p class="lbl">aprendizados</p>
 <h2 class="h2" id="apr">o que eu levo daqui</h2>
 <ul class="list">
@@ -237,5 +238,18 @@ a:hover{color:#4c1d95}
 </div>
 </div>
 
+<nav class="tnav" aria-label="menu" data-base="~/cases/refin">
+<div class="tnav-win">
+<ul class="tnav-out" id="tnav-out"><li><a href="../../"><span>~</span>../ (portfólio)</a></li><li><a href="./" aria-current="page"><span>case</span>refinanciamento-em-dia.case</a></li><li><a href="../lembrete-de-pagamento/"><span>case</span>lembrete-de-pagamento.case</a></li></ul>
+<div class="tnav-line">
+<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:<span class="tnav-path">~/cases/refin</span> $</span>
+<span class="tnav-cmd" aria-hidden="true">cd</span>
+<ul class="tnav-list"><li><a href="../../">..</a></li><li><a href="./" aria-current="page">refin.case</a></li><li><a href="../lembrete-de-pagamento/">lembrete.case</a></li></ul>
+<button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out">ls</button>
+</div>
+</div>
+</nav>
+<script src="../../assets/nav.js"></script>
 </body>
 </html>
