@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
-<title>case: refinanciamento em dia · thais castro</title>
-<meta name="description" content="Case: refinanciamento em dia no will bank, do fake door à oferta flexível.">
-<link rel="icon" href="../../assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
+<title>refinanciamento em dia · case · thais castro</title>
+<meta name="description" content="Case: como bons pagadores passaram a ajustar o próprio empréstimo antes de atrasar.">
+<link rel="icon" href="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;family=Work+Sans:wght@400;500;800&amp;display=swap" rel="stylesheet">
 <style>
-@font-face{font-family:'Gokschil';src:url('../../assets/93ba42cb1e8b8a10050eb62645b75517.ttf') format('truetype');font-display:swap}
+@font-face{font-family:'Gokschil';src:url('/assets/93ba42cb1e8b8a10050eb62645b75517.ttf') format('truetype');font-display:swap}
 body{margin:0;background:#f2f2f5}
 a{color:#292929;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
 a:hover{color:#4c1d95}
@@ -77,12 +77,61 @@ a:hover{color:#4c1d95}
 .dec-i{grid-template-columns:minmax(0,1fr);gap:8px}
 .spec-r{grid-template-columns:112px minmax(0,1fr)}
 }
+/* menu: linha de comando (igual ao site) */
+.tnav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);margin:0;font-family:'Roboto Mono',monospace;color:#f2f2f5}
+.tnav *{box-sizing:border-box}
+.tnav-win{display:flex;flex-direction:column;background:#292929;border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #1847e3;overflow:hidden}
+.tnav-line{display:flex;align-items:center;gap:16px;padding:8px 8px 8px 16px;min-height:56px}
+.tnav-dots{display:flex;gap:8px;flex-shrink:0}
+.tnav-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;display:block}
+.tnav-prompt{flex-shrink:0;font-size:14px;white-space:nowrap}
+.tnav-prompt b{font-weight:500;color:#ffff8d}
+.tnav-cmd{color:#e97045;font-size:14px;flex-shrink:0}
+.tnav-list{display:flex;align-items:center;gap:8px;margin:0;padding:0;list-style:none;min-width:0;overflow-x:auto;scrollbar-width:none}
+.tnav-list a{display:inline-flex;align-items:center;min-height:40px;padding:0 8px;font-size:14px;font-weight:500;color:#f2f2f5;text-decoration:none;text-transform:lowercase;white-space:nowrap;border:1px dashed transparent}
+.tnav-list a:hover{border-color:#ffff8d;color:#ffff8d}
+.tnav-ls{display:none;flex-shrink:0;margin-left:auto;width:48px;height:40px;padding:0;align-items:center;justify-content:center;background:#ffff8d;color:#292929;border:0;cursor:pointer}
+.tnav-out{order:2;display:block;margin:0;padding:8px 16px 16px;list-style:none;border-top:1px dashed #a3a3a3;font-size:14px}
+.tnav-out a{display:flex;gap:16px;align-items:center;min-height:44px;color:#f2f2f5;text-decoration:none;text-transform:lowercase}
+.tnav-out a span{color:#a3a3a3;font-size:12px;width:40px;flex-shrink:0}
+.tnav :focus-visible{outline:3px solid #ffff8d;outline-offset:2px}
+@media (min-width:1001px){.tnav-out{display:none}}
+@media (max-width:1000px){
+.tnav{top:8px}
+.tnav-win{box-shadow:4px 4px 0 #1847e3}
+.tnav-dots,.tnav-cmd,.tnav-list{display:none}
+.tnav-prompt{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.tnav-ls{display:inline-flex}
+}
+.tnav-list a[aria-current]{background:#ffff8d;color:#292929}
+.tnav-out a[aria-current]{color:#ffff8d}
+.tnav-sub{color:#ffff8d}
+.tnav-soon{display:inline-flex;align-items:center;gap:16px;min-height:40px;padding:0 8px;font-size:14px;font-weight:500;color:#8a8a8a;white-space:nowrap;cursor:default}
+.tnav-out .tnav-soon{padding:0;min-height:44px}
+.tnav-out .tnav-soon span{color:#8a8a8a;font-size:12px;width:40px;flex-shrink:0}
+.tnav-out .tnav-subitem a{min-height:40px;padding-left:16px;color:#d6d6d6}
 </style>
-<link rel="stylesheet" href="../../assets/nav.css?v=202610152252">
+<style>sc-if{display:contents}[hidden]{display:none!important}.tnav-list a[aria-current]{background:#ffff8d;color:#292929}.tnav-out a[aria-current]{color:#ffff8d}</style>
 </head>
-<body>
-<div class="cs" style="background: #f2f2f5; color: #292929; font-family: 'Work Sans',sans-serif; padding: 64px 0 96px; position: relative; overflow: hidden">
-<nav class="wrap" style="margin-bottom: 32px"><a href="../../" style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 16px; text-transform: lowercase">← voltar para o portfólio</a></nav>
+<body data-page="case">
+<div class="cs" id="topo" style="background: #f2f2f5; color: #292929; font-family: 'Work Sans',sans-serif; padding: 128px 0 0; position: relative; overflow: hidden">
+<nav class="tnav" aria-label="menu">
+<div class="tnav-win">
+<sc-if data-if="menuOpen" hidden>
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/" aria-current="page"><span>02</span>portfolio/</a></li><li><a href="/opinioes/"><span>03</span>opinioes/</a></li><li><a href="/contato/"><span>04</span>contato/</a></li></ul>
+</sc-if>
+<div class="tnav-line">
+<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/portfolio/refin.case $</span>
+<span class="tnav-cmd" aria-hidden="true">cd</span>
+<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/" aria-current="page">portfolio/</a></li><li><a href="/opinioes/">opinioes/</a></li><li><a href="/contato/">contato/</a></li></ul>
+<button class="tnav-ls" type="button" data-on="click:toggleMenu" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
+<sc-if data-if="menuClosed"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292929" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
+<sc-if data-if="menuOpen" hidden><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292929" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
+</button>
+</div>
+</div>
+</nav>
 <div class="wrap">
 
 <div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px; margin: 0 0 64px; height: 24px"></div>
@@ -105,20 +154,20 @@ a:hover{color:#4c1d95}
 </header>
 
 <div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
-<section data-dir-section="big-numbers" aria-labelledby="bn">
+<section aria-labelledby="bn">
 <p class="lbl">big numbers</p>
 <h2 class="h2" id="bn">em 5 meses de produto</h2>
 <div class="big">
 <div class="big-c"><span class="big-n">+R$ 500 mil</span><span class="big-l">em valor produzido</span></div>
 <div class="big-c"><span class="big-n">406</span><span class="big-l">contratos refinanciados</span></div>
-<div class="big-c" style="background: #1847e3; color: #fffefe"><span class="big-n">+66%</span><span class="big-l">no prazo médio dos contratos</span></div>
+<div class="big-c" style="background: #292929; color: #fffefe"><span class="big-n">+66%</span><span class="big-l">no prazo médio dos contratos</span></div>
 <div class="big-c"><span class="big-n">2,70%</span><span class="big-l">de penetração em ~15 mil elegíveis</span></div>
 </div>
 <p class="note">Só 2 dos 5 meses tiveram o produto liberado para toda a base elegível.</p>
 </section>
 
 <div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
-<section data-dir-section="contexto" aria-labelledby="ctx">
+<section aria-labelledby="ctx">
 <p class="lbl">contexto</p>
 <h2 class="h2" id="ctx">estávamos punindo bons clientes</h2>
 <div class="two">
@@ -135,7 +184,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
-<section data-dir-section="meu-papel" aria-labelledby="papel">
+<section aria-labelledby="papel">
 <p class="lbl">meu papel</p>
 <h2 class="h2" id="papel">dois trabalhos ao mesmo tempo</h2>
 <ul class="list">
@@ -147,7 +196,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
-<section data-dir-section="validacao" aria-labelledby="exp">
+<section aria-labelledby="exp">
 <p class="lbl">validação</p>
 <h2 class="h2" id="exp">um fake door que não parecia pesquisa</h2>
 <p class="txt" style="margin-bottom: 48px">Coloquei um botão “Renegociar” dentro do acompanhamento do contrato. Só chegava nele quem estava procurando. O botão levava a um questionário desenhado para parecer o fluxo real, e a pessoa só descobria que era pesquisa no final. Isso deu mais confiança às respostas de quem chegava até o fim.</p>
@@ -165,7 +214,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
-<section data-dir-section="decisoes" aria-labelledby="dec">
+<section aria-labelledby="dec">
 <p class="lbl">decisões</p>
 <h2 class="h2" id="dec">o que eu escolhi e por quê</h2>
 <div class="dec">
@@ -195,18 +244,18 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
-<section data-dir-section="solucao" aria-labelledby="sol">
+<section aria-labelledby="sol">
 <p class="lbl">solução</p>
 <h2 class="h2" id="sol">do piloto à oferta flexível</h2>
 <div class="win">
 <div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">refin em dia / evolução</div></div>
-<img loading="lazy" src="../../assets/f6609427b43f3b41704906e597a598f0.jpg" alt="Comparação de telas: o piloto, com uma oferta única de ajuste, e a oferta flexível, em que o cliente aumenta ou diminui o número de parcelas e vê o alívio na parcela">
+<img src="/assets/f6609427b43f3b41704906e597a598f0.jpg" alt="Comparação de telas: o piloto, com uma oferta única de ajuste, e a oferta flexível, em que o cliente aumenta ou diminui o número de parcelas e vê o alívio na parcela">
 </div>
 <p class="cap">À esquerda, o piloto com uma oferta única. À direita, a oferta flexível: o cliente estica o prazo até a parcela caber no bolso e vê na hora o alívio e o antes e depois do contrato.</p>
 </section>
 
 <div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
-<section data-dir-section="resultados" aria-labelledby="res">
+<section aria-labelledby="res">
 <p class="lbl">resultados</p>
 <h2 class="h2" id="res">a previsão contra a realidade</h2>
 <table class="cmp">
@@ -219,12 +268,12 @@ a:hover{color:#4c1d95}
 <p class="txt" style="margin-top: 24px">A diferença no ticket já era esperada e foi alinhada com o time antes do business plan: no fake door, o cliente estimava de cabeça quanto faltava pagar, num slider que começava num valor pré-selecionado.</p>
 <div class="win" style="margin-top: 48px">
 <div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">refin em dia / big numbers</div></div>
-<img loading="lazy" src="../../assets/a699d8056e5805a87692a304896e6afb.png" alt="Big numbers em 5 meses de produto: mais de R$ 500 mil produzidos, 406 contratos refinanciados, prazo médio 66% maior e 2,70% de penetração">
+<img src="/assets/a699d8056e5805a87692a304896e6afb.png" alt="Big numbers em 5 meses de produto: mais de R$ 500 mil produzidos, 406 contratos refinanciados, prazo médio 66% maior e 2,70% de penetração">
 </div>
 </section>
 
 <div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
-<section data-dir-section="aprendizados" aria-labelledby="apr">
+<section aria-labelledby="apr">
 <p class="lbl">aprendizados</p>
 <h2 class="h2" id="apr">o que eu levo daqui</h2>
 <ul class="list">
@@ -236,20 +285,11 @@ a:hover{color:#4c1d95}
 </section>
 
 </div>
+<div aria-hidden="true" style="margin-top: 96px; height: 40px; border-top: 2px solid #292929; border-bottom: 2px solid #292929; background: repeating-linear-gradient(-45deg, #4c1d95 0 16px, #f2f2f5 16px 32px);"></div>
+<footer style="background: #292929; color: #fffefe;">
+<div style="max-width: 1280px; margin: 0 auto; padding: 48px 32px; font-family: 'Roboto Mono', monospace; font-size: 16px;">©thais.coffee 2026_ ·&nbsp;feito por thais + claude<svg role="img" aria-label="com amor" width="18" height="16" viewBox="0 0 9 8" shape-rendering="crispEdges" style="display: inline-block; vertical-align: -2px; margin-left: 8px"><path fill="#e97045" d="M1 0h2v1h-2zM6 0h2v1h-2zM0 1h4v1h-4zM5 1h4v1h-4zM0 2h9v1h-9zM0 3h9v1h-9zM1 4h7v1h-7zM2 5h5v1h-5zM3 6h3v1h-3zM4 7h1v1h-1z"></path></svg></div>
+</footer>
 </div>
-
-<nav class="tnav" aria-label="menu" data-base="~/cases/refin">
-<div class="tnav-win">
-<ul class="tnav-out" id="tnav-out"><li><a href="../../"><span>~</span>../ (portfólio)</a></li><li><a href="./" aria-current="page"><span>case</span>refinanciamento-em-dia.case</a></li><li><a href="../lembrete-de-pagamento/"><span>case</span>lembrete-de-pagamento.case</a></li></ul>
-<div class="tnav-line">
-<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div>
-<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:<span class="tnav-path">~/cases/refin</span> $</span>
-<span class="tnav-cmd" aria-hidden="true">cd</span>
-<ul class="tnav-list"><li><a href="../../">..</a></li><li><a href="./" aria-current="page">refin.case</a></li><li><a href="../lembrete-de-pagamento/">lembrete.case</a></li></ul>
-<button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out">ls</button>
-</div>
-</div>
-</nav>
-<script src="../../assets/nav.js?v=202610152252"></script>
+<script src="/assets/site.js?v=202610161100"></script>
 </body>
 </html>

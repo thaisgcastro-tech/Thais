@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
-<title>case: lembrete de pagamento · thais castro</title>
-<meta name="description" content="Case: lembrete de pagamento por e-mail no will bank.">
-<link rel="icon" href="../../assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
+<title>lembrete de pagamento · case · thais castro</title>
+<meta name="description" content="Case: a mensagem certa, na hora certa, derrubou o saldo em atraso em 64,7%.">
+<link rel="icon" href="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;family=Work+Sans:wght@400;500;800&amp;display=swap" rel="stylesheet">
 <style>
-@font-face{font-family:'Gokschil';src:url('../../assets/93ba42cb1e8b8a10050eb62645b75517.ttf') format('truetype');font-display:swap}
+@font-face{font-family:'Gokschil';src:url('/assets/93ba42cb1e8b8a10050eb62645b75517.ttf') format('truetype');font-display:swap}
 body{margin:0;background:#f2f2f5}
 a{color:#292929;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
 a:hover{color:#4c1d95}
@@ -87,12 +87,61 @@ a:hover{color:#4c1d95}
 .cmp{font-size:12px}
 .cmp th,.cmp td{padding:8px}
 }
+/* menu: linha de comando (igual ao site) */
+.tnav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);margin:0;font-family:'Roboto Mono',monospace;color:#f2f2f5}
+.tnav *{box-sizing:border-box}
+.tnav-win{display:flex;flex-direction:column;background:#292929;border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #1847e3;overflow:hidden}
+.tnav-line{display:flex;align-items:center;gap:16px;padding:8px 8px 8px 16px;min-height:56px}
+.tnav-dots{display:flex;gap:8px;flex-shrink:0}
+.tnav-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;display:block}
+.tnav-prompt{flex-shrink:0;font-size:14px;white-space:nowrap}
+.tnav-prompt b{font-weight:500;color:#ffff8d}
+.tnav-cmd{color:#e97045;font-size:14px;flex-shrink:0}
+.tnav-list{display:flex;align-items:center;gap:8px;margin:0;padding:0;list-style:none;min-width:0;overflow-x:auto;scrollbar-width:none}
+.tnav-list a{display:inline-flex;align-items:center;min-height:40px;padding:0 8px;font-size:14px;font-weight:500;color:#f2f2f5;text-decoration:none;text-transform:lowercase;white-space:nowrap;border:1px dashed transparent}
+.tnav-list a:hover{border-color:#ffff8d;color:#ffff8d}
+.tnav-ls{display:none;flex-shrink:0;margin-left:auto;width:48px;height:40px;padding:0;align-items:center;justify-content:center;background:#ffff8d;color:#292929;border:0;cursor:pointer}
+.tnav-out{order:2;display:block;margin:0;padding:8px 16px 16px;list-style:none;border-top:1px dashed #a3a3a3;font-size:14px}
+.tnav-out a{display:flex;gap:16px;align-items:center;min-height:44px;color:#f2f2f5;text-decoration:none;text-transform:lowercase}
+.tnav-out a span{color:#a3a3a3;font-size:12px;width:40px;flex-shrink:0}
+.tnav :focus-visible{outline:3px solid #ffff8d;outline-offset:2px}
+@media (min-width:1001px){.tnav-out{display:none}}
+@media (max-width:1000px){
+.tnav{top:8px}
+.tnav-win{box-shadow:4px 4px 0 #1847e3}
+.tnav-dots,.tnav-cmd,.tnav-list{display:none}
+.tnav-prompt{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.tnav-ls{display:inline-flex}
+}
+.tnav-list a[aria-current]{background:#ffff8d;color:#292929}
+.tnav-out a[aria-current]{color:#ffff8d}
+.tnav-sub{color:#ffff8d}
+.tnav-soon{display:inline-flex;align-items:center;gap:16px;min-height:40px;padding:0 8px;font-size:14px;font-weight:500;color:#8a8a8a;white-space:nowrap;cursor:default}
+.tnav-out .tnav-soon{padding:0;min-height:44px}
+.tnav-out .tnav-soon span{color:#8a8a8a;font-size:12px;width:40px;flex-shrink:0}
+.tnav-out .tnav-subitem a{min-height:40px;padding-left:16px;color:#d6d6d6}
 </style>
-<link rel="stylesheet" href="../../assets/nav.css?v=202610152252">
+<style>sc-if{display:contents}[hidden]{display:none!important}.tnav-list a[aria-current]{background:#ffff8d;color:#292929}.tnav-out a[aria-current]{color:#ffff8d}</style>
 </head>
-<body>
-<div class="cs" style="background: #f2f2f5; color: #292929; font-family: 'Work Sans',sans-serif; padding: 64px 0 96px; position: relative; overflow: hidden">
-<nav class="wrap" style="margin-bottom: 32px"><a href="../../" style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 16px; text-transform: lowercase">← voltar para o portfólio</a></nav>
+<body data-page="case">
+<div class="cs" id="topo" style="background: #f2f2f5; color: #292929; font-family: 'Work Sans',sans-serif; padding: 128px 0 0; position: relative; overflow: hidden">
+<nav class="tnav" aria-label="menu">
+<div class="tnav-win">
+<sc-if data-if="menuOpen" hidden>
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/" aria-current="page"><span>02</span>portfolio/</a></li><li><a href="/opinioes/"><span>03</span>opinioes/</a></li><li><a href="/contato/"><span>04</span>contato/</a></li></ul>
+</sc-if>
+<div class="tnav-line">
+<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/portfolio/lembrete.case $</span>
+<span class="tnav-cmd" aria-hidden="true">cd</span>
+<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/" aria-current="page">portfolio/</a></li><li><a href="/opinioes/">opinioes/</a></li><li><a href="/contato/">contato/</a></li></ul>
+<button class="tnav-ls" type="button" data-on="click:toggleMenu" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
+<sc-if data-if="menuClosed"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292929" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
+<sc-if data-if="menuOpen" hidden><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292929" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
+</button>
+</div>
+</div>
+</nav>
 <div class="wrap">
 
 <div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px; margin: 0 0 64px; height: 24px"></div>
@@ -115,11 +164,11 @@ a:hover{color:#4c1d95}
 </header>
 
 <div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
-<section data-dir-section="big-numbers" aria-labelledby="bn">
+<section aria-labelledby="bn">
 <p class="lbl">big numbers</p>
 <h2 class="h2" id="bn">grupo que recebeu o e-mail contra o controle</h2>
 <div class="big">
-<div class="big-c" style="background: #1847e3; color: #fffefe"><span class="big-n">−64,7%</span><span class="big-l">no saldo em atraso</span></div>
+<div class="big-c" style="background: #292929; color: #fffefe"><span class="big-n">−64,7%</span><span class="big-l">no saldo em atraso</span></div>
 <div class="big-c"><span class="big-n">+18,6%</span><span class="big-l">no valor pago sobre o valor da parcela</span></div>
 <div class="big-c"><span class="big-n">+109,7%</span><span class="big-l">em pagamentos parciais</span></div>
 <div class="big-c"><span class="big-n">2</span><span class="big-l">disparos: no vencimento e 2 dias depois</span></div>
@@ -127,7 +176,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
-<section data-dir-section="contexto" aria-labelledby="ctx">
+<section aria-labelledby="ctx">
 <p class="lbl">contexto</p>
 <h2 class="h2" id="ctx">o dinheiro que chegava tarde</h2>
 <div class="two">
@@ -143,13 +192,13 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
-<section data-dir-section="origem" aria-labelledby="ori">
+<section aria-labelledby="ori">
 <p class="lbl">origem</p>
 <h2 class="h2" id="ori">começou num post-it</h2>
 <p class="txt" style="margin-bottom: 32px">Conduzi um brainstorm com o time usando o método Disney: dez minutos na sala dos sonhadores, quinze na dos realistas e vinte na dos críticos. Três desafios na mesa: reduzir a provisão para devedores duvidosos, reduzir a inadimplência e antecipar o recebimento de pagamentos. No fim, as ideias foram organizadas por esforço.</p>
 <figure class="win" style="margin: 0 0 48px">
 <div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">brainstorm / método disney</div></div>
-<img loading="lazy" src="../../assets/37425af9b33b13b528adc91067ae15a0.png" alt="Quadro do brainstorm com o método Disney: os três desafios do dia, a sala dos sonhadores (10 minutos), a dos realistas (15 minutos) e a dos críticos (20 minutos), e a pergunta final: o que você teria orgulho de fazer e mostrar que foi você que fez?">
+<img src="/assets/37425af9b33b13b528adc91067ae15a0.png" alt="Quadro do brainstorm com o método Disney: os três desafios do dia, a sala dos sonhadores (10 minutos), a dos realistas (15 minutos) e a dos críticos (20 minutos), e a pergunta final: o que você teria orgulho de fazer e mostrar que foi você que fez?">
 </figure>
 <div class="two" style="align-items: start">
 <div style="display: flex; flex-direction: column; gap: 24px">
@@ -158,18 +207,18 @@ a:hover{color:#4c1d95}
 </div>
 <figure class="win" style="margin: 0; transform: rotate(-1deg)">
 <div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">brainstorm / ideias</div></div>
-<img loading="lazy" src="../../assets/f90a5850e6937fc95c1fbb298320d01c.png" alt="Post-its do brainstorm. Ideia: permitir que o cliente use pix cobrança no ficar em dia ou na amortização. Avaliação: mais simples para testar com fake door, boa ideia, pode ser testado na vida real com o time de cobrança, talvez dê para reaproveitar a experiência de renegociação.">
+<img src="/assets/f90a5850e6937fc95c1fbb298320d01c.png" alt="Post-its do brainstorm. Ideia: permitir que o cliente use pix cobrança no ficar em dia ou na amortização. Avaliação: mais simples para testar com fake door, boa ideia, pode ser testado na vida real com o time de cobrança, talvez dê para reaproveitar a experiência de renegociação.">
 </figure>
 </div>
 </section>
 
 <div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
-<section data-dir-section="meu-papel" aria-labelledby="papel">
+<section aria-labelledby="papel">
 <p class="lbl">meu papel</p>
 <h2 class="h2" id="papel">se ninguém abrir, o teste não existe</h2>
 <p class="txt" style="margin-bottom: 48px">O experimento dependia de uma coisa antes de qualquer Pix: a pessoa abrir o e-mail e chegar até o botão. Minha parte foi desenhar essa mensagem, da linha de assunto ao último clique.</p>
 <div class="mail">
-<div class="phone"><img loading="lazy" src="../../assets/2cec37f03c13e2670bcfb68a5b42444b.png" alt="Prévia do e-mail: título “pagar seu empréstimo com Pix? Agora dá!”, saudação pelo nome, a frase “Escolhi você para testar uma função nova do empréstimo”, o valor da parcela e o vencimento em destaque e o bloco “Pague com o QR Code”"></div>
+<div class="phone"><img src="/assets/2cec37f03c13e2670bcfb68a5b42444b.png" alt="Prévia do e-mail: título “pagar seu empréstimo com Pix? Agora dá!”, saudação pelo nome, a frase “Escolhi você para testar uma função nova do empréstimo”, o valor da parcela e o vencimento em destaque e o bloco “Pague com o QR Code”"></div>
 <ol class="lev">
 <li><span class="lev-n">01</span><div><h3 class="h3" style="margin-bottom: 8px">um convite, não uma cobrança</h3><p class="txt">Usei um gatilho de exclusividade: “escolhi você para testar uma função nova”. A pessoa abre um convite, não mais um lembrete de dívida.</p></div></li>
 <li><span class="lev-n">02</span><div><h3 class="h3" style="margin-bottom: 8px">o valor já no e-mail</h3><p class="txt">Valor da parcela e vencimento aparecem logo no começo. Ninguém precisa abrir o app só para conferir quanto deve.</p></div></li>
@@ -181,7 +230,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
-<section data-dir-section="resultados" aria-labelledby="res">
+<section aria-labelledby="res">
 <p class="lbl">resultados</p>
 <h2 class="h2" id="res">o pagamento subiu nos dois produtos</h2>
 <table class="cmp">
@@ -200,12 +249,12 @@ a:hover{color:#4c1d95}
 </table>
 <div class="win" style="margin-top: 48px">
 <div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">experimento / resultados</div></div>
-<img loading="lazy" src="../../assets/8311be42ae4c1453f9385cd5fff47e57.jpg" alt="Slide de resultados do experimento: saldo em atraso 64,7% menor, valor pago 18,6% maior e pagamentos parciais 109,7% maiores no grupo de ação">
+<img src="/assets/8311be42ae4c1453f9385cd5fff47e57.jpg" alt="Slide de resultados do experimento: saldo em atraso 64,7% menor, valor pago 18,6% maior e pagamentos parciais 109,7% maiores no grupo de ação">
 </div>
 </section>
 
 <div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
-<section data-dir-section="a-virada" aria-labelledby="vir">
+<section aria-labelledby="vir">
 <p class="lbl">a virada</p>
 <h2 class="h2" id="vir">não foi o pix. foi o lembrete.</h2>
 <p class="lead">A análise mostrou que a principal causa do aumento não foi o Pix em si, e sim o reforço do lembrete. O teste nasceu para validar um meio de pagamento e acabou provando o peso da mensagem.</p>
@@ -218,7 +267,7 @@ a:hover{color:#4c1d95}
 </section>
 
 <div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
-<section data-dir-section="aprendizados" aria-labelledby="apr">
+<section aria-labelledby="apr">
 <p class="lbl">aprendizados</p>
 <h2 class="h2" id="apr">o que eu levo daqui</h2>
 <ul class="list">
@@ -230,20 +279,11 @@ a:hover{color:#4c1d95}
 </section>
 
 </div>
+<div aria-hidden="true" style="margin-top: 96px; height: 40px; border-top: 2px solid #292929; border-bottom: 2px solid #292929; background: repeating-linear-gradient(-45deg, #4c1d95 0 16px, #f2f2f5 16px 32px);"></div>
+<footer style="background: #292929; color: #fffefe;">
+<div style="max-width: 1280px; margin: 0 auto; padding: 48px 32px; font-family: 'Roboto Mono', monospace; font-size: 16px;">©thais.coffee 2026_ ·&nbsp;feito por thais + claude<svg role="img" aria-label="com amor" width="18" height="16" viewBox="0 0 9 8" shape-rendering="crispEdges" style="display: inline-block; vertical-align: -2px; margin-left: 8px"><path fill="#e97045" d="M1 0h2v1h-2zM6 0h2v1h-2zM0 1h4v1h-4zM5 1h4v1h-4zM0 2h9v1h-9zM0 3h9v1h-9zM1 4h7v1h-7zM2 5h5v1h-5zM3 6h3v1h-3zM4 7h1v1h-1z"></path></svg></div>
+</footer>
 </div>
-
-<nav class="tnav" aria-label="menu" data-base="~/cases/lembrete">
-<div class="tnav-win">
-<ul class="tnav-out" id="tnav-out"><li><a href="../../"><span>~</span>../ (portfólio)</a></li><li><a href="./" aria-current="page"><span>case</span>lembrete-de-pagamento.case</a></li><li><a href="../refinanciamento-em-dia/"><span>case</span>refinanciamento-em-dia.case</a></li></ul>
-<div class="tnav-line">
-<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div>
-<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:<span class="tnav-path">~/cases/lembrete</span> $</span>
-<span class="tnav-cmd" aria-hidden="true">cd</span>
-<ul class="tnav-list"><li><a href="../../">..</a></li><li><a href="./" aria-current="page">lembrete.case</a></li><li><a href="../refinanciamento-em-dia/">refin.case</a></li></ul>
-<button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out">ls</button>
-</div>
-</div>
-</nav>
-<script src="../../assets/nav.js?v=202610152252"></script>
+<script src="/assets/site.js?v=202610161100"></script>
 </body>
 </html>
