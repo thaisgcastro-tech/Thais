@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>thais castro · product designer</title>
+<meta name="description" content="Portfólio de Thais Castro, product designer de crédito e fintech.">
+<link rel="icon" href="assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;family=Work+Sans:wght@400;500;800&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Gokschil';src:url('assets/93ba42cb1e8b8a10050eb62645b75517.ttf') format('truetype');font-display:swap}
+body{margin:0;background:#f2f2f5}
+a{color:#292929;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
+a:hover{color:#4c1d95}
+.v2,.v2 *{box-sizing:border-box}
+.v2 :focus-visible{outline:3px solid #1847e3;outline-offset:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+.lbl{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:uppercase;color:#4c1d95;margin:0 0 8px}
+.h2{font-family:'Roboto Mono',monospace;font-weight:500;font-size:clamp(40px,7vw,80px);line-height:.95;letter-spacing:-.02em;text-transform:lowercase;margin:0 0 48px;color:#292929}
+.h3{font-family:'Roboto Mono',monospace;font-weight:500;font-size:32px;line-height:1.1;text-transform:lowercase;margin:0;color:#292929}
+.txt{font-size:16px;line-height:1.5;margin:0;max-width:60ch}
+.fita{height:16px;margin:96px 0 48px;background:repeating-linear-gradient(var(--a),var(--c) 0 var(--l),transparent var(--l) calc(var(--l) + var(--g)))}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:center}
+.hero-t{font-family:'Gokschil','Roboto Mono',monospace;font-weight:400;font-size:clamp(56px,9vw,80px);line-height:.9;text-transform:lowercase;margin:0 0 32px;color:#292929}
+.win{border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #292929;background:#fffefe;overflow:hidden}
+.win-bar{display:flex;align-items:center;gap:16px;padding:8px 16px;background:#f2f2f5;border-bottom:2px solid #292929}
+.win-dots{display:flex;gap:8px}
+.win-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #292929;display:block}
+.win-url{flex:1 1 auto;min-width:0;padding:8px 16px;background:#fffefe;border:1px solid #292929;border-radius:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:16px 24px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:16px;text-transform:lowercase;text-decoration:none;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease}
+.btn:hover{transform:translate(2px,2px)}
+.btn:active{transform:translate(4px,4px);box-shadow:0 0 0 #292929 !important}
+.acts{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin-top:32px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;padding:32px 0}
+.row.rev{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.row.rev .ill{order:2}
+.ill{width:100%;aspect-ratio:16/9;background-position:center;background-size:contain;background-repeat:no-repeat}
+.blk{display:flex;flex-direction:column;gap:16px}
+.num{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;color:#4c1d95}
+.spec{border:2px solid #292929;box-shadow:8px 8px 0 #292929;background:#fffefe}
+.spec-r{display:grid;grid-template-columns:240px minmax(0,1fr)}
+.spec-r + .spec-r{border-top:2px solid #292929}
+.spec-k{padding:24px;background:#ffff8d;border-right:2px solid #292929;display:flex;flex-direction:column;gap:8px}
+.spec-v{padding:24px;display:flex;flex-direction:column;gap:16px;justify-content:center}
+.spec-i{display:flex;gap:16px;align-items:baseline;font-family:'Roboto Mono',monospace;font-weight:500;font-size:16px;line-height:1.5;text-transform:lowercase}
+.tl{display:flex;flex-direction:column;gap:48px;position:relative;padding-left:32px;border-left:3px solid #292929}
+.tl-ico{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 0 0 8px;cursor:pointer;background:none;border:0;color:#fffefe}
+.tl-ico svg{overflow:visible}
+.tl-ico .sh{transform:translate(2px,2px)}
+.tl-ico .mn{transition:transform .12s ease}
+.tl-ico:active .mn{transform:translate(2px,2px)}
+.dep{display:grid;grid-template-columns:minmax(0,440px) 56px minmax(0,1fr);gap:48px;align-items:center}
+.t-card{border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #292929;background:#fffefe;overflow:hidden}
+.t-scroll{height:720px;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none}
+.t-scroll::-webkit-scrollbar{display:none}
+.t-post{scroll-snap-align:start;background:#fffefe;border-bottom:2px solid #292929}
+.t-head{display:flex;align-items:center;gap:16px;padding:16px;border-bottom:2px solid #292929;background:#f2f2f5}
+.t-avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid #292929;display:block;filter:grayscale(1)}
+.t-name{font-family:'Roboto Mono',monospace;font-size:16px;font-weight:700;color:#292929;line-height:1.2;display:block}
+.t-role{font-family:'Roboto Mono',monospace;font-size:12px;color:#292929;display:block;margin-top:4px}
+.t-photo img{width:100%;height:auto;display:block;filter:grayscale(1)}
+.t-acts{display:flex;align-items:center;gap:16px;padding:16px 16px 8px}
+.t-ibtn{background:none;border:0;padding:0;cursor:pointer;display:flex;width:48px;height:48px;align-items:center;justify-content:center;margin:-12px}
+.t-ibtn svg{width:24px;height:24px}
+.t-cap{padding:0 16px 24px;font-size:14px;line-height:1.55;color:#292929;font-family:'Roboto Mono',monospace}
+.t-capuser{font-weight:700;margin-right:8px}
+.t-fnav{display:flex;flex-direction:column;gap:16px}
+.rc-wrap{display:grid;grid-template-columns:minmax(0,480px) minmax(0,1fr);gap:64px;align-items:start}
+.rc{background:#fffefe;border:2px solid #292929;border-bottom:0;padding:32px 32px 24px;display:flex;flex-direction:column;gap:24px}
+.rc-row{display:flex;align-items:baseline;gap:8px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:16px;line-height:1.5}
+.rc-lead{flex:1 1 auto;min-width:24px;border-bottom:2px dotted #292929;transform:translateY(-6px)}
+.rc-item{display:flex;flex-direction:column;gap:8px}
+.rc-sub{display:flex;flex-direction:column;gap:4px;padding-left:16px;font-family:'Roboto Mono',monospace;font-weight:400;font-size:14px;line-height:1.5}
+.rc-ref{padding-left:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;color:#4c1d95;white-space:nowrap}
+.rc-cut{height:16px;border-left:2px solid #292929;border-right:2px solid #292929;background:linear-gradient(-45deg,transparent 8px,#fffefe 0) 0 0/16px 16px repeat-x,linear-gradient(45deg,transparent 8px,#fffefe 0) 0 0/16px 16px repeat-x}
+.ax-list{display:flex;flex-direction:column;gap:48px;padding-top:24px}
+.ax{position:relative;margin:0;background:#fffefe;border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #292929}
+.ax-bar{padding:8px 16px;background:#f2f2f5;border-bottom:2px solid #292929;border-radius:14px 14px 0 0;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase}
+.ax-bar b{color:#4c1d95;font-weight:500}
+.ax img{display:block;width:100%;height:auto;border-radius:0 0 14px 14px}
+.clip{position:absolute;top:-24px;left:32px;width:24px;height:48px;border:3px solid #292929;border-radius:12px;z-index:2}
+.gc{position:absolute;display:block;pointer-events:none;image-rendering:pixelated}
+@media (max-width:1180px){.gc{display:none}}
+@media (max-width:820px){
+.wrap{padding:0 16px}
+.hero,.row,.row.rev,.dep{grid-template-columns:minmax(0,1fr);gap:32px}
+.row.rev .ill{order:0}
+.ill{max-width:none}
+.spec-r{grid-template-columns:minmax(0,1fr)}
+.rc-wrap{grid-template-columns:minmax(0,1fr);gap:48px}
+.rc{padding:24px 16px}
+.rc-row{font-size:14px}
+.ax{transform:none !important}
+.spec-k{border-right:0;border-bottom:2px solid #292929}
+.t-fnav{flex-direction:row}
+.t-scroll{height:600px}
+}
+@media (prefers-reduced-motion:reduce){.btn,.tl-ico .mn{transition:none}}
+</style>
+<style>
+[hidden]{display:none !important}
+.t-ibtn svg{fill:#e97045;stroke:#292929;stroke-width:2}
+.t-ibtn[aria-pressed="false"] svg{fill:none}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="v2" style="background: #f2f2f5; color: #292929; font-family: 'Work Sans',sans-serif; padding: 64px 0 96px; position: relative; overflow: hidden">
+
+<div class="wrap" style="position: relative">
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px; margin: 0 0 64px; height: 24px"></div>
+<section class="hero" aria-labelledby="hero-t">
+<div>
+<p class="lbl">product designer</p>
+<h1 class="hero-t" id="hero-t">thais<br>castro</h1>
+<p class="txt" style="font-size: 20px; line-height: 1.45">Transformo regras de negócio e linguagem técnica de crédito em jornadas claras, da simulação ao pós-venda.</p>
+<div class="acts">
+<a class="btn" href="#sec-pacote-wrap" style="background: #1847e3; color: #fffefe; border: 1px solid #292929; box-shadow: 4px 4px 0 #292929">ver cases</a>
+<a href="#por-onde-andei" style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 16px; text-transform: lowercase">por onde andei</a>
+</div>
+</div>
+<div class="win">
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">thais.design / fig-1</div></div>
+<img src="assets/e2e3919e2f406078ebb5c5f54e69fe1b.png" alt="ilustração: doze parcelas decrescentes ao lado de uma cúpula em wireframe sobre uma grade em perspectiva, com um smiley em pixel no céu" style="display: block; width: 100%; height: auto">
+</div>
+</section>
+
+<div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
+<section aria-labelledby="sec-jeito">
+<p class="lbl">características e competências</p>
+<h2 class="h2" id="sec-jeito">jeito pra coisa</h2>
+<div class="row">
+<div class="ill" role="img" aria-label="ilustração: mão humana e mão robô se tocando" style="background-image: url('assets/ffea1dcd8470e7aecc6bab4a30c3116f.webp')"></div>
+<div class="blk"><span class="num">01</span><h3 class="h3">eu + claude =&nbsp;<svg role="img" aria-label="coração" width="36" height="32" viewBox="0 0 9 8" shape-rendering="crispEdges" style="display: inline-block; vertical-align: -2px"><path fill="#292929" d="M1 0h2v1h-2zM6 0h2v1h-2zM0 1h4v1h-4zM5 1h4v1h-4zM0 2h9v1h-9zM0 3h9v1h-9zM1 4h7v1h-7zM2 5h5v1h-5zM3 6h3v1h-3zM4 7h1v1h-1z"></path></svg></h3><p class="txt">uso ia como parceira de produção e mantenho a direção: defino o sistema (paleta, tipografia, grid de 8px, componentes), itero em ciclos curtos com feedback direto na tela e valido cada detalhe antes de seguir. este portfólio foi feito assim.</p></div>
+</div>
+<div class="row rev">
+<div class="ill" role="img" aria-label="ilustração: mãos segurando uma claquete" style="background-image: url('assets/b5efc55560a34efe56dcf3c5e0d9aa85.webp')"></div>
+<div class="blk"><span class="num">02</span><h3 class="h3">até os créditos finais</h3><p class="txt">da simulação à contratação e ao pós-venda, em ambiente regulado: transformo regras de negócio e linguagem técnica em uma história clara, segura e transparente. com começo, meio, fim e cena pós-créditos.</p></div>
+</div>
+<div class="row">
+<div class="ill" role="img" aria-label="ilustração: papel com gráficos" style="background-image: url('assets/cd751fae31000310c259842233db23a6.png')"></div>
+<div class="blk"><span class="num">03</span><h3 class="h3">estudar antes de desenhar</h3><p class="txt">antes de abrir o figma, quero saber que problema o produto resolve, pra quem e como ele funciona por dentro: juros, prazos, regras. a tela é só a parte que o cliente vê.</p></div>
+</div>
+<div class="row rev">
+<div class="ill" role="img" aria-label="ilustração: mão jogando dados para o alto" style="background-image: url('assets/37afd984b791c9b8810ce2f2ee5e9c85.webp')"></div>
+<div class="blk"><span class="num">04</span><h3 class="h3">design (muito) orientado a dados</h3><p class="txt">não tomo decisões sem evidência.<br>minhas decisões são baseadas em dados, não no que suponho.</p></div>
+</div>
+<div class="row">
+<div class="ill" role="img" aria-label="ilustração: mão movendo uma peça de xadrez" style="background-image: url('assets/7f1ebf4a0e049558a3f9477759a59aaa.webp')"></div>
+<div class="blk"><span class="num">05</span><h3 class="h3">é assim que a banda toca</h3><p class="txt">gosto de estar envolvida com o time para saber onde o negócio quer ir e junto com devs, PM, marketing, definir o que temos que fazer para chegar lá, da melhor maneira possível.</p><p class="txt" style="font-weight: 500; color: #4c1d95">eu acredito muito no poder da transversalidade de disciplinas.</p></div>
+</div>
+</section>
+
+<div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
+<section id="sec-pacote-wrap" aria-labelledby="sec-pacote">
+<p class="lbl">pride</p>
+<h2 class="h2" id="sec-pacote" style="margin-bottom: 32px">grandes feitos</h2>
+<p class="txt" style="font-size: 20px; line-height: 1.45; margin-bottom: 48px">E tenho como provar. Aqui vai o comprovante:</p>
+<div class="rc-wrap">
+<div>
+<div class="rc">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Roboto Mono',monospace; font-weight: 700; font-size: 20px; text-transform: lowercase">comprovante de feitos</span>
+<span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; color: #4c1d95">thais castro / product designer / will bank</span>
+</div>
+<span style="width: 56px; height: 56px; background: #ffff8d; border: 2px solid #292929; transform: rotate(-8deg); position: relative; flex-shrink: 0" aria-hidden="true"><img src="assets/1e45b3ff62f20ec79a7daa2df025733b.svg" alt="" style="position: absolute; left: 8px; top: 8px; width: 36px; height: 36px; image-rendering: pixelated"></span>
+</div>
+<div style="border-top: 2px dashed #292929"></div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div class="rc-item">
+<div class="rc-row"><span>lembrete de pagamento</span><span class="rc-lead"></span><span>−64,7%</span></div>
+<div class="rc-sub"><span>no saldo em atraso</span><span>+18,6% no valor pago sobre a parcela</span><span>+109,7% em pagamentos parciais</span></div>
+<span class="rc-ref">ver anexo 1 · <a href="cases/lembrete-de-pagamento/">ler o case</a></span>
+</div>
+<div class="rc-item">
+<div class="rc-row"><span>refinanciamento em dia</span><span class="rc-lead"></span><span>+R$ 500 mil</span></div>
+<div class="rc-sub"><span>406 contratos em 5 meses, só 2 com o produto para toda a base</span><span>2,70% de penetração em ~15 mil elegíveis</span><span>prazo médio 66% maior</span><span>+7% de conversão com a oferta flexível</span></div>
+<span class="rc-ref">ver anexos 2 e 3 · <a href="cases/refinanciamento-em-dia/">ler o case</a></span>
+</div>
+<div class="rc-item">
+<div class="rc-row"><span>índice de transparência</span><span class="rc-lead"></span><span>3º lugar</span></div>
+<div class="rc-sub"><span>novücard, 2º semestre de 2023, na estreia</span></div>
+<a class="rc-ref" href="https://www.novucard.com.br/wp-content/uploads/2024/04/Transparency-eBook-2S23.pdf">ler o ranking</a>
+</div>
+<div class="rc-item">
+<div class="rc-row"><span>produtos de crédito end-to-end</span><span class="rc-lead"></span><span>6</span></div>
+<div class="rc-sub"><span>empréstimo pessoal</span><span>antecipação do saque-aniversário do FGTS</span><span>Pix parcelado</span><span>parcelamento de compras à vista</span><span>refinanciamento em dia</span><span>renegociação de empréstimo</span></div>
+</div>
+</div>
+<div style="border-top: 2px dashed #292929"></div>
+<div class="rc-row" style="font-size: 20px; font-weight: 700"><span>total</span><span class="rc-lead"></span><span>pago com design</span></div>
+<span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; text-align: center; letter-spacing: .2em" aria-hidden="true">|||| ||| |||| || ||||| | ||| ||||</span>
+<p style="margin: 0; font-family: 'Roboto Mono',monospace; font-weight: 400; font-size: 12px; line-height: 1.5">* Estes números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo Banco Central em janeiro de 2026.</p>
+</div>
+<svg class="rc-zz" width="100%" height="16" aria-hidden="true" style="display: block"><defs><pattern id="zz" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 0 L8 12 L16 0 Z" fill="#fffefe"></path><path d="M0 1 L8 13 L16 1" fill="none" stroke="#292929" stroke-width="2" stroke-linejoin="miter"></path></pattern></defs><rect width="100%" height="16" fill="url(#zz)"></rect></svg>
+</div>
+<div class="ax-list">
+<figure class="ax" style="transform: rotate(1.5deg)">
+<span class="clip" aria-hidden="true"></span>
+<div class="ax-bar"><span><b>anexo 1</b>  resultado do lembrete de pagamento</span></div>
+<img src="assets/8311be42ae4c1453f9385cd5fff47e57.jpg" alt="Slide de resultados do experimento de lembrete de pagamento: saldo em atraso 64,7% menor, valor pago 18,6% maior e pagamentos parciais 109,7% maiores no grupo de ação">
+</figure>
+<figure class="ax" style="transform: rotate(-1deg)">
+<span class="clip" aria-hidden="true"></span>
+<div class="ax-bar"><span><b>anexo 2</b>  refin em dia: do piloto à oferta flexível</span></div>
+<img src="assets/f6609427b43f3b41704906e597a598f0.jpg" alt="Comparação de telas do refinanciamento em dia: o piloto com oferta única e a oferta flexível, em que o cliente escolhe o número de parcelas">
+</figure>
+<figure class="ax" style="transform: rotate(-1.5deg)">
+<span class="clip" aria-hidden="true"></span>
+<div class="ax-bar"><span><b>anexo 3</b>  big numbers</span></div>
+<img src="assets/a699d8056e5805a87692a304896e6afb.png" alt="Big numbers do refinanciamento em dia em 5 meses de produto: mais de R$ 500 mil produzidos, 406 contratos refinanciados, prazo médio 66% maior e 2,70% de penetração">
+</figure>
+</div>
+</div>
+</section>
+
+<div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
+<section id="por-onde-andei" aria-labelledby="sec-resume">
+<p class="lbl">resume</p>
+<h2 class="h2" id="sec-resume">por onde andei_</h2>
+<div class="tl">
+<div style="position: relative">
+<div aria-hidden="true" style="position: absolute; left: -44px; top: 24px; width: 18px; height: 18px; background: #ffff8d; border: 3px solid #292929"></div>
+<div class="win">
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">@ will bank</div></div>
+<div style="padding: 24px 40px; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center">
+<div style="width: 96px; height: 72px; display: flex; align-items: center; justify-content: center"><img src="assets/f009001c26c0a051e36ca0adf7d7a821.webp" alt="@ will bank" style="width:100%;height:100%;object-fit:contain;display:block;transform:scale(0.75)"></div>
+<span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 16px; color: #4c1d95">11/2021 — 09/2026</span>
+</div>
+<h3 style="margin: 0; font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 20px; text-transform: lowercase">senior product designer</h3>
+<div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap">
+<span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; text-transform: lowercase">nível de responsabilidade</span>
+<div role="img" aria-label="nível 5 de 5" style="display: flex; gap: 8px"><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #292929; display: block; background: #1847e3"></span><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #292929; display: block; background: #1847e3"></span><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #292929; display: block; background: #1847e3"></span><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #292929; display: block; background: #1847e3"></span><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #292929; display: block; background: #1847e3"></span></div>
+</div>
+<p style="margin: 0; border-left: 16px solid #e97045; padding: 8px 0 8px 16px; font-size: 16px; line-height: 1.5; max-width: 64ch">Produtos de crédito e financiamento digital: jornadas completas de contratação, da simulação ao acompanhamento do contrato. Discovery, pesquisa com usuários, experimentos (fake doors, MVPs e testes A/B) e evolução do design system, com foco em dados e impacto no negócio.</p>
+<div id="evo-a" hidden style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; text-transform: lowercase; color: #4c1d95">evolução de cargo</span>
+<div style="display: flex; flex-direction: column; gap: 16px; border-left: 2px solid #292929; padding-left: 24px; margin-left: 8px">
+<div style="position: relative">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 4px; width: 16px; height: 16px; border: 2px solid #292929; display: block; background: #f2f2f5"></span>
+<div style="font-weight: 800; font-size: 16px; text-transform: lowercase">content designer</div>
+<div style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; margin-top: 4px">11/2021 — 11/2023</div>
+</div>
+<div style="position: relative">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 4px; width: 16px; height: 16px; border: 2px solid #292929; display: block; background: #f2f2f5"></span>
+<div style="font-weight: 800; font-size: 16px; text-transform: lowercase">senior content designer</div>
+<div style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; margin-top: 4px">11/2023 — 11/2025</div>
+</div>
+<div style="position: relative">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 4px; width: 16px; height: 16px; border: 2px solid #292929; display: block; background: #e97045"></span>
+<div style="font-weight: 800; font-size: 16px; text-transform: lowercase">senior product designer</div>
+<div style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; margin-top: 4px">01/2025 — 09/2026</div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: flex-end"><button type="button" class="tl-ico js-toggle" aria-expanded="false" aria-controls="evo-a"><span class="js-label" style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 14px; text-transform: lowercase; color: #292929">ver evolução de cargo</span><svg class="ico-plus" width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true"><g class="sh"><polygon points="9.5,4 14.5,4 14.5,9.5 20,9.5 20,14.5 14.5,14.5 14.5,20 9.5,20 9.5,14.5 4,14.5 4,9.5 9.5,9.5" fill="#292929" stroke="#292929" stroke-width="1"></polygon></g><g class="mn"><polygon points="9.5,4 14.5,4 14.5,9.5 20,9.5 20,14.5 14.5,14.5 14.5,20 9.5,20 9.5,14.5 4,14.5 4,9.5 9.5,9.5" fill="#fffefe" stroke="#292929" stroke-width="1"></polygon></g></svg><svg class="ico-minus" width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden><g class="sh"><polygon points="4,9.5 20,9.5 20,14.5 4,14.5" fill="#292929" stroke="#292929" stroke-width="1"></polygon></g><g class="mn"><polygon points="4,9.5 20,9.5 20,14.5 4,14.5" fill="#fffefe" stroke="#292929" stroke-width="1"></polygon></g></svg></button></div>
+</div>
+</div>
+</div>
+<div style="position: relative">
+<div aria-hidden="true" style="position: absolute; left: -44px; top: 24px; width: 18px; height: 18px; background: #ffff8d; border: 3px solid #292929"></div>
+<div class="win">
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">@ melhores destinos</div></div>
+<div style="padding: 24px 40px; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center">
+<div style="width: 96px; height: 72px; display: flex; align-items: center; justify-content: center"><img src="assets/952bdf8b56931ff02fc49fdfa3ed4da6.webp" alt="@ melhores destinos" style="width:100%;height:100%;object-fit:contain;display:block;transform:scale(1.8)"></div>
+<span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 16px; color: #4c1d95">01/2015 — 11/2021</span>
+</div>
+<h3 style="margin: 0; font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 20px; text-transform: lowercase">ux writer</h3>
+<div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap">
+<span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; text-transform: lowercase">nível de responsabilidade</span>
+<div role="img" aria-label="nível 3 de 5" style="display: flex; gap: 8px"><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #292929; display: block; background: #1847e3"></span><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #292929; display: block; background: #1847e3"></span><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #292929; display: block; background: #1847e3"></span><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #292929; display: block"></span><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #292929; display: block"></span></div>
+</div>
+<p style="margin: 0; border-left: 16px solid #e97045; padding: 8px 0 8px 16px; font-size: 16px; line-height: 1.5; max-width: 64ch">Única pessoa de UX: discovery para diagnosticar dores da jornada, início do guia de escrita da marca (voz e tom) e microcopy de interface, evangelizando a cultura de design e conteúdo. Antes, seis anos como revisora de texto.</p>
+<div id="evo-b" hidden style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; text-transform: lowercase; color: #4c1d95">evolução de cargo</span>
+<div style="display: flex; flex-direction: column; gap: 16px; border-left: 2px solid #292929; padding-left: 24px; margin-left: 8px">
+<div style="position: relative">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 4px; width: 16px; height: 16px; border: 2px solid #292929; display: block; background: #f2f2f5"></span>
+<div style="font-weight: 800; font-size: 16px; text-transform: lowercase">revisora de texto</div>
+<div style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; margin-top: 4px">01/2015 — 03/2021</div>
+</div>
+<div style="position: relative">
+<span aria-hidden="true" style="position: absolute; left: -33px; top: 4px; width: 16px; height: 16px; border: 2px solid #292929; display: block; background: #e97045"></span>
+<div style="font-weight: 800; font-size: 16px; text-transform: lowercase">ux writer</div>
+<div style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; margin-top: 4px">03/2021 — 11/2021</div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: flex-end"><button type="button" class="tl-ico js-toggle" aria-expanded="false" aria-controls="evo-b"><span class="js-label" style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 14px; text-transform: lowercase; color: #292929">ver evolução de cargo</span><svg class="ico-plus" width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true"><g class="sh"><polygon points="9.5,4 14.5,4 14.5,9.5 20,9.5 20,14.5 14.5,14.5 14.5,20 9.5,20 9.5,14.5 4,14.5 4,9.5 9.5,9.5" fill="#292929" stroke="#292929" stroke-width="1"></polygon></g><g class="mn"><polygon points="9.5,4 14.5,4 14.5,9.5 20,9.5 20,14.5 14.5,14.5 14.5,20 9.5,20 9.5,14.5 4,14.5 4,9.5 9.5,9.5" fill="#fffefe" stroke="#292929" stroke-width="1"></polygon></g></svg><svg class="ico-minus" width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden><g class="sh"><polygon points="4,9.5 20,9.5 20,14.5 4,14.5" fill="#292929" stroke="#292929" stroke-width="1"></polygon></g><g class="mn"><polygon points="4,9.5 20,9.5 20,14.5 4,14.5" fill="#fffefe" stroke="#292929" stroke-width="1"></polygon></g></svg></button></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
+<section aria-labelledby="sec-dep" style="position: relative">
+<p class="lbl">they like me</p>
+<h2 class="h2" id="sec-dep">como diz<br>o outro_</h2>
+<div class="dep">
+<div class="t-card"><div class="t-scroll" id="dep2-scroll" tabindex="0" aria-label="depoimentos">
+<article class="t-post" id="dep2-0" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="Mateus Resende no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/a1921ebd24593f381a46f329815ae39e.jpg" alt="" loading="lazy"></a><div><span class="t-name">Mateus Resende</span><span class="t-role">Software Engineering Lead @ Resend</span></div></div>
+<div class="t-photo"><img src="assets/a1921ebd24593f381a46f329815ae39e.jpg" alt="Mateus Resende" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="0" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">mateusresende</span>Thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. Não tinha dessa de &quot;isso é coisa de dev&quot;. Estávamos todos buscando o que era melhor para o produto em si.</p>
+</article>
+<article class="t-post" id="dep2-1" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/marianapaladino/" target="_blank" rel="noopener noreferrer" aria-label="Mari Paladino no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg" alt="" loading="lazy"></a><div><span class="t-name">Mari Paladino</span><span class="t-role">Group Product Manager @ Sem Parar</span></div></div>
+<div class="t-photo"><img src="assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg" alt="Mari Paladino" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="1" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">maripaladino</span>Tive a oportunidade de trabalhar com a Thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.</p>
+</article>
+<article class="t-post" id="dep2-2" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/atiara-braga/" target="_blank" rel="noopener noreferrer" aria-label="Atiara Braga no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/4e3aed058834b31d77c3cfd50b2877a3.jpg" alt="" loading="lazy"></a><div><span class="t-name">Atiara Braga</span><span class="t-role">Associate Product Manager @ Neon</span></div></div>
+<div class="t-photo"><img src="assets/4e3aed058834b31d77c3cfd50b2877a3.jpg" alt="Atiara Braga" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="2" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">atiarabraga</span>Já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! Você entende a dor e necessidade do cliente e faz o negócio acontecer.</p>
+</article>
+<article class="t-post" id="dep2-3" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/maisaholland/" target="_blank" rel="noopener noreferrer" aria-label="Maisa Holland no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/26471d611f0542138846ef4c1a73823b.jpg" alt="" loading="lazy"></a><div><span class="t-name">Maisa Holland</span><span class="t-role">Senior Mobile Engineer @ iGlu</span></div></div>
+<div class="t-photo"><img src="assets/26471d611f0542138846ef4c1a73823b.jpg" alt="Maisa Holland" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="3" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">maisaholland</span>Foi um prazer imenso trabalhar diretamente com a Thais. É uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.</p>
+</article>
+<article class="t-post" id="dep2-4" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/juliananakata/" target="_blank" rel="noopener noreferrer" aria-label="Juliana Nakata Zampronio no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg" alt="" loading="lazy"></a><div><span class="t-name">Juliana Nakata Zampronio</span><span class="t-role">Software Engineer @ Itaú Unibanco</span></div></div>
+<div class="t-photo"><img src="assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg" alt="Juliana Nakata Zampronio" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="4" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">julianakata</span>Sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. Recomendo de olhos fechados.</p>
+</article>
+<article class="t-post" id="dep2-5" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/janaina-vallim-melo/" target="_blank" rel="noopener noreferrer" aria-label="Jana Vallim no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/9202fddc055098fdf619b1261af2eb81.jpg" alt="" loading="lazy"></a><div><span class="t-name">Jana Vallim</span><span class="t-role">Conversational AI Designer @ Stone</span></div></div>
+<div class="t-photo"><img src="assets/9202fddc055098fdf619b1261af2eb81.jpg" alt="Jana Vallim" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="5" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">janavallim</span>Trabalhar com a Thais é incrível! Ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.</p>
+</article>
+<article class="t-post" id="dep2-6" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/" target="_blank" rel="noopener noreferrer" aria-label="Ana Beatriz Sulliman no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/9f7fed6e11957850e7e6c4adff521e56.jpg" alt="" loading="lazy"></a><div><span class="t-name">Ana Beatriz Sulliman</span><span class="t-role">Especialista de negócios @ Mercado Pago</span></div></div>
+<div class="t-photo"><img src="assets/9f7fed6e11957850e7e6c4adff521e56.jpg" alt="Ana Beatriz Sulliman" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="6" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">anabeatriz</span>Thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.</p>
+</article>
+<article class="t-post" id="dep2-7" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/thiagomelobezerra/" target="_blank" rel="noopener noreferrer" aria-label="Thiago Bezerra no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/38ca2d8845c319a1af351810007faa3a.jpg" alt="" loading="lazy"></a><div><span class="t-name">Thiago Bezerra</span><span class="t-role">Staff Software Engineer @ Alice</span></div></div>
+<div class="t-photo"><img src="assets/38ca2d8845c319a1af351810007faa3a.jpg" alt="Thiago Bezerra" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="7" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">thiagobezerra</span>Ouvindo o cliente, coletando dados, entendendo seu publico Thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.</p>
+</article>
+<article class="t-post" id="dep2-8">
+<div class="t-head"><a href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="Mateus Resende no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/a1921ebd24593f381a46f329815ae39e.jpg" alt="" loading="lazy"></a><div><span class="t-name">Mateus Resende</span><span class="t-role">Software Engineering Lead @ Resend</span></div></div>
+<div class="t-photo"><img src="assets/a1921ebd24593f381a46f329815ae39e.jpg" alt="Mateus Resende" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="0" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">mateusresende</span>Thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. Não tinha dessa de &quot;isso é coisa de dev&quot;. Estávamos todos buscando o que era melhor para o produto em si.</p>
+</article>
+<article class="t-post" id="dep2-9">
+<div class="t-head"><a href="https://www.linkedin.com/in/marianapaladino/" target="_blank" rel="noopener noreferrer" aria-label="Mari Paladino no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg" alt="" loading="lazy"></a><div><span class="t-name">Mari Paladino</span><span class="t-role">Group Product Manager @ Sem Parar</span></div></div>
+<div class="t-photo"><img src="assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg" alt="Mari Paladino" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="1" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">maripaladino</span>Tive a oportunidade de trabalhar com a Thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.</p>
+</article>
+<article class="t-post" id="dep2-10">
+<div class="t-head"><a href="https://www.linkedin.com/in/atiara-braga/" target="_blank" rel="noopener noreferrer" aria-label="Atiara Braga no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/4e3aed058834b31d77c3cfd50b2877a3.jpg" alt="" loading="lazy"></a><div><span class="t-name">Atiara Braga</span><span class="t-role">Associate Product Manager @ Neon</span></div></div>
+<div class="t-photo"><img src="assets/4e3aed058834b31d77c3cfd50b2877a3.jpg" alt="Atiara Braga" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="2" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">atiarabraga</span>Já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! Você entende a dor e necessidade do cliente e faz o negócio acontecer.</p>
+</article>
+<article class="t-post" id="dep2-11">
+<div class="t-head"><a href="https://www.linkedin.com/in/maisaholland/" target="_blank" rel="noopener noreferrer" aria-label="Maisa Holland no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/26471d611f0542138846ef4c1a73823b.jpg" alt="" loading="lazy"></a><div><span class="t-name">Maisa Holland</span><span class="t-role">Senior Mobile Engineer @ iGlu</span></div></div>
+<div class="t-photo"><img src="assets/26471d611f0542138846ef4c1a73823b.jpg" alt="Maisa Holland" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="3" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">maisaholland</span>Foi um prazer imenso trabalhar diretamente com a Thais. É uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.</p>
+</article>
+<article class="t-post" id="dep2-12">
+<div class="t-head"><a href="https://www.linkedin.com/in/juliananakata/" target="_blank" rel="noopener noreferrer" aria-label="Juliana Nakata Zampronio no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg" alt="" loading="lazy"></a><div><span class="t-name">Juliana Nakata Zampronio</span><span class="t-role">Software Engineer @ Itaú Unibanco</span></div></div>
+<div class="t-photo"><img src="assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg" alt="Juliana Nakata Zampronio" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="4" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">julianakata</span>Sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. Recomendo de olhos fechados.</p>
+</article>
+<article class="t-post" id="dep2-13">
+<div class="t-head"><a href="https://www.linkedin.com/in/janaina-vallim-melo/" target="_blank" rel="noopener noreferrer" aria-label="Jana Vallim no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/9202fddc055098fdf619b1261af2eb81.jpg" alt="" loading="lazy"></a><div><span class="t-name">Jana Vallim</span><span class="t-role">Conversational AI Designer @ Stone</span></div></div>
+<div class="t-photo"><img src="assets/9202fddc055098fdf619b1261af2eb81.jpg" alt="Jana Vallim" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="5" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">janavallim</span>Trabalhar com a Thais é incrível! Ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.</p>
+</article>
+<article class="t-post" id="dep2-14">
+<div class="t-head"><a href="https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/" target="_blank" rel="noopener noreferrer" aria-label="Ana Beatriz Sulliman no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/9f7fed6e11957850e7e6c4adff521e56.jpg" alt="" loading="lazy"></a><div><span class="t-name">Ana Beatriz Sulliman</span><span class="t-role">Especialista de negócios @ Mercado Pago</span></div></div>
+<div class="t-photo"><img src="assets/9f7fed6e11957850e7e6c4adff521e56.jpg" alt="Ana Beatriz Sulliman" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="6" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">anabeatriz</span>Thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.</p>
+</article>
+<article class="t-post" id="dep2-15">
+<div class="t-head"><a href="https://www.linkedin.com/in/thiagomelobezerra/" target="_blank" rel="noopener noreferrer" aria-label="Thiago Bezerra no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/38ca2d8845c319a1af351810007faa3a.jpg" alt="" loading="lazy"></a><div><span class="t-name">Thiago Bezerra</span><span class="t-role">Staff Software Engineer @ Alice</span></div></div>
+<div class="t-photo"><img src="assets/38ca2d8845c319a1af351810007faa3a.jpg" alt="Thiago Bezerra" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="7" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">thiagobezerra</span>Ouvindo o cliente, coletando dados, entendendo seu publico Thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.</p>
+</article>
+<article class="t-post" id="dep2-16" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="Mateus Resende no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/a1921ebd24593f381a46f329815ae39e.jpg" alt="" loading="lazy"></a><div><span class="t-name">Mateus Resende</span><span class="t-role">Software Engineering Lead @ Resend</span></div></div>
+<div class="t-photo"><img src="assets/a1921ebd24593f381a46f329815ae39e.jpg" alt="Mateus Resende" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="0" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">mateusresende</span>Thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. Não tinha dessa de &quot;isso é coisa de dev&quot;. Estávamos todos buscando o que era melhor para o produto em si.</p>
+</article>
+<article class="t-post" id="dep2-17" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/marianapaladino/" target="_blank" rel="noopener noreferrer" aria-label="Mari Paladino no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg" alt="" loading="lazy"></a><div><span class="t-name">Mari Paladino</span><span class="t-role">Group Product Manager @ Sem Parar</span></div></div>
+<div class="t-photo"><img src="assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg" alt="Mari Paladino" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="1" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">maripaladino</span>Tive a oportunidade de trabalhar com a Thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.</p>
+</article>
+<article class="t-post" id="dep2-18" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/atiara-braga/" target="_blank" rel="noopener noreferrer" aria-label="Atiara Braga no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/4e3aed058834b31d77c3cfd50b2877a3.jpg" alt="" loading="lazy"></a><div><span class="t-name">Atiara Braga</span><span class="t-role">Associate Product Manager @ Neon</span></div></div>
+<div class="t-photo"><img src="assets/4e3aed058834b31d77c3cfd50b2877a3.jpg" alt="Atiara Braga" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="2" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">atiarabraga</span>Já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! Você entende a dor e necessidade do cliente e faz o negócio acontecer.</p>
+</article>
+<article class="t-post" id="dep2-19" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/maisaholland/" target="_blank" rel="noopener noreferrer" aria-label="Maisa Holland no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/26471d611f0542138846ef4c1a73823b.jpg" alt="" loading="lazy"></a><div><span class="t-name">Maisa Holland</span><span class="t-role">Senior Mobile Engineer @ iGlu</span></div></div>
+<div class="t-photo"><img src="assets/26471d611f0542138846ef4c1a73823b.jpg" alt="Maisa Holland" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="3" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">maisaholland</span>Foi um prazer imenso trabalhar diretamente com a Thais. É uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.</p>
+</article>
+<article class="t-post" id="dep2-20" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/juliananakata/" target="_blank" rel="noopener noreferrer" aria-label="Juliana Nakata Zampronio no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg" alt="" loading="lazy"></a><div><span class="t-name">Juliana Nakata Zampronio</span><span class="t-role">Software Engineer @ Itaú Unibanco</span></div></div>
+<div class="t-photo"><img src="assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg" alt="Juliana Nakata Zampronio" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="4" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">julianakata</span>Sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. Recomendo de olhos fechados.</p>
+</article>
+<article class="t-post" id="dep2-21" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/janaina-vallim-melo/" target="_blank" rel="noopener noreferrer" aria-label="Jana Vallim no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/9202fddc055098fdf619b1261af2eb81.jpg" alt="" loading="lazy"></a><div><span class="t-name">Jana Vallim</span><span class="t-role">Conversational AI Designer @ Stone</span></div></div>
+<div class="t-photo"><img src="assets/9202fddc055098fdf619b1261af2eb81.jpg" alt="Jana Vallim" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="5" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">janavallim</span>Trabalhar com a Thais é incrível! Ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.</p>
+</article>
+<article class="t-post" id="dep2-22" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/" target="_blank" rel="noopener noreferrer" aria-label="Ana Beatriz Sulliman no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/9f7fed6e11957850e7e6c4adff521e56.jpg" alt="" loading="lazy"></a><div><span class="t-name">Ana Beatriz Sulliman</span><span class="t-role">Especialista de negócios @ Mercado Pago</span></div></div>
+<div class="t-photo"><img src="assets/9f7fed6e11957850e7e6c4adff521e56.jpg" alt="Ana Beatriz Sulliman" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="6" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">anabeatriz</span>Thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.</p>
+</article>
+<article class="t-post" id="dep2-23" aria-hidden="true" inert>
+<div class="t-head"><a href="https://www.linkedin.com/in/thiagomelobezerra/" target="_blank" rel="noopener noreferrer" aria-label="Thiago Bezerra no LinkedIn (abre em nova aba)"><img class="t-avatar" src="assets/38ca2d8845c319a1af351810007faa3a.jpg" alt="" loading="lazy"></a><div><span class="t-name">Thiago Bezerra</span><span class="t-role">Staff Software Engineer @ Alice</span></div></div>
+<div class="t-photo"><img src="assets/38ca2d8845c319a1af351810007faa3a.jpg" alt="Thiago Bezerra" loading="lazy"></div>
+<div class="t-acts"><button class="t-ibtn js-like" type="button" data-i="7" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<p class="t-cap" style="margin: 0"><span class="t-capuser">thiagobezerra</span>Ouvindo o cliente, coletando dados, entendendo seu publico Thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.</p>
+</article>
+</div></div>
+<div class="t-fnav"><button class="tl-ico" type="button" data-feed="-1" aria-label="depoimento anterior" style="padding: 0; width: 56px; height: 56px; justify-content: center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true"><g class="sh"><polygon points="12,3 21,12 15,12 15,21 9,21 9,12 3,12" fill="#292929" stroke="#292929" stroke-width="1"></polygon></g><g class="mn"><polygon points="12,3 21,12 15,12 15,21 9,21 9,12 3,12" fill="#fffefe" stroke="#292929" stroke-width="1"></polygon></g></svg></button><button class="tl-ico" type="button" data-feed="1" aria-label="próximo depoimento" style="padding: 0; width: 56px; height: 56px; justify-content: center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true"><g class="sh"><polygon points="12,21 21,12 15,12 15,3 9,3 9,12 3,12" fill="#292929" stroke="#292929" stroke-width="1"></polygon></g><g class="mn"><polygon points="12,21 21,12 15,12 15,3 9,3 9,12 3,12" fill="#fffefe" stroke="#292929" stroke-width="1"></polygon></g></svg></button></div>
+<div style="display: flex; flex-direction: column; gap: 32px; align-items: flex-start">
+<p class="txt" style="font-size: 20px; line-height: 1.45; max-width: 32ch">Depoimentos de pessoas muito boas que já trabalharam comigo. Inclusive, indico todas.</p>
+<div style="width: 96px; height: 96px; background: #ffff8d; border: 2px solid #292929; box-shadow: 8px 8px 0 #292929; position: relative" aria-hidden="true"><img src="assets/1e45b3ff62f20ec79a7daa2df025733b.svg" alt="" style="position: absolute; left: 14px; top: 14px; width: 64px; height: 64px; image-rendering: pixelated"></div>
+</div>
+</div>
+</section>
+</div>
+
+<img class="gc" src="assets/8629aae69fe2766b8e9923183143aa10.svg" alt="" style="left: calc(50% + 588px); top: 1240px; width: 96px; height: 96px">
+<img class="gc" src="assets/0dfd9617c5195d98fadcb2ddcebdc73a.svg" alt="" style="left: calc(50% - 668px); top: 1560px; width: 48px; height: 48px">
+<div class="gc" style="left: calc(50% - 640px); top: 1240px; writing-mode: vertical-rl; font-family: 'Roboto Mono',monospace; font-size: 12px; color: #4c1d95; text-transform: lowercase">feito com ia</div>
+<img class="gc" src="assets/6a809d3fe657ef01873722c90488e93d.svg" alt="" style="left: calc(50% + 588px); top: 2480px; width: 48px; height: 48px">
+</div>
+<script>
+(function () {
+  // timeline: mostrar/ocultar evolução de cargo
+  document.querySelectorAll('.js-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') !== 'true';
+      document.querySelectorAll('.js-toggle').forEach(function (b) {
+        var on = b === btn && open;
+        b.setAttribute('aria-expanded', on);
+        document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
+        b.querySelector('.js-label').textContent = on ? 'recolher' : 'ver evolução de cargo';
+        b.querySelector('.ico-plus').toggleAttribute('hidden', on);
+        b.querySelector('.ico-minus').toggleAttribute('hidden', !on);
+      });
+    });
+  });
+
+  // depoimentos: curtir
+  document.querySelectorAll('.js-like').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var on = btn.getAttribute('aria-pressed') !== 'true';
+      document.querySelectorAll('.js-like[data-i="' + btn.dataset.i + '"]').forEach(function (b) {
+        b.setAttribute('aria-pressed', on);
+      });
+    });
+  });
+
+  // depoimentos: feed em looping
+  var sc = document.getElementById('dep2-scroll');
+  if (!sc) return;
+  var posts = sc.querySelectorAll('.t-post');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function loop() {
+    var third = sc.scrollHeight / 3;
+    if (sc.scrollTop < third - 8) { sc.style.scrollSnapType = 'none'; sc.scrollTop += third; sc.style.scrollSnapType = ''; }
+    else if (sc.scrollTop >= 2 * third - 8) { sc.style.scrollSnapType = 'none'; sc.scrollTop -= third; sc.style.scrollSnapType = ''; }
+  }
+  var t;
+  sc.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(loop, 120); });
+  window.addEventListener('load', function () { sc.scrollTop = sc.scrollHeight / 3; });
+  var anim = 0;
+  function go(dir) {
+    loop();
+    var top = sc.getBoundingClientRect().top, cur = sc.scrollTop, pos = [];
+    posts.forEach(function (e) { pos.push(e.getBoundingClientRect().top - top + sc.scrollTop); });
+    var target = dir > 0 ? pos.find(function (p) { return p > cur + 8; }) : pos.filter(function (p) { return p < cur - 8; }).pop();
+    if (target === undefined) return;
+    if (reduce) { sc.scrollTop = target; return; }
+    var from = sc.scrollTop, dist = target - from, dur = Math.min(1100, 420 + Math.abs(dist) * 0.7), t0 = performance.now(), token = ++anim;
+    sc.style.scrollSnapType = 'none';
+    (function step(now) {
+      if (token !== anim) return;
+      var p = Math.min(1, (now - t0) / dur);
+      sc.scrollTop = from + dist * (1 - Math.pow(1 - p, 4));
+      if (p < 1) requestAnimationFrame(step); else { sc.scrollTop = target; sc.style.scrollSnapType = ''; }
+    })(t0);
+  }
+  document.querySelectorAll('[data-feed]').forEach(function (b) {
+    b.addEventListener('click', function () { go(+b.dataset.feed); });
+  });
+})();
+</script>
+</body>
+</html>

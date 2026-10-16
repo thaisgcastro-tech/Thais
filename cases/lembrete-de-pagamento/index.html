@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>case: lembrete de pagamento · thais castro</title>
+<meta name="description" content="Case: lembrete de pagamento por e-mail no will bank.">
+<link rel="icon" href="../../assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;family=Work+Sans:wght@400;500;800&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Gokschil';src:url('../../assets/93ba42cb1e8b8a10050eb62645b75517.ttf') format('truetype');font-display:swap}
+body{margin:0;background:#f2f2f5}
+a{color:#292929;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
+a:hover{color:#4c1d95}
+.cs,.cs *{box-sizing:border-box}
+.cs :focus-visible{outline:3px solid #1847e3;outline-offset:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+.lbl{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:uppercase;color:#4c1d95;margin:0 0 8px}
+.h2{font-family:'Roboto Mono',monospace;font-weight:500;font-size:clamp(32px,5vw,64px);line-height:1;letter-spacing:-.02em;text-transform:lowercase;margin:0 0 48px}
+.h3{font-family:'Roboto Mono',monospace;font-weight:500;font-size:20px;line-height:1.2;text-transform:lowercase;margin:0}
+.txt{font-size:16px;line-height:1.6;margin:0;max-width:64ch}
+.lead{font-size:20px;line-height:1.5;margin:0;max-width:52ch}
+.fita{height:16px;margin:96px 0 48px;background:repeating-linear-gradient(var(--a),var(--c) 0 var(--l),transparent var(--l) calc(var(--l) + var(--g)))}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:64px;align-items:start}
+.hero-t{font-family:'Gokschil','Roboto Mono',monospace;font-weight:400;font-size:clamp(56px,8vw,80px);line-height:.9;text-transform:lowercase;margin:0 0 32px}
+.spec{border:2px solid #292929;box-shadow:8px 8px 0 #292929;background:#fffefe}
+.spec-r{display:grid;grid-template-columns:144px minmax(0,1fr)}
+.spec-r + .spec-r{border-top:2px solid #292929}
+.spec-k{padding:16px;background:#ffff8d;border-right:2px solid #292929;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95}
+.spec-v{padding:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;line-height:1.5;text-transform:lowercase}
+.big{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:2px solid #292929;background:#fffefe}
+.big-c{padding:32px 24px;display:flex;flex-direction:column;gap:8px}
+.big-c + .big-c{border-left:2px solid #292929}
+.big-n{font-family:'Roboto Mono',monospace;font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1;letter-spacing:-.02em}
+.big-l{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;line-height:1.4;text-transform:lowercase}
+.note{font-family:'Roboto Mono',monospace;font-size:12px;line-height:1.5;margin:16px 0 0}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.pain{display:flex;flex-direction:column;gap:16px;border-top:2px solid #292929;padding-top:24px}
+.quote{margin:48px 0 0;padding:24px 0 24px 32px;border-left:16px solid #e97045;font-family:'Roboto Mono',monospace;font-weight:500;font-size:20px;line-height:1.4;max-width:40ch}
+.list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:16px}
+.list li{display:flex;gap:16px;align-items:baseline;font-size:16px;line-height:1.6;max-width:64ch}
+.list li::before{content:'+';font-family:'Roboto Mono',monospace;font-weight:800;color:#e97045;flex-shrink:0}
+.funnel{display:flex;flex-direction:column;gap:16px}
+.fn{display:grid;grid-template-columns:200px minmax(0,1fr) 96px;gap:16px;align-items:center;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase}
+.fn-bar{height:32px;background:#1847e3;border:2px solid #292929}
+.fn-n{text-align:right;font-size:16px}
+.dec{display:flex;flex-direction:column;gap:0;border-top:2px solid #292929}
+.dec-i{display:grid;grid-template-columns:64px minmax(0,1fr);gap:24px;padding:32px 0;border-bottom:2px solid #292929}
+.dec-n{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;color:#4c1d95}
+.dec-b{display:flex;flex-direction:column;gap:16px}
+.dec-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.dec-k{font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95;margin:0 0 8px}
+.win{border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #292929;background:#fffefe;overflow:hidden}
+.win-bar{display:flex;align-items:center;gap:16px;padding:8px 16px;background:#f2f2f5;border-bottom:2px solid #292929}
+.win-dots{display:flex;gap:8px}
+.win-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #292929;display:block}
+.win-url{flex:1 1 auto;min-width:0;padding:8px 16px;background:#fffefe;border:1px solid #292929;border-radius:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.win img{display:block;width:100%;height:auto}
+.cap{font-family:'Roboto Mono',monospace;font-size:12px;line-height:1.5;margin:24px 0 0;max-width:64ch}
+.cmp{width:100%;border-collapse:collapse;border:2px solid #292929;background:#fffefe;font-family:'Roboto Mono',monospace;font-size:14px}
+.cmp th,.cmp td{padding:16px;text-align:left;border-bottom:2px solid #292929}
+.cmp th{background:#ffff8d;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95}
+.cmp td + td,.cmp th + th{border-left:2px solid #292929}
+.mail{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:64px;align-items:start}
+.phone{border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #292929;background:#fffefe;overflow:hidden;max-width:320px}
+.phone img{display:block;width:100%;height:auto}
+.lev{display:flex;flex-direction:column;gap:24px;margin:0;padding:0;list-style:none}
+.lev li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;align-items:start}
+.lev-n{width:40px;height:40px;border:2px solid #292929;background:#ffff8d;display:flex;align-items:center;justify-content:center;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px}
+.gc{position:absolute;display:block;pointer-events:none;image-rendering:pixelated}
+@media (max-width:1180px){.gc{display:none}}
+@media (max-width:820px){
+.wrap{padding:0 16px}
+.hero,.two,.dec-g{grid-template-columns:minmax(0,1fr);gap:32px}
+.big{grid-template-columns:repeat(2,minmax(0,1fr))}
+.big-c + .big-c{border-left:0}
+.big-c:nth-child(even){border-left:2px solid #292929}
+.big-c:nth-child(n+3){border-top:2px solid #292929}
+.fn{grid-template-columns:minmax(0,1fr) 72px}
+.fn-bar{grid-column:1 / -1;grid-row:2}
+.dec-i{grid-template-columns:minmax(0,1fr);gap:8px}
+.spec-r{grid-template-columns:112px minmax(0,1fr)}
+.mail{grid-template-columns:minmax(0,1fr);gap:32px}
+.phone{max-width:280px}
+.cmp{font-size:12px}
+.cmp th,.cmp td{padding:8px}
+}
+</style>
+</head>
+<body>
+<div class="cs" style="background: #f2f2f5; color: #292929; font-family: 'Work Sans',sans-serif; padding: 64px 0 96px; position: relative; overflow: hidden">
+<nav class="wrap" style="margin-bottom: 32px"><a href="../../" style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 16px; text-transform: lowercase">← voltar para o portfólio</a></nav>
+<div class="wrap">
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px; margin: 0 0 64px; height: 24px"></div>
+
+<header class="hero">
+<div>
+<p class="lbl">case / cobrança</p>
+<h1 class="hero-t">lembrete de pagamento</h1>
+<p class="lead">Um teste para ver se o Pix aumentava o pagamento em dia virou outra descoberta: o que fez o cliente pagar foi a mensagem certa, na hora certa. Eu escrevi essa mensagem.</p>
+</div>
+<div class="spec" role="table" aria-label="Ficha técnica">
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">produtos</div><div class="spec-v" role="cell">empréstimo pessoal e pix parcelado</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">empresa</div><div class="spec-v" role="cell">will bank</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">período</div><div class="spec-v" role="cell">set/2025</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">meu papel</div><div class="spec-v" role="cell">product designer: brainstorm com o time, estratégia de conteúdo, texto e hierarquia do e-mail</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">time</div><div class="spec-v" role="cell">bu empréstimos: pm, devs e dados</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">método</div><div class="spec-v" role="cell">experimento com grupo controle, disparos em d0 e d2</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">canal</div><div class="spec-v" role="cell">e-mail</div></div>
+</div>
+</header>
+
+<div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
+<section aria-labelledby="bn">
+<p class="lbl">big numbers</p>
+<h2 class="h2" id="bn">grupo que recebeu o e-mail contra o controle</h2>
+<div class="big">
+<div class="big-c" style="background: #1847e3; color: #fffefe"><span class="big-n">−64,7%</span><span class="big-l">no saldo em atraso</span></div>
+<div class="big-c"><span class="big-n">+18,6%</span><span class="big-l">no valor pago sobre o valor da parcela</span></div>
+<div class="big-c"><span class="big-n">+109,7%</span><span class="big-l">em pagamentos parciais</span></div>
+<div class="big-c"><span class="big-n">2</span><span class="big-l">disparos: no vencimento e 2 dias depois</span></div>
+</div>
+</section>
+
+<div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
+<section aria-labelledby="ctx">
+<p class="lbl">contexto</p>
+<h2 class="h2" id="ctx">o dinheiro que chegava tarde</h2>
+<div class="two">
+<div class="pain">
+<h3 class="h3">o problema</h3>
+<p class="txt">Uma parte dos clientes não pagava a parcela no vencimento, nem pelo débito automático, nem pelo boleto. Isso gerava atraso e custo extra de cobrança. O boleto tinha atrito: acessar, digitar código, esperar a compensação.</p>
+</div>
+<div class="pain">
+<h3 class="h3">a hipótese</h3>
+<p class="txt">Se enviássemos um e-mail com Pix (QR code e copia e cola) no dia do vencimento e dois dias depois, o pagamento pareceria mais prático e imediato. Sucesso seria ver o Pix converter mais que o boleto e a inadimplência cair em relação ao controle.</p>
+</div>
+</div>
+</section>
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
+<section aria-labelledby="ori">
+<p class="lbl">origem</p>
+<h2 class="h2" id="ori">começou num post-it</h2>
+<p class="txt" style="margin-bottom: 32px">Conduzi um brainstorm com o time usando o método Disney: dez minutos na sala dos sonhadores, quinze na dos realistas e vinte na dos críticos. Três desafios na mesa: reduzir a provisão para devedores duvidosos, reduzir a inadimplência e antecipar o recebimento de pagamentos. No fim, as ideias foram organizadas por esforço.</p>
+<figure class="win" style="margin: 0 0 48px">
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">brainstorm / método disney</div></div>
+<img loading="lazy" src="../../assets/37425af9b33b13b528adc91067ae15a0.png" alt="Quadro do brainstorm com o método Disney: os três desafios do dia, a sala dos sonhadores (10 minutos), a dos realistas (15 minutos) e a dos críticos (20 minutos), e a pergunta final: o que você teria orgulho de fazer e mostrar que foi você que fez?">
+</figure>
+<div class="two" style="align-items: start">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<p class="txt">Uma das ideias foi deixar o cliente pagar com Pix cobrança dentro de fluxos que já existiam, como ficar em dia e amortização.</p>
+<p class="txt">Na avaliação, apareceu o caminho mais curto: em vez de construir dentro do app, testar na vida real com o time de cobrança, aproveitando o que já tínhamos aprendido na renegociação. Daí veio o e-mail.</p>
+</div>
+<figure class="win" style="margin: 0; transform: rotate(-1deg)">
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">brainstorm / ideias</div></div>
+<img loading="lazy" src="../../assets/f90a5850e6937fc95c1fbb298320d01c.png" alt="Post-its do brainstorm. Ideia: permitir que o cliente use pix cobrança no ficar em dia ou na amortização. Avaliação: mais simples para testar com fake door, boa ideia, pode ser testado na vida real com o time de cobrança, talvez dê para reaproveitar a experiência de renegociação.">
+</figure>
+</div>
+</section>
+
+<div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
+<section aria-labelledby="papel">
+<p class="lbl">meu papel</p>
+<h2 class="h2" id="papel">se ninguém abrir, o teste não existe</h2>
+<p class="txt" style="margin-bottom: 48px">O experimento dependia de uma coisa antes de qualquer Pix: a pessoa abrir o e-mail e chegar até o botão. Minha parte foi desenhar essa mensagem, da linha de assunto ao último clique.</p>
+<div class="mail">
+<div class="phone"><img loading="lazy" src="../../assets/2cec37f03c13e2670bcfb68a5b42444b.png" alt="Prévia do e-mail: título “pagar seu empréstimo com Pix? Agora dá!”, saudação pelo nome, a frase “Escolhi você para testar uma função nova do empréstimo”, o valor da parcela e o vencimento em destaque e o bloco “Pague com o QR Code”"></div>
+<ol class="lev">
+<li><span class="lev-n">01</span><div><h3 class="h3" style="margin-bottom: 8px">um convite, não uma cobrança</h3><p class="txt">Usei um gatilho de exclusividade: “escolhi você para testar uma função nova”. A pessoa abre um convite, não mais um lembrete de dívida.</p></div></li>
+<li><span class="lev-n">02</span><div><h3 class="h3" style="margin-bottom: 8px">o valor já no e-mail</h3><p class="txt">Valor da parcela e vencimento aparecem logo no começo. Ninguém precisa abrir o app só para conferir quanto deve.</p></div></li>
+<li><span class="lev-n">03</span><div><h3 class="h3" style="margin-bottom: 8px">QR code e copia e cola</h3><p class="txt">A maioria abria o e-mail no celular, e não dá para escanear um QR code com o próprio aparelho que mostra o código. Por isso, as duas formas.</p></div></li>
+<li><span class="lev-n">04</span><div><h3 class="h3" style="margin-bottom: 8px">um botão de copiar, negociado</h3><p class="txt">A primeira proposta técnica era só exibir a linha do código. Negociei com os devs um botão de copiar, porque selecionar um código longo no celular é onde o pagamento morre.</p></div></li>
+<li><span class="lev-n">05</span><div><h3 class="h3" style="margin-bottom: 8px">pagar como um momento fácil</h3><p class="txt">Hierarquizei as informações para o caminho até o pagamento ser curto e o tom ser leve, sem cara de cobrança.</p></div></li>
+</ol>
+</div>
+</section>
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
+<section aria-labelledby="res">
+<p class="lbl">resultados</p>
+<h2 class="h2" id="res">o pagamento subiu nos dois produtos</h2>
+<table class="cmp">
+<thead><tr><th scope="col">indicador</th><th scope="col">produto</th><th scope="col">com e-mail</th><th scope="col">controle</th></tr></thead>
+<tbody>
+<tr><td rowspan="3">valor pago sobre o valor da parcela</td><td>empréstimo pessoal</td><td>98,0%</td><td>90,6%</td></tr>
+<tr><td>pix parcelado</td><td>98,6%</td><td>78,2%</td></tr>
+<tr><td>total</td><td>98,4%</td><td>82,9%</td></tr>
+<tr><td rowspan="3">saldo em atraso sobre o saldo total</td><td>empréstimo pessoal</td><td>4,2%</td><td>11,0%</td></tr>
+<tr><td>pix parcelado</td><td>3,8%</td><td>12,0%</td></tr>
+<tr><td>total</td><td>4,0%</td><td>11,4%</td></tr>
+<tr><td rowspan="3">pagamentos parciais sobre o total de pagamentos</td><td>empréstimo pessoal</td><td>2,9%</td><td>1,3%</td></tr>
+<tr><td>pix parcelado</td><td>2,3%</td><td>1,1%</td></tr>
+<tr><td>total</td><td>2,5%</td><td>1,2%</td></tr>
+</tbody>
+</table>
+<div class="win" style="margin-top: 48px">
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">experimento / resultados</div></div>
+<img loading="lazy" src="../../assets/8311be42ae4c1453f9385cd5fff47e57.jpg" alt="Slide de resultados do experimento: saldo em atraso 64,7% menor, valor pago 18,6% maior e pagamentos parciais 109,7% maiores no grupo de ação">
+</div>
+</section>
+
+<div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
+<section aria-labelledby="vir">
+<p class="lbl">a virada</p>
+<h2 class="h2" id="vir">não foi o pix. foi o lembrete.</h2>
+<p class="lead">A análise mostrou que a principal causa do aumento não foi o Pix em si, e sim o reforço do lembrete. O teste nasceu para validar um meio de pagamento e acabou provando o peso da mensagem.</p>
+<p class="txt" style="margin-top: 32px">Por isso o próximo passo foi testar o lembrete por push, com variações de texto, para entender:</p>
+<ul class="list" style="margin-top: 24px">
+<li>se o disparo só em D+2 mantém o resultado;</li>
+<li>se a palavra “Pix” enviesa o público do Pix parcelado;</li>
+<li>se o cliente entende que o pagamento é pelo app, e não pela fatura.</li>
+</ul>
+</section>
+
+<div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
+<section aria-labelledby="apr">
+<p class="lbl">aprendizados</p>
+<h2 class="h2" id="apr">o que eu levo daqui</h2>
+<ul class="list">
+<li>Ler resultado com honestidade vale mais do que confirmar hipótese. Assumir que o efeito veio do lembrete mudou o roadmap para um caminho mais barato e mais escalável.</li>
+<li>Em teste de comunicação, o texto não é embalagem: é a variável. Se a mensagem não for aberta, nenhuma outra variável chega a ser testada.</li>
+<li>Pequenas negociações técnicas, como um botão de copiar, são decisões de design. Elas decidem se a pessoa termina ou abandona o pagamento.</li>
+</ul>
+<p class="note" style="margin-top: 64px">* Estes números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo Banco Central em janeiro de 2026.</p>
+</section>
+
+</div>
+</div>
+
+</body>
+</html>

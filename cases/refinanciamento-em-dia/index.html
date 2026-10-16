@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>case: refinanciamento em dia · thais castro</title>
+<meta name="description" content="Case: refinanciamento em dia no will bank, do fake door à oferta flexível.">
+<link rel="icon" href="../../assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;family=Work+Sans:wght@400;500;800&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Gokschil';src:url('../../assets/93ba42cb1e8b8a10050eb62645b75517.ttf') format('truetype');font-display:swap}
+body{margin:0;background:#f2f2f5}
+a{color:#292929;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
+a:hover{color:#4c1d95}
+.cs,.cs *{box-sizing:border-box}
+.cs :focus-visible{outline:3px solid #1847e3;outline-offset:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+.lbl{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:uppercase;color:#4c1d95;margin:0 0 8px}
+.h2{font-family:'Roboto Mono',monospace;font-weight:500;font-size:clamp(32px,5vw,64px);line-height:1;letter-spacing:-.02em;text-transform:lowercase;margin:0 0 48px}
+.h3{font-family:'Roboto Mono',monospace;font-weight:500;font-size:20px;line-height:1.2;text-transform:lowercase;margin:0}
+.txt{font-size:16px;line-height:1.6;margin:0;max-width:64ch}
+.lead{font-size:20px;line-height:1.5;margin:0;max-width:52ch}
+.fita{height:16px;margin:96px 0 48px;background:repeating-linear-gradient(var(--a),var(--c) 0 var(--l),transparent var(--l) calc(var(--l) + var(--g)))}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:64px;align-items:start}
+.hero-t{font-family:'Gokschil','Roboto Mono',monospace;font-weight:400;font-size:clamp(56px,8vw,80px);line-height:.9;text-transform:lowercase;margin:0 0 32px}
+.spec{border:2px solid #292929;box-shadow:8px 8px 0 #292929;background:#fffefe}
+.spec-r{display:grid;grid-template-columns:144px minmax(0,1fr)}
+.spec-r + .spec-r{border-top:2px solid #292929}
+.spec-k{padding:16px;background:#ffff8d;border-right:2px solid #292929;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95}
+.spec-v{padding:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;line-height:1.5;text-transform:lowercase}
+.big{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:2px solid #292929;background:#fffefe}
+.big-c{padding:32px 24px;display:flex;flex-direction:column;gap:8px}
+.big-c + .big-c{border-left:2px solid #292929}
+.big-n{font-family:'Roboto Mono',monospace;font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1;letter-spacing:-.02em}
+.big-l{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;line-height:1.4;text-transform:lowercase}
+.note{font-family:'Roboto Mono',monospace;font-size:12px;line-height:1.5;margin:16px 0 0}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.pain{display:flex;flex-direction:column;gap:16px;border-top:2px solid #292929;padding-top:24px}
+.quote{margin:48px 0 0;padding:24px 0 24px 32px;border-left:16px solid #e97045;font-family:'Roboto Mono',monospace;font-weight:500;font-size:20px;line-height:1.4;max-width:40ch}
+.list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:16px}
+.list li{display:flex;gap:16px;align-items:baseline;font-size:16px;line-height:1.6;max-width:64ch}
+.list li::before{content:'+';font-family:'Roboto Mono',monospace;font-weight:800;color:#e97045;flex-shrink:0}
+.funnel{display:flex;flex-direction:column;gap:16px}
+.fn{display:grid;grid-template-columns:200px minmax(0,1fr) 96px;gap:16px;align-items:center;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase}
+.fn-bar{height:32px;background:#1847e3;border:2px solid #292929}
+.fn-n{text-align:right;font-size:16px}
+.dec{display:flex;flex-direction:column;gap:0;border-top:2px solid #292929}
+.dec-i{display:grid;grid-template-columns:64px minmax(0,1fr);gap:24px;padding:32px 0;border-bottom:2px solid #292929}
+.dec-n{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;color:#4c1d95}
+.dec-b{display:flex;flex-direction:column;gap:16px}
+.dec-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.dec-k{font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95;margin:0 0 8px}
+.win{border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #292929;background:#fffefe;overflow:hidden}
+.win-bar{display:flex;align-items:center;gap:16px;padding:8px 16px;background:#f2f2f5;border-bottom:2px solid #292929}
+.win-dots{display:flex;gap:8px}
+.win-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #292929;display:block}
+.win-url{flex:1 1 auto;min-width:0;padding:8px 16px;background:#fffefe;border:1px solid #292929;border-radius:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.win img{display:block;width:100%;height:auto}
+.cap{font-family:'Roboto Mono',monospace;font-size:12px;line-height:1.5;margin:24px 0 0;max-width:64ch}
+.cmp{width:100%;border-collapse:collapse;border:2px solid #292929;background:#fffefe;font-family:'Roboto Mono',monospace;font-size:14px}
+.cmp th,.cmp td{padding:16px;text-align:left;border-bottom:2px solid #292929}
+.cmp th{background:#ffff8d;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95}
+.cmp td + td,.cmp th + th{border-left:2px solid #292929}
+.gc{position:absolute;display:block;pointer-events:none;image-rendering:pixelated}
+@media (max-width:1180px){.gc{display:none}}
+@media (max-width:820px){
+.wrap{padding:0 16px}
+.hero,.two,.dec-g{grid-template-columns:minmax(0,1fr);gap:32px}
+.big{grid-template-columns:repeat(2,minmax(0,1fr))}
+.big-c + .big-c{border-left:0}
+.big-c:nth-child(even){border-left:2px solid #292929}
+.big-c:nth-child(n+3){border-top:2px solid #292929}
+.fn{grid-template-columns:minmax(0,1fr) 72px}
+.fn-bar{grid-column:1 / -1;grid-row:2}
+.dec-i{grid-template-columns:minmax(0,1fr);gap:8px}
+.spec-r{grid-template-columns:112px minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="cs" style="background: #f2f2f5; color: #292929; font-family: 'Work Sans',sans-serif; padding: 64px 0 96px; position: relative; overflow: hidden">
+<nav class="wrap" style="margin-bottom: 32px"><a href="../../" style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 16px; text-transform: lowercase">← voltar para o portfólio</a></nav>
+<div class="wrap">
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px; margin: 0 0 64px; height: 24px"></div>
+
+<header class="hero">
+<div>
+<p class="lbl">case / crédito</p>
+<h1 class="hero-t">refinancia­mento em dia</h1>
+<p class="lead">Bons pagadores com um imprevisto não tinham como reorganizar o empréstimo antes de atrasar. Validei a demanda com um fake door e desenhei o produto que deixou o cliente ajustar o próprio contrato.</p>
+</div>
+<div class="spec" role="table" aria-label="Ficha técnica">
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">produto</div><div class="spec-v" role="cell">refinanciamento de empréstimo pessoal para clientes em dia</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">empresa</div><div class="spec-v" role="cell">will bank</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">período</div><div class="spec-v" role="cell">mai/2025 a jan/2026</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">meu papel</div><div class="spec-v" role="cell">product designer: discovery, experimento, ux writing e ui</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">time</div><div class="spec-v" role="cell">bu empréstimos: pm, design manager, devs e crédito</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">métodos</div><div class="spec-v" role="cell">fake door com survey, piloto e evolução</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">plataforma</div><div class="spec-v" role="cell">app ios e android</div></div>
+</div>
+</header>
+
+<div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
+<section aria-labelledby="bn">
+<p class="lbl">big numbers</p>
+<h2 class="h2" id="bn">em 5 meses de produto</h2>
+<div class="big">
+<div class="big-c"><span class="big-n">+R$ 500 mil</span><span class="big-l">em valor produzido</span></div>
+<div class="big-c"><span class="big-n">406</span><span class="big-l">contratos refinanciados</span></div>
+<div class="big-c" style="background: #1847e3; color: #fffefe"><span class="big-n">+66%</span><span class="big-l">no prazo médio dos contratos</span></div>
+<div class="big-c"><span class="big-n">2,70%</span><span class="big-l">de penetração em ~15 mil elegíveis</span></div>
+</div>
+<p class="note">Só 2 dos 5 meses tiveram o produto liberado para toda a base elegível.</p>
+</section>
+
+<div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
+<section aria-labelledby="ctx">
+<p class="lbl">contexto</p>
+<h2 class="h2" id="ctx">estávamos punindo bons clientes</h2>
+<div class="two">
+<div class="pain">
+<h3 class="h3">a dor do cliente</h3>
+<p class="txt">Perda de emprego, problema de saúde, mudança na data do salário. Quem estava em dia e previa um aperto procurava o chat para renegociar antes de atrasar, mas não tinha opção. O único caminho era deixar o contrato atrasar, esperar pelo menos 15 dias e só então receber uma oferta da cobrança, já com o nome em risco.</p>
+</div>
+<div class="pain">
+<h3 class="h3">a dor do negócio</h3>
+<p class="txt">Sem flexibilidade para reorganizar a dívida, o risco de inadimplência subia, bons clientes iam embora e o banco deixava de ganhar com contratos mais longos. Quando a dor do cliente encontra a do negócio, ali no meio tem uma oportunidade.</p>
+</div>
+</div>
+<blockquote class="quote">“Sei que não vou ter dinheiro este mês, quero renegociar meu empréstimo.”</blockquote>
+</section>
+
+<div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
+<section aria-labelledby="papel">
+<p class="lbl">meu papel</p>
+<h2 class="h2" id="papel">dois trabalhos ao mesmo tempo</h2>
+<ul class="list">
+<li>Validar com dados que a necessidade existia, desenhando e analisando o experimento de fake door.</li>
+<li>Definir com o time regras de negócio, limitações técnicas e estratégia antes de abrir o figma.</li>
+<li>Desenhar o fluxo inteiro, do botão no acompanhamento à tela de sucesso, com interface e texto.</li>
+<li>Levar mais de uma proposta para cada decisão e defender as escolhas com o time.</li>
+</ul>
+</section>
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
+<section aria-labelledby="exp">
+<p class="lbl">validação</p>
+<h2 class="h2" id="exp">um fake door que não parecia pesquisa</h2>
+<p class="txt" style="margin-bottom: 48px">Coloquei um botão “Renegociar” dentro do acompanhamento do contrato. Só chegava nele quem estava procurando. O botão levava a um questionário desenhado para parecer o fluxo real, e a pessoa só descobria que era pesquisa no final. Isso deu mais confiança às respostas de quem chegava até o fim.</p>
+<div class="funnel" role="img" aria-label="Funil do fake door: 60.095 pessoas viram o botão, 10.140 clicaram, 1.829 começaram o fluxo e 714 concluíram">
+<div class="fn"><span>viram o botão</span><div class="fn-bar" style="width: 100%"></div><span class="fn-n">60.095</span></div>
+<div class="fn"><span>clicaram</span><div class="fn-bar" style="width: 16.9%"></div><span class="fn-n">10.140</span></div>
+<div class="fn"><span>começaram o fluxo</span><div class="fn-bar" style="width: 3%"></div><span class="fn-n">1.829</span></div>
+<div class="fn"><span>concluíram</span><div class="fn-bar" style="width: 1.2%; background: #e97045"></div><span class="fn-n">714</span></div>
+</div>
+<p class="note">28/05 a 17/06/2025. Clientes com empréstimo pessoal ativo e em dia. 95% de confiança, margem de erro de 3,67 p.p.</p>
+<div class="two" style="margin-top: 48px">
+<div class="pain"><h3 class="h3">7,04% do clique à conclusão</h3><p class="txt">Uma taxa parecida com a do fake door do FGTS, que depois se confirmou em produção.</p></div>
+<div class="pain"><h3 class="h3">acessos perto do vencimento</h3><p class="txt">Os picos de acesso caíram um ou dois dias antes ou depois dos vencimentos mais escolhidos. Esse cliente acompanha o empréstimo de perto, o que mostra boa-fé.</p></div>
+</div>
+</section>
+
+<div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
+<section aria-labelledby="dec">
+<p class="lbl">decisões</p>
+<h2 class="h2" id="dec">o que eu escolhi e por quê</h2>
+<div class="dec">
+<div class="dec-i"><span class="dec-n">01</span><div class="dec-b">
+<h3 class="h3">começar por esticar o prazo</h3>
+<div class="dec-g">
+<div><p class="dec-k">descartei, por enquanto</p><p class="txt">O refin com troco, mais pedido no fake door (51% contra 21%). Exigia business plan mais maduro, nova política de crédito e mais tempo de desenvolvimento.</p></div>
+<div><p class="dec-k">escolhi</p><p class="txt">Esticar o prazo: resolve a mesma dor sem o dinheiro extra, entrega valor mais rápido, reaproveita telas e componentes e deixa o troco como evolução natural.</p></div>
+</div></div></div>
+<div class="dec-i"><span class="dec-n">02</span><div class="dec-b">
+<h3 class="h3">chamar de “ajustar”, não de “renegociar”</h3>
+<div class="dec-g">
+<div><p class="dec-k">descartei</p><p class="txt">“Renegociar” é fácil de reconhecer, mas a cobrança já usava o termo com inadimplentes. A palavra carrega atraso, justamente o que esse cliente queria evitar.</p></div>
+<div><p class="dec-k">escolhi</p><p class="txt">“Ajustar”: nenhum outro banco usava, gera curiosidade e não pesa no momento do cliente. Assumi o risco de menos cliques, e o resultado mostrou que valeu.</p></div>
+</div></div></div>
+<div class="dec-i"><span class="dec-n">03</span><div class="dec-b">
+<h3 class="h3">nunca levar só uma opção pro refinamento</h3>
+<div class="dec-g">
+<div><p class="dec-k">piloto</p><p class="txt">Uma oferta única, mais simples de desenvolver. Foi o que lançamos primeiro, para medir.</p></div>
+<div><p class="dec-k">evolução</p><p class="txt">Uma oferta flexível, em que o cliente escolhe o número de parcelas. Pedia um componente novo de comparação. Os dados do piloto provaram que ela era necessária, e ela trouxe +7% de conversão.</p></div>
+</div></div></div>
+<div class="dec-i"><span class="dec-n">04</span><div class="dec-b">
+<h3 class="h3">transparência como regra de layout</h3>
+<p class="txt">No resumo, todas as taxas aparecem com o mesmo tamanho de fonte, o cliente vê o que acontece com o contrato antigo e pode abrir a explicação detalhada do que será cobrado. Um comparativo de antes e depois acelera a decisão sem esconder nada.</p>
+</div></div>
+</div>
+</section>
+
+<div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
+<section aria-labelledby="sol">
+<p class="lbl">solução</p>
+<h2 class="h2" id="sol">do piloto à oferta flexível</h2>
+<div class="win">
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">refin em dia / evolução</div></div>
+<img loading="lazy" src="../../assets/f6609427b43f3b41704906e597a598f0.jpg" alt="Comparação de telas: o piloto, com uma oferta única de ajuste, e a oferta flexível, em que o cliente aumenta ou diminui o número de parcelas e vê o alívio na parcela">
+</div>
+<p class="cap">À esquerda, o piloto com uma oferta única. À direita, a oferta flexível: o cliente estica o prazo até a parcela caber no bolso e vê na hora o alívio e o antes e depois do contrato.</p>
+</section>
+
+<div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
+<section aria-labelledby="res">
+<p class="lbl">resultados</p>
+<h2 class="h2" id="res">a previsão contra a realidade</h2>
+<table class="cmp">
+<thead><tr><th scope="col">indicador</th><th scope="col">previsão do fake door</th><th scope="col">em produção</th></tr></thead>
+<tbody>
+<tr><td>contratos por dia</td><td>5,1</td><td>4,11</td></tr>
+<tr><td>ticket médio</td><td>R$ 2.240</td><td>R$ 1.506</td></tr>
+</tbody>
+</table>
+<p class="txt" style="margin-top: 24px">A diferença no ticket já era esperada e foi alinhada com o time antes do business plan: no fake door, o cliente estimava de cabeça quanto faltava pagar, num slider que começava num valor pré-selecionado.</p>
+<div class="win" style="margin-top: 48px">
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">refin em dia / big numbers</div></div>
+<img loading="lazy" src="../../assets/a699d8056e5805a87692a304896e6afb.png" alt="Big numbers em 5 meses de produto: mais de R$ 500 mil produzidos, 406 contratos refinanciados, prazo médio 66% maior e 2,70% de penetração">
+</div>
+</section>
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
+<section aria-labelledby="apr">
+<p class="lbl">aprendizados</p>
+<h2 class="h2" id="apr">o que eu levo daqui</h2>
+<ul class="list">
+<li>Pequei pelo excesso: o questionário do fake door era mais longo que o necessário. Funcionou para ter um funil mais seguro, mas custou respostas no meio do caminho.</li>
+<li>Componente de resposta também enviesa dado. Um slider que já começa num valor puxa a média para ele.</li>
+<li>Tem coisa que só o teste resolve. O tom comemorativo da tela de sucesso me parecia infantil, mas era bem aceito pelo cliente will.</li>
+</ul>
+<p class="note" style="margin-top: 64px">* Estes números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo Banco Central em janeiro de 2026.</p>
+</section>
+
+</div>
+</div>
+
+</body>
+</html>
