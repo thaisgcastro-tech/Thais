@@ -81,7 +81,7 @@ a{color:#292929}
 .tnav{top:8px}
 .tnav-win{box-shadow:4px 4px 0 #1847e3}
 .tnav-dots,.tnav-cmd,.tnav-list{display:none}
-.tnav-prompt{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.tnav-prompt{flex-shrink:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
 .tnav-ls{display:inline-flex}
 }
 .tnav-list a[aria-current]{background:#ffff8d;color:#292929}
@@ -123,7 +123,7 @@ a{color:#292929}
 <div class="flt-grid">
 <button type="button" class="flt-o is-on" aria-pressed="true" data-on="click:pick"><span class="flt-t">ver todos os cases</span><span class="flt-s">sem filtro, na ordem de sempre</span></button><button type="button" class="flt-o" aria-pressed="false" data-on="click:pick"><span class="flt-t">product designer generalista</span><span class="flt-s">do problema à interface, de ponta a ponta</span></button><button type="button" class="flt-o" aria-pressed="false" data-on="click:pick"><span class="flt-t">foco em ui e interação</span><span class="flt-s">fluxos, componentes e layout</span></button><button type="button" class="flt-o" aria-pressed="false" data-on="click:pick"><span class="flt-t">foco em conteúdo</span><span class="flt-s">ux writing e content design</span></button><button type="button" class="flt-o" aria-pressed="false" data-on="click:pick"><span class="flt-t">foco em dados e experimentação</span><span class="flt-s">testes, métricas e growth</span></button><button type="button" class="flt-o" aria-pressed="false" data-on="click:pick"><span class="flt-t">foco em pesquisa e discovery</span><span class="flt-s">validar antes de construir</span></button><button type="button" class="flt-o" aria-pressed="false" data-on="click:pick"><span class="flt-t">design com ia</span><span class="flt-s">ia no processo, com critério humano</span></button><button type="button" class="flt-o" aria-pressed="false" data-on="click:pick"><span class="flt-t">fintech e produtos regulados</span><span class="flt-s">crédito, cobrança e transparência</span></button><button type="button" class="flt-o" aria-pressed="false" data-on="click:pick"><span class="flt-t">sênior com influência no time</span><span class="flt-s">facilitar, negociar e alinhar</span></button>
 </div>
-<p class="flt-n" aria-live="polite">mostrando todos os 2 cases</p>
+<p class="flt-n" aria-live="polite">mostrando todos os 4 cases</p>
 </div>
 <ul class="cases">
 <sc-if data-if="c.show"><li>
@@ -148,7 +148,34 @@ a{color:#292929}
 <p class="txt">Um teste para ver se o Pix aumentava o pagamento em dia virou outra descoberta: o que fez o cliente pagar foi a mensagem certa, na hora certa. Eu escrevi essa mensagem.</p>
 <p class="case-n" style="background: #292929">−64,7% no saldo em atraso</p>
 <sc-if data-if="c.hasWhy" hidden><div class="why"><span class="why-l">por que ler, para esse perfil</span><p class="why-t"></p></div></sc-if>
-<div class="sk"><span class="sk-l">habilidades usadas</span><ul class="sk-list"><li class="">facilitação de brainstorm</li><li class="">desenho de experimento</li><li class="">estratégia de conteúdo</li><li class="">ux writing</li><li class="">hierarquia da informação</li><li class="">negociação técnica</li></ul></div>
+<div class="sk"><span class="sk-l">habilidades usadas</span><ul class="sk-list"><li class="">facilitação de brainstorm</li><li class="">desenho de experimento</li><li class="">estratégia de conteúdo</li><li class="">ux writing</li><li class="">hierarquia da informação</li><li class="">negociação técnica</li><sc-if data-if="c.show"><li>
+<a class="case" href="/cases/transparencia/">
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">~/portfolio/transparencia.case</div><sc-if data-if="c.first" hidden><span class="first">comece por aqui</span></sc-if></div>
+<div class="case-b">
+<p class="lbl">case / crédito</p>
+<h2 class="case-t">transparência como regra de produto</h2>
+<p class="txt">Empréstimo assusta. Transformei transparência, segurança e clareza em regras de tela que se repetiram de um produto de crédito para o outro.</p>
+<p class="case-n" style="background: #292929">3º lugar no índice de transparência novücard</p>
+<sc-if data-if="c.hasWhy" hidden><div class="why"><span class="why-l">por que ler, para esse perfil</span><p class="why-t"></p></div></sc-if>
+<div class="sk"><span class="sk-l">habilidades usadas</span><ul class="sk-list"><li class="">discovery</li><li class="">estratégia de conteúdo</li><li class="">ux writing</li><li class="">teste de conteúdo</li><li class="">dados para convencer</li><li class="">padrões de interface</li></ul></div>
+<span class="case-go">abrir case →</span>
+</div>
+</a>
+</li></sc-if><sc-if data-if="c.show"><li>
+<a class="case" href="/cases/este-portfolio/">
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">~/portfolio/este-portfolio.case</div><sc-if data-if="c.first" hidden><span class="first">comece por aqui</span></sc-if></div>
+<div class="case-b">
+<p class="lbl">case / processo</p>
+<h2 class="case-t">este portfólio, feito com ia</h2>
+<p class="txt">O case é o site que você está lendo. Desenhei, escrevi e publiquei com o Claude como parceiro de produção: a IA acelerou o fazer, e direção, sistema e conteúdo ficaram comigo.</p>
+<p class="case-n" style="background: #1847e3">feito por thais + claude</p>
+<sc-if data-if="c.hasWhy" hidden><div class="why"><span class="why-l">por que ler, para esse perfil</span><p class="why-t"></p></div></sc-if>
+<div class="sk"><span class="sk-l">habilidades usadas</span><ul class="sk-list"><li class="">ia no processo</li><li class="">direção de arte</li><li class="">design system</li><li class="">estratégia de conteúdo</li><li class="">heurísticas de usabilidade</li><li class="">curadoria de ferramentas</li></ul></div>
+<span class="case-go">abrir case →</span>
+</div>
+</a>
+</li></sc-if>
+</ul></div>
 <span class="case-go">abrir case →</span>
 </div>
 </a>

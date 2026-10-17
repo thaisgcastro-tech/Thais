@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<title>este portfólio, feito com ia · case · thais castro</title>
+<meta name="description" content="Case: como Thais Castro desenhou, escreveu e publicou este portfólio usando IA como parceira de produção.">
+<link rel="icon" href="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;family=Work+Sans:wght@400;500;800&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Gokschil';src:url('/assets/93ba42cb1e8b8a10050eb62645b75517.ttf') format('truetype');font-display:swap}
+body{margin:0;background:#f2f2f5}
+a{color:#292929;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
+a:hover{color:#4c1d95}
+.cs,.cs *{box-sizing:border-box}
+.cs :focus-visible{outline:3px solid #1847e3;outline-offset:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+.lbl{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:uppercase;color:#4c1d95;margin:0 0 8px}
+.h2{font-family:'Roboto Mono',monospace;font-weight:500;font-size:clamp(32px,5vw,64px);line-height:1;letter-spacing:-.02em;text-transform:lowercase;margin:0 0 48px}
+.h3{font-family:'Roboto Mono',monospace;font-weight:500;font-size:20px;line-height:1.2;text-transform:lowercase;margin:0}
+.txt{font-size:16px;line-height:1.6;margin:0;max-width:64ch}
+.lead{font-size:20px;line-height:1.5;margin:0;max-width:52ch}
+.fita{height:16px;margin:96px 0 48px;background:repeating-linear-gradient(var(--a),var(--c) 0 var(--l),transparent var(--l) calc(var(--l) + var(--g)))}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:64px;align-items:start}
+.hero-t{font-family:'Gokschil','Roboto Mono',monospace;font-weight:400;font-size:clamp(56px,8vw,80px);line-height:.9;text-transform:lowercase;margin:0 0 32px}
+.spec{border:2px solid #292929;box-shadow:8px 8px 0 #292929;background:#fffefe}
+.spec-r{display:grid;grid-template-columns:144px minmax(0,1fr)}
+.spec-r + .spec-r{border-top:2px solid #292929}
+.spec-k{padding:16px;background:#ffff8d;border-right:2px solid #292929;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95}
+.spec-v{padding:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;line-height:1.5;text-transform:lowercase}
+.big{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:2px solid #292929;background:#fffefe}
+.big-c{padding:32px 24px;display:flex;flex-direction:column;gap:8px}
+.big-c + .big-c{border-left:2px solid #292929}
+.big-n{font-family:'Roboto Mono',monospace;font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1;letter-spacing:-.02em}
+.big-l{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;line-height:1.4;text-transform:lowercase}
+.note{font-family:'Roboto Mono',monospace;font-size:12px;line-height:1.5;margin:16px 0 0}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.pain{display:flex;flex-direction:column;gap:16px;border-top:2px solid #292929;padding-top:24px}
+.quote{margin:48px 0 0;padding:24px 0 24px 32px;border-left:16px solid #e97045;font-family:'Roboto Mono',monospace;font-weight:500;font-size:20px;line-height:1.4;max-width:40ch}
+.list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:16px}
+.list li{display:flex;gap:16px;align-items:baseline;font-size:16px;line-height:1.6;max-width:64ch}
+.list li::before{content:'+';font-family:'Roboto Mono',monospace;font-weight:800;color:#e97045;flex-shrink:0}
+.funnel{display:flex;flex-direction:column;gap:16px}
+.fn{display:grid;grid-template-columns:200px minmax(0,1fr) 96px;gap:16px;align-items:center;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase}
+.fn-bar{height:32px;background:#1847e3;border:2px solid #292929}
+.fn-n{text-align:right;font-size:16px}
+.dec{display:flex;flex-direction:column;gap:0;border-top:2px solid #292929}
+.dec-i{display:grid;grid-template-columns:64px minmax(0,1fr);gap:24px;padding:32px 0;border-bottom:2px solid #292929}
+.dec-n{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;color:#4c1d95}
+.dec-b{display:flex;flex-direction:column;gap:16px}
+.dec-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.dec-k{font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95;margin:0 0 8px}
+.win{border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #292929;background:#fffefe;overflow:hidden}
+.win-bar{display:flex;align-items:center;gap:16px;padding:8px 16px;background:#f2f2f5;border-bottom:2px solid #292929}
+.win-dots{display:flex;gap:8px}
+.win-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #292929;display:block}
+.win-url{flex:1 1 auto;min-width:0;padding:8px 16px;background:#fffefe;border:1px solid #292929;border-radius:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.win img{display:block;width:100%;height:auto}
+.cap{font-family:'Roboto Mono',monospace;font-size:12px;line-height:1.5;margin:24px 0 0;max-width:64ch}
+.cmp{width:100%;border-collapse:collapse;border:2px solid #292929;background:#fffefe;font-family:'Roboto Mono',monospace;font-size:14px}
+.cmp th,.cmp td{padding:16px;text-align:left;border-bottom:2px solid #292929}
+.cmp th{background:#ffff8d;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95}
+.cmp td + td,.cmp th + th{border-left:2px solid #292929}
+.gc{position:absolute;display:block;pointer-events:none;image-rendering:pixelated}
+@media (max-width:1180px){.gc{display:none}}
+@media (max-width:820px){
+.wrap{padding:0 16px}
+.hero,.two,.dec-g{grid-template-columns:minmax(0,1fr);gap:32px}
+.big{grid-template-columns:repeat(2,minmax(0,1fr))}
+.big-c + .big-c{border-left:0}
+.big-c:nth-child(even){border-left:2px solid #292929}
+.big-c:nth-child(n+3){border-top:2px solid #292929}
+.fn{grid-template-columns:minmax(0,1fr) 72px}
+.fn-bar{grid-column:1 / -1;grid-row:2}
+.dec-i{grid-template-columns:minmax(0,1fr);gap:8px}
+.spec-r{grid-template-columns:112px minmax(0,1fr)}
+}
+/* menu: linha de comando (igual ao site) */
+.tnav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);margin:0;font-family:'Roboto Mono',monospace;color:#f2f2f5}
+.tnav *{box-sizing:border-box}
+.tnav-win{display:flex;flex-direction:column;background:#292929;border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #1847e3;overflow:hidden}
+.tnav-line{display:flex;align-items:center;gap:16px;padding:8px 8px 8px 16px;min-height:56px}
+.tnav-dots{display:flex;gap:8px;flex-shrink:0}
+.tnav-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;display:block}
+.tnav-prompt{flex-shrink:0;font-size:14px;white-space:nowrap}
+.tnav-prompt b{font-weight:500;color:#ffff8d}
+.tnav-cmd{color:#e97045;font-size:14px;flex-shrink:0}
+.tnav-list{display:flex;align-items:center;gap:8px;margin:0;padding:0;list-style:none;min-width:0;overflow-x:auto;scrollbar-width:none}
+.tnav-list a{display:inline-flex;align-items:center;min-height:40px;padding:0 8px;font-size:14px;font-weight:500;color:#f2f2f5;text-decoration:none;text-transform:lowercase;white-space:nowrap;border:1px dashed transparent}
+.tnav-list a:hover{border-color:#ffff8d;color:#ffff8d}
+.tnav-ls{display:none;flex-shrink:0;margin-left:auto;width:48px;height:40px;padding:0;align-items:center;justify-content:center;background:#ffff8d;color:#292929;border:0;cursor:pointer}
+.tnav-out{order:2;display:block;margin:0;padding:8px 16px 16px;list-style:none;border-top:1px dashed #a3a3a3;font-size:14px}
+.tnav-out a{display:flex;gap:16px;align-items:center;min-height:44px;color:#f2f2f5;text-decoration:none;text-transform:lowercase}
+.tnav-out a span{color:#a3a3a3;font-size:12px;width:40px;flex-shrink:0}
+.tnav :focus-visible{outline:3px solid #ffff8d;outline-offset:2px}
+@media (min-width:1001px){.tnav-out{display:none}}
+@media (max-width:1000px){
+.tnav{top:8px}
+.tnav-win{box-shadow:4px 4px 0 #1847e3}
+.tnav-dots,.tnav-cmd,.tnav-list{display:none}
+.tnav-prompt{flex-shrink:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.tnav-ls{display:inline-flex}
+}
+.tnav-list a[aria-current]{background:#ffff8d;color:#292929}
+.tnav-out a[aria-current]{color:#ffff8d}
+.tnav-sub{color:#ffff8d}
+.tnav-soon{display:inline-flex;align-items:center;gap:16px;min-height:40px;padding:0 8px;font-size:14px;font-weight:500;color:#8a8a8a;white-space:nowrap;cursor:default}
+.tnav-out .tnav-soon{padding:0;min-height:44px}
+.tnav-out .tnav-soon span{color:#8a8a8a;font-size:12px;width:40px;flex-shrink:0}
+.tnav-out .tnav-subitem a{min-height:40px;padding-left:16px;color:#d6d6d6}
+/* case portfólio com ia */
+.side{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:64px;align-items:start}
+.smile{width:64px;height:64px;background:#ffff8d;border:2px solid #292929;position:relative;flex-shrink:0;transform:rotate(-8deg)}
+.smile img{position:absolute;left:12px;top:12px;width:36px;height:36px;image-rendering:pixelated}
+.hero-sign{display:flex;align-items:center;gap:24px;margin:48px 0 0}
+.hero-sign p{margin:0;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase}
+.who th:first-child,.who td:first-child{width:144px;background:#ffff8d;color:#4c1d95;font-weight:500;font-size:12px;text-transform:lowercase}
+.who td{line-height:1.5;vertical-align:top}
+.term{background:#292929;color:#f2f2f5;border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #1847e3;overflow:hidden;margin:0}
+.term-bar{display:flex;align-items:center;gap:16px;padding:8px 16px;border-bottom:1px dashed #a3a3a3}
+.term-bar .win-dots span{border-color:#f2f2f5}
+.term-t{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px}
+.term-l{margin:0;padding:24px;list-style:none;display:flex;flex-direction:column;gap:16px;font-family:'Roboto Mono',monospace;font-size:14px;line-height:1.5}
+.term-l b{font-weight:500;color:#ffff8d}
+.term-l span{display:block;color:#d6d6d6;font-size:12px}
+.steps{list-style:none;margin:0;padding:0}
+.steps li{position:relative;padding:0 0 32px 48px}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{content:'';position:absolute;left:11px;top:20px;bottom:-4px;width:2px;background:#292929}
+.steps li:last-child::before{display:none}
+.steps li::after{content:'';position:absolute;left:4px;top:2px;width:16px;height:16px;border-radius:50%;background:#ffff8d;border:2px solid #292929}
+.st-n{display:block;margin:0 0 4px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;line-height:20px;color:#4c1d95}
+.steps .h3{margin:0 0 8px}
+.cmts{display:flex;flex-direction:column;gap:16px;margin:48px 0 0;padding:0;list-style:none}
+.cmt{display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;align-items:start}
+.cmt-a{width:40px;height:40px;border-radius:50%;border:2px solid #292929;background:#e97045;display:flex;align-items:center;justify-content:center;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;color:#292929}
+.cmt-b{padding:16px;background:#fffefe;border:2px solid #292929;font-family:'Roboto Mono',monospace;font-size:14px;line-height:1.5;text-transform:lowercase}
+.cmt-b small{display:block;margin:8px 0 0;font-size:12px;color:#4c1d95}
+.pal{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:2px solid #292929;background:#fffefe}
+.sw{display:flex;flex-direction:column;margin:0}
+.sw + .sw{border-left:2px solid #292929}
+.sw-c{height:96px;border-bottom:2px solid #292929}
+.sw figcaption{padding:16px;display:flex;flex-direction:column;gap:4px;font-family:'Roboto Mono',monospace;font-size:12px;line-height:1.4;text-transform:lowercase}
+.sw figcaption b{font-weight:500;font-size:14px}
+.rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin:64px 0 0;padding:0;list-style:none}
+.rule{display:flex;flex-direction:column;gap:8px;padding:24px;background:#fffefe;border:2px solid #292929}
+.rule-k{font-family:'Roboto Mono',monospace;font-weight:500;font-size:32px;line-height:1}
+.rule-t{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;line-height:1.4;text-transform:lowercase;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chip{padding:4px 8px;border:1px solid #292929;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase;background:#fffefe}
+.chip.on{background:#ffff8d}
+.chip.off{background:transparent;color:#5c5c5c;text-decoration:line-through}
+.shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start}
+.shot{margin:0;display:flex;flex-direction:column;gap:16px}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{font-family:'Roboto Mono',monospace;font-size:12px;line-height:1.5;margin:0}
+.paper{border:2px solid #292929;box-shadow:8px 8px 0 #292929;background:#fffefe}
+.thread{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:48px 0 0}
+.thread .win{box-shadow:none}
+.next{margin:64px 0 0;display:flex;flex-wrap:wrap;gap:24px;align-items:center}
+@media (max-width:1000px){.pal{grid-template-columns:repeat(3,minmax(0,1fr))}.sw + .sw{border-left:0}.sw:nth-child(3n+2),.sw:nth-child(3n){border-left:2px solid #292929}.sw:nth-child(n+4){border-top:2px solid #292929}}
+@media (max-width:820px){
+.shots,.thread{grid-template-columns:minmax(0,1fr);gap:32px}
+.side,.rules{grid-template-columns:minmax(0,1fr);gap:32px}
+.pal{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sw:nth-child(3n+2),.sw:nth-child(3n){border-left:0}
+.sw:nth-child(even){border-left:2px solid #292929}
+.sw:nth-child(n+3){border-top:2px solid #292929}
+.who th:first-child,.who td:first-child{width:96px}
+}
+</style>
+<style>sc-if{display:contents}[hidden]{display:none!important}.tnav-list a[aria-current]{background:#ffff8d;color:#292929}.tnav-out a[aria-current]{color:#ffff8d}</style>
+</head>
+<body data-page="case">
+<div class="cs" id="topo" style="background: #f2f2f5; color: #292929; font-family: 'Work Sans',sans-serif; padding: 128px 0 0; position: relative; overflow: hidden">
+<nav class="tnav" aria-label="menu">
+<div class="tnav-win">
+<sc-if data-if="menuOpen" hidden>
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/" aria-current="page"><span>02</span>portfolio/</a></li><li><a href="/opinioes/"><span>03</span>opinioes/</a></li><li><a href="/contato/"><span>04</span>contato/</a></li></ul>
+</sc-if>
+<div class="tnav-line">
+<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/portfolio/<span class="tnav-sub">este-portfolio.case</span> $</span>
+<span class="tnav-cmd" aria-hidden="true">cd</span>
+<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/" aria-current="page">portfolio/</a></li><li><a href="/opinioes/">opinioes/</a></li><li><a href="/contato/">contato/</a></li></ul>
+<button class="tnav-ls" type="button" data-on="click:toggleMenu" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
+<sc-if data-if="menuClosed"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292929" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
+<sc-if data-if="menuOpen" hidden><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292929" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
+</button>
+</div>
+</div>
+</nav>
+<div class="wrap">
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px; margin: 0 0 64px; height: 24px"></div>
+
+<header class="hero">
+<div>
+<p class="lbl">case / processo</p>
+<h1 class="hero-t">este portfólio, feito com ia</h1>
+<p class="lead">O case é o site que você está lendo. Desenhei, escrevi e publiquei o thais.coffee com o Claude como parceiro de produção. A IA acelerou o fazer. Direção, sistema e conteúdo continuaram comigo.</p>
+<div class="hero-sign">
+<span class="smile" aria-hidden="true"><img src="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" alt=""></span>
+<p>feito por thais + claude</p>
+</div>
+</div>
+<div class="spec" role="table" aria-label="Ficha técnica">
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">produto</div><div class="spec-v" role="cell">thais.coffee: sobre, portfólio, opiniões e contato</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">período</div><div class="spec-v" role="cell">out/2026, em evolução</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">meu papel</div><div class="spec-v" role="cell">direção de arte, design system, conteúdo e a palavra final em cada detalhe</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">time</div><div class="spec-v" role="cell">eu + claude</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">ferramentas</div><div class="spec-v" role="cell">canvas de design do claude, skills frontend-design e canvas-design, github e hostinger</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">métodos</div><div class="spec-v" role="cell">iteração por comentário na tela, design system documentado e revisão por heurísticas</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">plataforma</div><div class="spec-v" role="cell">web, do desktop ao celular</div></div>
+</div>
+</header>
+
+<div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
+<section aria-labelledby="bn">
+<p class="lbl">big numbers</p>
+<h2 class="h2" id="bn">o site, em números contados</h2>
+<div class="big">
+<div class="big-c"><span class="big-n">4</span><span class="big-l">páginas principais, sem home: o sobre é a entrada</span></div>
+<div class="big-c"><span class="big-n">4</span><span class="big-l">cases, este incluído</span></div>
+<div class="big-c" style="background: #292929; color: #fffefe"><span class="big-n">6</span><span class="big-l">cores, cada uma com uma função</span></div>
+<div class="big-c"><span class="big-n">8 px</span><span class="big-l">a base de todo espaçamento</span></div>
+</div>
+<p class="note">Contei no próprio site. Não medi horas, então não vou inventar um “x vezes mais rápido”.</p>
+</section>
+
+<div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
+<section aria-labelledby="ctx">
+<p class="lbl">contexto</p>
+<h2 class="h2" id="ctx">a ia que faz tudo sozinha não servia</h2>
+<div class="two">
+<div class="pain">
+<h3 class="h3">o que não funcionava</h3>
+<p class="txt">Comecei no criador de sites com IA da Hostinger. Ele entregava uma página pronta, mas cada mudança virava copiar e colar código, e a minha fonte de título nem carregava na caixa de código. Eu não estava desenhando: estava administrando um gerador.</p>
+</div>
+<div class="pain">
+<h3 class="h3">o que eu queria</h3>
+<p class="txt">Um portfólio um pouco disruptivo, brutalista, com códigos gráficos techno retrô e o processo em primeiro plano. E um lugar onde eu pudesse dirigir a IA tela por tela, em vez de aceitar o que ela decidisse.</p>
+</div>
+</div>
+<blockquote class="quote">“Fui eu que fiz, com a ajuda de alguma IA.”</blockquote>
+<p class="note">Do meu texto <a href="/opinioes/ia/">ia não faz bons designers</a>. Este case é a prática dele.</p>
+</section>
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
+<section aria-labelledby="rab">
+<p class="lbl">origem</p>
+<h2 class="h2" id="rab">antes do prompt, o rabisco</h2>
+<p class="txt" style="margin-bottom: 48px">A arquitetura do site nasceu à mão, no tablet. O rabisco vira o briefing: a IA lê o desenho, e eu confiro se a tela respeitou a intenção, não só o traço.</p>
+<div class="shots">
+<figure class="shot"><div class="paper"><img src="/assets/f1fe4c7d7c790dc8fc950b374fcb9c5e.webp" alt="Esboço à mão da página sobre: menu no topo com a anotação menu mais identificável, um hero com foto e dois botões, e a frase do hero escrita ao lado: mitigo riscos através do design"></div><figcaption>O sobre no papel. A frase anotada ao lado virou o título do hero, e “menu ⊕ identificável” virou uma decisão.</figcaption></figure>
+<figure class="shot"><div class="paper"><img src="/assets/fe4403d1e28620a50ac6375427758af3.webp" alt="Esboço à mão da página portfólio: uma lista vertical de cards com um elemento visual marcante no topo, em forma de cúpula, e o detalhe do card com título, ficha, descrição, destaque das habilidades usadas e botão para expandir"></div><figcaption>O portfólio no papel: a cúpula em wireframe no topo e o card com ficha e habilidades destacadas, como está no ar hoje.</figcaption></figure>
+</div>
+</section>
+
+<div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
+<section aria-labelledby="papel">
+<p class="lbl">meu papel</p>
+<h2 class="h2" id="papel">quem faz o quê</h2>
+<p class="txt" style="margin-bottom: 48px">A divisão é simples: a IA produz, eu decido. Na prática, ela fica assim.</p>
+<table class="cmp who">
+<thead><tr><th scope="col">etapa</th><th scope="col">eu</th><th scope="col">a ia</th></tr></thead>
+<tbody>
+<tr><th scope="row">direção</th><td>Escolho a estética brutalista, as referências, a paleta e as fontes.</td><td>Propõe composições e variações dentro dessa direção.</td></tr>
+<tr><th scope="row">sistema</th><td>Defino as regras: grid de 8, raio só em janela, texto de botão curto.</td><td>Documenta os tokens, aponta onde a tela fugiu da regra e me faz as perguntas em aberto.</td></tr>
+<tr><th scope="row">conteúdo</th><td>Trago os fatos: meus documentos, análises, telas e o LinkedIn. Corto o que não consigo provar.</td><td>Rascunha a partir dessas fontes e organiza a estrutura de cada case.</td></tr>
+<tr><th scope="row">código</th><td>Reviso na tela, no desktop e no celular.</td><td>Escreve o HTML e o CSS e publica no canvas.</td></tr>
+</tbody>
+</table>
+</section>
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
+<section aria-labelledby="proc">
+<p class="lbl">processo</p>
+<h2 class="h2" id="proc">um ciclo curto, direto na tela</h2>
+<div class="side">
+<ol class="steps">
+<li><span class="st-n">01</span><h3 class="h3">briefing com fonte</h3><p class="txt">Cada pedido vem com material de verdade: o rabisco da página, o documento do case, as análises, os prints das telas. Sem isso, a IA escreve sobre um designer genérico.</p></li>
+<li><span class="st-n">02</span><h3 class="h3">primeira versão no canvas</h3><p class="txt">A página nasce como um artboard, ao lado das outras, para eu ver o site inteiro de uma vez.</p></li>
+<li><span class="st-n">03</span><h3 class="h3">feedback no lugar exato</h3><p class="txt">Comento em cima do elemento, como faria com um dev. Curto e direto.</p></li>
+<li><span class="st-n">04</span><h3 class="h3">a correção vira regra</h3><p class="txt">Quando um ajuste se repete, ele sobe para o design system. Uma vez escrita, a regra não precisa ser repetida.</p></li>
+<li><span class="st-n">05</span><h3 class="h3">publica</h3><p class="txt">O código vai para o GitHub, que publica na Hostinger.</p></li>
+</ol>
+<div>
+<figure class="term" aria-label="O ciclo resumido como comandos de terminal">
+<div class="term-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><span class="term-t">ciclo.sh</span></div>
+<ol class="term-l">
+<li><b>$ briefing</b> --fontes docs,telas,linkedin<span>contexto antes de tela</span></li>
+<li><b>$ desenha</b> --canvas “in prod”<span>uma página por artboard</span></li>
+<li><b>$ comenta</b> “volta como era”<span>feedback em cima do elemento</span></li>
+<li><b>$ regra</b> &gt;&gt; design-system<span>o ajuste que se repete vira regra</span></li>
+<li><b>$ publica</b> --github --hostinger<span>e o ciclo recomeça</span></li>
+</ol>
+</figure>
+</div>
+</div>
+<div class="thread">
+<figure class="shot"><img src="/assets/cf7bb81f43662571deb55ee8e8282c36.webp" alt="Comentário da Thais no canvas, em cima do menu, explicando a lógica das páginas: sobre, portfólio, opiniões e contato, com o caminho mudando para sobre/jeito ou portfolio/refin.case conforme a pessoa navega"><figcaption>Eu explico a lógica, no próprio menu: cada seção do sobre é uma “página” e o caminho acompanha a navegação.</figcaption></figure>
+<figure class="shot"><img src="/assets/2ec2f64d5eefd0e29b986368cd9752c0.webp" alt="Resposta do Claude na mesma thread: aplicou as 4 páginas principais no menu, com a página atual em amarelo, e o caminho no prompt mudando conforme a rolagem"><figcaption>A resposta vem na mesma thread, já aplicada. Foi daí que saiu o menu de terminal que mostra onde você está.</figcaption></figure>
+</div>
+</section>
+
+<div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
+<section aria-labelledby="dec">
+<p class="lbl">decisões</p>
+<h2 class="h2" id="dec">onde eu disse não para a ia</h2>
+<div class="dec">
+<div class="dec-i"><span class="dec-n">01</span><div class="dec-b"><h3 class="h3">sair do gerador</h3><div class="dec-g"><div><p class="dec-k">o que a ia oferecia</p><p class="txt">Um site inteiro gerado de uma vez, que eu só podia ajustar copiando código.</p></div><div><p class="dec-k">o que eu escolhi</p><p class="txt">Um canvas onde cada página é um artboard, com o código num repositório no GitHub e deploy na Hostinger. Mais trabalho no começo, controle total depois.</p></div></div></div></div>
+<div class="dec-i"><span class="dec-n">02</span><div class="dec-b"><h3 class="h3">canto arredondado só em janela</h3><div class="dec-g"><div><p class="dec-k">o que a ia oferecia</p><p class="txt">Raio em botão, tag, card e janela, cada um com um valor.</p></div><div><p class="dec-k">o que eu escolhi</p><p class="txt">Pela heurística de consistência de Nielsen: 16 px só em janelas e telas, círculo só a 50%, todo o resto reto. O raio passou a significar “isto é uma janela”.</p></div></div></div></div>
+<div class="dec-i"><span class="dec-n">03</span><div class="dec-b"><h3 class="h3">tag não é botão</h3><div class="dec-g"><div><p class="dec-k">o problema</p><p class="txt">Destaques que não levam a lugar nenhum estavam com o mesmo azul dos botões.</p></div><div><p class="dec-k">o que eu escolhi</p><p class="txt">Azul é só para o que age. Tag e destaque não clicável ganharam outro tratamento, e texto de botão ficou com no máximo três palavras.</p></div></div></div></div>
+<div class="dec-i"><span class="dec-n">04</span><div class="dec-b"><h3 class="h3">número sem prova sai</h3><div class="dec-g"><div><p class="dec-k">o risco</p><p class="txt">IA escreve resultado de forma convincente, com ou sem lastro. Um portfólio não pode ter frase que eu não sustento numa entrevista.</p></div><div><p class="dec-k">o que eu escolhi</p><p class="txt">Tirei números que não conseguia comprovar, como um ganho de retenção do chatbot. No case de transparência, a prova virou externa: o ranking.</p></div></div></div></div>
+<div class="dec-i"><span class="dec-n">05</span><div class="dec-b"><h3 class="h3">sem home, menu de terminal</h3><div class="dec-g"><div><p class="dec-k">o padrão</p><p class="txt">Uma home com hero genérico e o resto escondido atrás de cliques.</p></div><div><p class="dec-k">o que eu escolhi</p><p class="txt">O sobre é a entrada. O menu fica no topo, como uma linha de comando que mostra onde você está: portfolio/este-portfolio.case.</p></div></div></div></div>
+<div class="dec-i"><span class="dec-n">06</span><div class="dec-b"><h3 class="h3">conceito não vence usabilidade</h3><div class="dec-g"><div><p class="dec-k">o que a ia oferecia</p><p class="txt">No celular, o menu abria num quadrado amarelo escrito “ls”, o comando de terminal que lista pastas. Combinava com o conceito, mas só quem programa entende.</p></div><div><p class="dec-k">o que eu escolhi</p><p class="txt">Anotei “menu ⊕ identificável” no rabisco e pedi para trocar pelo ícone de três linhas. O conceito fica no prompt; o botão precisa ser reconhecido por qualquer pessoa.</p></div></div></div></div>
+</div>
+</section>
+
+<div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
+<section aria-labelledby="sis">
+<p class="lbl">o sistema</p>
+<h2 class="h2" id="sis">cada cor com um trabalho</h2>
+<p class="txt" style="margin-bottom: 48px">O design system mora num artefato à parte, com tokens, componentes e uma lista de dúvidas que a IA levantava e eu respondia. A paleta é curta de propósito.</p>
+<div class="pal">
+<figure class="sw"><div class="sw-c" style="background: #1847e3"></div><figcaption><b>azul</b>#1847e3 · o que age</figcaption></figure>
+<figure class="sw"><div class="sw-c" style="background: #4c1d95"></div><figcaption><b>roxo</b>#4c1d95 · orienta, rotula</figcaption></figure>
+<figure class="sw"><div class="sw-c" style="background: #ffff8d"></div><figcaption><b>amarelo</b>#ffff8d · marca um ponto</figcaption></figure>
+<figure class="sw"><div class="sw-c" style="background: #e97045"></div><figcaption><b>laranja</b>#e97045 · links e atenção</figcaption></figure>
+<figure class="sw"><div class="sw-c" style="background: #292929"></div><figcaption><b>tinta</b>#292929 · texto e traço</figcaption></figure>
+<figure class="sw"><div class="sw-c" style="background: #f2f2f5"></div><figcaption><b>papel</b>#f2f2f5 · o fundo</figcaption></figure>
+</div>
+<ul class="rules">
+<li class="rule"><span class="rule-k">8 px</span><p class="rule-t">todo espaçamento em múltiplos de 8. na dúvida, o maior</p></li>
+<li class="rule"><span class="rule-k">16 px</span><p class="rule-t">raio só em janelas e telas. círculo, 50%. o resto, reto</p></li>
+<li class="rule"><span class="rule-k">12·14·16·20·32·80</span><p class="rule-t">a escala de fonte inteira. nada fora dela</p></li>
+<li class="rule"><span class="rule-k">3</span><p class="rule-t">palavras, no máximo, em texto de botão</p></li>
+<li class="rule"><span class="rule-k">aa</span><p class="rule-t">títulos sempre em minúsculas. gokschil só no hero</p></li>
+<li class="rule"><span class="rule-k">:)</span><p class="rule-t">o smiley em pixel aparece em todas as páginas</p></li>
+</ul>
+</section>
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
+<section aria-labelledby="sk">
+<p class="lbl">ferramentas</p>
+<h2 class="h2" id="sk">escolher a ferramenta também é design</h2>
+<div class="side">
+<div>
+<p class="txt" style="margin-bottom: 32px">Skills são pacotes de instrução que mudam como a IA trabalha. Instalei só as que serviam ao site e deixei de fora o que traria complexidade sem ganho.</p>
+<ul class="list">
+<li>Com a frontend-design e a canvas-design, fiz uma versão revisada do sobre. Ela virou a página que está no ar.</li>
+<li>A canvas-design partiu de uma filosofia visual escrita antes de qualquer pixel: desenho técnico, cor chapada, sombra sólida e uma assinatura sorrindo.</li>
+<li>Deixei de fora a skill de React com biblioteca de componentes. O site é HTML e CSS, e não precisa de mais que isso.</li>
+<li>Explorações e produção ficam em páginas separadas do canvas, então dá para testar sem quebrar o que está no ar.</li>
+</ul>
+</div>
+<div>
+<p class="dec-k">no processo deste site</p>
+<ul class="chips" aria-label="Skills que entraram">
+<li class="chip on">frontend-design</li><li class="chip on">canvas-design</li><li class="chip on">web-design-guidelines</li>
+</ul>
+<p class="dec-k" style="margin-top: 32px">ficou de fora</p>
+<ul class="chips" aria-label="Skill que ficou de fora">
+<li class="chip off">web-artifacts-builder</li>
+</ul>
+</div>
+</div>
+</section>
+
+<div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
+<section aria-labelledby="apr">
+<p class="lbl">aprendizados</p>
+<h2 class="h2" id="apr">o que eu levo daqui</h2>
+<ul class="list">
+<li>A IA acelera o fazer, não o decidir. O que mais rendeu foi transformar cada feedback em regra do sistema.</li>
+<li>Contexto é o insumo. Com os meus documentos, ela escreve sobre o meu trabalho. Sem eles, sobre qualquer designer.</li>
+<li>Revisar é o trabalho. Toda frase com número passou por mim, e o que eu não conseguia provar saiu.</li>
+<li>Dirigir IA é parecido com dirigir um time: briefing claro, feedback específico e critério na hora de aprovar.</li>
+</ul>
+<div class="next">
+<a class="back" style="margin-top: 0" href="/portfolio/">← voltar para os cases</a>
+<a class="back" style="margin-top: 0" href="/opinioes/ia/">ler “ia não faz bons designers” →</a>
+</div>
+</section>
+
+</div>
+
+<div aria-hidden="true" style="margin-top: 96px; height: 40px; border-top: 2px solid #292929; border-bottom: 2px solid #292929; background: repeating-linear-gradient(-45deg, #4c1d95 0 16px, #f2f2f5 16px 32px);"></div>
+<footer style="background: #292929; color: #fffefe;">
+<div style="max-width: 1280px; margin: 0 auto; padding: 48px 32px; font-family: 'Roboto Mono', monospace; font-size: 16px;">©thais.coffee 2026_ ·&nbsp;feito por thais + claude<svg role="img" aria-label="com amor" width="18" height="16" viewBox="0 0 9 8" shape-rendering="crispEdges" style="display: inline-block; vertical-align: -2px; margin-left: 8px"><path fill="#e97045" d="M1 0h2v1h-2zM6 0h2v1h-2zM0 1h4v1h-4zM5 1h4v1h-4zM0 2h9v1h-9zM0 3h9v1h-9zM1 4h7v1h-7zM2 5h5v1h-5zM3 6h3v1h-3zM4 7h1v1h-1z"></path></svg></div>
+</footer>
+</div>
+<script src="/assets/site.js?v=202610170300"></script>
+</body>
+</html>

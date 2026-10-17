@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<title>transparência como regra de produto · case · thais castro</title>
+<meta name="description" content="Case: como transparência, segurança e clareza viraram regras de tela nos produtos de crédito.">
+<link rel="icon" href="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;family=Work+Sans:wght@400;500;800&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Gokschil';src:url('/assets/93ba42cb1e8b8a10050eb62645b75517.ttf') format('truetype');font-display:swap}
+body{margin:0;background:#f2f2f5}
+a{color:#292929;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
+a:hover{color:#4c1d95}
+.cs,.cs *{box-sizing:border-box}
+.cs :focus-visible{outline:3px solid #1847e3;outline-offset:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+.lbl{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:uppercase;color:#4c1d95;margin:0 0 8px}
+.h2{font-family:'Roboto Mono',monospace;font-weight:500;font-size:clamp(32px,5vw,64px);line-height:1;letter-spacing:-.02em;text-transform:lowercase;margin:0 0 48px}
+.h3{font-family:'Roboto Mono',monospace;font-weight:500;font-size:20px;line-height:1.2;text-transform:lowercase;margin:0}
+.txt{font-size:16px;line-height:1.6;margin:0;max-width:64ch}
+.lead{font-size:20px;line-height:1.5;margin:0;max-width:52ch}
+.fita{height:16px;margin:96px 0 48px;background:repeating-linear-gradient(var(--a),var(--c) 0 var(--l),transparent var(--l) calc(var(--l) + var(--g)))}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:64px;align-items:start}
+.hero-t{font-family:'Gokschil','Roboto Mono',monospace;font-weight:400;font-size:clamp(56px,8vw,80px);line-height:.9;text-transform:lowercase;margin:0 0 32px}
+.spec{border:2px solid #292929;box-shadow:8px 8px 0 #292929;background:#fffefe}
+.spec-r{display:grid;grid-template-columns:144px minmax(0,1fr)}
+.spec-r + .spec-r{border-top:2px solid #292929}
+.spec-k{padding:16px;background:#ffff8d;border-right:2px solid #292929;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95}
+.spec-v{padding:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;line-height:1.5;text-transform:lowercase}
+.big{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:2px solid #292929;background:#fffefe}
+.big-c{padding:32px 24px;display:flex;flex-direction:column;gap:8px}
+.big-c + .big-c{border-left:2px solid #292929}
+.big-n{font-family:'Roboto Mono',monospace;font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1;letter-spacing:-.02em}
+.big-l{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;line-height:1.4;text-transform:lowercase}
+.note{font-family:'Roboto Mono',monospace;font-size:12px;line-height:1.5;margin:16px 0 0}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.pain{display:flex;flex-direction:column;gap:16px;border-top:2px solid #292929;padding-top:24px}
+.quote{margin:48px 0 0;padding:24px 0 24px 32px;border-left:16px solid #e97045;font-family:'Roboto Mono',monospace;font-weight:500;font-size:20px;line-height:1.4;max-width:40ch}
+.list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:16px}
+.list li{display:flex;gap:16px;align-items:baseline;font-size:16px;line-height:1.6;max-width:64ch}
+.list li::before{content:'+';font-family:'Roboto Mono',monospace;font-weight:800;color:#e97045;flex-shrink:0}
+.funnel{display:flex;flex-direction:column;gap:16px}
+.fn{display:grid;grid-template-columns:200px minmax(0,1fr) 96px;gap:16px;align-items:center;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase}
+.fn-bar{height:32px;background:#1847e3;border:2px solid #292929}
+.fn-n{text-align:right;font-size:16px}
+.dec{display:flex;flex-direction:column;gap:0;border-top:2px solid #292929}
+.dec-i{display:grid;grid-template-columns:64px minmax(0,1fr);gap:24px;padding:32px 0;border-bottom:2px solid #292929}
+.dec-n{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;color:#4c1d95}
+.dec-b{display:flex;flex-direction:column;gap:16px}
+.dec-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.dec-k{font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95;margin:0 0 8px}
+.win{border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #292929;background:#fffefe;overflow:hidden}
+.win-bar{display:flex;align-items:center;gap:16px;padding:8px 16px;background:#f2f2f5;border-bottom:2px solid #292929}
+.win-dots{display:flex;gap:8px}
+.win-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #292929;display:block}
+.win-url{flex:1 1 auto;min-width:0;padding:8px 16px;background:#fffefe;border:1px solid #292929;border-radius:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.win img{display:block;width:100%;height:auto}
+.cap{font-family:'Roboto Mono',monospace;font-size:12px;line-height:1.5;margin:24px 0 0;max-width:64ch}
+.cmp{width:100%;border-collapse:collapse;border:2px solid #292929;background:#fffefe;font-family:'Roboto Mono',monospace;font-size:14px}
+.cmp th,.cmp td{padding:16px;text-align:left;border-bottom:2px solid #292929}
+.cmp th{background:#ffff8d;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95}
+.cmp td + td,.cmp th + th{border-left:2px solid #292929}
+.gc{position:absolute;display:block;pointer-events:none;image-rendering:pixelated}
+@media (max-width:1180px){.gc{display:none}}
+@media (max-width:820px){
+.wrap{padding:0 16px}
+.hero,.two,.dec-g{grid-template-columns:minmax(0,1fr);gap:32px}
+.big{grid-template-columns:repeat(2,minmax(0,1fr))}
+.big-c + .big-c{border-left:0}
+.big-c:nth-child(even){border-left:2px solid #292929}
+.big-c:nth-child(n+3){border-top:2px solid #292929}
+.fn{grid-template-columns:minmax(0,1fr) 72px}
+.fn-bar{grid-column:1 / -1;grid-row:2}
+.dec-i{grid-template-columns:minmax(0,1fr);gap:8px}
+.spec-r{grid-template-columns:112px minmax(0,1fr)}
+}
+/* menu: linha de comando (igual ao site) */
+.tnav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);margin:0;font-family:'Roboto Mono',monospace;color:#f2f2f5}
+.tnav *{box-sizing:border-box}
+.tnav-win{display:flex;flex-direction:column;background:#292929;border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #1847e3;overflow:hidden}
+.tnav-line{display:flex;align-items:center;gap:16px;padding:8px 8px 8px 16px;min-height:56px}
+.tnav-dots{display:flex;gap:8px;flex-shrink:0}
+.tnav-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;display:block}
+.tnav-prompt{flex-shrink:0;font-size:14px;white-space:nowrap}
+.tnav-prompt b{font-weight:500;color:#ffff8d}
+.tnav-cmd{color:#e97045;font-size:14px;flex-shrink:0}
+.tnav-list{display:flex;align-items:center;gap:8px;margin:0;padding:0;list-style:none;min-width:0;overflow-x:auto;scrollbar-width:none}
+.tnav-list a{display:inline-flex;align-items:center;min-height:40px;padding:0 8px;font-size:14px;font-weight:500;color:#f2f2f5;text-decoration:none;text-transform:lowercase;white-space:nowrap;border:1px dashed transparent}
+.tnav-list a:hover{border-color:#ffff8d;color:#ffff8d}
+.tnav-ls{display:none;flex-shrink:0;margin-left:auto;width:48px;height:40px;padding:0;align-items:center;justify-content:center;background:#ffff8d;color:#292929;border:0;cursor:pointer}
+.tnav-out{order:2;display:block;margin:0;padding:8px 16px 16px;list-style:none;border-top:1px dashed #a3a3a3;font-size:14px}
+.tnav-out a{display:flex;gap:16px;align-items:center;min-height:44px;color:#f2f2f5;text-decoration:none;text-transform:lowercase}
+.tnav-out a span{color:#a3a3a3;font-size:12px;width:40px;flex-shrink:0}
+.tnav :focus-visible{outline:3px solid #ffff8d;outline-offset:2px}
+@media (min-width:1001px){.tnav-out{display:none}}
+@media (max-width:1000px){
+.tnav{top:8px}
+.tnav-win{box-shadow:4px 4px 0 #1847e3}
+.tnav-dots,.tnav-cmd,.tnav-list{display:none}
+.tnav-prompt{flex-shrink:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.tnav-ls{display:inline-flex}
+}
+.tnav-list a[aria-current]{background:#ffff8d;color:#292929}
+.tnav-out a[aria-current]{color:#ffff8d}
+.tnav-sub{color:#ffff8d}
+.tnav-soon{display:inline-flex;align-items:center;gap:16px;min-height:40px;padding:0 8px;font-size:14px;font-weight:500;color:#8a8a8a;white-space:nowrap;cursor:default}
+.tnav-out .tnav-soon{padding:0;min-height:44px}
+.tnav-out .tnav-soon span{color:#8a8a8a;font-size:12px;width:40px;flex-shrink:0}
+.tnav-out .tnav-subitem a{min-height:40px;padding-left:16px;color:#d6d6d6}
+/* case transparência */
+.phone{margin:0;display:flex;flex-direction:column;gap:16px}
+.phone-f{border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #292929;background:#fffefe;overflow:hidden}
+.phone-f img{display:block;width:100%;height:auto}
+.phone figcaption{font-family:'Roboto Mono',monospace;font-size:12px;line-height:1.5;margin:0}
+.phones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;align-items:start}
+.phones-2{display:grid;grid-template-columns:repeat(2,minmax(0,280px));gap:48px;align-items:start}
+.side{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:64px;align-items:start}
+.proof{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:64px;align-items:start}
+.stamp{display:flex;align-items:center;gap:32px;margin:0 0 32px}
+.stamp-n{font-family:'Gokschil','Roboto Mono',monospace;font-size:clamp(96px,14vw,176px);line-height:.8;color:#292929}
+.stamp-t{font-family:'Roboto Mono',monospace;font-weight:500;font-size:20px;line-height:1.3;text-transform:lowercase;max-width:20ch;margin:0}
+.smile{width:64px;height:64px;background:#ffff8d;border:2px solid #292929;position:relative;flex-shrink:0;transform:rotate(-8deg)}
+.smile img{position:absolute;left:12px;top:12px;width:36px;height:36px;image-rendering:pixelated}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:2px solid #292929;background:#fffefe}
+.stats .big-c + .big-c{border-left:2px solid #292929}
+.asks{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.ask{display:grid;grid-template-columns:240px minmax(0,1fr);gap:16px;align-items:center;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase}
+.ask-b{height:24px;background:#1847e3;border:2px solid #292929}
+.map{width:100%;border-collapse:collapse;border:2px solid #292929;background:#fffefe;font-family:'Roboto Mono',monospace;font-size:14px;line-height:1.5}
+.map th,.map td{padding:16px;text-align:left;border-bottom:2px solid #292929;vertical-align:top}
+.map th{background:#ffff8d;font-weight:500;font-size:12px;text-transform:lowercase;color:#4c1d95}
+.map td + td,.map th + th{border-left:2px solid #292929}
+.pil{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.pil-c{display:flex;flex-direction:column;gap:16px;padding:32px;background:#fffefe;border:2px solid #292929;box-shadow:8px 8px 0 #292929}
+.pil-n{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;color:#4c1d95}
+.pats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:64px 48px}
+.pat{display:flex;flex-direction:column;gap:16px;margin:0}
+.pat .phone-f{max-width:280px}
+.tag{align-self:flex-start;padding:4px 8px;background:#ffff8d;border:1px solid #292929;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase}
+.back{display:inline-flex;margin-top:64px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:16px}
+@media (max-width:1000px){.phones{grid-template-columns:repeat(2,minmax(0,1fr))}.pats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:820px){
+.side,.proof,.pil{grid-template-columns:minmax(0,1fr);gap:32px}
+.side .phone{max-width:280px}
+.phones-2{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.phones{gap:24px}
+.pats{grid-template-columns:minmax(0,1fr);gap:48px}
+.stats{grid-template-columns:minmax(0,1fr)}
+.stats .big-c + .big-c{border-left:0;border-top:2px solid #292929}
+.ask{grid-template-columns:minmax(0,1fr)}
+.stamp{gap:16px}
+}
+</style>
+<style>sc-if{display:contents}[hidden]{display:none!important}.tnav-list a[aria-current]{background:#ffff8d;color:#292929}.tnav-out a[aria-current]{color:#ffff8d}</style>
+</head>
+<body data-page="case">
+<div class="cs" id="topo" style="background: #f2f2f5; color: #292929; font-family: 'Work Sans',sans-serif; padding: 128px 0 0; position: relative; overflow: hidden">
+<nav class="tnav" aria-label="menu">
+<div class="tnav-win">
+<sc-if data-if="menuOpen" hidden>
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/" aria-current="page"><span>02</span>portfolio/</a></li><li><a href="/opinioes/"><span>03</span>opinioes/</a></li><li><a href="/contato/"><span>04</span>contato/</a></li></ul>
+</sc-if>
+<div class="tnav-line">
+<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/portfolio/transparencia.case $</span>
+<span class="tnav-cmd" aria-hidden="true">cd</span>
+<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/" aria-current="page">portfolio/</a></li><li><a href="/opinioes/">opinioes/</a></li><li><a href="/contato/">contato/</a></li></ul>
+<button class="tnav-ls" type="button" data-on="click:toggleMenu" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
+<sc-if data-if="menuClosed"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292929" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
+<sc-if data-if="menuOpen" hidden><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292929" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
+</button>
+</div>
+</div>
+</nav>
+<div class="wrap">
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px; margin: 0 0 64px; height: 24px"></div>
+
+<header class="hero">
+<div>
+<p class="lbl">case / crédito</p>
+<h1 class="hero-t">transparência como regra de produto</h1>
+<p class="lead">Empréstimo assusta. Em vez de esconder as partes difíceis, transformei transparência, segurança e clareza em regras que valiam para cada produto de crédito que a gente desenhava.</p>
+</div>
+<div class="spec" role="table" aria-label="Ficha técnica">
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">produtos</div><div class="spec-v" role="cell">empréstimo pessoal, antecipação do saque-aniversário do fgts, pagar antes e refinanciamento em dia</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">empresa</div><div class="spec-v" role="cell">will bank</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">período</div><div class="spec-v" role="cell">2022 a 2025</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">meu papel</div><div class="spec-v" role="cell">discovery, estratégia de conteúdo, ux writing e, depois, product design</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">time</div><div class="spec-v" role="cell">bu empréstimos: pm, design, ilustração, dados e devs</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">métodos</div><div class="spec-v" role="cell">análise de chat, reclame aqui e lojas de app, teste de conteúdo e análise de dados</div></div>
+<div class="spec-r" role="row"><div class="spec-k" role="rowheader">plataforma</div><div class="spec-v" role="cell">app ios e android</div></div>
+</div>
+</header>
+
+<div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
+<section aria-labelledby="prova">
+<p class="lbl">a prova</p>
+<h2 class="h2" id="prova">3º lugar logo na estreia</h2>
+<div class="proof">
+<div>
+<div class="stamp">
+<span class="stamp-n" aria-hidden="true">3º</span>
+<p class="stamp-t">no Índice de Transparência novücard, 2º semestre de 2023</p>
+<span class="smile" aria-hidden="true"><img src="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" alt=""></span>
+</div>
+<ul class="list">
+<li>Empatado com o Itaú, atrás só de Banco do Brasil e Nubank.</li>
+<li>Foi a primeira vez que o will bank entrou no índice, entre 18 instituições avaliadas, de bancos públicos a neobancos.</li>
+<li>A régua do índice é a mesma deste case: taxa fácil de achar, bem explicada e anunciada com precisão, e reclamação bem resolvida.</li>
+</ul>
+<p class="note">O índice avalia o banco inteiro, não só o meu trabalho. Não tenho mais acesso aos números de resultado de cada produto, então a prova aqui é externa.</p>
+</div>
+<div class="win">
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045"></span><span style="background: #ffff8d"></span><span style="background: #4c1d95"></span></div><div class="win-url">índice novücard / 2s23</div></div>
+<img src="/assets/036507c0ecee4027268fd5f13a6d3694.png" alt="Ranking Top Instituições do índice de transparência: 1º Banco do Brasil com 3,57, 2º Nubank com 3,28, 3º Itaú com 3,06 e will bank também em 3º, com 3,06, marcado como novo">
+</div>
+</div>
+</section>
+
+<div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
+<section aria-labelledby="ctx">
+<p class="lbl">contexto</p>
+<h2 class="h2" id="ctx">empréstimo já chega pesado</h2>
+<div class="two">
+<div class="pain">
+<h3 class="h3">o que o cliente sente</h3>
+<p class="txt">Muita dúvida e muita insegurança. Crédito carrega uma carga negativa: medo de taxa escondida, de letra miúda, de não entender o que está assinando. E, como descobri depois, medo de golpe.</p>
+</div>
+<div class="pain">
+<h3 class="h3">o que eu fiz primeiro</h3>
+<p class="txt">Ouvi antes de desenhar. No discovery do empréstimo pessoal, li conversas do chat, reclamações no Reclame Aqui e avaliações nas lojas de app para entender o que as pessoas queriam do produto e como falavam dele.</p>
+</div>
+</div>
+<blockquote class="quote">“O que é esse IOF?”</blockquote>
+<p class="note">Uma das dúvidas que mais apareciam no chat.</p>
+</section>
+
+<div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
+<section aria-labelledby="pil">
+<p class="lbl">os pilares</p>
+<h2 class="h2" id="pil">três regras, não três valores</h2>
+<p class="txt" style="margin-bottom: 48px">Defini os pilares no writing da antecipação do FGTS, a partir do que já tínhamos aprendido em crédito pessoal. Para não virarem palavra bonita em slide, cada um precisava dizer o que a tela faz.</p>
+<div class="pil">
+<div class="pil-c"><span class="pil-n">01</span><h3 class="h3">transparência</h3><p class="txt">Mostrar o custo inteiro, do jeito que ele é. Toda taxa aparece, com o mesmo peso, e o cliente vê quanto vai pagar antes de confirmar.</p></div>
+<div class="pil-c"><span class="pil-n">02</span><h3 class="h3">segurança</h3><p class="txt">Avisar do risco antes que ele aconteça: golpe, ação que não tem volta, prazo de validade da oferta.</p></div>
+<div class="pil-c"><span class="pil-n">03</span><h3 class="h3">clareza</h3><p class="txt">Explicar como uma pessoa explicaria: sem jargão, com o tim-tim por tim-tim e o próximo passo sempre à vista.</p></div>
+</div>
+</section>
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
+<section aria-labelledby="seg">
+<p class="lbl">segurança</p>
+<h2 class="h2" id="seg">um golpe antes do produto existir</h2>
+<div class="side">
+<div>
+<p class="txt" style="margin-bottom: 32px">No discovery, descobri que clientes já estavam sendo enganados em nome de um empréstimo que a gente nem tinha lançado. Por isso entrou no fluxo uma tela de interrupção: o banco não pede taxa nem depósito antecipado e não oferece empréstimo por rede social ou WhatsApp.</p>
+<ul class="list">
+<li>Testei a palavra “golpistas”, direta, para gerar alarme de verdade e prender a atenção.</li>
+<li>Deixei o alerta por último e a frase inteira em negrito, pensando em quem escaneia a tela.</li>
+<li>Havia receio de assustar o cliente. No teste, a mensagem ficou clara para todo mundo, não gerou desconforto e a tela foi considerada “muito importante”.</li>
+<li>O que falhou foi a ilustração: ela não passava a sensação de alerta. Texto e imagem precisam dizer a mesma coisa.</li>
+</ul>
+</div>
+<figure class="phone">
+<div class="phone-f"><img src="/assets/52f1083020f3c6375b52a764caefeacc.webp" alt="Tela de interrupção do fluxo de empréstimo: o banco avisa que não pede taxa nem depósito antecipado, que não oferece o serviço por redes sociais e WhatsApp, e termina com cuidado com golpistas, em negrito"></div>
+<figcaption>A tela de interrupção, com o alerta no fim.</figcaption>
+</figure>
+</div>
+</section>
+
+<div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
+<section aria-labelledby="briga">
+<p class="lbl">a briga</p>
+<h2 class="h2" id="briga">a tela que ninguém queria na v1</h2>
+<div class="two" style="margin-bottom: 48px">
+<div class="pain"><h3 class="h3">o impasse</h3><p class="txt">Para lançar rápido, a V1 seria enxuta. Para design, acompanhar o empréstimo fazia parte do básico. Os stakeholders discordavam.</p></div>
+<div class="pain"><h3 class="h3">o que a gente já sabia</h3><p class="txt">Num teste anterior do produto, o cliente contratava, recebia algumas informações e o empréstimo sumia do app. Para qualquer dúvida, só restava o chat. Então fui atrás dos motivos de contato que uma tela de acompanhamento teria evitado.</p></div>
+</div>
+<div class="stats">
+<div class="big-c"><span class="big-n">526</span><span class="big-l">chamados no chat em pouco mais de um ano de teste</span></div>
+<div class="big-c"><span class="big-n">66,3%</span><span class="big-l">poderiam ser resolvidos pelo próprio cliente, com uma tela de acompanhamento</span></div>
+<div class="big-c" style="background: #292929; color: #fffefe"><span class="big-n">8.982</span><span class="big-l">chamados evitáveis por ano, na projeção para a base elegível</span></div>
+</div>
+<p class="note">Logs do chat do teste de crédito pessoal, de 18/03/2021 a 12/03/2022. A projeção foi calculada com o time de dados, considerando 350 mil clientes elegíveis.*</p>
+<h3 class="h3" style="margin: 64px 0 24px">o que as pessoas perguntavam, da mais para a menos frequente</h3>
+<ul class="asks" aria-label="Dúvidas mais comuns no chat, em ordem: como pago, o que é esse IOF, posso quitar, posso antecipar, quando pago, e meu contrato, posso ter 2 empréstimos">
+<li class="ask"><span>como pago?</span><span class="ask-b" style="width: 100%"></span></li>
+<li class="ask"><span>o que é esse iof?</span><span class="ask-b" style="width: 86%"></span></li>
+<li class="ask"><span>posso quitar?</span><span class="ask-b" style="width: 68%"></span></li>
+<li class="ask"><span>posso antecipar?</span><span class="ask-b" style="width: 61%"></span></li>
+<li class="ask"><span>quando pago?</span><span class="ask-b" style="width: 35%"></span></li>
+<li class="ask"><span>e meu contrato?</span><span class="ask-b" style="width: 34%"></span></li>
+<li class="ask"><span>posso ter 2 empréstimos?</span><span class="ask-b" style="width: 26%"></span></li>
+</ul>
+<p class="txt" style="margin: 48px 0">Organizei os dados num infográfico e apresentei aos stakeholders. A tela de acompanhamento entrou na V1. Cada dúvida do chat virou um pedaço dela:</p>
+<div class="side">
+<table class="map">
+<thead><tr><th scope="col">a dúvida no chat</th><th scope="col">a resposta na tela</th></tr></thead>
+<tbody>
+<tr><td>quando pago? como pago?</td><td>próxima parcela, com valor e data</td></tr>
+<tr><td>e meu contrato?</td><td>seus contratos, tudo bem explicadinho</td></tr>
+<tr><td>posso antecipar? posso quitar?</td><td>pagar antes, com desconto</td></tr>
+<tr><td>o que é esse iof?</td><td>o tim-tim por tim-tim dos encargos</td></tr>
+</tbody>
+</table>
+<figure class="phone">
+<div class="phone-f"><img src="/assets/a424709b40c69e8350b2f0f8e1fbaae8.webp" alt="Tela de acompanhamento da antecipação do saque-aniversário do FGTS: status ativo, próximo desconto no FGTS com valor e data, parcelas pagas e saldo bloqueado"></div>
+<figcaption>O acompanhamento, como ficou na antecipação do FGTS.</figcaption>
+</figure>
+</div>
+</section>
+
+<div class="fita" style="--c: #4c1d95; --a: 45deg; --l: 24px; --g: 24px"></div>
+<section aria-labelledby="cla">
+<p class="lbl">clareza</p>
+<h2 class="h2" id="cla">o tim-tim por tim-tim</h2>
+<p class="txt" style="margin-bottom: 48px">Na antecipação do saque-aniversário do FGTS, construí o writing do fluxo sobre os três pilares. A ideia era deixar um produto de crédito mais leve, com a ajuda do time de ilustração, sem perder a seriedade de quem fala de dinheiro.</p>
+<div class="phones">
+<figure class="phone"><div class="phone-f"><img src="/assets/fc93724f2de0789ea4488dd6085d3948.webp" alt="Tela de abertura da antecipação do FGTS com três promessas: nada de pagar todo mês, dinheiro em até 1 dia útil e a taxa de juros ao mês"></div><figcaption>O produto em três promessas, com a taxa logo na primeira tela.</figcaption></figure>
+<figure class="phone"><div class="phone-f"><img src="/assets/15b89d681b0d54a5ac334a8f151039c4.webp" alt="Bloco que explica o Custo Efetivo Total: juros totais mais IOF, com os valores do cliente e a taxa ao ano"></div><figcaption>O CET explicado com os valores do próprio cliente.</figcaption></figure>
+<figure class="phone"><div class="phone-f"><img src="/assets/b2b3222a396b0885de191bbde99a94c3.webp" alt="Etapa 4 de 4 do fluxo: separei os pontos mais importantes do contrato, leia com atenção"></div><figcaption>Os pontos importantes do contrato, separados antes da assinatura.</figcaption></figure>
+<figure class="phone"><div class="phone-f"><img src="/assets/f09e100ab62aa99386f601a3ff10b2bb.webp" alt="Tela pós-contratação com o progresso: adesão ao saque-aniversário, autorização, aguardando o FGTS e dinheiro na conta"></div><figcaption>O que acontece depois, passo a passo.</figcaption></figure>
+</div>
+</section>
+
+<div class="fita" style="--c: #292929; --a: 45deg; --l: 2px; --g: 8px"></div>
+<section aria-labelledby="pad">
+<p class="lbl">o padrão</p>
+<h2 class="h2" id="pad">a mesma regra, produto depois de produto</h2>
+<p class="txt" style="margin-bottom: 64px">Os pilares não ficaram num produto só. Viraram padrões que reaparecem no pagar antes, no refinanciamento em dia e no próprio acompanhamento.</p>
+<div class="pats">
+<figure class="pat"><div class="phone-f"><img src="/assets/133127ebd3da88ad9469fab8996599b7.webp" alt="Tela que explica o que é CET, o que é IOF e sobre que valor os juros são cobrados, com a conta do ajuste na ponta do lápis"></div><span class="tag">transparência</span><h3 class="h3">o custo inteiro, por escrito</h3><p class="txt">CET, IOF e juros explicados em linguagem de gente, com a conta na ponta do lápis.</p></figure>
+<figure class="pat"><div class="phone-f"><img src="/assets/722979e45ac90dc55cae94364440bdde.webp" alt="Encargos do ajuste: juros ao mês, juros ao ano, CET ao ano, IOF e valor total de juros, todos no mesmo tamanho"></div><span class="tag">transparência</span><h3 class="h3">toda taxa com o mesmo peso</h3><p class="txt">Juros ao mês, ao ano, CET, IOF e total de juros no mesmo tamanho. Nenhum número escondido no rodapé.</p></figure>
+<figure class="pat"><div class="phone-f"><img src="/assets/972a8507d818391bef702e80e22623a6.webp" alt="Oferta de ajuste com o antes e depois: parcelas restantes contra novas parcelas, total restante contra novo total e juros iguais"></div><span class="tag">clareza</span><h3 class="h3">antes e depois, lado a lado</h3><p class="txt">O contrato atual ao lado do novo, parcela, total e juros, antes de qualquer confirmação.</p></figure>
+<figure class="pat"><div class="phone-f"><img src="/assets/84baac2c0225cb23c15a8452a2bb8669.webp" alt="Como funciona o desconto: calculado com base na taxa de juros e proporcional aos dias antecipados, com as taxas mensal e anual"></div><span class="tag">clareza</span><h3 class="h3">o desconto, explicado</h3><p class="txt">Como o desconto é calculado e por que antecipar antes rende mais, sem fórmula.</p></figure>
+<figure class="pat"><div class="phone-f"><img src="/assets/0a9f135118aacb3e3cf9d96478165996.webp" alt="Confirmação: tem certeza de que quer pagar antes? Ao confirmar, o pagamento antecipado não poderá ser desfeito"></div><span class="tag">segurança</span><h3 class="h3">o que não tem volta, avisado</h3><p class="txt">Confirmação explícita antes de uma ação que não pode ser desfeita.</p></figure>
+<figure class="pat"><div class="phone-f"><img src="/assets/c30e03db8a0e7b1de3ee52c095ceeae0.webp" alt="Resumo do pagamento antecipado com data, valor original, desconto e total, e o aviso de que os valores valem só para aquele dia"></div><span class="tag">segurança</span><h3 class="h3">validade à vista</h3><p class="txt">O resumo diz até quando aqueles valores valem, para ninguém ser pego de surpresa.</p></figure>
+</div>
+</section>
+
+<div class="fita" style="--c: #1847e3; --a: -45deg; --l: 16px; --g: 16px"></div>
+<section aria-labelledby="dec">
+<p class="lbl">decisão</p>
+<h2 class="h2" id="dec">transparência também tem custo</h2>
+<div class="side">
+<div>
+<p class="txt" style="margin-bottom: 32px">No pagar antes, o cliente pode antecipar as próximas ou as últimas parcelas. Antecipar as últimas dá mais desconto: é melhor para o cliente e pior para o negócio no curto prazo. Deixar isso em silêncio seria fácil.</p>
+<div class="dec-g">
+<div><p class="dec-k">a pergunta</p><p class="txt">Se o desconto ficasse claro, as pessoas iam correr para as últimas parcelas a ponto de prejudicar o negócio? Ou o volume ficaria estável e a gente ganharia confiança para seguir o mais transparente possível?</p></div>
+<div><p class="dec-k">o que eu fiz</p><p class="txt">Em vez de decidir no achismo, planejei um teste A/B de conteúdo em dez/2023: uma versão com o argumento do desconto e outra só com destaque visual no card, com 272 respostas por versão para 90% de confiança.</p></div>
+</div>
+</div>
+<figure class="phone">
+<div class="phone-f"><img src="/assets/2f52df824ba5a70194ad0ae891a16911.webp" alt="Opções para antecipar: pagar próximas parcelas, marcada como recomendada, e pagar últimas parcelas, que diminui o prazo e dá desconto"></div>
+<figcaption>Em produção, o desconto das últimas parcelas está escrito com todas as letras.</figcaption>
+</figure>
+</div>
+</section>
+
+<div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
+<section aria-labelledby="apr">
+<p class="lbl">aprendizados</p>
+<h2 class="h2" id="apr">o que eu levo daqui</h2>
+<ul class="list">
+<li>Transparência precisa de dado para sobreviver a uma V1 enxuta. Sem os chamados do chat, a tela de acompanhamento teria ficado para depois.</li>
+<li>Alerta forte não espanta cliente quando é verdade. Quem decide se a palavra é dura demais é o teste, não o receio.</li>
+<li>Texto e ilustração têm que dizer a mesma coisa. Na tela de fraude, o texto alarmava e a ilustração acalmava.</li>
+<li>Pilar só vale quando vira padrão que se repete de um produto para o outro.</li>
+</ul>
+<p class="note" style="margin-top: 64px">* Os números do chat só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo Banco Central em janeiro de 2026.</p>
+<a class="back" href="/portfolio/">← voltar para os cases</a>
+</section>
+
+</div>
+
+<div aria-hidden="true" style="margin-top: 96px; height: 40px; border-top: 2px solid #292929; border-bottom: 2px solid #292929; background: repeating-linear-gradient(-45deg, #4c1d95 0 16px, #f2f2f5 16px 32px);"></div>
+<footer style="background: #292929; color: #fffefe;">
+<div style="max-width: 1280px; margin: 0 auto; padding: 48px 32px; font-family: 'Roboto Mono', monospace; font-size: 16px;">©thais.coffee 2026_ ·&nbsp;feito por thais + claude<svg role="img" aria-label="com amor" width="18" height="16" viewBox="0 0 9 8" shape-rendering="crispEdges" style="display: inline-block; vertical-align: -2px; margin-left: 8px"><path fill="#e97045" d="M1 0h2v1h-2zM6 0h2v1h-2zM0 1h4v1h-4zM5 1h4v1h-4zM0 2h9v1h-9zM0 3h9v1h-9zM1 4h7v1h-7zM2 5h5v1h-5zM3 6h3v1h-3zM4 7h1v1h-1z"></path></svg></div>
+</footer>
+</div>
+<script src="/assets/site.js?v=202610170300"></script>
+</body>
+</html>
