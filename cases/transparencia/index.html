@@ -79,6 +79,58 @@ a:hover{color:#4c1d95}
 .spec-r{grid-template-columns:112px minmax(0,1fr)}
 }
 /* menu: linha de comando (igual ao site) */
+/* ficha técnica: etiqueta de equipamento */
+.hero{grid-template-columns:minmax(0,1fr)}
+.fx{position:relative;margin:104px 0 0;background:#fffefe;border:2px solid #292929;box-shadow:8px 8px 0 #292929;color:#292929}
+.fx-tab{position:absolute;left:-2px;top:-42px;width:344px;max-width:calc(100% + 2px);height:42px}
+.fx-tab svg.fx-tab-bg{position:absolute;left:0;top:0;display:block}
+.fx-tab-l{position:absolute;left:16px;top:8px;height:26px;padding:0 12px;display:flex;align-items:center;gap:8px;background:#fffefe;border:2px solid #292929;font-family:'Roboto Mono',monospace;font-size:12px;font-weight:500;white-space:nowrap}
+.fx-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:48px;padding:8px 24px;background:#292929;color:#f2f2f5;font-family:'Roboto Mono',monospace;font-size:14px;font-weight:500}
+.fx-r1{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:2px solid #292929}
+.fx-r2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-bottom:2px solid #292929}
+.fx-c{padding:24px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.fx-r1 .fx-c:not(:last-child),.fx-r2 > :first-child{border-right:2px solid #292929}
+.fx-col{display:flex;flex-direction:column;min-width:0}
+.fx-col .fx-c + .fx-c{border-top:2px solid #292929}
+.fx-k{font-family:'Roboto Mono',monospace;font-size:12px;font-weight:500;color:#4c1d95;text-transform:lowercase}
+.fx-big{font-family:'Roboto Mono',monospace;font-size:32px;font-weight:500;line-height:1.1;text-transform:lowercase}
+.fx-sub{font-size:14px;line-height:1.5}
+.fx-mini{font-family:'Roboto Mono',monospace;font-size:12px;font-weight:500}
+.fx-cal{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:4px}
+.fx-m{display:flex;flex-direction:column;gap:4px;align-items:center;font-family:'Roboto Mono',monospace;font-size:12px;font-weight:500}
+.fx-m i{display:block;width:100%;height:24px;background:#fffefe;border:2px solid #292929}
+.fx-m.fx-on i{background:#d7263d}
+.fx-sk{display:flex;flex-direction:column;gap:12px;margin:8px 0 0;padding:0;list-style:none}
+.fx-sk li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:12px;border-bottom:1px dashed #292929;font-family:'Roboto Mono',monospace;font-size:16px;font-weight:500}
+.fx-dots{display:flex;gap:8px;flex-shrink:0}
+.fx-dots i{display:block;width:16px;height:16px;border-radius:50%;border:2px solid #292929;background:#fffefe}
+.fx-dots i.fx-on{background:#d7263d}
+.fx-dis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px;margin:8px 0 0;padding:0;list-style:none}
+.fx-dis li{display:flex;align-items:center;gap:8px;font-family:'Roboto Mono',monospace;font-size:16px;font-weight:500}
+.fx-dis svg{flex:0 0 15px}
+.fx-tags{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0;padding:0;list-style:none}
+.fx-tags li{padding:4px 12px;border:2px solid #292929;background:#ffff8d;font-family:'Roboto Mono',monospace;font-size:14px;font-weight:500}
+.fx-ft{position:relative;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:16px 24px}
+.fx-code{display:flex;align-items:center;gap:24px;min-width:0}
+.fx-bc{display:flex;align-items:stretch;height:48px;flex-shrink:0}
+.fx-bc span{display:block;background:#292929}
+.fx-id{display:flex;flex-direction:column;font-family:'Roboto Mono',monospace;font-size:12px;font-weight:500;line-height:1.5}
+.fx-seal{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.fx-seal span{font-family:'Roboto Mono',monospace;font-size:12px;font-weight:500;text-align:right;line-height:1.5}
+.fx-stamp{position:absolute;left:50%;top:22px;width:264px;padding:16px;background:#e97045;border:2px solid #292929;transform:translateX(-30%) rotate(-6deg);font-family:'Roboto Mono',monospace;display:flex;flex-direction:column;gap:4px}
+.fx-stamp b{font-size:16px;font-weight:800}
+.fx-stamp span{font-size:12px;font-weight:500;line-height:1.5}
+@media (max-width:820px){
+.fx-r1,.fx-r2{grid-template-columns:minmax(0,1fr)}
+.fx-r1 .fx-c:not(:last-child),.fx-r2 > :first-child{border-right:0;border-bottom:2px solid #292929}
+.fx-bar{flex-direction:column;align-items:flex-start;gap:4px;padding:12px 16px}
+.fx-c{padding:16px}
+.fx-sk li{font-size:14px}
+.fx-dis li{font-size:14px}
+.fx-ft{flex-direction:column;align-items:flex-start;gap:16px;padding:16px}
+.fx-stamp{position:relative;left:auto;top:auto;transform:rotate(-3deg);margin:8px 0}
+.fx-bc{display:none}
+}
 .tnav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);margin:0;font-family:'Roboto Mono',monospace;color:#f2f2f5}
 .tnav *{box-sizing:border-box}
 .tnav-win{display:flex;flex-direction:column;background:#292929;border:2px solid #292929;border-radius:16px;box-shadow:8px 8px 0 #1847e3;overflow:hidden}
@@ -246,16 +298,29 @@ a:hover{color:#4c1d95}
 <h1 class="hero-t">transparência como regra de produto</h1>
 <p class="lead">Empréstimo assusta. Em vez de esconder as partes difíceis, transformei transparência, segurança e clareza em regras que valiam para cada produto de crédito que a gente desenhava.</p>
 </div>
-<div class="spec" role="table" aria-label="Ficha técnica">
-<div class="spec-r" role="row"><div class="spec-k" role="rowheader">produtos</div><div class="spec-v" role="cell">empréstimo pessoal, antecipação do saque-aniversário do fgts, pagar antes e refinanciamento em dia</div></div>
-<div class="spec-r" role="row"><div class="spec-k" role="rowheader">empresa</div><div class="spec-v" role="cell">will bank</div></div>
-<div class="spec-r" role="row"><div class="spec-k" role="rowheader">período</div><div class="spec-v" role="cell">2022 a 2025</div></div>
-<div class="spec-r" role="row"><div class="spec-k" role="rowheader">meu papel</div><div class="spec-v" role="cell">discovery, estratégia de conteúdo, ux writing e, depois, product design</div></div>
-<div class="spec-r" role="row"><div class="spec-k" role="rowheader">time</div><div class="spec-v" role="cell">bu empréstimos: pm, design, ilustração, dados e devs</div></div>
-<div class="spec-r" role="row"><div class="spec-k" role="rowheader">métodos</div><div class="spec-v" role="cell">análise de chat, reclame aqui e lojas de app, teste de conteúdo e análise de dados</div></div>
-<div class="spec-r" role="row"><div class="spec-k" role="rowheader">plataforma</div><div class="spec-v" role="cell">app ios e android</div></div>
-</div>
 </header>
+<div class="fx" role="group" aria-label="Ficha técnica">
+<div class="fx-tab"><svg class="fx-tab-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="#292929"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="#292929"></polygon></svg>
+<div class="fx-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#e97045" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg><span>case 03 · transparência</span></div></div>
+<div class="fx-bar"><span>ficha técnica</span><span>nº 03 · transparencia.case · rev. 2025</span></div>
+<div class="fx-r1">
+<div class="fx-c"><span class="fx-k">01 · empresa</span><span class="fx-big">will bank</span><span class="fx-sub">banco digital · time de crédito</span></div>
+<div class="fx-c"><span class="fx-k">02 · produto/projeto</span><span class="fx-big">5 produtos de crédito</span><span class="fx-sub">empréstimo pessoal, antecipação do fgts, parcelar compras, BNPL e ajuste de empréstimo</span></div>
+<div class="fx-c"><span class="fx-k">03 · duração</span><span class="fx-big">4 anos</span><div class="fx-cal" style="--n: 4" role="img" aria-label="4 anos, de 2022 a 2025"><span class="fx-m fx-on"><i></i>22</span><span class="fx-m fx-on"><i></i>23</span><span class="fx-m fx-on"><i></i>24</span><span class="fx-m fx-on"><i></i>25</span></div><span class="fx-mini">2022 → 2025</span></div>
+</div>
+<div class="fx-r2">
+<div class="fx-c"><span class="fx-k">04 · habilidades utilizadas</span><ul class="fx-sk"><li><span>research</span><span class="fx-dots" role="img" aria-label="nível 4 de 5"><i class="fx-on"></i><i class="fx-on"></i><i class="fx-on"></i><i class="fx-on"></i><i></i></span></li><li><span>estratégia de conteúdo</span><span class="fx-dots" role="img" aria-label="nível 5 de 5"><i class="fx-on"></i><i class="fx-on"></i><i class="fx-on"></i><i class="fx-on"></i><i class="fx-on"></i></span></li><li><span>ux writing</span><span class="fx-dots" role="img" aria-label="nível 5 de 5"><i class="fx-on"></i><i class="fx-on"></i><i class="fx-on"></i><i class="fx-on"></i><i class="fx-on"></i></span></li><li><span>teste de conteúdo</span><span class="fx-dots" role="img" aria-label="nível 4 de 5"><i class="fx-on"></i><i class="fx-on"></i><i class="fx-on"></i><i class="fx-on"></i><i></i></span></li><li><span>ui e interação</span><span class="fx-dots" role="img" aria-label="nível 3 de 5"><i class="fx-on"></i><i class="fx-on"></i><i class="fx-on"></i><i></i><i></i></span></li></ul></div>
+<div class="fx-col">
+<div class="fx-c"><span class="fx-k">05 · disciplinas envolvidas</span><ul class="fx-dis"><li><svg aria-hidden="true" width="15" height="15" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#e97045" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>design</li><li><svg aria-hidden="true" width="15" height="15" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#e97045" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg><span>negócio</span></li><li><svg aria-hidden="true" width="15" height="15" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#e97045" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg><span>ilustração</span></li><li><svg aria-hidden="true" width="15" height="15" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#e97045" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>produto</li><li><svg aria-hidden="true" width="15" height="15" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#e97045" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>dados</li><li><svg aria-hidden="true" width="15" height="15" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#e97045" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>engenharia</li></ul></div>
+<div class="fx-c"><span class="fx-k">06 · ferramentas e plataformas</span><ul class="fx-tags"><li>figma</li><li>google sheets</li><li>app ios</li><li>app android</li></ul></div>
+</div>
+</div>
+<div class="fx-ft">
+<div class="fx-code"><div class="fx-bc" aria-hidden="true"><span style="width: 2px; margin-right: 2px"></span><span style="width: 2px; margin-right: 2px"></span><span style="width: 3px; margin-right: 3px"></span><span style="width: 3px; margin-right: 2px"></span><span style="width: 2px; margin-right: 4px"></span><span style="width: 2px; margin-right: 3px"></span><span style="width: 2px; margin-right: 2px"></span><span style="width: 2px; margin-right: 2px"></span><span style="width: 3px; margin-right: 4px"></span><span style="width: 3px; margin-right: 2px"></span><span style="width: 4px; margin-right: 3px"></span><span style="width: 2px; margin-right: 2px"></span><span style="width: 2px; margin-right: 3px"></span><span style="width: 3px; margin-right: 3px"></span><span style="width: 4px; margin-right: 4px"></span><span style="width: 3px; margin-right: 2px"></span><span style="width: 4px; margin-right: 4px"></span><span style="width: 2px; margin-right: 2px"></span><span style="width: 2px; margin-right: 4px"></span><span style="width: 2px; margin-right: 3px"></span><span style="width: 4px; margin-right: 2px"></span><span style="width: 3px; margin-right: 2px"></span><span style="width: 4px; margin-right: 2px"></span><span style="width: 3px; margin-right: 2px"></span><span style="width: 4px; margin-right: 2px"></span><span style="width: 3px; margin-right: 2px"></span><span style="width: 4px; margin-right: 3px"></span><span style="width: 2px; margin-right: 2px"></span></div><div class="fx-id"><span>TC-TRANSP-2225</span><span>design: thais castro</span></div></div>
+<div class="fx-stamp"><b>números reais</b><span>compartilhados só porque o will bank foi liquidado</span></div>
+<div class="fx-seal"><span>selo de<br>qualidade</span><svg role="img" aria-label="smiley" width="56" height="56" viewBox="0 0 64 64" shape-rendering="crispEdges"><path fill="#292929" d="M20 4h4v4h-4zM24 4h4v4h-4zM28 4h4v4h-4zM32 4h4v4h-4zM36 4h4v4h-4zM40 4h4v4h-4zM12 8h4v4h-4zM16 8h4v4h-4zM44 8h4v4h-4zM48 8h4v4h-4zM8 12h4v4h-4zM52 12h4v4h-4zM4 16h4v4h-4zM56 16h4v4h-4zM4 20h4v4h-4zM20 20h4v4h-4zM40 20h4v4h-4zM56 20h4v4h-4zM0 24h4v4h-4zM20 24h4v4h-4zM40 24h4v4h-4zM60 24h4v4h-4zM0 28h4v4h-4zM20 28h4v4h-4zM40 28h4v4h-4zM60 28h4v4h-4zM0 32h4v4h-4zM60 32h4v4h-4zM0 36h4v4h-4zM60 36h4v4h-4zM0 40h4v4h-4zM12 40h4v4h-4zM48 40h4v4h-4zM60 40h4v4h-4zM4 44h4v4h-4zM16 44h4v4h-4zM44 44h4v4h-4zM56 44h4v4h-4zM4 48h4v4h-4zM20 48h4v4h-4zM24 48h4v4h-4zM28 48h4v4h-4zM32 48h4v4h-4zM36 48h4v4h-4zM40 48h4v4h-4zM56 48h4v4h-4zM8 52h4v4h-4zM52 52h4v4h-4zM12 56h4v4h-4zM16 56h4v4h-4zM44 56h4v4h-4zM48 56h4v4h-4zM20 60h4v4h-4zM24 60h4v4h-4zM28 60h4v4h-4zM32 60h4v4h-4zM36 60h4v4h-4zM40 60h4v4h-4z"></path></svg></div>
+</div>
+</div>
 
 <div class="fita" style="--c: #e97045; --a: -45deg; --l: 8px; --g: 8px"></div>
 <section aria-labelledby="prova">
@@ -492,7 +557,7 @@ a:hover{color:#4c1d95}
 <div style="max-width: 1280px; margin: 0 auto; padding: 48px 32px; font-family: 'Roboto Mono', monospace; font-size: 16px;">©thais.coffee 2026_ ·&nbsp;feito por thais + claude<svg role="img" aria-label="com amor" width="18" height="16" viewBox="0 0 9 8" shape-rendering="crispEdges" style="display: inline-block; vertical-align: -2px; margin-left: 8px"><path fill="#e97045" d="M1 0h2v1h-2zM6 0h2v1h-2zM0 1h4v1h-4zM5 1h4v1h-4zM0 2h9v1h-9zM0 3h9v1h-9zM1 4h7v1h-7zM2 5h5v1h-5zM3 6h3v1h-3zM4 7h1v1h-1z"></path></svg></div>
 </footer>
 </div>
-<script src="/assets/site.js?v=202610191930"></script>
+<script src="/assets/site.js?v=202610192100"></script>
 <script src="/assets/simulador.js?v=202610191930"></script>
 </body>
 </html>

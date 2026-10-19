@@ -60,7 +60,7 @@
 
   /* ---------- sobre: abrir a evolução de cargo */
   on('toggle', function () {
-    var card = within(this, 'job.open');
+    var card = this.closest('.win') || within(this.parentElement, 'job.open');
     if (!card) return;
     var open = this.getAttribute('aria-expanded') !== 'true';
     $$('sc-if[data-if="job.open"]', card).forEach(function (s) { show(s, open); });
