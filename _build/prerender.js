@@ -47,7 +47,9 @@ const server = http.createServer((req, res) => {
     if (!check && len > 500) {
       const f = path.join(ROOT, u, 'index.html');
       const src = fs.readFileSync(f, 'utf8');
-      const out = src.replace(/<div id="dc-root">[\s\S]*?<\/div>\n<template id="dc-tpl">/, '<div id="dc-root">' + htmlOut + '</div>\n<template id="dc-tpl">');
+      // função de substituição: o HTML tem "R$" e afins, que numa string de substituição viram padrões ($`, $&…)
+      const out = src.replace(/<div id="dc-root">[\s\S]*?<\/div>\n<template id="dc-tpl">/, () => '<div id="dc-root">' + htmlOut + '</div>\n<template id="dc-tpl">');
+      if ((out.match(/<template id="dc-tpl">/g) || []).length !== 1) throw new Error('pré-render corrompeu ' + u);
       fs.writeFileSync(f, out);
     }
   }
