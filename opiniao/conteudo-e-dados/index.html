@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<title>content designer também abre planilha · thais castro</title>
+<meta name="description" content="Opinião de Thais Castro sobre como content designers podem trabalhar com dados e levar métricas para seus estudos de caso.">
+<link rel="canonical" href="https://thais.coffee/opiniao/conteudo-e-dados/">
+<meta property="og:title" content="content designer também abre planilha · thais castro">
+<meta property="og:description" content="Opinião de Thais Castro sobre como content designers podem trabalhar com dados e levar métricas para seus estudos de caso.">
+<meta property="og:url" content="https://thais.coffee/opiniao/conteudo-e-dados/">
+<meta property="og:type" content="website">
+<link rel="icon" href="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
+<style>html,body{overflow-x:clip}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@800&amp;family=Work+Sans:wght@300&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Gokschil';src:url('/assets/93ba42cb1e8b8a10050eb62645b75517.ttf') format('truetype');font-display:swap}
+body{margin:0;background:#121214;color:#f2f2f5}
+.op,.op *{box-sizing:border-box}
+.op :focus-visible{outline:3px solid #ffff8d;outline-offset:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+.fita{height:24px;margin:0 0 64px;background:repeating-linear-gradient(-45deg,#f2f2f5 0 16px,transparent 16px 32px)}
+.lbl{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:uppercase;color:#b9a6f2;margin:0 0 8px}
+.hero-t{font-family:'Gokschil','Roboto Mono',monospace;font-weight:400;font-size:clamp(56px,8vw,80px);line-height:.9;text-transform:lowercase;margin:0 0 32px;max-width:12ch}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0;padding:0;list-style:none}
+/* elemento gráfico: planilha em wireframe com cursor de texto, atrás do título e da janela do texto */
+.op-hero{position:relative;margin:0 0 64px}
+.op-hero > div{position:relative;z-index:1}
+.op-g{position:absolute;z-index:0;right:-16px;top:56px;width:min(400px,40%);height:auto;pointer-events:none}
+.doc{position:relative;z-index:1}
+.tag{padding:4px 8px;background:#ffff8d;border:1px solid #f2f2f5;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase;color:#292929}
+.meta-t{font-family:'Roboto Mono',monospace;font-size:14px;margin-right:8px}
+/* janela do texto: não é clicável, então não leva sombra */
+.doc{background:#292929;border:2px solid #f2f2f5;border-radius:16px;overflow:hidden;color:#f2f2f5}
+.doc-bar{display:flex;align-items:center;gap:16px;padding:8px 16px;background:#121214;border-bottom:2px solid #f2f2f5;color:#f2f2f5}
+.doc-dots{display:flex;gap:8px}
+.doc-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;display:block}
+.doc-name{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px}
+.doc-b{padding:64px 32px 96px}
+.txt{max-width:640px;margin:0 auto;text-transform:lowercase}
+.txt p{font-size:20px;line-height:1.6;margin:0 0 32px}
+.txt a{color:#f2f2f5;font-weight:500;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
+.txt a:hover{color:#e97045}
+.steps{list-style:none;margin:0 0 48px;padding:0}
+.steps li{position:relative;padding:0 0 32px 48px;font-size:20px;line-height:1.5}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{content:'';position:absolute;left:11px;top:20px;bottom:-4px;width:2px;background:#f2f2f5}
+.steps li:last-child::before{display:none}
+.steps li::after{content:'';position:absolute;left:4px;top:2px;width:16px;height:16px;border-radius:50%;background:#ffff8d;border:2px solid #f2f2f5;color:#292929}
+.st-n{display:block;margin:0 0 4px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;line-height:20px;color:#b9a6f2}
+.case-box{margin:0 0 32px;padding:24px;background:#121214;border:2px dashed #b9a6f2;color:#f2f2f5}
+.case-box .why-l{display:block;margin:0 0 8px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:uppercase;color:#b9a6f2}
+.case-box p{margin:0 0 16px}
+.case-box p:last-child{margin:0}
+.nums{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;padding:0;list-style:none}
+.num{text-transform:none;padding:8px 16px;background:#292929;color:#fffefe;border:1px solid #f2f2f5;font-family:'Roboto Mono',monospace;font-weight:500;font-size:16px}
+.tab{width:100%;margin:0 0 32px;border-collapse:collapse;border:2px solid #f2f2f5;font-size:16px;line-height:1.5}
+.tab th{padding:12px 16px;background:#f2f2f5;color:#292929;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-align:left}
+.tab td{padding:12px 16px;border-top:1px solid #f2f2f5;vertical-align:top}
+.tab td:first-child{font-family:'Roboto Mono',monospace;font-weight:500;background:#121214;border-right:1px solid #f2f2f5;color:#f2f2f5}
+.fontes{margin:0 0 32px;padding:0 0 0 24px;font-size:20px;line-height:1.6}
+.fontes li{margin:0 0 8px}
+.pausa{margin:64px 0;padding:32px 0;border-top:2px solid #f2f2f5;border-bottom:2px solid #f2f2f5;font-family:'Roboto Mono',monospace;font-weight:500;font-size:32px;line-height:1.2;text-transform:lowercase}
+.pausa span{display:block;font-size:14px;color:#b9a6f2;text-transform:uppercase;margin:0 0 8px}
+.txt h2{font-family:'Roboto Mono',monospace;font-weight:500;font-size:32px;line-height:1.2;text-transform:lowercase;margin:64px 0 32px}
+.fecho{margin:64px 0 0;font-family:'Roboto Mono',monospace;font-weight:500;font-size:32px;line-height:1.3}
+.fecho mark{background:#ffff8d;color:#292929;padding:0 4px}
+.note-l{margin:48px 0 0;font-family:'Roboto Mono',monospace;font-size:12px;line-height:1.5}
+.assina{display:flex;align-items:center;gap:16px;margin:48px 0 0;font-family:'Roboto Mono',monospace;font-size:14px}
+.next{margin:96px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:24px}
+.next-l{width:100%;margin:0}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 24px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:16px;text-decoration:none;border:1px solid #f2f2f5;box-shadow:4px 4px 0 #f2f2f5;transition:transform .12s ease,box-shadow .12s ease}
+.btn-p{background:#1847e3;color:#fffefe}
+.btn-s{background:#292929;color:#f2f2f5;border-width:2px}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #f2f2f5}
+.btn-s:hover{background:#ffff8d;color:#292929}
+@media (max-width:820px){.op-hero .op-g{display:none}.tab{font-size:14px}.tab th,.tab td{padding:8px}.fontes{font-size:16px}.wrap{padding:0 16px}.doc-b{padding:48px 16px 64px}.txt p,.steps li{font-size:16px}.pausa,.txt h2,.fecho{font-size:20px}}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+/* menu: linha de comando (igual ao site) */
+.tnav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);margin:0;font-family:'Roboto Mono',monospace;color:#f2f2f5}
+.tnav *{box-sizing:border-box}
+.tnav-win{display:flex;flex-direction:column;background:#292929;border:2px solid #f2f2f5;border-radius:16px;box-shadow:8px 8px 0 #1847e3;overflow:hidden;color:#f2f2f5}
+.tnav-line{display:flex;align-items:center;gap:16px;padding:8px 8px 8px 16px;min-height:56px}
+.tnav-dots{display:flex;gap:8px;flex-shrink:0}
+.tnav-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;display:block}
+.tnav-prompt{flex-shrink:0;font-size:14px;white-space:nowrap}
+.tnav-prompt b{font-weight:500;color:#ffff8d}
+.tnav-cmd{color:#e97045;font-size:14px;flex-shrink:0}
+.tnav-list{display:flex;align-items:center;gap:8px;margin:0;padding:0;list-style:none;min-width:0;overflow-x:auto;scrollbar-width:none}
+.tnav-list a{display:inline-flex;align-items:center;min-height:40px;padding:0 8px;font-size:14px;font-weight:500;color:#f2f2f5;text-decoration:none;text-transform:lowercase;white-space:nowrap;border:1px dashed transparent}
+.tnav-list a:hover{border-color:#ffff8d;color:#ffff8d}
+.tnav-ls{display:none;flex-shrink:0;margin-left:auto;width:48px;height:40px;padding:0;align-items:center;justify-content:center;background:#ffff8d;color:#292929;border:0;cursor:pointer}
+.tnav-out{order:2;display:block;margin:0;padding:8px 16px 16px;list-style:none;border-top:1px dashed #a3a3a3;font-size:14px}
+.tnav-out a{display:flex;gap:16px;align-items:center;min-height:44px;color:#f2f2f5;text-decoration:none;text-transform:lowercase}
+.tnav-out a span{color:#a3a3a3;font-size:12px;width:40px;flex-shrink:0}
+.tnav :focus-visible{outline:3px solid #ffff8d;outline-offset:2px}
+@media (min-width:1001px){.tnav-out{display:none}}
+@media (max-width:1000px){
+.tnav{top:8px}
+.tnav-win{box-shadow:4px 4px 0 #1847e3}
+.tnav-dots,.tnav-cmd,.tnav-list{display:none}
+.tnav-prompt{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.tnav-ls{display:inline-flex}
+}
+.tnav-list a[aria-current]{background:#ffff8d;color:#292929}
+.tnav-out a[aria-current]{color:#ffff8d}
+.tnav-sub{color:#ffff8d}
+/* footer do DS (portfólio thais) */
+.dsf{position:relative;overflow:hidden;background:#121214;color:#f2f2f5}
+.dsf *{box-sizing:border-box}
+.dsf-tape{height:16px;background:repeating-linear-gradient(-45deg,#f2f2f5 0 12px,transparent 12px 24px);border-top:1px solid #f2f2f5;border-bottom:1px solid #f2f2f5}
+.dsf-in{position:relative;max-width:1080px;margin:0 auto;padding:64px 32px 48px}
+.dsf-lbl{font:500 14px/1.5 'Roboto Mono',monospace;color:#b9a6f2;text-transform:uppercase;margin:0 0 16px}
+.dsf-cta{font:800 clamp(40px,7vw,72px)/.95 'Roboto Mono',monospace;letter-spacing:-.02em;text-transform:lowercase;margin:0 0 48px}
+.dsf-cta a{color:#f2f2f5;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:4px;text-underline-offset:8px}
+.dsf-cta a:hover{background:#ffff8d;color:#292929}
+.dsf-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #f2f2f5}
+.dsf-col{padding:24px 24px 0 0}
+.dsf-col+.dsf-col{border-left:1px solid #f2f2f5;padding-left:24px}
+.dsf-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.dsf-col li{display:flex;gap:16px;align-items:baseline}
+.dsf-n{font:500 12px/1.5 'Roboto Mono',monospace;color:#b9a6f2}
+.dsf-lk{font:400 16px/1.5 'Roboto Mono',monospace;color:#f2f2f5;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
+.dsf-ic{display:inline-flex;text-decoration:none}
+.dsf-ic svg{display:block}
+.dsf-ic .li-mn{transition:transform .12s ease}
+.dsf-ic:hover .li-mn{transform:translate(1px,1px)}
+.dsf-ic:active .li-mn{transform:translate(2px,2px)}
+@media (prefers-reduced-motion:reduce){.dsf-ic .li-mn{transition:none}}
+.dsf-lk:hover{background:#ffff8d;color:#292929}
+.dsf-sig{position:relative;background:#292929;border-top:1px solid #f2f2f5;overflow:hidden;white-space:nowrap}
+.dsf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.dsf-track{display:inline-flex;animation:dsf-run 24s linear infinite}
+.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#ffff8d;padding:16px 24px}
+.dsf-track span.dsf-dot{color:#f2f2f5;padding:16px 0}
+@keyframes dsf-run{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media (prefers-reduced-motion:reduce){.dsf-track{animation:none}}
+.dsf-cp{background:#292929;color:#f2f2f5;font:300 14px/1.5 'Work Sans',sans-serif;text-align:center;padding:0 24px 16px;margin:0}
+@media (max-width:640px){.dsf-in{padding:48px 16px 32px}.dsf-cols{grid-template-columns:minmax(0,1fr)}.dsf-col+.dsf-col{border-left:0;border-top:1px solid #f2f2f5;padding-left:0;margin-top:24px}}
+</style>
+</head>
+<body>
+<div id="dc-root">
+
+<div class="op" style="background: rgb(18, 18, 20); color: rgb(242, 242, 245); font-family: &quot;Work Sans&quot;, sans-serif; padding: 128px 0px 0px; min-height: 100vh;">
+<nav class="tnav" aria-label="menu">
+<div class="tnav-win">
+
+<div class="tnav-line">
+<div class="tnav-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/opiniao/<span class="tnav-sub">conteudo-e-dados.txt</span> $</span>
+<span class="tnav-cmd" aria-hidden="true">cd</span>
+<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">opiniao/</a></li><li><a href="/contato/">contato/</a></li></ul>
+<button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+
+</button>
+</div>
+</div>
+</nav>
+
+<main class="wrap">
+<div class="fita" aria-hidden="true"></div>
+<section class="op-hero">
+<div>
+<p class="lbl">opinião</p>
+<h1 class="hero-t">content designer também abre planilha</h1>
+<ul class="meta" aria-label="sobre este texto">
+<li class="meta-t">6 min de leitura</li>
+<li class="tag">content design</li><li class="tag">dados</li><li class="tag">estudo de caso</li>
+</ul>
+</div>
+<svg class="op-g" viewBox="0 0 400 260" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="8" y="8" width="384" height="244"></rect><path d="M8 40 H392"></path><path d="M8 82 H392"></path><path d="M8 124 H392"></path><path d="M8 166 H392"></path><path d="M8 208 H392"></path><path d="M56 8 V252"></path><path d="M168 8 V252"></path><path d="M280 8 V252"></path><rect x="168" y="124" width="112" height="42" fill="#e97045"></rect><path d="M184 145 H232" stroke-width="2.5"></path><rect x="240" y="133" width="4" height="24" fill="currentColor" stroke="none"></rect><path d="M72 103 H136" stroke-dasharray="6 6"></path><path d="M72 187 H120" stroke-dasharray="6 6"></path><path d="M296 61 H360" stroke-dasharray="6 6"></path><path d="M296 229 H344" stroke-dasharray="6 6"></path><path d="M184 61 H248" stroke-dasharray="6 6"></path></svg>
+</section>
+
+<article class="doc" aria-labelledby="doc-name">
+<div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><span class="doc-name" id="doc-name">conteudo-e-dados.txt</span></div>
+<div class="doc-b"><div class="txt">
+
+<p>Texto e dado não são mundos separados. No content design, o dado entra antes da palavra, durante o teste e depois, na hora de defender a decisão.</p>
+
+<p>A dificuldade que mais vejo em quem trabalha com conteúdo é ligar uma métrica a um texto. A conversão subiu: foi a palavra, o layout ou a oferta? Os chamados caíram: foi a nova explicação ou a mudança na regra? Como o texto quase nunca é a única coisa que muda, isolar o efeito dele parece impossível. Na hora de montar um estudo de caso, sobra um antes e depois de telas e a frase “o texto ficou mais claro”. Ninguém consegue provar isso.</p>
+
+<p>Passei alguns anos como content designer no time de empréstimos do will bank. Olhando para trás, quase tudo que fiz de mais importante teve número no meio. Não porque eu fosse analista, mas porque aprendi a usar dado de três jeitos: como matéria-prima, como teste e como argumento.</p>
+
+<h2>1. o dado como matéria-prima: ler antes de escrever_</h2>
+
+<p>O melhor texto que escrevi começou numa planilha de reclamações. No discovery do empréstimo pessoal, primeiro produto lançado pelo time, antes de abrir o Figma, li conversas do chat, reclamações no Reclame Aqui e avaliações nas lojas de app.</p>
+
+<p>Eu queria saber duas coisas: o que as pessoas não entendiam e com que palavras falavam do produto. Um piloto de empréstimo foi rodado por 3 meses um ano antes, então eu tinha uma fonte valiosa de dados de clientes, o próprio atendimento.</p>
+
+<p>Uma pergunta aparecia o tempo todo no chat: “o que é esse IOF?”. E por que chamo de melhor texto: essa seção se repetiu em todos os produtos de crédito que criamos subsequentemente, virou marca registrada do empréstimo do will, a página “tim-tim por tim-tim” que explicava sem jargões e de maneira clara o que era cada sigla dos encargos, e a conta explícita “na ponta do lápis” sobre o custo do empréstimo.</p>
+
+<p>O mesmo discovery trouxe uma coisa que nenhum briefing tinha: clientes já estavam caindo em golpe em nome de um empréstimo que a gente nem tinha lançado. Daí nasceu uma tela de interrupção no fluxo. Esse é o primeiro jeito de trabalhar com dado: ele decide o que precisa ser dito, antes de você decidir como dizer.</p>
+
+<p>O que serve de fonte para content, sem precisar de SQL:</p>
+
+<ul class="fontes">
+<li>conversas do chat e motivos de contato</li>
+<li>Reclame Aqui e avaliações das lojas de app</li>
+<li>buscas dentro do app, quando existem</li>
+<li>respostas abertas de pesquisa e NPS</li>
+</ul>
+
+<h2>2. o texto como hipótese: deixar o teste decidir_</h2>
+
+<p>Toda escolha de palavra é uma aposta. Content design fica mais forte quando trata essa aposta como hipótese, com critério de sucesso definido antes.</p>
+
+<p>Na tela de golpe, eu quis usar a palavra “golpistas”, direta, para gerar alarme de verdade. O time tinha receio de assustar o cliente. Em vez de discutir gosto, a gente testou. A mensagem ficou clara para todo mundo, não gerou desconforto e a tela foi considerada “muito importante”. O teste também mostrou o que falhou: a ilustração não foi entendida. As pessoas viram um cachorro bravo, não um cão de guarda, e não ligaram a imagem à ideia de segurança.</p>
+
+<p>No pagar antes, a dúvida era de negócio. Antecipar as últimas parcelas dá mais desconto para o cliente e é pior para o banco no curto prazo. Se o texto explicasse isso com todas as letras, as pessoas iam correr para as últimas parcelas? Planejei um teste A/B de conteúdo em dez/2023: descobrimos que a interferência era mínima e que sermos transparentes nesse caso não afetava de modo perigoso a receita. Hoje, em produção, o desconto está escrito por extenso.</p>
+
+<p>Já como product designer, escrevi o e-mail de um experimento de lembrete de pagamento com Pix. A hipótese era sobre o meio de pagamento, oferecer Pix aumentaria a taxa de pagamentos em dia e recuperaria atrasos curtos (no teste, D+2).</p>
+
+<p>O resultado mostrou outra coisa: o grupo que recebeu o e-mail teve 64,7% menos saldo em atraso que o controle, e a análise apontou o reforço da mensagem como a causa principal, não o Pix, porque o aumento de pagamento por esse meio não foi tão significativo. <a href="/cases/lembrete-de-pagamento/">Leia o case completo.</a></p>
+
+<h2>3. o dado como argumento: conteúdo que muda o roadmap_</h2>
+
+<p>O terceiro jeito é o que mais muda a posição de quem escreve no time. Quando o dado vem de conteúdo, ele mostra onde o produto deixa o cliente sem resposta.</p>
+
+<p>Na V1 do empréstimo, ninguém queria gastar tempo com uma tela de acompanhamento além do time de design. Queriam um MVP enxuto, apenas com contratação.</p>
+
+<p>O problema disso é que a gente já havia cometido esse erro antes. Num teste anterior, o cliente contratava e o empréstimo sumia do app. Fui atrás dos chamados que essa tela teria evitado: 526 em pouco mais de um ano, isso com o teste tendo rodado apenas 3 meses para uma base de 10k. Desses 526, 66,3% o próprio cliente poderia resolver com uma tela de acompanhamento.</p>
+
+<p>Com o time de dados, projetamos 8.982 chamados evitáveis por ano para a nova base elegível de empréstimo que era muito maior. A tela entrou na V1.</p>
+
+<p>O pulo do gato foi o que veio depois. Cada dúvida do chat virou um pedaço da tela:</p>
+
+<table class="tab">
+<thead><tr><th scope="col">a dúvida no chat</th><th scope="col">a resposta na tela</th></tr></thead>
+<tbody>
+<tr><td>quando pago? como pago?</td><td>próxima parcela, com valor e data</td></tr>
+<tr><td>e meu contrato?</td><td>e-mail com contrato enviado no ato da contratação</td></tr>
+<tr><td>posso antecipar? posso quitar?</td><td>informação já na tela de simulação com essa resposta</td></tr>
+<tr><td>o que é esse IOF?</td><td>o tim-tim por tim-tim dos encargos</td></tr>
+</tbody>
+</table>
+
+<p>O dado defendeu a tela e também escreveu a arquitetura de conteúdo dela.</p>
+
+<h2>4. como levar isso para um estudo de caso_</h2>
+
+<p>Um case de content com dados não mostra só a tela final. Mostra a pergunta, a fonte e o que mudou por causa dela.</p>
+
+<ol class="steps">
+<li><span class="st-n">01</span><strong>comece pela pergunta, não pela planilha.</strong> “por que as pessoas chamam o chat depois de contratar?” guia a leitura. “vou olhar os dados” não guia nada.</li>
+<li><span class="st-n">02</span><strong>declare amostra e período.</strong> “526 chamados, de mar/2021 a mar/2022” é difícil de contestar. “muita gente reclamava” é fácil.</li>
+<li><span class="st-n">03</span><strong>ligue cada dado a uma decisão de texto.</strong> a dúvida do IOF virou o tim-tim por tim-tim. sem essa ligação, o número vira enfeite.</li>
+<li><span class="st-n">04</span><strong>traduza para a língua do negócio.</strong> chamado evitável é custo. informação errada é risco. saldo em atraso é dinheiro.</li>
+<li><span class="st-n">05</span><strong>mostre o teste, mesmo sem resultado final.</strong> hipótese, versões, amostra e confiança já mostram método.</li>
+<li><span class="st-n">06</span><strong>sem acesso aos números, use prova externa.</strong> no meu <a href="/cases/transparencia/">case de transparência</a>, a prova foi o 3º lugar do will bank no Índice de transparência de empréstimos novücard, no 2º semestre de 2023, que avalia como os bancos dispõem informações para clientes.</li>
+<li><span class="st-n">07</span><strong>conte o que deu errado.</strong> o cão de guarda lido como cachorro bravo, o questionário longo demais. aprendizado honesto dá mais credibilidade que resultado perfeito.</li>
+</ol>
+
+<h2>então…_</h2>
+
+<p>Não precisa virar analista para trabalhar com dados. Precisa de curiosidade para ler o que o cliente já está dizendo e de coragem para colocar as próprias palavras à prova.</p>
+
+<p class="fecho">O texto é a parte do produto que mais conversa com o cliente. Por isso mesmo, ele deixa rastro em todo lugar: no chat, na reclamação, no clique que não aconteceu. <mark>Quem escreve só precisa aprender a ler esse rastro.</mark></p>
+
+<p class="note-l">Os números do will bank só estão sendo compartilhados porque o banco teve liquidação extrajudicial decretada pelo Banco Central em janeiro de 2026.</p>
+
+<p class="assina"><svg width="40" height="40" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>thais castro · product designer</p>
+
+</div></div>
+</article>
+
+<div class="next">
+<p class="lbl next-l">e agora?</p>
+<a class="btn btn-p" href="/cases/transparencia/">ver o case →</a>
+</div>
+</main>
+
+<footer class="dsf" style="margin-top: 96px;">
+<div class="dsf-tape" aria-hidden="true"></div>
+<div class="dsf-in">
+<p class="dsf-lbl">fim da página</p>
+
+<div class="dsf-cols">
+<div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
+</div>
+</div>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+</footer>
+</div>
+</div>
+<template id="dc-tpl">
+
+<div class="op" style="background: #121214; color: #f2f2f5; font-family: 'Work Sans',sans-serif; padding: 128px 0 0; min-height: 100vh;">
+<nav class="tnav" aria-label="menu">
+<div class="tnav-win">
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/" aria-current="page"><span>03</span>opiniao/</a></li><li><a href="/contato/"><span>04</span>contato/</a></li></ul>
+</sc-if>
+<div class="tnav-line">
+<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/opiniao/<span class="tnav-sub">conteudo-e-dados.txt</span> $</span>
+<span class="tnav-cmd" aria-hidden="true">cd</span>
+<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">opiniao/</a></li><li><a href="/contato/">contato/</a></li></ul>
+<button class="tnav-ls" type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuOpen}}" aria-controls="tnav-out" aria-label="{{menuLabel}}">
+<sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
+</button>
+</div>
+</div>
+</nav>
+
+<main class="wrap">
+<div class="fita" aria-hidden="true"></div>
+<section class="op-hero">
+<div>
+<p class="lbl">opinião</p>
+<h1 class="hero-t">content designer também abre planilha</h1>
+<ul class="meta" aria-label="sobre este texto">
+<li class="meta-t">6 min de leitura</li>
+<li class="tag">content design</li><li class="tag">dados</li><li class="tag">estudo de caso</li>
+</ul>
+</div>
+<svg class="op-g" viewBox="0 0 400 260" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="8" y="8" width="384" height="244"></rect><path d="M8 40 H392"></path><path d="M8 82 H392"></path><path d="M8 124 H392"></path><path d="M8 166 H392"></path><path d="M8 208 H392"></path><path d="M56 8 V252"></path><path d="M168 8 V252"></path><path d="M280 8 V252"></path><rect x="168" y="124" width="112" height="42" fill="#e97045"></rect><path d="M184 145 H232" stroke-width="2.5"></path><rect x="240" y="133" width="4" height="24" fill="currentColor" stroke="none"></rect><path d="M72 103 H136" stroke-dasharray="6 6"></path><path d="M72 187 H120" stroke-dasharray="6 6"></path><path d="M296 61 H360" stroke-dasharray="6 6"></path><path d="M296 229 H344" stroke-dasharray="6 6"></path><path d="M184 61 H248" stroke-dasharray="6 6"></path></svg>
+</section>
+
+<article class="doc" aria-labelledby="doc-name">
+<div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><span class="doc-name" id="doc-name">conteudo-e-dados.txt</span></div>
+<div class="doc-b"><div class="txt">
+
+<p>Texto e dado não são mundos separados. No content design, o dado entra antes da palavra, durante o teste e depois, na hora de defender a decisão.</p>
+
+<p>A dificuldade que mais vejo em quem trabalha com conteúdo é ligar uma métrica a um texto. A conversão subiu: foi a palavra, o layout ou a oferta? Os chamados caíram: foi a nova explicação ou a mudança na regra? Como o texto quase nunca é a única coisa que muda, isolar o efeito dele parece impossível. Na hora de montar um estudo de caso, sobra um antes e depois de telas e a frase “o texto ficou mais claro”. Ninguém consegue provar isso.</p>
+
+<p>Passei alguns anos como content designer no time de empréstimos do will bank. Olhando para trás, quase tudo que fiz de mais importante teve número no meio. Não porque eu fosse analista, mas porque aprendi a usar dado de três jeitos: como matéria-prima, como teste e como argumento.</p>
+
+<h2>1. o dado como matéria-prima: ler antes de escrever_</h2>
+
+<p>O melhor texto que escrevi começou numa planilha de reclamações. No discovery do empréstimo pessoal, primeiro produto lançado pelo time, antes de abrir o Figma, li conversas do chat, reclamações no Reclame Aqui e avaliações nas lojas de app.</p>
+
+<p>Eu queria saber duas coisas: o que as pessoas não entendiam e com que palavras falavam do produto. Um piloto de empréstimo foi rodado por 3 meses um ano antes, então eu tinha uma fonte valiosa de dados de clientes, o próprio atendimento.</p>
+
+<p>Uma pergunta aparecia o tempo todo no chat: “o que é esse IOF?”. E por que chamo de melhor texto: essa seção se repetiu em todos os produtos de crédito que criamos subsequentemente, virou marca registrada do empréstimo do will, a página “tim-tim por tim-tim” que explicava sem jargões e de maneira clara o que era cada sigla dos encargos, e a conta explícita “na ponta do lápis” sobre o custo do empréstimo.</p>
+
+<p>O mesmo discovery trouxe uma coisa que nenhum briefing tinha: clientes já estavam caindo em golpe em nome de um empréstimo que a gente nem tinha lançado. Daí nasceu uma tela de interrupção no fluxo. Esse é o primeiro jeito de trabalhar com dado: ele decide o que precisa ser dito, antes de você decidir como dizer.</p>
+
+<p>O que serve de fonte para content, sem precisar de SQL:</p>
+
+<ul class="fontes">
+<li>conversas do chat e motivos de contato</li>
+<li>Reclame Aqui e avaliações das lojas de app</li>
+<li>buscas dentro do app, quando existem</li>
+<li>respostas abertas de pesquisa e NPS</li>
+</ul>
+
+<h2>2. o texto como hipótese: deixar o teste decidir_</h2>
+
+<p>Toda escolha de palavra é uma aposta. Content design fica mais forte quando trata essa aposta como hipótese, com critério de sucesso definido antes.</p>
+
+<p>Na tela de golpe, eu quis usar a palavra “golpistas”, direta, para gerar alarme de verdade. O time tinha receio de assustar o cliente. Em vez de discutir gosto, a gente testou. A mensagem ficou clara para todo mundo, não gerou desconforto e a tela foi considerada “muito importante”. O teste também mostrou o que falhou: a ilustração não foi entendida. As pessoas viram um cachorro bravo, não um cão de guarda, e não ligaram a imagem à ideia de segurança.</p>
+
+<p>No pagar antes, a dúvida era de negócio. Antecipar as últimas parcelas dá mais desconto para o cliente e é pior para o banco no curto prazo. Se o texto explicasse isso com todas as letras, as pessoas iam correr para as últimas parcelas? Planejei um teste A/B de conteúdo em dez/2023: descobrimos que a interferência era mínima e que sermos transparentes nesse caso não afetava de modo perigoso a receita. Hoje, em produção, o desconto está escrito por extenso.</p>
+
+<p>Já como product designer, escrevi o e-mail de um experimento de lembrete de pagamento com Pix. A hipótese era sobre o meio de pagamento, oferecer Pix aumentaria a taxa de pagamentos em dia e recuperaria atrasos curtos (no teste, D+2).</p>
+
+<p>O resultado mostrou outra coisa: o grupo que recebeu o e-mail teve 64,7% menos saldo em atraso que o controle, e a análise apontou o reforço da mensagem como a causa principal, não o Pix, porque o aumento de pagamento por esse meio não foi tão significativo. <a href="/cases/lembrete-de-pagamento/">Leia o case completo.</a></p>
+
+<h2>3. o dado como argumento: conteúdo que muda o roadmap_</h2>
+
+<p>O terceiro jeito é o que mais muda a posição de quem escreve no time. Quando o dado vem de conteúdo, ele mostra onde o produto deixa o cliente sem resposta.</p>
+
+<p>Na V1 do empréstimo, ninguém queria gastar tempo com uma tela de acompanhamento além do time de design. Queriam um MVP enxuto, apenas com contratação.</p>
+
+<p>O problema disso é que a gente já havia cometido esse erro antes. Num teste anterior, o cliente contratava e o empréstimo sumia do app. Fui atrás dos chamados que essa tela teria evitado: 526 em pouco mais de um ano, isso com o teste tendo rodado apenas 3 meses para uma base de 10k. Desses 526, 66,3% o próprio cliente poderia resolver com uma tela de acompanhamento.</p>
+
+<p>Com o time de dados, projetamos 8.982 chamados evitáveis por ano para a nova base elegível de empréstimo que era muito maior. A tela entrou na V1.</p>
+
+<p>O pulo do gato foi o que veio depois. Cada dúvida do chat virou um pedaço da tela:</p>
+
+<table class="tab">
+<thead><tr><th scope="col">a dúvida no chat</th><th scope="col">a resposta na tela</th></tr></thead>
+<tbody>
+<tr><td>quando pago? como pago?</td><td>próxima parcela, com valor e data</td></tr>
+<tr><td>e meu contrato?</td><td>e-mail com contrato enviado no ato da contratação</td></tr>
+<tr><td>posso antecipar? posso quitar?</td><td>informação já na tela de simulação com essa resposta</td></tr>
+<tr><td>o que é esse IOF?</td><td>o tim-tim por tim-tim dos encargos</td></tr>
+</tbody>
+</table>
+
+<p>O dado defendeu a tela e também escreveu a arquitetura de conteúdo dela.</p>
+
+<h2>4. como levar isso para um estudo de caso_</h2>
+
+<p>Um case de content com dados não mostra só a tela final. Mostra a pergunta, a fonte e o que mudou por causa dela.</p>
+
+<ol class="steps">
+<li><span class="st-n">01</span><strong>comece pela pergunta, não pela planilha.</strong> “por que as pessoas chamam o chat depois de contratar?” guia a leitura. “vou olhar os dados” não guia nada.</li>
+<li><span class="st-n">02</span><strong>declare amostra e período.</strong> “526 chamados, de mar/2021 a mar/2022” é difícil de contestar. “muita gente reclamava” é fácil.</li>
+<li><span class="st-n">03</span><strong>ligue cada dado a uma decisão de texto.</strong> a dúvida do IOF virou o tim-tim por tim-tim. sem essa ligação, o número vira enfeite.</li>
+<li><span class="st-n">04</span><strong>traduza para a língua do negócio.</strong> chamado evitável é custo. informação errada é risco. saldo em atraso é dinheiro.</li>
+<li><span class="st-n">05</span><strong>mostre o teste, mesmo sem resultado final.</strong> hipótese, versões, amostra e confiança já mostram método.</li>
+<li><span class="st-n">06</span><strong>sem acesso aos números, use prova externa.</strong> no meu <a href="/cases/transparencia/">case de transparência</a>, a prova foi o 3º lugar do will bank no Índice de transparência de empréstimos novücard, no 2º semestre de 2023, que avalia como os bancos dispõem informações para clientes.</li>
+<li><span class="st-n">07</span><strong>conte o que deu errado.</strong> o cão de guarda lido como cachorro bravo, o questionário longo demais. aprendizado honesto dá mais credibilidade que resultado perfeito.</li>
+</ol>
+
+<h2>então…_</h2>
+
+<p>Não precisa virar analista para trabalhar com dados. Precisa de curiosidade para ler o que o cliente já está dizendo e de coragem para colocar as próprias palavras à prova.</p>
+
+<p class="fecho">O texto é a parte do produto que mais conversa com o cliente. Por isso mesmo, ele deixa rastro em todo lugar: no chat, na reclamação, no clique que não aconteceu. <mark>Quem escreve só precisa aprender a ler esse rastro.</mark></p>
+
+<p class="note-l">Os números do will bank só estão sendo compartilhados porque o banco teve liquidação extrajudicial decretada pelo Banco Central em janeiro de 2026.</p>
+
+<p class="assina"><svg width="40" height="40" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>thais castro · product designer</p>
+
+</div></div>
+</article>
+
+<div class="next">
+<p class="lbl next-l">e agora?</p>
+<a class="btn btn-p" href="/cases/transparencia/">ver o case →</a>
+</div>
+</main>
+
+<footer class="dsf" style="margin-top: 96px">
+<div class="dsf-tape" aria-hidden="true"></div>
+<div class="dsf-in">
+<p class="dsf-lbl">fim da página</p>
+
+<div class="dsf-cols">
+<div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
+</div>
+</div>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+</footer>
+</div>
+</template>
+<script type="text/plain" id="dc-logic">
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { menuOpen: false }; }
+renderVals() {
+const menuOpen = !!this.state.menuOpen;
+return { menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? 'fechar menu' : 'abrir menu',
+toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: () => this.setState({ menuOpen: false }) };
+}
+}
+</script>
+<script src="/assets/dc.js?v=202610210300"></script>
+</body>
+</html>

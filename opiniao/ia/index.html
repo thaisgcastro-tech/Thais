@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<title>ia não faz bons designers · thais castro</title>
+<meta name="description" content="Opinião de Thais Castro sobre IA, processo e design de produto.">
+<link rel="canonical" href="https://thais.coffee/opiniao/ia/">
+<meta property="og:title" content="ia não faz bons designers · thais castro">
+<meta property="og:description" content="Opinião de Thais Castro sobre IA, processo e design de produto.">
+<meta property="og:url" content="https://thais.coffee/opiniao/ia/">
+<meta property="og:type" content="website">
+<link rel="icon" href="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
+<style>html,body{overflow-x:clip}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@800&amp;family=Work+Sans:wght@300&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Gokschil';src:url('/assets/93ba42cb1e8b8a10050eb62645b75517.ttf') format('truetype');font-display:swap}
+body{margin:0;background:#121214;color:#f2f2f5}
+.op,.op *{box-sizing:border-box}
+.op :focus-visible{outline:3px solid #ffff8d;outline-offset:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+.fita{height:24px;margin:0 0 64px;background:repeating-linear-gradient(-45deg,#f2f2f5 0 16px,transparent 16px 32px)}
+.lbl{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:uppercase;color:#b9a6f2;margin:0 0 8px}
+.hero-t{font-family:'Gokschil','Roboto Mono',monospace;font-weight:400;font-size:clamp(56px,8vw,80px);line-height:.9;text-transform:lowercase;margin:0 0 32px;max-width:12ch}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0;padding:0;list-style:none}
+/* elemento gráfico: chão em grade e balão de fala em pixel, atrás do título e da janela do texto */
+.op-hero{position:relative;margin:0 0 64px}
+.op-hero > div{position:relative;z-index:1}
+.op-g{position:absolute;z-index:0;right:-16px;top:56px;width:min(560px,56%);height:auto;pointer-events:none}
+.doc{position:relative;z-index:1}
+.tag{padding:4px 8px;background:#ffff8d;border:1px solid #f2f2f5;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase;color:#292929}
+.meta-t{font-family:'Roboto Mono',monospace;font-size:14px;margin-right:8px}
+/* janela do texto: não é clicável, então não leva sombra */
+.doc{background:#292929;border:2px solid #f2f2f5;border-radius:16px;overflow:hidden;color:#f2f2f5}
+.doc-bar{display:flex;align-items:center;gap:16px;padding:8px 16px;background:#121214;border-bottom:2px solid #f2f2f5;color:#f2f2f5}
+.doc-dots{display:flex;gap:8px}
+.doc-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;display:block}
+.doc-name{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px}
+.doc-b{padding:64px 32px 96px}
+.txt{max-width:640px;margin:0 auto;text-transform:lowercase}
+.txt p{font-size:20px;line-height:1.6;margin:0 0 32px}
+.txt a{color:#f2f2f5;font-weight:500;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
+.txt a:hover{color:#e97045}
+.steps{list-style:none;margin:0 0 48px;padding:0}
+.steps li{position:relative;padding:0 0 32px 48px;font-size:20px;line-height:1.5}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{content:'';position:absolute;left:11px;top:20px;bottom:-4px;width:2px;background:#f2f2f5}
+.steps li:last-child::before{display:none}
+.steps li::after{content:'';position:absolute;left:4px;top:2px;width:16px;height:16px;border-radius:50%;background:#ffff8d;border:2px solid #f2f2f5;color:#292929}
+.st-n{display:block;margin:0 0 4px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;line-height:20px;color:#b9a6f2}
+.case-box{margin:0 0 32px;padding:24px;background:#121214;border:2px dashed #b9a6f2;color:#f2f2f5}
+.case-box .why-l{display:block;margin:0 0 8px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:uppercase;color:#b9a6f2}
+.case-box p{margin:0 0 16px}
+.case-box p:last-child{margin:0}
+.nums{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;padding:0;list-style:none}
+.num{text-transform:none;padding:8px 16px;background:#292929;color:#fffefe;border:1px solid #f2f2f5;font-family:'Roboto Mono',monospace;font-weight:500;font-size:16px}
+.pausa{margin:64px 0;padding:32px 0;border-top:2px solid #f2f2f5;border-bottom:2px solid #f2f2f5;font-family:'Roboto Mono',monospace;font-weight:500;font-size:32px;line-height:1.2;text-transform:lowercase}
+.pausa span{display:block;font-size:14px;color:#b9a6f2;text-transform:uppercase;margin:0 0 8px}
+.txt h2{font-family:'Roboto Mono',monospace;font-weight:500;font-size:32px;line-height:1.2;text-transform:lowercase;margin:64px 0 32px}
+.fecho{margin:64px 0 0;font-family:'Roboto Mono',monospace;font-weight:500;font-size:32px;line-height:1.3}
+.fecho mark{background:#ffff8d;color:#292929;padding:0 4px}
+.assina{display:flex;align-items:center;gap:16px;margin:48px 0 0;font-family:'Roboto Mono',monospace;font-size:14px}
+.next{margin:96px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:24px}
+.next-l{width:100%;margin:0}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 24px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:16px;text-decoration:none;border:1px solid #f2f2f5;box-shadow:4px 4px 0 #f2f2f5;transition:transform .12s ease,box-shadow .12s ease}
+.btn-p{background:#1847e3;color:#fffefe}
+.btn-s{background:#292929;color:#f2f2f5;border-width:2px}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #f2f2f5}
+.btn-s:hover{background:#ffff8d;color:#292929}
+@media (max-width:820px){.op-g{width:64%;top:96px;right:-24px}.wrap{padding:0 16px}.doc-b{padding:48px 16px 64px}.txt p,.steps li{font-size:16px}.pausa,.txt h2,.fecho{font-size:20px}}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+/* menu: linha de comando (igual ao site) */
+.tnav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);margin:0;font-family:'Roboto Mono',monospace;color:#f2f2f5}
+.tnav *{box-sizing:border-box}
+.tnav-win{display:flex;flex-direction:column;background:#292929;border:2px solid #f2f2f5;border-radius:16px;box-shadow:8px 8px 0 #1847e3;overflow:hidden;color:#f2f2f5}
+.tnav-line{display:flex;align-items:center;gap:16px;padding:8px 8px 8px 16px;min-height:56px}
+.tnav-dots{display:flex;gap:8px;flex-shrink:0}
+.tnav-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;display:block}
+.tnav-prompt{flex-shrink:0;font-size:14px;white-space:nowrap}
+.tnav-prompt b{font-weight:500;color:#ffff8d}
+.tnav-cmd{color:#e97045;font-size:14px;flex-shrink:0}
+.tnav-list{display:flex;align-items:center;gap:8px;margin:0;padding:0;list-style:none;min-width:0;overflow-x:auto;scrollbar-width:none}
+.tnav-list a{display:inline-flex;align-items:center;min-height:40px;padding:0 8px;font-size:14px;font-weight:500;color:#f2f2f5;text-decoration:none;text-transform:lowercase;white-space:nowrap;border:1px dashed transparent}
+.tnav-list a:hover{border-color:#ffff8d;color:#ffff8d}
+.tnav-ls{display:none;flex-shrink:0;margin-left:auto;width:48px;height:40px;padding:0;align-items:center;justify-content:center;background:#ffff8d;color:#292929;border:0;cursor:pointer}
+.tnav-out{order:2;display:block;margin:0;padding:8px 16px 16px;list-style:none;border-top:1px dashed #a3a3a3;font-size:14px}
+.tnav-out a{display:flex;gap:16px;align-items:center;min-height:44px;color:#f2f2f5;text-decoration:none;text-transform:lowercase}
+.tnav-out a span{color:#a3a3a3;font-size:12px;width:40px;flex-shrink:0}
+.tnav :focus-visible{outline:3px solid #ffff8d;outline-offset:2px}
+@media (min-width:1001px){.tnav-out{display:none}}
+@media (max-width:1000px){
+.tnav{top:8px}
+.tnav-win{box-shadow:4px 4px 0 #1847e3}
+.tnav-dots,.tnav-cmd,.tnav-list{display:none}
+.tnav-prompt{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.tnav-ls{display:inline-flex}
+}
+.tnav-list a[aria-current]{background:#ffff8d;color:#292929}
+.tnav-out a[aria-current]{color:#ffff8d}
+.tnav-sub{color:#ffff8d}
+/* footer do DS (portfólio thais) */
+.dsf{position:relative;overflow:hidden;background:#121214;color:#f2f2f5}
+.dsf *{box-sizing:border-box}
+.dsf-tape{height:16px;background:repeating-linear-gradient(-45deg,#f2f2f5 0 12px,transparent 12px 24px);border-top:1px solid #f2f2f5;border-bottom:1px solid #f2f2f5}
+.dsf-in{position:relative;max-width:1080px;margin:0 auto;padding:64px 32px 48px}
+.dsf-lbl{font:500 14px/1.5 'Roboto Mono',monospace;color:#b9a6f2;text-transform:uppercase;margin:0 0 16px}
+.dsf-cta{font:800 clamp(40px,7vw,72px)/.95 'Roboto Mono',monospace;letter-spacing:-.02em;text-transform:lowercase;margin:0 0 48px}
+.dsf-cta a{color:#f2f2f5;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:4px;text-underline-offset:8px}
+.dsf-cta a:hover{background:#ffff8d;color:#292929}
+.dsf-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #f2f2f5}
+.dsf-col{padding:24px 24px 0 0}
+.dsf-col+.dsf-col{border-left:1px solid #f2f2f5;padding-left:24px}
+.dsf-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.dsf-col li{display:flex;gap:16px;align-items:baseline}
+.dsf-n{font:500 12px/1.5 'Roboto Mono',monospace;color:#b9a6f2}
+.dsf-lk{font:400 16px/1.5 'Roboto Mono',monospace;color:#f2f2f5;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
+.dsf-ic{display:inline-flex;text-decoration:none}
+.dsf-ic svg{display:block}
+.dsf-ic .li-mn{transition:transform .12s ease}
+.dsf-ic:hover .li-mn{transform:translate(1px,1px)}
+.dsf-ic:active .li-mn{transform:translate(2px,2px)}
+@media (prefers-reduced-motion:reduce){.dsf-ic .li-mn{transition:none}}
+.dsf-lk:hover{background:#ffff8d;color:#292929}
+.dsf-sig{position:relative;background:#292929;border-top:1px solid #f2f2f5;overflow:hidden;white-space:nowrap}
+.dsf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.dsf-track{display:inline-flex;animation:dsf-run 24s linear infinite}
+.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#ffff8d;padding:16px 24px}
+.dsf-track span.dsf-dot{color:#f2f2f5;padding:16px 0}
+@keyframes dsf-run{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media (prefers-reduced-motion:reduce){.dsf-track{animation:none}}
+.dsf-cp{background:#292929;color:#f2f2f5;font:300 14px/1.5 'Work Sans',sans-serif;text-align:center;padding:0 24px 16px;margin:0}
+@media (max-width:640px){.dsf-in{padding:48px 16px 32px}.dsf-cols{grid-template-columns:minmax(0,1fr)}.dsf-col+.dsf-col{border-left:0;border-top:1px solid #f2f2f5;padding-left:0;margin-top:24px}}
+</style>
+</head>
+<body>
+<div id="dc-root">
+
+<div class="op" style="background: rgb(18, 18, 20); color: rgb(242, 242, 245); font-family: &quot;Work Sans&quot;, sans-serif; padding: 128px 0px 0px; min-height: 100vh;">
+<nav class="tnav" aria-label="menu">
+<div class="tnav-win">
+
+<div class="tnav-line">
+<div class="tnav-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/opiniao/<span class="tnav-sub">ia.txt</span> $</span>
+<span class="tnav-cmd" aria-hidden="true">cd</span>
+<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">opiniao/</a></li><li><a href="/contato/">contato/</a></li></ul>
+<button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+
+</button>
+</div>
+</div>
+</nav>
+
+<main class="wrap">
+<div class="fita" aria-hidden="true"></div>
+<section class="op-hero">
+<div>
+<p class="lbl">opinião</p>
+<h1 class="hero-t">ia não faz bons designers</h1>
+<ul class="meta" aria-label="sobre este texto">
+<li class="meta-t">2 min de leitura</li>
+<li class="tag">ia</li><li class="tag">processo</li><li class="tag">carreira</li>
+</ul>
+</div>
+<svg class="op-g" viewBox="0 0 400 260" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><defs><clipPath id="op-floor"><rect x="8" y="100" width="384" height="152"></rect></clipPath></defs><g clip-path="url(#op-floor)" stroke-width="1.5"><path d="M200 40 L-400 250"></path><path d="M200 40 L-350 250"></path><path d="M200 40 L-300 250"></path><path d="M200 40 L-250 250"></path><path d="M200 40 L-200 250"></path><path d="M200 40 L-150 250"></path><path d="M200 40 L-100 250"></path><path d="M200 40 L-50 250"></path><path d="M200 40 L0 250"></path><path d="M200 40 L50 250"></path><path d="M200 40 L100 250"></path><path d="M200 40 L150 250"></path><path d="M200 40 L200 250"></path><path d="M200 40 L250 250"></path><path d="M200 40 L300 250"></path><path d="M200 40 L350 250"></path><path d="M200 40 L400 250"></path><path d="M200 40 L450 250"></path><path d="M200 40 L500 250"></path><path d="M200 40 L550 250"></path><path d="M200 40 L600 250"></path><path d="M200 40 L650 250"></path><path d="M200 40 L700 250"></path><path d="M200 40 L750 250"></path><path d="M200 40 L800 250"></path></g><path d="M8 100 H392"></path><path d="M8 110 H392"></path><path d="M8 124 H392"></path><path d="M8 142 H392"></path><path d="M8 166 H392"></path><path d="M8 198 H392"></path><path d="M8 250 H392"></path><rect x="8" y="100" width="384" height="150"></rect><rect x="304" y="0" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="320" y="0" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="336" y="0" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="352" y="0" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="288" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="304" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="320" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="336" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="352" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="368" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="288" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="304" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="320" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="336" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="352" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="368" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="304" y="48" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="320" y="48" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="336" y="48" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="352" y="48" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="304" y="64" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="308" y="28" width="8" height="8" fill="currentColor" stroke="none"></rect><rect x="324" y="28" width="8" height="8" fill="currentColor" stroke="none"></rect><rect x="340" y="28" width="8" height="8" fill="currentColor" stroke="none"></rect><rect x="356" y="28" width="8" height="8" fill="currentColor" stroke="none"></rect></svg>
+</section>
+
+<article class="doc" aria-labelledby="doc-name">
+<div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><span class="doc-name" id="doc-name">ia-nao-faz-bons-designers.txt</span></div>
+<div class="doc-b"><div class="txt">
+
+<p>A maior parte do meu tempo eu não passo desenhando tela, assim como não passava a maior parte do tempo escrevendo quando era Content Designer. Comecei pelas palavras, fui parar nas interfaces e, no caminho, entendi que nenhuma das duas se sustenta sozinha.</p>
+
+<p>Uma boa experiência passa por conhecer com profundidade a dor de quem usa, a necessidade de quem vende, os desafios de quem desenvolve e as limitações técnicas no meio do caminho. Isso demanda tempo, maturidade e jogo de cintura. E é aí que eu gosto de estar:</p>
+
+<ol class="steps">
+<li><span class="st-n">01</span>mergulhar em um discovery</li>
+<li><span class="st-n">02</span>investigar dores com dados e pesquisa</li>
+<li><span class="st-n">03</span>resolver com os devs os detalhes técnicos que mudam a experiência</li>
+<li><span class="st-n">04</span>negociar com outros times quando os produtos se entrelaçam</li>
+<li><span class="st-n">05</span>entender com o negócio o que a feature precisa entregar</li>
+<li><span class="st-n">06</span>e provocar todo mundo a perguntar se aquilo resolve de verdade algum problema</li>
+</ol>
+
+<p>Interface, arquitetura de informação e usabilidade são peças fundamentais. Mas, pra mim, elas são o resultado do processo, e é no processo que está a qualidade do produto.</p>
+
+<div class="case-box">
+<span class="why-l">na prática</span>
+<p>No will bank, descobrimos que estávamos punindo bons clientes: quem estava em dia e previa um aperto não tinha como renegociar. Precisava atrasar, sujar o nome e esperar a Cobrança. Um fake door mostrou que essa demanda era real, e o resultado virou o Ajuste de Empréstimo:</p>
+<ul class="nums" aria-label="resultado em cinco meses"><li class="num">406 contratos</li><li class="num">+R$ 500 mil gerados</li><li class="num">5 meses</li></ul>
+<p><a href="/cases/refinanciamento-em-dia/">Veja o case</a></p>
+</div>
+
+<p class="pausa"><span>enfim…</span>processo.</p>
+
+<h2>e a ia nisso tudo?_</h2>
+
+<p>Uso, e uso bastante. No ajuste de empréstimo, ela me ajudou a clusterizar as respostas da survey, refinar a análise dos dados, criar um novo componente e prototipar a primeira versão do fluxo. Trabalho operacional que antes levaria dias saiu em horas, e esse tempo voltou para onde ele faz diferença: conversar com o time, questionar premissas, testar caminhos.</p>
+
+<p>Mas a IA é parte do processo, não o todo. Eu não acredito nessa ideia de que “foi a IA que fez”. Fui eu que fiz, com a ajuda de alguma IA. Não terceirizo essa responsabilidade e não abro mão de pensar: decidir começar por esticar o prazo em vez do troco, trocar “renegociar” por “ajustar”. Cada vez que a gente deixa a IA pensar no nosso lugar, perde um pouco da capacidade de crescer, de criar conexões com as próprias experiências, perde o que nos torna únicos e passa a repetir padrões simplórios. E eu tenho personalidade demais pra deixar isso acontecer comigo.</p>
+
+<p class="fecho">Ela entrega telas lindas e pixel perfect. <mark>O molho continua com quem entende o produto em profundidade.</mark></p>
+
+<p class="assina"><svg width="40" height="40" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>thais castro · product designer</p>
+
+</div></div>
+</article>
+
+<div class="next">
+<p class="lbl next-l">e agora?</p>
+<a class="btn btn-p" href="/cases/refinanciamento-em-dia/">case do ajuste →</a>
+</div>
+</main>
+
+<footer class="dsf" style="margin-top: 96px;">
+<div class="dsf-tape" aria-hidden="true"></div>
+<div class="dsf-in">
+<p class="dsf-lbl">fim da página</p>
+
+<div class="dsf-cols">
+<div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
+</div>
+</div>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+</footer>
+</div>
+</div>
+<template id="dc-tpl">
+
+<div class="op" style="background: #121214; color: #f2f2f5; font-family: 'Work Sans',sans-serif; padding: 128px 0 0; min-height: 100vh;">
+<nav class="tnav" aria-label="menu">
+<div class="tnav-win">
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/" aria-current="page"><span>03</span>opiniao/</a></li><li><a href="/contato/"><span>04</span>contato/</a></li></ul>
+</sc-if>
+<div class="tnav-line">
+<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/opiniao/<span class="tnav-sub">ia.txt</span> $</span>
+<span class="tnav-cmd" aria-hidden="true">cd</span>
+<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">opiniao/</a></li><li><a href="/contato/">contato/</a></li></ul>
+<button class="tnav-ls" type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuOpen}}" aria-controls="tnav-out" aria-label="{{menuLabel}}">
+<sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
+</button>
+</div>
+</div>
+</nav>
+
+<main class="wrap">
+<div class="fita" aria-hidden="true"></div>
+<section class="op-hero">
+<div>
+<p class="lbl">opinião</p>
+<h1 class="hero-t">ia não faz bons designers</h1>
+<ul class="meta" aria-label="sobre este texto">
+<li class="meta-t">2 min de leitura</li>
+<li class="tag">ia</li><li class="tag">processo</li><li class="tag">carreira</li>
+</ul>
+</div>
+<svg class="op-g" viewBox="0 0 400 260" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><defs><clipPath id="op-floor"><rect x="8" y="100" width="384" height="152"></rect></clipPath></defs><g clip-path="url(#op-floor)" stroke-width="1.5"><path d="M200 40 L-400 250"></path><path d="M200 40 L-350 250"></path><path d="M200 40 L-300 250"></path><path d="M200 40 L-250 250"></path><path d="M200 40 L-200 250"></path><path d="M200 40 L-150 250"></path><path d="M200 40 L-100 250"></path><path d="M200 40 L-50 250"></path><path d="M200 40 L0 250"></path><path d="M200 40 L50 250"></path><path d="M200 40 L100 250"></path><path d="M200 40 L150 250"></path><path d="M200 40 L200 250"></path><path d="M200 40 L250 250"></path><path d="M200 40 L300 250"></path><path d="M200 40 L350 250"></path><path d="M200 40 L400 250"></path><path d="M200 40 L450 250"></path><path d="M200 40 L500 250"></path><path d="M200 40 L550 250"></path><path d="M200 40 L600 250"></path><path d="M200 40 L650 250"></path><path d="M200 40 L700 250"></path><path d="M200 40 L750 250"></path><path d="M200 40 L800 250"></path></g><path d="M8 100 H392"></path><path d="M8 110 H392"></path><path d="M8 124 H392"></path><path d="M8 142 H392"></path><path d="M8 166 H392"></path><path d="M8 198 H392"></path><path d="M8 250 H392"></path><rect x="8" y="100" width="384" height="150"></rect><rect x="304" y="0" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="320" y="0" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="336" y="0" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="352" y="0" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="288" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="304" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="320" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="336" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="352" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="368" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="288" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="304" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="320" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="336" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="352" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="368" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="304" y="48" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="320" y="48" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="336" y="48" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="352" y="48" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="304" y="64" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="308" y="28" width="8" height="8" fill="currentColor" stroke="none"></rect><rect x="324" y="28" width="8" height="8" fill="currentColor" stroke="none"></rect><rect x="340" y="28" width="8" height="8" fill="currentColor" stroke="none"></rect><rect x="356" y="28" width="8" height="8" fill="currentColor" stroke="none"></rect></svg>
+</section>
+
+<article class="doc" aria-labelledby="doc-name">
+<div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><span class="doc-name" id="doc-name">ia-nao-faz-bons-designers.txt</span></div>
+<div class="doc-b"><div class="txt">
+
+<p>A maior parte do meu tempo eu não passo desenhando tela, assim como não passava a maior parte do tempo escrevendo quando era Content Designer. Comecei pelas palavras, fui parar nas interfaces e, no caminho, entendi que nenhuma das duas se sustenta sozinha.</p>
+
+<p>Uma boa experiência passa por conhecer com profundidade a dor de quem usa, a necessidade de quem vende, os desafios de quem desenvolve e as limitações técnicas no meio do caminho. Isso demanda tempo, maturidade e jogo de cintura. E é aí que eu gosto de estar:</p>
+
+<ol class="steps">
+<li><span class="st-n">01</span>mergulhar em um discovery</li>
+<li><span class="st-n">02</span>investigar dores com dados e pesquisa</li>
+<li><span class="st-n">03</span>resolver com os devs os detalhes técnicos que mudam a experiência</li>
+<li><span class="st-n">04</span>negociar com outros times quando os produtos se entrelaçam</li>
+<li><span class="st-n">05</span>entender com o negócio o que a feature precisa entregar</li>
+<li><span class="st-n">06</span>e provocar todo mundo a perguntar se aquilo resolve de verdade algum problema</li>
+</ol>
+
+<p>Interface, arquitetura de informação e usabilidade são peças fundamentais. Mas, pra mim, elas são o resultado do processo, e é no processo que está a qualidade do produto.</p>
+
+<div class="case-box">
+<span class="why-l">na prática</span>
+<p>No will bank, descobrimos que estávamos punindo bons clientes: quem estava em dia e previa um aperto não tinha como renegociar. Precisava atrasar, sujar o nome e esperar a Cobrança. Um fake door mostrou que essa demanda era real, e o resultado virou o Ajuste de Empréstimo:</p>
+<ul class="nums" aria-label="resultado em cinco meses"><li class="num">406 contratos</li><li class="num">+R$ 500 mil gerados</li><li class="num">5 meses</li></ul>
+<p><a href="/cases/refinanciamento-em-dia/">Veja o case</a></p>
+</div>
+
+<p class="pausa"><span>enfim…</span>processo.</p>
+
+<h2>e a ia nisso tudo?_</h2>
+
+<p>Uso, e uso bastante. No ajuste de empréstimo, ela me ajudou a clusterizar as respostas da survey, refinar a análise dos dados, criar um novo componente e prototipar a primeira versão do fluxo. Trabalho operacional que antes levaria dias saiu em horas, e esse tempo voltou para onde ele faz diferença: conversar com o time, questionar premissas, testar caminhos.</p>
+
+<p>Mas a IA é parte do processo, não o todo. Eu não acredito nessa ideia de que “foi a IA que fez”. Fui eu que fiz, com a ajuda de alguma IA. Não terceirizo essa responsabilidade e não abro mão de pensar: decidir começar por esticar o prazo em vez do troco, trocar “renegociar” por “ajustar”. Cada vez que a gente deixa a IA pensar no nosso lugar, perde um pouco da capacidade de crescer, de criar conexões com as próprias experiências, perde o que nos torna únicos e passa a repetir padrões simplórios. E eu tenho personalidade demais pra deixar isso acontecer comigo.</p>
+
+<p class="fecho">Ela entrega telas lindas e pixel perfect. <mark>O molho continua com quem entende o produto em profundidade.</mark></p>
+
+<p class="assina"><svg width="40" height="40" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>thais castro · product designer</p>
+
+</div></div>
+</article>
+
+<div class="next">
+<p class="lbl next-l">e agora?</p>
+<a class="btn btn-p" href="/cases/refinanciamento-em-dia/">case do ajuste →</a>
+</div>
+</main>
+
+<footer class="dsf" style="margin-top: 96px">
+<div class="dsf-tape" aria-hidden="true"></div>
+<div class="dsf-in">
+<p class="dsf-lbl">fim da página</p>
+
+<div class="dsf-cols">
+<div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
+</div>
+</div>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+</footer>
+</div>
+</template>
+<script type="text/plain" id="dc-logic">
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { menuOpen: false }; }
+renderVals() {
+const menuOpen = !!this.state.menuOpen;
+return { menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? 'fechar menu' : 'abrir menu',
+toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: () => this.setState({ menuOpen: false }) };
+}
+}
+</script>
+<script src="/assets/dc.js?v=202610210300"></script>
+</body>
+</html>
