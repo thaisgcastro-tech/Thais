@@ -24,7 +24,7 @@ body{margin:0;background:#121214;color:#f2f2f5}
 .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
 .fita{height:24px;margin:0 0 64px;background:repeating-linear-gradient(-45deg,#f2f2f5 0 16px,transparent 16px 32px)}
 .lbl{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:uppercase;color:#b9a6f2;margin:0 0 8px}
-.hero-t{font-family:'Gokschil','Roboto Mono',monospace;font-weight:400;font-size:clamp(56px,8vw,80px);line-height:.9;text-transform:lowercase;margin:0 0 32px;max-width:12ch}
+.hero-t{font-family:'Gokschil','Roboto Mono',monospace;font-weight:400;font-size:clamp(40px,8vw,80px);line-height:.9;text-transform:lowercase;margin:0 0 32px;max-width:12ch}
 .meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0;padding:0;list-style:none}
 /* elemento gráfico: chão em grade e balão de fala em pixel, atrás do título e da janela do texto */
 .op-hero{position:relative;margin:0 0 64px}
@@ -83,7 +83,7 @@ body{margin:0;background:#121214;color:#f2f2f5}
 .tnav-prompt b{font-weight:500;color:#ffff8d}
 .tnav-cmd{color:#e97045;font-size:14px;flex-shrink:0}
 .tnav-list{display:flex;align-items:center;gap:8px;margin:0;padding:0;list-style:none;min-width:0;overflow-x:auto;scrollbar-width:none}
-.tnav-list a{display:inline-flex;align-items:center;min-height:40px;padding:0 8px;font-size:14px;font-weight:500;color:#f2f2f5;text-decoration:none;text-transform:lowercase;white-space:nowrap;border:1px dashed transparent}
+.tnav-list a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;font-size:14px;font-weight:500;color:#f2f2f5;text-decoration:none;text-transform:lowercase;white-space:nowrap;border:1px dashed transparent}
 .tnav-list a:hover{border-color:#ffff8d;color:#ffff8d}
 .tnav-ls{display:none;flex-shrink:0;margin-left:auto;width:48px;height:40px;padding:0;align-items:center;justify-content:center;background:#ffff8d;color:#292929;border:0;cursor:pointer}
 .tnav-out{order:2;display:block;margin:0;padding:8px 16px 16px;list-style:none;border-top:1px dashed #a3a3a3;font-size:14px}
@@ -128,7 +128,7 @@ button.pf-tab{cursor:pointer;transition:transform .12s ease}
 button.pf-tab:hover{transform:translateY(-4px)}
 button.pf-tab:hover .pf-tab-l{background:#ffff8d;color:#292929}
 .pf-tab svg.pf-bg{position:absolute;left:0;top:0;display:block}
-.pf-tab-l{position:absolute;left:16px;top:8px;height:26px;padding:0 12px;display:flex;align-items:center;gap:8px;background:#292929;border:2px solid #f2f2f5;font-family:'Roboto Mono',monospace;font-size:12px;font-weight:500;white-space:nowrap;text-transform:lowercase;color:#f2f2f5}
+.pf-tab-l{position:absolute;left:16px;top:6px;height:30px;padding:0 12px;display:flex;align-items:center;gap:8px;background:#292929;border:2px solid #f2f2f5;font-family:'Roboto Mono',monospace;font-size:14px;font-weight:500;white-space:nowrap;text-transform:lowercase;color:#f2f2f5;max-width:calc(100% - 48px);overflow:hidden;text-overflow:ellipsis}
 .pf-a{left:-2px}
 .pf-b{left:calc(50% - 172px)}
 .pf-c{right:-2px}
@@ -205,15 +205,15 @@ button.pf-tab:hover .pf-tab-l{background:#ffff8d;color:#292929}
 <div class="gav-in" style="border-style: none;">
 
 <div class="pf-sheet">
-<button type="button" class="pf-tab pf-c" aria-label="puxar a pasta 03: ia não faz bons designers"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#4c1d95" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>pasta 03 · ia</span></button>
+<button type="button" class="pf-tab pf-c" aria-label="puxar a pasta 03: ia não faz bons designers, 2 min de leitura" title="ia não faz bons designers"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#b9a6f2" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg> · </span></button>
 </div>
 
 <div class="pf-sheet">
-<button type="button" class="pf-tab pf-b" aria-label="puxar a pasta 02: ninguém me chamou pra mesa do roadmap"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#1847e3" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>pasta 02 · roadmap</span></button>
+<button type="button" class="pf-tab pf-b" aria-label="puxar a pasta 02: ninguém me chamou pra mesa do roadmap, 3 min de leitura" title="ninguém me chamou pra mesa do roadmap"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#1847e3" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg> · </span></button>
 </div>
 
 <a class="item pf-front" href="/opiniao/conteudo-e-dados/">
-<span class="pf-tab pf-a" aria-hidden="true"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#e97045" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>pasta 01 · conteúdo e dados</span></span>
+<span class="pf-tab pf-a" aria-hidden="true"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="#e97045" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg> · </span></span>
 <span class="pf-bar"><span>texto nº 01</span><span>6 min de leitura</span></span>
 <span class="pf-in"><span class="item-path">~/opiniao/conteudo-e-dados.txt</span><span class="item-t">content designer também abre planilha</span><span class="item-d">Ligar métrica a texto parece impossível. Três jeitos de usar dado no content design, e como levar isso para um estudo de caso.</span><span class="item-f"><span class="tag">content design</span><span class="tag">dados</span><span class="tag">estudo de caso</span><span class="item-go" aria-hidden="true">ler texto →</span></span></span>
 </a>
@@ -272,11 +272,11 @@ button.pf-tab:hover .pf-tab-l{background:#ffff8d;color:#292929}
 <div class="gav-in" style="border-style: none">
 <sc-for list="{{fundo}}" as="f" hint-placeholder-count="2">
 <div class="pf-sheet">
-<button type="button" class="pf-tab {{f.pos}}" onClick="{{f.puxar}}" aria-label="puxar a pasta {{f.num}}: {{f.titulo}}"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="{{f.cor}}" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>pasta {{f.num}} · {{f.aba}}</span></button>
+<button type="button" class="pf-tab {{f.pos}}" onClick="{{f.puxar}}" aria-label="puxar a pasta {{f.num}}: {{f.titulo}}, {{f.tempo}}" title="{{f.titulo}}"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="{{f.cor}}" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>{{f.aba}} · {{f.tempo}}</span></button>
 </div>
 </sc-for>
 <a class="item pf-front" href="{{frente.href}}">
-<span class="pf-tab {{frente.pos}}" aria-hidden="true"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="{{frente.cor}}" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>pasta {{frente.num}} · {{frente.aba}}</span></span>
+<span class="pf-tab {{frente.pos}}" aria-hidden="true"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="{{frente.cor}}" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>{{frente.aba}} · {{frente.tempo}}</span></span>
 <span class="pf-bar"><span>texto nº {{frente.num}}</span><span>{{frente.tempo}}</span></span>
 <span class="pf-in"><span class="item-path">{{frente.path}}</span><span class="item-t">{{frente.titulo}}</span><span class="item-d">{{frente.desc}}</span><span class="item-f"><sc-for list="{{frente.tags}}" as="t" hint-placeholder-count="3"><span class="tag">{{t}}</span></sc-for><span class="item-go" aria-hidden="true">ler texto →</span></span></span>
 </a>
@@ -309,7 +309,7 @@ const menuOpen = !!this.state.menuOpen;
 const pastas = [
 { num: '01', aba: 'conteúdo e dados', pos: 'pf-a', cor: '#e97045', href: '/opiniao/conteudo-e-dados/', path: '~/opiniao/conteudo-e-dados.txt', titulo: 'content designer também abre planilha', desc: 'Ligar métrica a texto parece impossível. Três jeitos de usar dado no content design, e como levar isso para um estudo de caso.', tempo: '6 min de leitura', tags: ['content design', 'dados', 'estudo de caso'] },
 { num: '02', aba: 'roadmap', pos: 'pf-b', cor: '#1847e3', href: '/opiniao/roadmap/', path: '~/opiniao/roadmap.txt', titulo: 'ninguém me chamou pra mesa do roadmap', desc: 'Como 187 conversas lidas no chat viraram argumento para entrar na discussão de prioridade, e o que eu aprendi a levar junto com os números.', tempo: '3 min de leitura', tags: ['dados', 'discovery', 'carreira'] },
-{ num: '03', aba: 'ia', pos: 'pf-c', cor: '#4c1d95', href: '/opiniao/ia/', path: '~/opiniao/ia.txt', titulo: 'ia não faz bons designers', desc: 'Uso IA, e uso bastante. Mas a qualidade do produto está no processo, e esse eu não terceirizo.', tempo: '2 min de leitura', tags: ['ia', 'processo', 'carreira'] }
+{ num: '03', aba: 'ia', pos: 'pf-c', cor: '#b9a6f2', href: '/opiniao/ia/', path: '~/opiniao/ia.txt', titulo: 'ia não faz bons designers', desc: 'Uso IA, e uso bastante. Mas a qualidade do produto está no processo, e esse eu não terceirizo.', tempo: '2 min de leitura', tags: ['ia', 'processo', 'carreira'] }
 ].map((p) => ({ ...p, puxar: () => this.setState({ ativa: p.num }) }));
 const frente = pastas.find((p) => p.num === this.state.ativa) || pastas[0];
 const fundo = pastas.filter((p) => p !== frente).reverse();
