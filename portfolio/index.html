@@ -102,6 +102,7 @@ a{color:#f2f2f5}
 @media (prefers-reduced-motion:reduce){.flt-o{transition:none}}
 /* menu: linha de comando (igual ao site) */
 .tnav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);margin:0;font-family:'Roboto Mono',monospace;color:#f2f2f5}
+.tnav::before{content:"";position:absolute;z-index:-1;left:calc(50% - 50vw);width:100vw;top:-16px;height:46px;background:#121214;pointer-events:none}
 .tnav *{box-sizing:border-box}
 .tnav-win{display:flex;flex-direction:column;background:#292929;border:2px solid #f2f2f5;border-radius:16px;box-shadow:8px 8px 0 #1847e3;overflow:hidden;color:#f2f2f5}
 .tnav-line{display:flex;align-items:center;gap:16px;padding:8px 8px 8px 16px;min-height:56px}
@@ -120,6 +121,7 @@ a{color:#f2f2f5}
 .tnav :focus-visible{outline:3px solid #ffff8d;outline-offset:2px}
 @media (min-width:1001px){.tnav-out{display:none}}
 @media (max-width:1000px){
+.tnav::before{top:-8px;height:38px}
 .tnav{top:8px}
 .tnav-win{box-shadow:4px 4px 0 #1847e3}
 .tnav-dots,.tnav-cmd,.tnav-list{display:none}
@@ -539,6 +541,6 @@ toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: 
 }
 }
 </script>
-<script src="/assets/dc.js?v=202610222200"></script>
+<script src="/assets/dc.js?v=202610230030"></script>
 </body>
 </html>

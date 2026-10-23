@@ -85,6 +85,7 @@ a:hover{color:#b9a6f2}
 }
 /* menu: linha de comando (igual ao site) */
 .tnav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);margin:0;font-family:'Roboto Mono',monospace;color:#f2f2f5}
+.tnav::before{content:"";position:absolute;z-index:-1;left:calc(50% - 50vw);width:100vw;top:-16px;height:46px;background:#121214;pointer-events:none}
 .tnav *{box-sizing:border-box}
 .tnav-win{display:flex;flex-direction:column;background:#292929;border:2px solid #f2f2f5;border-radius:16px;box-shadow:8px 8px 0 #1847e3;overflow:hidden;color:#f2f2f5}
 .tnav-line{display:flex;align-items:center;gap:16px;padding:8px 8px 8px 16px;min-height:56px}
@@ -103,6 +104,7 @@ a:hover{color:#b9a6f2}
 .tnav :focus-visible{outline:3px solid #ffff8d;outline-offset:2px}
 @media (min-width:1001px){.tnav-out{display:none}}
 @media (max-width:1000px){
+.tnav::before{top:-8px;height:38px}
 .tnav{top:8px}
 .tnav-win{box-shadow:4px 4px 0 #1847e3}
 .tnav-dots,.tnav-cmd,.tnav-list{display:none}
@@ -504,8 +506,6 @@ Não estava claro que era uma pesquisa que estava respondendo, essa informação
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center;"><button style="min-height: 44px; padding: 8px 16px; border: 2px solid rgb(242, 242, 245); background: rgb(18, 18, 20); color: rgb(242, 242, 245); font: 500 14px &quot;Roboto Mono&quot;, monospace; text-transform: lowercase; cursor: pointer; box-shadow: rgb(242, 242, 245) 4px 4px 0px; box-sizing: border-box;">reiniciar fluxo</button>
 <label style="display: flex; gap: 8px; align-items: center; font: 500 14px &quot;Roboto Mono&quot;, monospace; text-transform: lowercase; cursor: pointer; min-height: 44px;"><input type="checkbox" style="width: 18px; height: 18px; accent-color: rgb(54, 214, 165); margin: 0px;">simular erro na contratação</label></div>
-<label style="display: flex; flex-direction: column; gap: 8px; font: 500 12px &quot;Roboto Mono&quot;, monospace; text-transform: uppercase; color: rgb(185, 166, 242);">ir para a tela
-<select style="font: 500 14px &quot;Roboto Mono&quot;, monospace; padding: 10px 12px; border: 2px solid rgb(242, 242, 245); background: rgb(18, 18, 20); color: rgb(242, 242, 245); text-transform: lowercase; max-width: 100%; min-height: 44px; box-sizing: border-box;"><option value="hub">início · empréstimos</option><option value="acomp">acompanhamento</option><option value="flex">oferta flexível</option><option value="resumo">é hora de conferir</option><option value="timtim">tim-tim por tim-tim</option><option value="senha">senha</option><option value="sucesso">sucesso</option><option value="erro">erro</option><option value="parcelas">parcelas agendadas</option></select></label>
 </div>
 <div style="flex: 0 1 376px; min-width: 0px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
 <div style="width: 376px; max-width: 100%; height: 780px; background: rgb(17, 17, 17); border-radius: 44px; padding: 8px; box-sizing: border-box; border: 2px solid rgb(242, 242, 245);">
@@ -587,7 +587,6 @@ Não estava claro que era uma pesquisa que estava respondendo, essa informação
 <div class="dsf-tape" aria-hidden="true"></div>
 <div class="dsf-in">
 <p class="dsf-lbl">fim da página</p>
-<p class="dsf-cta"><a href="mailto:oi@thais.coffee">vamos tomar um café?</a></p>
 <div class="dsf-cols">
 <div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li></ul></div>
 <div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
@@ -597,7 +596,7 @@ Não estava claro que era uma pesquisa que estava respondendo, essa informação
 <div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
 </footer>
-<svg viewBox="0 0 400 400"><use href="#gc-globo"></use></svg></div><div class="band-bg" aria-hidden="true" style="top: 4395px; width: 760px; height: 760px; transform: translate(155px, -41%) rotate(-90deg) scale(1.05, 1.12); position: absolute; left: 989px; color: rgb(41, 41, 41); opacity: 0.3;"><svg viewBox="0 0 400 400" style="fill: rgb(54, 214, 165);"><use href="#gc-tunel"></use></svg></div>
+</div><div class="band-bg" aria-hidden="true" style="top: 4395px; width: 760px; height: 760px; transform: translate(155px, -41%) rotate(-90deg) scale(1.05, 1.12); position: absolute; left: 989px; color: rgb(41, 41, 41); opacity: 0.3;"><svg viewBox="0 0 400 400" style="fill: rgb(54, 214, 165);"><use href="#gc-tunel"></use></svg></div>
 <div class="band-bg" aria-hidden="true" style="top: 3037px; width: 646px; height: 495px; transform: translate(0px, -48%) scale(0.99, 0.95); position: absolute; left: 822px; color: rgb(41, 41, 41); opacity: 0.3;"><svg viewBox="0 0 400 400" style="fill: rgb(54, 214, 165);"><use href="#gc-tunel"></use></svg></div></div>
 <template id="dc-tpl">
 
@@ -852,7 +851,6 @@ Não estava claro que era uma pesquisa que estava respondendo, essa informação
 <div class="dsf-tape" aria-hidden="true"></div>
 <div class="dsf-in">
 <p class="dsf-lbl">fim da página</p>
-<p class="dsf-cta"><a href="mailto:oi@thais.coffee">vamos tomar um café?</a></p>
 <div class="dsf-cols">
 <div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li></ul></div>
 <div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
@@ -862,7 +860,7 @@ Não estava claro que era uma pesquisa que estava respondendo, essa informação
 <div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
 </footer>
-<svg viewBox="0 0 400 400"><use href="#gc-globo"></use></svg></div><div class="band-bg" aria-hidden="true" style="top: 4395px; width: 760px; height: 760px; transform: translate(155px, -41%) rotate(-90deg) scale(1.05, 1.12); position: absolute; left: 989px; color: #292929; opacity: 0.3"><svg viewBox="0 0 400 400" style="fill: #36d6a5"><use href="#gc-tunel"></use></svg></div>
+</div><div class="band-bg" aria-hidden="true" style="top: 4395px; width: 760px; height: 760px; transform: translate(155px, -41%) rotate(-90deg) scale(1.05, 1.12); position: absolute; left: 989px; color: #292929; opacity: 0.3"><svg viewBox="0 0 400 400" style="fill: #36d6a5"><use href="#gc-tunel"></use></svg></div>
 <div class="band-bg" aria-hidden="true" style="top: 3037px; width: 646px; height: 495px; transform: translate(0px, -48%) scale(0.99, 0.95); position: absolute; left: 822px; color: #292929; opacity: 0.3"><svg viewBox="0 0 400 400" style="fill: #36d6a5"><use href="#gc-tunel"></use></svg></div></template>
 <script type="text/plain" id="dc-logic">
 class Component extends DCLogic {
@@ -885,8 +883,6 @@ toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: 
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center"><button style="min-height:44px;padding:8px 16px;border:2px solid #f2f2f5;background:#121214;color:#f2f2f5;font:500 14px 'Roboto Mono',monospace;text-transform:lowercase;cursor:pointer;box-shadow:4px 4px 0 #f2f2f5;box-sizing:border-box" onClick="{{restart}}">reiniciar fluxo</button>
 <label style="display:flex;gap:8px;align-items:center;font:500 14px 'Roboto Mono',monospace;text-transform:lowercase;cursor:pointer;min-height:44px"><input type="checkbox" checked="{{err}}" onChange="{{toggleErr}}" style="width:18px;height:18px;accent-color:#36d6a5;margin:0">simular erro na contratação</label></div>
-<label style="display:flex;flex-direction:column;gap:8px;font:500 12px 'Roboto Mono',monospace;text-transform:uppercase;color:#b9a6f2">ir para a tela
-<select value="{{cur}}" onChange="{{jump}}" style="font:500 14px 'Roboto Mono',monospace;padding:10px 12px;border:2px solid #f2f2f5;background:#121214;color:#f2f2f5;text-transform:lowercase;max-width:100%;min-height:44px;box-sizing:border-box"><sc-for list="{{jumpOpts}}" as="o" hint-placeholder-count="10"><option value="{{o.k}}">{{o.t}}</option></sc-for></select></label>
 </div>
 <div style="flex:0 1 376px;min-width:0;display:flex;flex-direction:column;align-items:center;gap:8px">
 <div style="width:376px;max-width:100%;height:780px;background:#111;border-radius:44px;padding:8px;box-sizing:border-box;border:2px solid #f2f2f5">
@@ -1010,7 +1006,7 @@ toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: 
 class Component extends DCLogic {
 constructor(props) {
 super(props);
-this.state = { v: 'full', n: null, adjusted: false, err: false, cur: 'hub', stack: [], pin: '', pinShow: false, stars: 0, accEnc: true, accCmp: true, toast: '', sheet: false, load: 0, roll: null };
+this.state = { v: 'full', n: null, adjusted: false, err: false, cur: 'hub', jm: false, stack: [], pin: '', pinShow: false, stars: 0, accEnc: true, accCmp: true, toast: '', sheet: false, load: 0, roll: null };
 this.timers = []; this.cache = {};
 }
 componentWillUnmount() { this.timers.forEach(clearTimeout); clearTimeout(this.tt); }
@@ -1092,10 +1088,12 @@ const pn = adj ? m0.n : m0.rem, pv = adj ? m0.pmt : m0.pmt0, start = adj ? m0.ne
 const parcList = []; for (let k = 0; k < pn; k++) parcList.push({ k: (k + 1 + off) + 'ª', d: this.fmtD(this.addM(start, k), true), v: this.brl(pv) });
 const tot = adj ? m0.n : c.n, paid = adj ? 0 : c.paid;
 const SCREENS = { hub: 'início · empréstimos', acomp: 'acompanhamento', oferta: 'oferta de ajuste', flex: 'oferta flexível', breve: 'mais opções em breve', resumo: 'é hora de conferir', timtim: 'tim-tim por tim-tim', senha: 'senha', sucesso: 'sucesso', erro: 'erro', parcelas: 'parcelas agendadas' };
-const jumpOpts = Object.keys(SCREENS).filter((k) => !(k === 'flex' && !full) && !((k === 'breve' || k === 'oferta') && full)).map((k) => ({ k, t: SCREENS[k] }));
+const curK = s.cur === 'loading' ? 'senha' : s.cur;
+const jumpTo = (k) => { const x = { cur: k, stack: k === 'hub' ? [] : ['hub'], toast: '', sheet: false, roll: null, jm: false }; if (k === 'sucesso') x.adjusted = true; if (['oferta', 'flex', 'breve', 'resumo', 'timtim', 'senha'].includes(k)) x.adjusted = false; if (k === 'senha') x.pin = ''; this.setState(x); };
+const jumpOpts = Object.keys(SCREENS).filter((k) => !(k === 'flex' && !full) && !((k === 'breve' || k === 'oferta') && full)).map((k) => ({ k, t: SCREENS[k], on: k === curK, pick: () => jumpTo(k), st: 'width:100%;min-height:44px;padding:10px 16px;border:0;border-bottom:1px solid #3a3a3e;text-align:left;cursor:pointer;font:500 14px \'Roboto Mono\',monospace;text-transform:lowercase;box-sizing:border-box;flex:none;' + (k === curK ? 'background:#36d6a5;color:#121214' : 'background:#121214;color:#f2f2f5') }));
 const vb = (on) => 'text-align:left;min-height:56px;padding:12px 16px;border:2px solid #f2f2f5;cursor:pointer;font:500 14px \'Roboto Mono\',monospace;text-transform:lowercase;box-sizing:border-box;' + (on ? 'background:#36d6a5;color:#121214;box-shadow:4px 4px 0 #f2f2f5' : 'background:#121214;color:#f2f2f5;box-shadow:none');
 return {
-is, m, alv, adjusted: adj, notAdjusted: !adj, err: s.err, cur: s.cur === 'loading' ? 'senha' : s.cur, jumpOpts,
+is, m, alv, adjusted: adj, notAdjusted: !adj, err: s.err, cur: curK, jumpOpts, curLabel: SCREENS[curK] || curK, jmOpen: !!s.jm, jmArrow: s.jm ? '▲' : '▼', toggleJm: () => this.setState({ jm: !s.jm }),
 isMvp: !full, isFull: full, vMvpSt: vb(!full), vFullSt: vb(full),
 hubNext: this.fmtD(adj ? m0.next : this.D(c.nextDue)), hubVal: this.brl(pmtNow),
 contractId: adj ? c.id + '-A' : c.id, baseId: c.id, acNext: this.fmtD(adj ? m0.next : this.D(c.nextDue)), acPm: this.brl(pmtNow),
@@ -1126,12 +1124,12 @@ doneAcomp: () => this.setState({ stack: ['hub'], cur: 'acomp' }), doneHub: () =>
 togglePin: () => this.setState({ pinShow: !s.pinShow }), confirm: () => this.confirmPin(),
 setMvp: () => this.reset({ v: 'mvp' }), setFull: () => this.reset({ v: 'full' }), restart: () => this.reset(),
 toggleErr: (e) => this.setState({ err: e.target.checked }),
-jump: (e) => { const k = e.target.value; const x = { cur: k, stack: k === 'hub' ? [] : ['hub'], toast: '', sheet: false, roll: null }; if (k === 'sucesso') x.adjusted = true; if (['oferta', 'flex', 'breve', 'resumo', 'timtim', 'senha'].includes(k)) x.adjusted = false; if (k === 'senha') x.pin = ''; this.setState(x); }
+jump: (e) => jumpTo(e.target.value)
 };
 }
 }
 
 </script>
-<script src="/assets/dc.js?v=202610222200"></script>
+<script src="/assets/dc.js?v=202610230030"></script>
 </body>
 </html>
