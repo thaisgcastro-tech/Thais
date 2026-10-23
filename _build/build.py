@@ -94,8 +94,7 @@ def contato(tpl, js):
     return tpl, js
 
 
-def convert(name):
-    url, title, desc = PAGES[name]
+def parts(name, raw=False):
     s = open(os.path.join(SRC, name), encoding='utf-8').read()
     m = re.search(r'<x-dc>(.*)</x-dc>', s, re.S)
     body = m.group(1)
@@ -103,10 +102,27 @@ def convert(name):
     helmet = hm.group(1).strip() if hm else ''
     tpl = body[:hm.start()] + body[hm.end():] if hm else body
     js = re.search(r'<script type="text/x-dc"[^>]*>(.*?)</script>', s, re.S).group(1)
+    if raw:
+        return helmet, tpl, js
+    out = tuple(rewrite(x, name) for x in (helmet, tpl, js))
+    assert '</script' not in out[2].lower() and '</template' not in out[1].lower()
+    return out
+
+
+def convert(name):
+    url, title, desc = PAGES[name]
+    helmet, tpl, js = parts(name, raw=True)
     if name == 'Contato.dc.html':
         tpl, js = contato(tpl, js)
     helmet, tpl, js = (rewrite(x, name) for x in (helmet, tpl, js))
     assert '</script' not in js.lower() and '</template' not in tpl.lower()
+    # <dc-import name="X">: embute o componente X.dc.html (template, lógica e estilos)
+    extra = ''
+    for imp in sorted(set(re.findall(r'<dc-import\s+name="([A-Za-z0-9_-]+)"', tpl))):
+        ih, it, ij = parts(imp + '.dc.html')
+        ih = '\n'.join(l for l in ih.splitlines() if l.strip() and l.strip() not in helmet and l.strip() != 'body{margin:0}')
+        helmet += '\n' + ih
+        extra += f'\n<template id="dc-tpl-{imp}">{it}</template>\n<script type="text/plain" id="dc-logic-{imp}">{ij}</script>'
     canon = SITE + url
     out = f'''<!doctype html>
 <html lang="pt-BR">
@@ -122,13 +138,13 @@ def convert(name):
 <meta property="og:url" content="{canon}">
 <meta property="og:type" content="website">
 <link rel="icon" href="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
-<style>html,body{{overflow-x:clip}}</style>
+<style>html,body{{overflow-x:clip}}#dc-root{{position:relative;overflow:hidden}}</style>
 {helmet}
 </head>
 <body>
 <div id="dc-root"><!--prerender--></div>
 <template id="dc-tpl">{tpl}</template>
-<script type="text/plain" id="dc-logic">{js}</script>
+<script type="text/plain" id="dc-logic">{js}</script>{extra}
 <script src="/assets/dc.js?v={VER}"></script>
 </body>
 </html>

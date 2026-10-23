@@ -24,7 +24,7 @@ function lookup(scope, expr) {
   return v;
 }
 const HOLE = /\{\{([\s\S]*?)\}\}/g;
-const WHOLE = /^\s*\{\{([\s\S]*?)\}\}\s*$/;
+const WHOLE = /^\s*\{\{((?:(?!\{\{|\}\})[\s\S])*)\}\}\s*$/; // um único buraco ocupando tudo
 function str(v) { return v == null || v === false ? '' : String(v); }
 function interp(text, scope) {
   return text.replace(HOLE, (_, e) => str(lookup(scope, e)));
@@ -120,6 +120,18 @@ function build(node, scope) {
   }
   if (node.nodeType !== 1) return null;
   const tag = node.localName;
+  if (tag === 'dc-import') {
+    // componente de outro arquivo do canvas (ex.: a simulação do Refin), embutido na página pelo build
+    const name = node.getAttribute('name');
+    const C = component(name);
+    if (!C) return null;
+    const props = {};
+    for (const a of Array.from(node.attributes)) {
+      if (a.name === 'name' || a.name.startsWith('hint-')) continue;
+      props[a.name] = value(a.value, scope);
+    }
+    return h('div', { className: 'dc-import', 'data-name': name }, h(C, props));
+  }
   if (tag === 'sc-if') {
     const v = value(node.getAttribute('value') || '', scope);
     return v ? h(React.Fragment, null, ...kids(node, scope)) : null;
@@ -155,10 +167,27 @@ class DCLogic extends React.Component {
   renderVals() { return {}; }
   render() {
     const vals = this.renderVals() || {};
-    return h(React.Fragment, null, ...kids(DCLogic.__tpl, vals));
+    return h(React.Fragment, null, ...kids(this.constructor.__tpl || DCLogic.__tpl, vals));
   }
 }
 window.DCLogic = DCLogic;
+
+/* componentes importados: <template id="dc-tpl-Nome"> + <script id="dc-logic-Nome"> */
+const COMPS = {};
+function component(name) {
+  if (!name) return null;
+  if (COMPS[name]) return COMPS[name];
+  const tpl = document.getElementById('dc-tpl-' + name);
+  if (!tpl) return null;
+  const logic = document.getElementById('dc-logic-' + name);
+  let C = class extends DCLogic {};
+  // eslint-disable-next-line no-new-func
+  if (logic) C = new Function('DCLogic', 'React', logic.textContent + '\n;return Component;')(DCLogic, React);
+  const Comp = class extends C {};
+  Comp.__tpl = tpl.content;
+  COMPS[name] = Comp;
+  return Comp;
+}
 
 function boot() {
   const tpl = document.getElementById('dc-tpl');
