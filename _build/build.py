@@ -138,7 +138,7 @@ def convert(name):
 <meta property="og:url" content="{canon}">
 <meta property="og:type" content="website">
 <link rel="icon" href="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
-<style>html,body{{overflow-x:clip}}#dc-root{{position:relative;overflow:hidden}}</style>
+<style>html,body{{overflow-x:clip}}#dc-root{{position:relative;overflow:hidden}}@media (max-width:1000px){{.tnav-prompt{{flex-shrink:1!important;min-width:0!important}}}}@media (max-width:760px){{#dc-root p{{width:auto!important;max-width:100%;box-sizing:border-box}}#dc-root div[style*="flex-direction: row"]:has(> div > p.txt){{flex-direction:column!important}}#dc-root div[style*="flex-direction: row"]:has(> div > p.txt) img{{max-width:100%;height:auto}}}}</style>
 {helmet}
 </head>
 <body>
