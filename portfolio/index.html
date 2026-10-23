@@ -178,7 +178,7 @@ a{color:#f2f2f5}
 
 <div class="tnav-line">
 <div class="tnav-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div>
-<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/portfolio $</span>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/portfolio<span class="tnav-sub"></span> $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
 <ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/" aria-current="page">portfolio/</a></li><li><a href="/opiniao/">opiniao/</a></li><li><a href="/contato/">contato/</a></li></ul>
 <button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
@@ -220,7 +220,7 @@ a{color:#f2f2f5}
 </div><p class="flt-n" aria-live="polite">mostrando todos os 4 cases</p>
 </div>
 <ul class="cases">
-<li>
+<li data-navsub="/refin.case">
 <a class="case" href="/cases/refinanciamento-em-dia/">
 <div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><div class="win-url">~/portfolio/refin.case</div></div>
 <div class="case-b">
@@ -233,7 +233,7 @@ a{color:#f2f2f5}
 <span class="case-go"><span class="sbtn" aria-hidden="true"><svg class="sbtn-i" width="27" height="27" viewBox="0 0 9 9" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M2 1h1v1h-1zM3 1h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM2 7h1v1h-1zM3 7h1v1h-1z"></path></svg></span></span>
 </div>
 </a>
-</li><li>
+</li><li data-navsub="/lembrete.case">
 <a class="case" href="/cases/lembrete-de-pagamento/">
 <div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><div class="win-url">~/portfolio/lembrete.case</div></div>
 <div class="case-b">
@@ -246,7 +246,7 @@ a{color:#f2f2f5}
 <span class="case-go"><span class="sbtn" aria-hidden="true"><svg class="sbtn-i" width="27" height="27" viewBox="0 0 9 9" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M2 1h1v1h-1zM3 1h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM2 7h1v1h-1zM3 7h1v1h-1z"></path></svg></span></span>
 </div>
 </a>
-</li><li>
+</li><li data-navsub="/transparencia.case">
 <a class="case" href="/cases/transparencia/">
 <div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><div class="win-url">~/portfolio/transparencia.case</div></div>
 <div class="case-b">
@@ -259,7 +259,7 @@ a{color:#f2f2f5}
 <span class="case-go"><span class="sbtn" aria-hidden="true"><svg class="sbtn-i" width="27" height="27" viewBox="0 0 9 9" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M2 1h1v1h-1zM3 1h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM2 7h1v1h-1zM3 7h1v1h-1z"></path></svg></span></span>
 </div>
 </a>
-</li><li>
+</li><li data-navsub="/este-portfolio.case">
 <a class="case" href="/cases/este-portfolio/">
 <div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><div class="win-url">~/portfolio/este-portfolio.case</div></div>
 <div class="case-b">
@@ -297,11 +297,11 @@ a{color:#f2f2f5}
 <nav class="tnav" aria-label="menu">
 <div class="tnav-win">
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
-<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/" aria-current="page"><span>02</span>portfolio/</a></li><li><a href="/opiniao/"><span>03</span>opiniao/</a></li><li><a href="/contato/"><span>04</span>contato/</a></li></ul>
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/" aria-current="page"><span>02</span>portfolio/</a></li><li class="tnav-subitem"><a href="/cases/refinanciamento-em-dia/"><span></span>portfolio/refin.case</a></li><li class="tnav-subitem"><a href="/cases/lembrete-de-pagamento/"><span></span>portfolio/lembrete.case</a></li><li class="tnav-subitem"><a href="/cases/transparencia/"><span></span>portfolio/transparencia.case</a></li><li class="tnav-subitem"><a href="/cases/este-portfolio/"><span></span>portfolio/este-portfolio.case</a></li><li><a href="/opiniao/"><span>03</span>opiniao/</a></li><li><a href="/contato/"><span>04</span>contato/</a></li></ul>
 </sc-if>
 <div class="tnav-line">
 <div class="tnav-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div>
-<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/portfolio $</span>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/portfolio<span class="tnav-sub">{{navSub}}</span> $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
 <ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/" aria-current="page">portfolio/</a></li><li><a href="/opiniao/">opiniao/</a></li><li><a href="/contato/">contato/</a></li></ul>
 <button class="tnav-ls" type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuOpen}}" aria-controls="tnav-out" aria-label="{{menuLabel}}">
@@ -343,7 +343,7 @@ a{color:#f2f2f5}
 </div><p class="flt-n" aria-live="polite">{{countLabel}}</p>
 </div>
 <ul class="cases">
-<sc-for list="{{cases}}" as="c" hint-placeholder-count="4"><sc-if value="{{c.show}}" hint-placeholder-val="{{ true }}"><li>
+<sc-for list="{{cases}}" as="c" hint-placeholder-count="4"><sc-if value="{{c.show}}" hint-placeholder-val="{{ true }}"><li data-navsub="{{c.sub}}">
 <a class="case" href="{{c.href}}">
 <div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><div class="win-url">{{c.path}}</div><sc-if value="{{c.first}}" hint-placeholder-val="{{ false }}"><span class="first">comece por aqui</span></sc-if></div>
 <div class="case-b">
@@ -433,7 +433,7 @@ static engine() {
   Component._eng = { norm, root, lev1, build, matchV, concepts, snippet };
   return Component._eng;
 }
-constructor(props) { super(props); this.state = { menuOpen: false, q: '' }; }
+constructor(props) { super(props); this.state = { menuOpen: false, q: '', navSub: '' }; const trackSec = () => { const mid = window.innerHeight * 0.4; let cur = ''; let best = -Infinity; document.querySelectorAll('[data-navsub]').forEach((el) => { const t = el.getBoundingClientRect().top; if (t <= mid && t > best + 8) { best = t; cur = el.getAttribute('data-navsub') || ''; } }); if (cur !== this.state.navSub) this.setState({ navSub: cur }); }; if (window.__tnavScroll) window.removeEventListener('scroll', window.__tnavScroll); window.__tnavScroll = () => { cancelAnimationFrame(window.__tnavRaf); window.__tnavRaf = requestAnimationFrame(trackSec); }; window.addEventListener('scroll', window.__tnavScroll, { passive: true }); setTimeout(trackSec, 0); }
 renderVals() {
 const menuOpen = !!this.state.menuOpen;
 const fid = 'todos';
@@ -524,7 +524,7 @@ let cases = C.map((c, idx) => {
   let snip = '', matchLabel = '';
   if (h.got.length) { snip = E.snippet(ix, [].concat.apply([], h.got.map((k) => k.own))); matchLabel = (h.rel.length || h.miss.length) ? 'fala de ' + list(h.got) + (h.miss.length ? ', mas não de ' + list(h.miss) : '') : 'onde isso aparece no case'; }
   else if (h.rel.length) { const f = h.rel[0].found; snip = E.snippet(ix, f); matchLabel = 'não com essas palavras, mas com uma ideia próxima'; }
-  return Object.assign({}, c, { idx, score, mscore: h.n, skills, show: score > 0 && h.n > 0, hasWhy: !all && !!f, why: f ? f[1] : '', hasMatch: cs.length > 0 && h.n > 0 && !!snip, direct: h.got.length, matchLabel, matchText: snip ? '“' + snip + '”' : '' });
+  return Object.assign({}, c, { idx, sub: c.path.replace('~/portfolio', ''), score, mscore: h.n, skills, show: score > 0 && h.n > 0, hasWhy: !all && !!f, why: f ? f[1] : '', hasMatch: cs.length > 0 && h.n > 0 && !!snip, direct: h.got.length, matchLabel, matchText: snip ? '“' + snip + '”' : '' });
 });
 cases.sort((a, b) => b.mscore - a.mscore || b.score - a.score || a.idx - b.idx);
 const shown = cases.filter((c) => c.show);
@@ -536,11 +536,11 @@ const qq = q.trim();
 const full = shown.filter((c) => c.direct === cs.length).length;
 const near = shown.filter((c) => !c.direct).length;
 const countLabel = !cs.length ? base : (n === 0 ? 'nenhum case fala de “' + qq + '”. tente outra palavra ou limpe a busca.' : (n - near === 0 ? 'nenhum case fala exatamente de “' + qq + '”, mas ' + (n === 1 ? '1 chega perto.' : n + ' chegam perto.') : (n - near === 1 ? '1 case fala de “' + qq + '”' : (n - near) + ' cases falam de “' + qq + '”') + (cs.length > 1 && full < n - near ? (full ? ', ' + full + ' com tudo o que você buscou' : ', cada um com parte do que você buscou') : '') + (near ? (near === 1 ? '. mais 1 chega perto.' : '. mais ' + near + ' chegam perto.') : '.')));
-return { menuOpen, cases, countLabel, q, hasQ: q.length > 0, onSearch: (e) => this.setState({ q: e && e.target ? e.target.value : '' }), clearSearch: () => this.setState({ q: '' }), menuClosed: !menuOpen, menuLabel: menuOpen ? 'fechar menu' : 'abrir menu',
+return { navSub: this.state.navSub || '', menuOpen, cases, countLabel, q, hasQ: q.length > 0, onSearch: (e) => this.setState({ q: e && e.target ? e.target.value : '' }), clearSearch: () => this.setState({ q: '' }), menuClosed: !menuOpen, menuLabel: menuOpen ? 'fechar menu' : 'abrir menu',
 toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: () => this.setState({ menuOpen: false }) };
 }
 }
 </script>
-<script src="/assets/dc.js?v=202610230030"></script>
+<script src="/assets/dc.js?v=202610230105"></script>
 </body>
 </html>
