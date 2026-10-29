@@ -8,7 +8,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const PAGES = ['/', '/portfolio/', '/cases/transparencia/', '/cases/este-portfolio/', '/cases/refinanciamento-em-dia/',
-  '/cases/lembrete-de-pagamento/', '/opiniao/', '/opiniao/ia/', '/opiniao/conteudo-e-dados/', '/opiniao/roadmap/', '/contato/'];
+  '/cases/lembrete-de-pagamento/', '/opiniao/', '/opiniao/ia/', '/opiniao/conteudo-e-dados/', '/opiniao/roadmap/', '/contato/', '/quiz/'];
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml',
   '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.ttf': 'font/ttf', '.json': 'application/json', '.gif': 'image/gif' };
 

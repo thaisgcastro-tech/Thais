@@ -38,6 +38,8 @@ PAGES = {
     'Opiniao-Roadmap.dc.html': ('/opiniao/roadmap/', 'ninguém me chamou pra mesa do roadmap · thais castro',
                                 'Opinião de Thais Castro sobre dados, discovery e como conquistar espaço no roadmap.'),
     'Contato.dc.html': ('/contato/', 'contato · thais castro', 'Fale com Thais Castro, product designer.'),
+    'Match.dc.html': ('/quiz/', 'eu sou a pessoa certa pra você? · quiz · thais castro',
+                      'Quiz para recrutadores: descubra a porcentagem de match entre a sua vaga e Thais Castro.'),
 }
 # links do canvas que apontam para versões antigas das mesmas páginas
 ALIAS = {'Case-Refin.dc.html': '/cases/refinanciamento-em-dia/',
