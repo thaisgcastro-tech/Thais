@@ -85,11 +85,8 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
 .dsf-lk:hover{background:#ffff8d;color:#292929}
 .dsf-sig{position:relative;background:#292929;border-top:1px solid #f2f2f5;overflow:hidden;white-space:nowrap}
 .dsf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.dsf-track{display:inline-flex;animation:dsf-run 24s linear infinite}
-.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#ffff8d;padding:16px 24px}
-.dsf-track span.dsf-dot{color:#f2f2f5;padding:16px 0}
-@keyframes dsf-run{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-@media (prefers-reduced-motion:reduce){.dsf-track{animation:none}}
+.dsf-track{display:flex;justify-content:center;align-items:center;gap:16px;padding:16px 24px}
+.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#f2f2f5}
 .dsf-cp{background:#292929;color:#f2f2f5;font:300 14px/1.5 'Work Sans',sans-serif;text-align:center;padding:0 24px 16px;margin:0}
 @media (max-width:640px){.dsf-in{padding:48px 16px 32px}.dsf-cols{grid-template-columns:minmax(0,1fr)}.dsf-col+.dsf-col{border-left:0;border-top:1px solid #f2f2f5;padding-left:0;margin-top:24px}}
 
@@ -124,7 +121,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
         <div class="cafe" aria-hidden="true"><svg width="96" height="96" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path fill="#292929" d="M6 1h1v1h-1zM10 1h1v1h-1zM5 2h1v1h-1zM9 2h1v1h-1zM6 3h1v1h-1zM10 3h1v1h-1zM5 4h1v1h-1zM9 4h1v1h-1zM2 6h10v1h-10zM2 7h1v1h-1zM11 7h4v1h-4zM2 8h1v1h-1zM11 8h1v1h-1zM14 8h1v1h-1zM2 9h1v1h-1zM11 9h1v1h-1zM14 9h1v1h-1zM2 10h1v1h-1zM11 10h4v1h-4zM2 11h1v1h-1zM11 11h1v1h-1zM3 12h1v1h-1zM10 12h1v1h-1zM4 13h6v1h-6zM1 15h14v1h-14z"></path><path fill="#e97045" d="M3 7h8v1h-8z"></path><path fill="#fffefe" d="M3 8h8v4h-8zM4 12h6v1h-6z"></path></svg></div>
         <p style="margin: 0px; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 14px; font-weight: 500; color: rgb(185, 166, 242); text-transform: uppercase;">contato</p>
         <h1 style="margin: 0px; font-family: Gokschil, &quot;Roboto Mono&quot;, monospace; font-weight: 400; font-size: clamp(48px, 7vw, 80px); line-height: 0.95;">vamos conversar</h1>
-        <p style="margin: 0px; max-width: 440px; font-size: 20px;">Deixe seu e-mail e uma mensagem que eu respondo por lá.</p>
+        <p style="margin: 0px; max-width: 440px; font-size: 20px;">deixe seu e-mail e uma mensagem que eu respondo por lá.</p>
         <ul style="list-style: none; margin: 0px; padding: 0px; display: flex; flex-direction: column; gap: 16px; font-family: &quot;Roboto Mono&quot;, monospace;">
           <li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li>
           <li><a href="mailto:oi@thais.coffee">oi@thais.coffee</a></li>
@@ -174,8 +171,8 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
 <div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
 </div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
-<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </div>
@@ -208,7 +205,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
         <div class="cafe" aria-hidden="true"><svg width="96" height="96" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path fill="#292929" d="M6 1h1v1h-1zM10 1h1v1h-1zM5 2h1v1h-1zM9 2h1v1h-1zM6 3h1v1h-1zM10 3h1v1h-1zM5 4h1v1h-1zM9 4h1v1h-1zM2 6h10v1h-10zM2 7h1v1h-1zM11 7h4v1h-4zM2 8h1v1h-1zM11 8h1v1h-1zM14 8h1v1h-1zM2 9h1v1h-1zM11 9h1v1h-1zM14 9h1v1h-1zM2 10h1v1h-1zM11 10h4v1h-4zM2 11h1v1h-1zM11 11h1v1h-1zM3 12h1v1h-1zM10 12h1v1h-1zM4 13h6v1h-6zM1 15h14v1h-14z"></path><path fill="#e97045" d="M3 7h8v1h-8z"></path><path fill="#fffefe" d="M3 8h8v4h-8zM4 12h6v1h-6z"></path></svg></div>
         <p style="margin: 0; font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500; color: #b9a6f2; text-transform: uppercase;">contato</p>
         <h1 style="margin: 0; font-family: 'Gokschil', 'Roboto Mono', monospace; font-weight: 400; font-size: clamp(48px, 7vw, 80px); line-height: 0.95;">vamos conversar</h1>
-        <p style="margin: 0; max-width: 440px; font-size: 20px;">Deixe seu e-mail e uma mensagem que eu respondo por lá.</p>
+        <p style="margin: 0; max-width: 440px; font-size: 20px;">deixe seu e-mail e uma mensagem que eu respondo por lá.</p>
         <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; font-family: 'Roboto Mono', monospace;">
           <li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li>
           <li><a href="mailto:oi@thais.coffee">oi@thais.coffee</a></li>
@@ -233,7 +230,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
               <label for="f-email" style="font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500;">e-mail <span style="color: #b9a6f2;">(obrigatório)</span></label>
               <input id="f-email" name="email" type="email" aria-required="true" autocomplete="email" placeholder="voce@empresa.com" value="{{ email }}" onChange="{{ setEmail }}" aria-invalid="{{ emailInvalid }}" aria-describedby="f-email-erro" style="min-height: 48px; padding: 0 16px; border: 2px solid #f2f2f5; border-radius: 0; background: #292929; font-family: 'Work Sans', sans-serif; font-size: 16px; color: #f2f2f5;">
               <sc-if value="{{ emailInvalid }}" hint-placeholder-val="{{ false }}">
-                <p id="f-email-erro" style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px;"><span aria-hidden="true" style="display: inline-block; width: 8px; height: 8px; background: #e97045; color: #292929"></span>Confira o e-mail: falta o @ ou o domínio.</p>
+                <p id="f-email-erro" style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px;"><span aria-hidden="true" style="display: inline-block; width: 8px; height: 8px; background: #e97045; color: #292929"></span>confira o e-mail: falta o @ ou o domínio.</p>
               </sc-if>
             </div>
             <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -250,7 +247,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
           <div role="status" style="padding: 48px 32px; display: flex; flex-direction: column; gap: 24px; align-items: flex-start;">
             <svg width="64" height="64" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>
             <h2 style="margin: 0; font-family: 'Roboto Mono', monospace; font-size: 32px; font-weight: 500; line-height: 1.1;">mensagem enviada_</h2>
-            <p style="margin: 0;">Obrigada! Vou responder no e-mail que você deixou.</p>
+            <p style="margin: 0;">obrigada! vou responder no e-mail que você deixou.</p>
             <button type="button" onClick="{{ reset }}" style="min-height: 44px; padding: 0 16px; background: #292929; border: 2px solid #f2f2f5; box-shadow: 2px 2px 0 #f2f2f5; font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500; color: #f2f2f5;">escrever outra</button>
           </div>
         </sc-if>
@@ -267,8 +264,8 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
 <div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
 </div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
-<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </template>
@@ -300,6 +297,6 @@ class Component extends DCLogic {
   }
 }
 </script>
-<script src="/assets/dc.js?v=1793307327"></script>
+<script src="/assets/dc.js?v=1793316727"></script>
 </body>
 </html>

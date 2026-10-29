@@ -129,11 +129,8 @@ body{margin:0;background:#121214;color:#f2f2f5}
 .dsf-lk:hover{background:#ffff8d;color:#292929}
 .dsf-sig{position:relative;background:#292929;border-top:1px solid #f2f2f5;overflow:hidden;white-space:nowrap}
 .dsf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.dsf-track{display:inline-flex;animation:dsf-run 24s linear infinite}
-.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#ffff8d;padding:16px 24px}
-.dsf-track span.dsf-dot{color:#f2f2f5;padding:16px 0}
-@keyframes dsf-run{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-@media (prefers-reduced-motion:reduce){.dsf-track{animation:none}}
+.dsf-track{display:flex;justify-content:center;align-items:center;gap:16px;padding:16px 24px}
+.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#f2f2f5}
 .dsf-cp{background:#292929;color:#f2f2f5;font:300 14px/1.5 'Work Sans',sans-serif;text-align:center;padding:0 24px 16px;margin:0}
 @media (max-width:640px){.dsf-in{padding:48px 16px 32px}.dsf-cols{grid-template-columns:minmax(0,1fr)}.dsf-col+.dsf-col{border-left:0;border-top:1px solid #f2f2f5;padding-left:0;margin-top:24px}}
 
@@ -190,43 +187,43 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><span class="doc-name" id="doc-name">ninguem-me-chamou-pra-mesa.txt</span></div>
 <div class="doc-b"><div class="txt">
 
-<p>Todo designer quer estar na mesa quando o roadmap é decidido. Mas ninguém senta ali só por ter boas ideias. Senta quem chega com um argumento que o time não consegue ignorar. E, na maioria das vezes, esse argumento é um dado.</p>
+<p>todo designer quer estar na mesa quando o roadmap é decidido. mas ninguém senta ali só por ter boas ideias. senta quem chega com um argumento que o time não consegue ignorar. e, na maioria das vezes, esse argumento é um dado.</p>
 
-<p>Aprendi isso quando ainda era product writer no time de empréstimos. Eu não desenhava tela nem tinha cargo para decidir prioridade. O que eu tinha era tempo para ler o que os clientes diziam no chat.</p>
+<p>aprendi isso quando ainda era product writer no time de empréstimos. eu não desenhava tela nem tinha cargo para decidir prioridade. o que eu tinha era tempo para ler o que os clientes diziam no chat.</p>
 
 <h2>o chat conta o que o painel esconde_</h2>
 
-<p>Em 2024, li 187 conversas do atendimento humano, uma por uma, e comparei o que o cliente queria com o que ficou registrado.</p>
+<p>em 2024, li 187 conversas do atendimento humano, uma por uma, e comparei o que o cliente queria com o que ficou registrado.</p>
 
 <div class="case-box">
 <span class="why-l">o que eu encontrei</span>
 <ul class="nums" aria-label="achados do discovery do atendimento humano"><li class="num">48% das tags erradas</li><li class="num">25% de informação incorreta</li><li class="num">11,5% fora do produto</li></ul>
-<p>Quase metade das tags não refletia o motivo real do contato. Um quarto das informações passadas ao cliente estava parcial ou totalmente errada. E 11,5% da fila de empréstimos nem era sobre empréstimo: em 74% desses casos, era Pix no crédito confundido com Pix parcelado.</p>
+<p>quase metade das tags não refletia o motivo real do contato. um quarto das informações passadas ao cliente estava parcial ou totalmente errada. e 11,5% da fila de empréstimos nem era sobre empréstimo: em 74% desses casos, era Pix no crédito confundido com Pix parcelado.</p>
 </div>
 
-<p>O dado mais curioso era outro: mais de 80% das notas para os atendentes eram positivas. Cliente satisfeito não é, necessariamente, cliente bem informado. Sem ler as conversas, a gente teria comemorado o CSAT.</p>
+<p>o dado mais curioso era outro: mais de 80% das notas para os atendentes eram positivas. cliente satisfeito não é, necessariamente, cliente bem informado. sem ler as conversas, a gente teria comemorado o CSAT.</p>
 
-<p>Esses números viraram plano de ação: treinamento de regras de produto, treinamento de uso das tags e um material separando Pix parcelado de Pix no crédito.</p>
+<p>esses números viraram plano de ação: treinamento de regras de produto, treinamento de uso das tags e um material separando Pix parcelado de Pix no crédito.</p>
 
 <h2>o mesmo método, de novo_</h2>
 
-<p>Meses depois, repeti o mesmo método com o Pix parcelado: 200 chats, de julho de 2024 a janeiro de 2025.</p>
+<p>meses depois, repeti o mesmo método com o Pix parcelado: 200 chats, de julho de 2024 a janeiro de 2025.</p>
 
 <div class="case-box">
 <span class="why-l">o que eu encontrei</span>
 <ul class="nums" aria-label="achados do discovery do pix parcelado"><li class="num">40,99% inelegíveis</li><li class="num">35,14% elegíveis sem bot</li><li class="num">70,27% resolvíveis</li></ul>
-<p>Quase metade das conversas era de gente querendo saber por que não tinha o produto. Um terço era de clientes com dúvidas simples, sobre pagamento, acompanhamento e o que o produto era. Nenhum bot respondia essas dúvidas, então elas iam obrigatoriamente para um humano.</p>
+<p>quase metade das conversas era de gente querendo saber por que não tinha o produto. um terço era de clientes com dúvidas simples, sobre pagamento, acompanhamento e o que o produto era. nenhum bot respondia essas dúvidas, então elas iam obrigatoriamente para um humano.</p>
 </div>
 
-<p>A conclusão cabia num slide: dava para agir sobre 70,27% dos casos com um bot dedicado, ajustes de texto e melhorias no fluxo de pagamento e acompanhamento. Parece óbvio, mas só fica óbvio depois que alguém conta.</p>
+<p>a conclusão cabia num slide: dava para agir sobre 70,27% dos casos com um bot dedicado, ajustes de texto e melhorias no fluxo de pagamento e acompanhamento. parece óbvio, mas só fica óbvio depois que alguém conta.</p>
 
-<p>E quando o dado convence, ele muda o que vai ser construído. Foi assim com a tela de acompanhamento do empréstimo. Ninguém queria essa tela na V1. Levei 526 chamados, mostrei que 66,3% poderiam ser resolvidos pelo próprio cliente e que isso projetava 8.982 chamados evitáveis por ano. A tela entrou. A história completa está no <a href="/cases/transparencia/">case de transparência</a>.</p>
+<p>e quando o dado convence, ele muda o que vai ser construído. foi assim com a tela de acompanhamento do empréstimo. ninguém queria essa tela na V1. levei 526 chamados, mostrei que 66,3% poderiam ser resolvidos pelo próprio cliente e que isso projetava 8.982 chamados evitáveis por ano. a tela entrou. a história completa está no <a href="/cases/transparencia/">case de transparência</a>.</p>
 
 <p class="pausa"><span>então…</span>dado sozinho não convence ninguém.</p>
 
 <h2>estar preparada é mais do que ter número_</h2>
 
-<p>O que eu aprendi a levar junto:</p>
+<p>o que eu aprendi a levar junto:</p>
 
 <ol class="steps">
 <li><span class="st-n">01</span>a pergunta antes da planilha. eu sabia o que queria descobrir antes de abrir o primeiro chat</li>
@@ -236,9 +233,9 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <li><span class="st-n">05</span>a fronteira clara. o que era do meu time ia para o roadmap. o que era de outro time ia para quem resolvia, com o dado anexado</li>
 </ol>
 
-<p class="fecho">Ninguém me deu lugar no roadmap. <mark>Eu cheguei lá com 187 conversas lidas.</mark></p>
+<p class="fecho">ninguém me deu lugar no roadmap. <mark>eu cheguei lá com 187 conversas lidas.</mark></p>
 
-<p class="note-l">Os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo Banco Central em janeiro de 2026.</p>
+<p class="note-l">os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026.</p>
 
 <p class="assina"><svg width="40" height="40" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>thais castro · product designer</p>
 
@@ -263,8 +260,8 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
-<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </div>
@@ -307,43 +304,43 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><span class="doc-name" id="doc-name">ninguem-me-chamou-pra-mesa.txt</span></div>
 <div class="doc-b"><div class="txt">
 
-<p>Todo designer quer estar na mesa quando o roadmap é decidido. Mas ninguém senta ali só por ter boas ideias. Senta quem chega com um argumento que o time não consegue ignorar. E, na maioria das vezes, esse argumento é um dado.</p>
+<p>todo designer quer estar na mesa quando o roadmap é decidido. mas ninguém senta ali só por ter boas ideias. senta quem chega com um argumento que o time não consegue ignorar. e, na maioria das vezes, esse argumento é um dado.</p>
 
-<p>Aprendi isso quando ainda era product writer no time de empréstimos. Eu não desenhava tela nem tinha cargo para decidir prioridade. O que eu tinha era tempo para ler o que os clientes diziam no chat.</p>
+<p>aprendi isso quando ainda era product writer no time de empréstimos. eu não desenhava tela nem tinha cargo para decidir prioridade. o que eu tinha era tempo para ler o que os clientes diziam no chat.</p>
 
 <h2>o chat conta o que o painel esconde_</h2>
 
-<p>Em 2024, li 187 conversas do atendimento humano, uma por uma, e comparei o que o cliente queria com o que ficou registrado.</p>
+<p>em 2024, li 187 conversas do atendimento humano, uma por uma, e comparei o que o cliente queria com o que ficou registrado.</p>
 
 <div class="case-box">
 <span class="why-l">o que eu encontrei</span>
 <ul class="nums" aria-label="achados do discovery do atendimento humano"><li class="num">48% das tags erradas</li><li class="num">25% de informação incorreta</li><li class="num">11,5% fora do produto</li></ul>
-<p>Quase metade das tags não refletia o motivo real do contato. Um quarto das informações passadas ao cliente estava parcial ou totalmente errada. E 11,5% da fila de empréstimos nem era sobre empréstimo: em 74% desses casos, era Pix no crédito confundido com Pix parcelado.</p>
+<p>quase metade das tags não refletia o motivo real do contato. um quarto das informações passadas ao cliente estava parcial ou totalmente errada. e 11,5% da fila de empréstimos nem era sobre empréstimo: em 74% desses casos, era Pix no crédito confundido com Pix parcelado.</p>
 </div>
 
-<p>O dado mais curioso era outro: mais de 80% das notas para os atendentes eram positivas. Cliente satisfeito não é, necessariamente, cliente bem informado. Sem ler as conversas, a gente teria comemorado o CSAT.</p>
+<p>o dado mais curioso era outro: mais de 80% das notas para os atendentes eram positivas. cliente satisfeito não é, necessariamente, cliente bem informado. sem ler as conversas, a gente teria comemorado o CSAT.</p>
 
-<p>Esses números viraram plano de ação: treinamento de regras de produto, treinamento de uso das tags e um material separando Pix parcelado de Pix no crédito.</p>
+<p>esses números viraram plano de ação: treinamento de regras de produto, treinamento de uso das tags e um material separando Pix parcelado de Pix no crédito.</p>
 
 <h2>o mesmo método, de novo_</h2>
 
-<p>Meses depois, repeti o mesmo método com o Pix parcelado: 200 chats, de julho de 2024 a janeiro de 2025.</p>
+<p>meses depois, repeti o mesmo método com o Pix parcelado: 200 chats, de julho de 2024 a janeiro de 2025.</p>
 
 <div class="case-box">
 <span class="why-l">o que eu encontrei</span>
 <ul class="nums" aria-label="achados do discovery do pix parcelado"><li class="num">40,99% inelegíveis</li><li class="num">35,14% elegíveis sem bot</li><li class="num">70,27% resolvíveis</li></ul>
-<p>Quase metade das conversas era de gente querendo saber por que não tinha o produto. Um terço era de clientes com dúvidas simples, sobre pagamento, acompanhamento e o que o produto era. Nenhum bot respondia essas dúvidas, então elas iam obrigatoriamente para um humano.</p>
+<p>quase metade das conversas era de gente querendo saber por que não tinha o produto. um terço era de clientes com dúvidas simples, sobre pagamento, acompanhamento e o que o produto era. nenhum bot respondia essas dúvidas, então elas iam obrigatoriamente para um humano.</p>
 </div>
 
-<p>A conclusão cabia num slide: dava para agir sobre 70,27% dos casos com um bot dedicado, ajustes de texto e melhorias no fluxo de pagamento e acompanhamento. Parece óbvio, mas só fica óbvio depois que alguém conta.</p>
+<p>a conclusão cabia num slide: dava para agir sobre 70,27% dos casos com um bot dedicado, ajustes de texto e melhorias no fluxo de pagamento e acompanhamento. parece óbvio, mas só fica óbvio depois que alguém conta.</p>
 
-<p>E quando o dado convence, ele muda o que vai ser construído. Foi assim com a tela de acompanhamento do empréstimo. Ninguém queria essa tela na V1. Levei 526 chamados, mostrei que 66,3% poderiam ser resolvidos pelo próprio cliente e que isso projetava 8.982 chamados evitáveis por ano. A tela entrou. A história completa está no <a href="/cases/transparencia/">case de transparência</a>.</p>
+<p>e quando o dado convence, ele muda o que vai ser construído. foi assim com a tela de acompanhamento do empréstimo. ninguém queria essa tela na V1. levei 526 chamados, mostrei que 66,3% poderiam ser resolvidos pelo próprio cliente e que isso projetava 8.982 chamados evitáveis por ano. a tela entrou. a história completa está no <a href="/cases/transparencia/">case de transparência</a>.</p>
 
 <p class="pausa"><span>então…</span>dado sozinho não convence ninguém.</p>
 
 <h2>estar preparada é mais do que ter número_</h2>
 
-<p>O que eu aprendi a levar junto:</p>
+<p>o que eu aprendi a levar junto:</p>
 
 <ol class="steps">
 <li><span class="st-n">01</span>a pergunta antes da planilha. eu sabia o que queria descobrir antes de abrir o primeiro chat</li>
@@ -353,9 +350,9 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <li><span class="st-n">05</span>a fronteira clara. o que era do meu time ia para o roadmap. o que era de outro time ia para quem resolvia, com o dado anexado</li>
 </ol>
 
-<p class="fecho">Ninguém me deu lugar no roadmap. <mark>Eu cheguei lá com 187 conversas lidas.</mark></p>
+<p class="fecho">ninguém me deu lugar no roadmap. <mark>eu cheguei lá com 187 conversas lidas.</mark></p>
 
-<p class="note-l">Os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo Banco Central em janeiro de 2026.</p>
+<p class="note-l">os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026.</p>
 
 <p class="assina"><svg width="40" height="40" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>thais castro · product designer</p>
 
@@ -380,8 +377,8 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
-<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </template>
@@ -395,6 +392,6 @@ toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: 
 }
 }
 </script>
-<script src="/assets/dc.js?v=1793307327"></script>
+<script src="/assets/dc.js?v=1793316727"></script>
 </body>
 </html>

@@ -82,6 +82,23 @@ a:hover{color:#b9a6f2}
 .t-cap{padding:0 16px 24px;font-size:14px;line-height:1.55;color:#f2f2f5;font-family:'Roboto Mono',monospace}
 .t-capuser{font-weight:700;margin-right:8px}
 .t-fnav{display:flex;flex-direction:column;gap:16px}
+.dp-win{flex:1 1 320px;min-width:0;align-self:center;display:flex;flex-direction:column;gap:16px;color:#f2f2f5;font-family:'Roboto Mono',monospace}
+.dp-l{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.dp-cmd{font-size:14px;color:#a3a3a3}
+.dp-cmd b{font-weight:500;color:#ffff8d}
+.dp-gap{margin-top:16px}
+.dp-name{font-weight:500;font-size:clamp(24px,4vw,32px);line-height:1.1;color:#f2f2f5}
+.dp-lk{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:44px;font:500 16px/1 'Roboto Mono',monospace;color:#f2f2f5;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
+.dp-lk:hover{background:#ffff8d;color:#292929}
+.dp-lk svg{flex-shrink:0}
+.dp-li{display:flex;gap:12px;font-family:'Work Sans',sans-serif;font-size:18px;line-height:1.5}
+.dp-li::before{content:'>';font-family:'Roboto Mono',monospace;color:#ffff8d;flex-shrink:0}
+.dp-ghost{visibility:hidden}
+.dp-cur{display:inline-block;width:.6em;height:1.1em;margin-left:2px;vertical-align:-.15em;background:#ffff8d;animation:dp-blink 1s steps(1) infinite}
+@keyframes dp-blink{50%{opacity:0}}
+.dp-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.dp-cur{animation:none}}
+@media (max-width:1100px){.dep.dep-wide{flex-direction:column !important;align-items:stretch !important;gap:48px !important}.dep-wide .dp-win{flex:none}}
 .rc-wrap{display:grid;grid-template-columns:minmax(0,480px) minmax(0,1fr);gap:64px;align-items:start}
 .rc{background:#292929;border:2px solid #f2f2f5;border-bottom:0;padding:32px 32px 24px;display:flex;flex-direction:column;gap:24px;color:#f2f2f5}
 .rc-row{display:flex;align-items:baseline;gap:8px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:16px;line-height:1.5}
@@ -238,11 +255,8 @@ a:hover{color:#b9a6f2}
 .dsf-lk:hover{background:#ffff8d;color:#292929}
 .dsf-sig{position:relative;background:#292929;border-top:1px solid #f2f2f5;overflow:hidden;white-space:nowrap}
 .dsf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.dsf-track{display:inline-flex;animation:dsf-run 24s linear infinite}
-.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#ffff8d;padding:16px 24px}
-.dsf-track span.dsf-dot{color:#f2f2f5;padding:16px 0}
-@keyframes dsf-run{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-@media (prefers-reduced-motion:reduce){.dsf-track{animation:none}}
+.dsf-track{display:flex;justify-content:center;align-items:center;gap:16px;padding:16px 24px}
+.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#f2f2f5}
 .dsf-cp{background:#292929;color:#f2f2f5;font:300 14px/1.5 'Work Sans',sans-serif;text-align:center;padding:0 24px 16px;margin:0}
 @media (max-width:640px){.dsf-in{padding:48px 16px 32px}.dsf-cols{grid-template-columns:minmax(0,1fr)}.dsf-col+.dsf-col{border-left:0;border-top:1px solid #f2f2f5;padding-left:0;margin-top:24px}}
 
@@ -363,7 +377,7 @@ a:hover{color:#b9a6f2}
 
 <p class="lbl">pride</p>
 <h2 class="h2" id="sec-pacote" style="margin-bottom: 32px;">grandes feitos_</h2>
-<p class="txt" style="font-size: 20px; line-height: 1.45; margin-bottom: 48px;">E tenho como provar. Aqui vai o comprovante:</p>
+<p class="txt" style="font-size: 20px; line-height: 1.45; margin-bottom: 48px;">e tenho como provar. aqui vai o comprovante:</p>
 <div class="rc-wrap" style="position: relative;">
 <div>
 <div class="rc">
@@ -408,7 +422,7 @@ a:hover{color:#b9a6f2}
 <div class="rc-row" style="font-weight: 700;"><span>forma pagamento</span><span class="rc-lead"></span><span style="white-space: nowrap;">contrato clt</span></div>
 <div class="rc-row" style="font-weight: 700;"><span>parcelamento</span><span class="rc-lead"></span><span style="white-space: nowrap;">5 anos</span></div>
 </div><span aria-hidden="true" style="font-family: &quot;Roboto Mono&quot;, monospace; font-weight: 500; font-size: 12px; text-align: center; letter-spacing: 0.2em;">|||| ||| |||| || ||||| | ||| ||||</span>
-<p style="margin: 0px; font-family: &quot;Roboto Mono&quot;, monospace; font-weight: 400; font-size: 12px; line-height: 1.5;">Os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo Banco Central em janeiro de 2026 e já não opera mais.</p>
+<p style="margin: 0px; font-family: &quot;Roboto Mono&quot;, monospace; font-weight: 400; font-size: 12px; line-height: 1.5;">os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026 e já não opera mais.</p>
 </div>
 <svg class="rc-zz" width="100%" height="16" aria-hidden="true" style="display: block;"><defs><pattern id="zz" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 0 L8 12 L16 0 Z" fill="#292929"></path><path d="M0 1 L8 13 L16 1" fill="none" stroke="#f2f2f5" stroke-width="2" stroke-linejoin="miter"></path></pattern></defs><rect width="100%" height="16" fill="url(#zz)"></rect></svg>
 
@@ -419,7 +433,7 @@ a:hover{color:#b9a6f2}
 <div class="ax-bar"><span><b>anexo 1</b>  resultado do lembrete de pagamento</span></div>
 <div class="ax-body" role="img" aria-label="Resultado do lembrete de pagamento, grupo com e-mail contra o controle. Valor pago sobre a parcela: 98,4% contra 82,9% no total, alta de 18,6%. Saldo em atraso sobre o saldo total: 4,0% contra 11,4%, queda de 64,7%. Pagamentos parciais: 2,5% contra 1,2%, alta de 109,7%.">
 <div class="ch-leg" aria-hidden="true"><span><i class="on"></i>com e-mail</span><span><i class="off"></i>controle</span></div>
-<div class="ch-stack"><div class="ch"><div class="ch-head"><span class="ch-t">valor pago / valor da parcela</span><span class="ch-d">+18,6%</span></div><div class="hb"><div class="hb-row"><span class="hb-l">emp. pessoal</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 76.4%;"></span><span class="hb-v">98,0%</span></div><div class="hb-b"><span class="hb-f off" style="width: 70.7%;"></span><span class="hb-v">90,6%</span></div></div></div><div class="hb-row"><span class="hb-l">pix parcelado</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 76.9%;"></span><span class="hb-v">98,6%</span></div><div class="hb-b"><span class="hb-f off" style="width: 61%;"></span><span class="hb-v">78,2%</span></div></div></div><div class="hb-row"><span class="hb-l">total</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 76.8%;"></span><span class="hb-v">98,4%</span></div><div class="hb-b"><span class="hb-f off" style="width: 64.7%;"></span><span class="hb-v">82,9%</span></div></div></div></div></div><div class="ch"><div class="ch-head"><span class="ch-t">saldo em atraso / saldo total</span><span class="ch-d">−64,7%</span></div><div class="hb"><div class="hb-row"><span class="hb-l">emp. pessoal</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 27.3%;"></span><span class="hb-v">4,2%</span></div><div class="hb-b"><span class="hb-f off" style="width: 71.5%;"></span><span class="hb-v">11,0%</span></div></div></div><div class="hb-row"><span class="hb-l">pix parcelado</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 24.7%;"></span><span class="hb-v">3,8%</span></div><div class="hb-b"><span class="hb-f off" style="width: 78%;"></span><span class="hb-v">12,0%</span></div></div></div><div class="hb-row"><span class="hb-l">total</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 26%;"></span><span class="hb-v">4,0%</span></div><div class="hb-b"><span class="hb-f off" style="width: 74.1%;"></span><span class="hb-v">11,4%</span></div></div></div></div></div><div class="ch"><div class="ch-head"><span class="ch-t">pagamentos parciais / pagamentos</span><span class="ch-d">+109,7%</span></div><div class="hb"><div class="hb-row"><span class="hb-l">emp. pessoal</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 75.4%;"></span><span class="hb-v">2,9%</span></div><div class="hb-b"><span class="hb-f off" style="width: 33.8%;"></span><span class="hb-v">1,3%</span></div></div></div><div class="hb-row"><span class="hb-l">pix parcelado</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 59.8%;"></span><span class="hb-v">2,3%</span></div><div class="hb-b"><span class="hb-f off" style="width: 28.6%;"></span><span class="hb-v">1,1%</span></div></div></div><div class="hb-row"><span class="hb-l">total</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 65%;"></span><span class="hb-v">2,5%</span></div><div class="hb-b"><span class="hb-f off" style="width: 31.2%;"></span><span class="hb-v">1,2%</span></div></div></div></div></div></div>
+<div class="ch-stack"><div class="ch"><div class="ch-head"><span class="ch-t">valor pago / valor da parcela</span><span class="ch-d">+18,6%</span></div><div class="hb"><div class="hb-row"><span class="hb-l">emp. pessoal</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 76.4%;"></span><span class="hb-v">98,0%</span></div><div class="hb-b"><span class="hb-f off" style="width: 70.7%;"></span><span class="hb-v">90,6%</span></div></div></div><div class="hb-row"><span class="hb-l">Pix parcelado</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 76.9%;"></span><span class="hb-v">98,6%</span></div><div class="hb-b"><span class="hb-f off" style="width: 61%;"></span><span class="hb-v">78,2%</span></div></div></div><div class="hb-row"><span class="hb-l">total</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 76.8%;"></span><span class="hb-v">98,4%</span></div><div class="hb-b"><span class="hb-f off" style="width: 64.7%;"></span><span class="hb-v">82,9%</span></div></div></div></div></div><div class="ch"><div class="ch-head"><span class="ch-t">saldo em atraso / saldo total</span><span class="ch-d">−64,7%</span></div><div class="hb"><div class="hb-row"><span class="hb-l">emp. pessoal</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 27.3%;"></span><span class="hb-v">4,2%</span></div><div class="hb-b"><span class="hb-f off" style="width: 71.5%;"></span><span class="hb-v">11,0%</span></div></div></div><div class="hb-row"><span class="hb-l">Pix parcelado</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 24.7%;"></span><span class="hb-v">3,8%</span></div><div class="hb-b"><span class="hb-f off" style="width: 78%;"></span><span class="hb-v">12,0%</span></div></div></div><div class="hb-row"><span class="hb-l">total</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 26%;"></span><span class="hb-v">4,0%</span></div><div class="hb-b"><span class="hb-f off" style="width: 74.1%;"></span><span class="hb-v">11,4%</span></div></div></div></div></div><div class="ch"><div class="ch-head"><span class="ch-t">pagamentos parciais / pagamentos</span><span class="ch-d">+109,7%</span></div><div class="hb"><div class="hb-row"><span class="hb-l">emp. pessoal</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 75.4%;"></span><span class="hb-v">2,9%</span></div><div class="hb-b"><span class="hb-f off" style="width: 33.8%;"></span><span class="hb-v">1,3%</span></div></div></div><div class="hb-row"><span class="hb-l">Pix parcelado</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 59.8%;"></span><span class="hb-v">2,3%</span></div><div class="hb-b"><span class="hb-f off" style="width: 28.6%;"></span><span class="hb-v">1,1%</span></div></div></div><div class="hb-row"><span class="hb-l">total</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 65%;"></span><span class="hb-v">2,5%</span></div><div class="hb-b"><span class="hb-f off" style="width: 31.2%;"></span><span class="hb-v">1,2%</span></div></div></div></div></div></div>
 </div>
 </figure>
 <figure class="ax" style="transform: rotate(-1deg);">
@@ -484,7 +498,7 @@ a:hover{color:#b9a6f2}
 
 </div>
 </div>
-<p style="margin: 0px; border-left: 16px solid rgb(233, 112, 69); padding: 8px 0px 8px 16px; font-size: 16px; line-height: 1.5; max-width: 64ch;">Produtos de crédito e financiamento digital: jornadas completas de contratação, da simulação ao acompanhamento do contrato. Discovery, pesquisa com usuários, experimentos (fake doors, MVPs e testes A/B) e evolução do design system, com foco em dados e impacto no negócio.</p>
+<p style="margin: 0px; border-left: 16px solid rgb(233, 112, 69); padding: 8px 0px 8px 16px; font-size: 16px; line-height: 1.5; max-width: 64ch;">produtos de crédito e financiamento digital: jornadas completas de contratação, da simulação ao acompanhamento do contrato. discovery, pesquisa com usuários, experimentos (fake doors, MVPs e testes a/b) e evolução do design system, com foco em dados e impacto no negócio.</p>
 
 <div style="display: flex; justify-content: flex-end;"><button type="button" class="sbtn" data-job="a" aria-expanded="false" aria-label="expandir"><svg class="sbtn-i" width="27" height="27" viewBox="0 0 9 9" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M1 2h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM4 6h1v1h-1zM5 4h1v1h-1zM5 5h1v1h-1zM6 3h1v1h-1zM6 4h1v1h-1zM7 2h1v1h-1zM7 3h1v1h-1z"></path></svg></button></div>
 </div>
@@ -522,7 +536,7 @@ a:hover{color:#b9a6f2}
 
 </div>
 </div>
-<p style="margin: 0px; border-left: 16px solid rgb(233, 112, 69); padding: 8px 0px 8px 16px; font-size: 16px; line-height: 1.5; max-width: 64ch;">Única pessoa de UX: discovery para diagnosticar dores da jornada, início do guia de escrita da marca (voz e tom) e microcopy de interface, evangelizando a cultura de design e conteúdo. Antes, seis anos como revisora de texto.</p>
+<p style="margin: 0px; border-left: 16px solid rgb(233, 112, 69); padding: 8px 0px 8px 16px; font-size: 16px; line-height: 1.5; max-width: 64ch;">única pessoa de UX: discovery para diagnosticar dores da jornada, início do guia de escrita da marca (voz e tom) e microcopy de interface, evangelizando a cultura de design e conteúdo. antes, seis anos como revisora de texto.</p>
 
 <div style="display: flex; justify-content: flex-end;"><button type="button" class="sbtn" data-job="b" aria-expanded="false" aria-label="expandir"><svg class="sbtn-i" width="27" height="27" viewBox="0 0 9 9" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M1 2h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM4 6h1v1h-1zM5 4h1v1h-1zM5 5h1v1h-1zM6 3h1v1h-1zM6 4h1v1h-1zM7 2h1v1h-1zM7 3h1v1h-1z"></path></svg></button></div>
 </div>
@@ -536,184 +550,208 @@ a:hover{color:#b9a6f2}
 <section id="como-diz-o-outro" aria-labelledby="sec-dep" style="position: relative;">
 <p class="lbl">they like me</p>
 <h2 class="h2" id="sec-dep">como diz<br>o outro_</h2>
-<p class="txt" style="font-size: 20px; line-height: 1.45; max-width: 800ch; width: min(887px, 100%);">Depoimentos de pessoas muito boas que já trabalharam comigo. Inclusive, indico todas.</p><div class="dep" style="align-items: center; padding-top: 32px; grid-template-rows: auto; gap: 86px; display: flex; width: min(799px, 100%);">
-<div class="t-card"><div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><div class="win-url">feed</div></div><div class="t-scroll" id="dep2-scroll" tabindex="0" aria-label="depoimentos">
+<p class="txt" style="font-size: 20px; line-height: 1.45; max-width: 800ch; width: min(887px, 100%);">depoimentos de pessoas muito boas que já trabalharam comigo. inclusive, indico todas.</p><div class="dep dep-wide" style="align-items: center; padding-top: 32px; grid-template-rows: auto; gap: 86px; display: flex; width: min(1120px, 100%); position: relative;">
+<div class="t-card" style="flex: 0 1 440px; min-width: 0px;"><div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><div class="win-url">feed</div></div><div class="t-scroll" id="dep2-scroll" tabindex="0" aria-label="depoimentos">
 
 <article class="t-post" id="dep2-0">
-<div class="t-head"><a href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="Mateus Resende no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></a><div><span class="t-name">Mateus Resende</span><span class="t-role">Software Engineering Lead @ Resend</span></div></div>
-<div class="t-photo"><img alt="Mateus Resende" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="mateus resende no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></a><div><span class="t-name">mateus resende</span><span class="t-role">software engineering lead @ resend</span></div></div>
+<div class="t-photo"><img alt="mateus resende" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">mateusresende</span>Thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. Não tinha dessa de "isso é coisa de dev". Estávamos todos buscando o que era melhor para o produto em si.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">mateusresende</span>thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. não tinha dessa de "isso é coisa de dev". estávamos todos buscando o que era melhor para o produto em si.</p>
 </article>
 
 <article class="t-post" id="dep2-1">
-<div class="t-head"><a href="https://www.linkedin.com/in/marianapaladino/" target="_blank" rel="noopener noreferrer" aria-label="Mari Paladino no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></a><div><span class="t-name">Mari Paladino</span><span class="t-role">Group Product Manager @ Sem Parar</span></div></div>
-<div class="t-photo"><img alt="Mari Paladino" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/marianapaladino/" target="_blank" rel="noopener noreferrer" aria-label="mari paladino no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></a><div><span class="t-name">mari paladino</span><span class="t-role">group product manager @ sem parar</span></div></div>
+<div class="t-photo"><img alt="mari paladino" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">maripaladino</span>Tive a oportunidade de trabalhar com a Thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">maripaladino</span>tive a oportunidade de trabalhar com a thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.</p>
 </article>
 
 <article class="t-post" id="dep2-2">
-<div class="t-head"><a href="https://www.linkedin.com/in/atiara-braga/" target="_blank" rel="noopener noreferrer" aria-label="Atiara Braga no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></a><div><span class="t-name">Atiara Braga</span><span class="t-role">Associate Product Manager @ Neon</span></div></div>
-<div class="t-photo"><img alt="Atiara Braga" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/atiara-braga/" target="_blank" rel="noopener noreferrer" aria-label="atiara braga no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></a><div><span class="t-name">atiara braga</span><span class="t-role">associate product manager @ neon</span></div></div>
+<div class="t-photo"><img alt="atiara braga" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">atiarabraga</span>Já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! Você entende a dor e necessidade do cliente e faz o negócio acontecer.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">atiarabraga</span>já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! você entende a dor e necessidade do cliente e faz o negócio acontecer.</p>
 </article>
 
 <article class="t-post" id="dep2-3">
-<div class="t-head"><a href="https://www.linkedin.com/in/maisaholland/" target="_blank" rel="noopener noreferrer" aria-label="Maisa Holland no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></a><div><span class="t-name">Maisa Holland</span><span class="t-role">Senior Mobile Engineer @ iGlu</span></div></div>
-<div class="t-photo"><img alt="Maisa Holland" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/maisaholland/" target="_blank" rel="noopener noreferrer" aria-label="maisa holland no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></a><div><span class="t-name">maisa holland</span><span class="t-role">senior mobile engineer @ iglu</span></div></div>
+<div class="t-photo"><img alt="maisa holland" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">maisaholland</span>Foi um prazer imenso trabalhar diretamente com a Thais. É uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">maisaholland</span>foi um prazer imenso trabalhar diretamente com a thais. é uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.</p>
 </article>
 
 <article class="t-post" id="dep2-4">
-<div class="t-head"><a href="https://www.linkedin.com/in/juliananakata/" target="_blank" rel="noopener noreferrer" aria-label="Juliana Nakata Zampronio no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></a><div><span class="t-name">Juliana Nakata Zampronio</span><span class="t-role">Software Engineer @ Itaú Unibanco</span></div></div>
-<div class="t-photo"><img alt="Juliana Nakata Zampronio" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/juliananakata/" target="_blank" rel="noopener noreferrer" aria-label="juliana nakata zampronio no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></a><div><span class="t-name">juliana nakata zampronio</span><span class="t-role">software engineer @ itaú unibanco</span></div></div>
+<div class="t-photo"><img alt="juliana nakata zampronio" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">julianakata</span>Sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. Recomendo de olhos fechados.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">julianakata</span>sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. recomendo de olhos fechados.</p>
 </article>
 
 <article class="t-post" id="dep2-5">
-<div class="t-head"><a href="https://www.linkedin.com/in/janaina-vallim-melo/" target="_blank" rel="noopener noreferrer" aria-label="Jana Vallim no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></a><div><span class="t-name">Jana Vallim</span><span class="t-role">Conversational AI Designer @ Stone</span></div></div>
-<div class="t-photo"><img alt="Jana Vallim" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/janaina-vallim-melo/" target="_blank" rel="noopener noreferrer" aria-label="jana vallim no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></a><div><span class="t-name">jana vallim</span><span class="t-role">conversational AI designer @ stone</span></div></div>
+<div class="t-photo"><img alt="jana vallim" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">janavallim</span>Trabalhar com a Thais é incrível! Ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">janavallim</span>trabalhar com a thais é incrível! ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.</p>
 </article>
 
 <article class="t-post" id="dep2-6">
-<div class="t-head"><a href="https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/" target="_blank" rel="noopener noreferrer" aria-label="Ana Beatriz Sulliman no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></a><div><span class="t-name">Ana Beatriz Sulliman</span><span class="t-role">Especialista de negócios @ Mercado Pago</span></div></div>
-<div class="t-photo"><img alt="Ana Beatriz Sulliman" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/" target="_blank" rel="noopener noreferrer" aria-label="ana beatriz suliman no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></a><div><span class="t-name">ana beatriz suliman</span><span class="t-role">especialista de negócios @ mercado pago</span></div></div>
+<div class="t-photo"><img alt="ana beatriz suliman" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">anabeatriz</span>Thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">anabeatriz</span>thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.</p>
 </article>
 
 <article class="t-post" id="dep2-7">
-<div class="t-head"><a href="https://www.linkedin.com/in/thiagomelobezerra/" target="_blank" rel="noopener noreferrer" aria-label="Thiago Bezerra no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></a><div><span class="t-name">Thiago Bezerra</span><span class="t-role">Staff Software Engineer @ Alice</span></div></div>
-<div class="t-photo"><img alt="Thiago Bezerra" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/thiagomelobezerra/" target="_blank" rel="noopener noreferrer" aria-label="thiago bezerra no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></a><div><span class="t-name">thiago bezerra</span><span class="t-role">staff software engineer @ alice</span></div></div>
+<div class="t-photo"><img alt="thiago bezerra" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">thiagobezerra</span>Ouvindo o cliente, coletando dados, entendendo seu publico Thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">thiagobezerra</span>ouvindo o cliente, coletando dados, entendendo seu publico thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.</p>
 </article>
 
 <article class="t-post" id="dep2-8">
-<div class="t-head"><a href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="Mateus Resende no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></a><div><span class="t-name">Mateus Resende</span><span class="t-role">Software Engineering Lead @ Resend</span></div></div>
-<div class="t-photo"><img alt="Mateus Resende" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="mateus resende no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></a><div><span class="t-name">mateus resende</span><span class="t-role">software engineering lead @ resend</span></div></div>
+<div class="t-photo"><img alt="mateus resende" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">mateusresende</span>Thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. Não tinha dessa de "isso é coisa de dev". Estávamos todos buscando o que era melhor para o produto em si.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">mateusresende</span>thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. não tinha dessa de "isso é coisa de dev". estávamos todos buscando o que era melhor para o produto em si.</p>
 </article>
 
 <article class="t-post" id="dep2-9">
-<div class="t-head"><a href="https://www.linkedin.com/in/marianapaladino/" target="_blank" rel="noopener noreferrer" aria-label="Mari Paladino no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></a><div><span class="t-name">Mari Paladino</span><span class="t-role">Group Product Manager @ Sem Parar</span></div></div>
-<div class="t-photo"><img alt="Mari Paladino" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/marianapaladino/" target="_blank" rel="noopener noreferrer" aria-label="mari paladino no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></a><div><span class="t-name">mari paladino</span><span class="t-role">group product manager @ sem parar</span></div></div>
+<div class="t-photo"><img alt="mari paladino" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">maripaladino</span>Tive a oportunidade de trabalhar com a Thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">maripaladino</span>tive a oportunidade de trabalhar com a thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.</p>
 </article>
 
 <article class="t-post" id="dep2-10">
-<div class="t-head"><a href="https://www.linkedin.com/in/atiara-braga/" target="_blank" rel="noopener noreferrer" aria-label="Atiara Braga no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></a><div><span class="t-name">Atiara Braga</span><span class="t-role">Associate Product Manager @ Neon</span></div></div>
-<div class="t-photo"><img alt="Atiara Braga" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/atiara-braga/" target="_blank" rel="noopener noreferrer" aria-label="atiara braga no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></a><div><span class="t-name">atiara braga</span><span class="t-role">associate product manager @ neon</span></div></div>
+<div class="t-photo"><img alt="atiara braga" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">atiarabraga</span>Já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! Você entende a dor e necessidade do cliente e faz o negócio acontecer.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">atiarabraga</span>já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! você entende a dor e necessidade do cliente e faz o negócio acontecer.</p>
 </article>
 
 <article class="t-post" id="dep2-11">
-<div class="t-head"><a href="https://www.linkedin.com/in/maisaholland/" target="_blank" rel="noopener noreferrer" aria-label="Maisa Holland no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></a><div><span class="t-name">Maisa Holland</span><span class="t-role">Senior Mobile Engineer @ iGlu</span></div></div>
-<div class="t-photo"><img alt="Maisa Holland" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/maisaholland/" target="_blank" rel="noopener noreferrer" aria-label="maisa holland no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></a><div><span class="t-name">maisa holland</span><span class="t-role">senior mobile engineer @ iglu</span></div></div>
+<div class="t-photo"><img alt="maisa holland" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">maisaholland</span>Foi um prazer imenso trabalhar diretamente com a Thais. É uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">maisaholland</span>foi um prazer imenso trabalhar diretamente com a thais. é uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.</p>
 </article>
 
 <article class="t-post" id="dep2-12">
-<div class="t-head"><a href="https://www.linkedin.com/in/juliananakata/" target="_blank" rel="noopener noreferrer" aria-label="Juliana Nakata Zampronio no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></a><div><span class="t-name">Juliana Nakata Zampronio</span><span class="t-role">Software Engineer @ Itaú Unibanco</span></div></div>
-<div class="t-photo"><img alt="Juliana Nakata Zampronio" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/juliananakata/" target="_blank" rel="noopener noreferrer" aria-label="juliana nakata zampronio no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></a><div><span class="t-name">juliana nakata zampronio</span><span class="t-role">software engineer @ itaú unibanco</span></div></div>
+<div class="t-photo"><img alt="juliana nakata zampronio" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">julianakata</span>Sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. Recomendo de olhos fechados.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">julianakata</span>sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. recomendo de olhos fechados.</p>
 </article>
 
 <article class="t-post" id="dep2-13">
-<div class="t-head"><a href="https://www.linkedin.com/in/janaina-vallim-melo/" target="_blank" rel="noopener noreferrer" aria-label="Jana Vallim no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></a><div><span class="t-name">Jana Vallim</span><span class="t-role">Conversational AI Designer @ Stone</span></div></div>
-<div class="t-photo"><img alt="Jana Vallim" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/janaina-vallim-melo/" target="_blank" rel="noopener noreferrer" aria-label="jana vallim no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></a><div><span class="t-name">jana vallim</span><span class="t-role">conversational AI designer @ stone</span></div></div>
+<div class="t-photo"><img alt="jana vallim" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">janavallim</span>Trabalhar com a Thais é incrível! Ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">janavallim</span>trabalhar com a thais é incrível! ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.</p>
 </article>
 
 <article class="t-post" id="dep2-14">
-<div class="t-head"><a href="https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/" target="_blank" rel="noopener noreferrer" aria-label="Ana Beatriz Sulliman no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></a><div><span class="t-name">Ana Beatriz Sulliman</span><span class="t-role">Especialista de negócios @ Mercado Pago</span></div></div>
-<div class="t-photo"><img alt="Ana Beatriz Sulliman" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/" target="_blank" rel="noopener noreferrer" aria-label="ana beatriz suliman no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></a><div><span class="t-name">ana beatriz suliman</span><span class="t-role">especialista de negócios @ mercado pago</span></div></div>
+<div class="t-photo"><img alt="ana beatriz suliman" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">anabeatriz</span>Thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">anabeatriz</span>thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.</p>
 </article>
 
 <article class="t-post" id="dep2-15">
-<div class="t-head"><a href="https://www.linkedin.com/in/thiagomelobezerra/" target="_blank" rel="noopener noreferrer" aria-label="Thiago Bezerra no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></a><div><span class="t-name">Thiago Bezerra</span><span class="t-role">Staff Software Engineer @ Alice</span></div></div>
-<div class="t-photo"><img alt="Thiago Bezerra" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/thiagomelobezerra/" target="_blank" rel="noopener noreferrer" aria-label="thiago bezerra no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></a><div><span class="t-name">thiago bezerra</span><span class="t-role">staff software engineer @ alice</span></div></div>
+<div class="t-photo"><img alt="thiago bezerra" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">thiagobezerra</span>Ouvindo o cliente, coletando dados, entendendo seu publico Thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">thiagobezerra</span>ouvindo o cliente, coletando dados, entendendo seu publico thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.</p>
 </article>
 
 <article class="t-post" id="dep2-16">
-<div class="t-head"><a href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="Mateus Resende no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></a><div><span class="t-name">Mateus Resende</span><span class="t-role">Software Engineering Lead @ Resend</span></div></div>
-<div class="t-photo"><img alt="Mateus Resende" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="mateus resende no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></a><div><span class="t-name">mateus resende</span><span class="t-role">software engineering lead @ resend</span></div></div>
+<div class="t-photo"><img alt="mateus resende" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">mateusresende</span>Thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. Não tinha dessa de "isso é coisa de dev". Estávamos todos buscando o que era melhor para o produto em si.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">mateusresende</span>thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. não tinha dessa de "isso é coisa de dev". estávamos todos buscando o que era melhor para o produto em si.</p>
 </article>
 
 <article class="t-post" id="dep2-17">
-<div class="t-head"><a href="https://www.linkedin.com/in/marianapaladino/" target="_blank" rel="noopener noreferrer" aria-label="Mari Paladino no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></a><div><span class="t-name">Mari Paladino</span><span class="t-role">Group Product Manager @ Sem Parar</span></div></div>
-<div class="t-photo"><img alt="Mari Paladino" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/marianapaladino/" target="_blank" rel="noopener noreferrer" aria-label="mari paladino no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></a><div><span class="t-name">mari paladino</span><span class="t-role">group product manager @ sem parar</span></div></div>
+<div class="t-photo"><img alt="mari paladino" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">maripaladino</span>Tive a oportunidade de trabalhar com a Thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">maripaladino</span>tive a oportunidade de trabalhar com a thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.</p>
 </article>
 
 <article class="t-post" id="dep2-18">
-<div class="t-head"><a href="https://www.linkedin.com/in/atiara-braga/" target="_blank" rel="noopener noreferrer" aria-label="Atiara Braga no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></a><div><span class="t-name">Atiara Braga</span><span class="t-role">Associate Product Manager @ Neon</span></div></div>
-<div class="t-photo"><img alt="Atiara Braga" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/atiara-braga/" target="_blank" rel="noopener noreferrer" aria-label="atiara braga no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></a><div><span class="t-name">atiara braga</span><span class="t-role">associate product manager @ neon</span></div></div>
+<div class="t-photo"><img alt="atiara braga" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">atiarabraga</span>Já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! Você entende a dor e necessidade do cliente e faz o negócio acontecer.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">atiarabraga</span>já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! você entende a dor e necessidade do cliente e faz o negócio acontecer.</p>
 </article>
 
 <article class="t-post" id="dep2-19">
-<div class="t-head"><a href="https://www.linkedin.com/in/maisaholland/" target="_blank" rel="noopener noreferrer" aria-label="Maisa Holland no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></a><div><span class="t-name">Maisa Holland</span><span class="t-role">Senior Mobile Engineer @ iGlu</span></div></div>
-<div class="t-photo"><img alt="Maisa Holland" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/maisaholland/" target="_blank" rel="noopener noreferrer" aria-label="maisa holland no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></a><div><span class="t-name">maisa holland</span><span class="t-role">senior mobile engineer @ iglu</span></div></div>
+<div class="t-photo"><img alt="maisa holland" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">maisaholland</span>Foi um prazer imenso trabalhar diretamente com a Thais. É uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">maisaholland</span>foi um prazer imenso trabalhar diretamente com a thais. é uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.</p>
 </article>
 
 <article class="t-post" id="dep2-20">
-<div class="t-head"><a href="https://www.linkedin.com/in/juliananakata/" target="_blank" rel="noopener noreferrer" aria-label="Juliana Nakata Zampronio no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></a><div><span class="t-name">Juliana Nakata Zampronio</span><span class="t-role">Software Engineer @ Itaú Unibanco</span></div></div>
-<div class="t-photo"><img alt="Juliana Nakata Zampronio" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/juliananakata/" target="_blank" rel="noopener noreferrer" aria-label="juliana nakata zampronio no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></a><div><span class="t-name">juliana nakata zampronio</span><span class="t-role">software engineer @ itaú unibanco</span></div></div>
+<div class="t-photo"><img alt="juliana nakata zampronio" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">julianakata</span>Sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. Recomendo de olhos fechados.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">julianakata</span>sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. recomendo de olhos fechados.</p>
 </article>
 
 <article class="t-post" id="dep2-21">
-<div class="t-head"><a href="https://www.linkedin.com/in/janaina-vallim-melo/" target="_blank" rel="noopener noreferrer" aria-label="Jana Vallim no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></a><div><span class="t-name">Jana Vallim</span><span class="t-role">Conversational AI Designer @ Stone</span></div></div>
-<div class="t-photo"><img alt="Jana Vallim" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/janaina-vallim-melo/" target="_blank" rel="noopener noreferrer" aria-label="jana vallim no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></a><div><span class="t-name">jana vallim</span><span class="t-role">conversational AI designer @ stone</span></div></div>
+<div class="t-photo"><img alt="jana vallim" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">janavallim</span>Trabalhar com a Thais é incrível! Ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">janavallim</span>trabalhar com a thais é incrível! ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.</p>
 </article>
 
 <article class="t-post" id="dep2-22">
-<div class="t-head"><a href="https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/" target="_blank" rel="noopener noreferrer" aria-label="Ana Beatriz Sulliman no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></a><div><span class="t-name">Ana Beatriz Sulliman</span><span class="t-role">Especialista de negócios @ Mercado Pago</span></div></div>
-<div class="t-photo"><img alt="Ana Beatriz Sulliman" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/" target="_blank" rel="noopener noreferrer" aria-label="ana beatriz suliman no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></a><div><span class="t-name">ana beatriz suliman</span><span class="t-role">especialista de negócios @ mercado pago</span></div></div>
+<div class="t-photo"><img alt="ana beatriz suliman" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">anabeatriz</span>Thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">anabeatriz</span>thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.</p>
 </article>
 
 <article class="t-post" id="dep2-23">
-<div class="t-head"><a href="https://www.linkedin.com/in/thiagomelobezerra/" target="_blank" rel="noopener noreferrer" aria-label="Thiago Bezerra no LinkedIn (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></a><div><span class="t-name">Thiago Bezerra</span><span class="t-role">Staff Software Engineer @ Alice</span></div></div>
-<div class="t-photo"><img alt="Thiago Bezerra" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></div>
+<div class="t-head"><a href="https://www.linkedin.com/in/thiagomelobezerra/" target="_blank" rel="noopener noreferrer" aria-label="thiago bezerra no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></a><div><span class="t-name">thiago bezerra</span><span class="t-role">staff software engineer @ alice</span></div></div>
+<div class="t-photo"><img alt="thiago bezerra" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></div>
 <div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
-<p class="t-cap" style="margin: 0px;"><span class="t-capuser">thiagobezerra</span>Ouvindo o cliente, coletando dados, entendendo seu publico Thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.</p>
+<p class="t-cap" style="margin: 0px;"><span class="t-capuser">thiagobezerra</span>ouvindo o cliente, coletando dados, entendendo seu publico thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.</p>
 </article>
 
 </div><div class="t-hint" aria-hidden="true">role<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fffefe" stroke-width="2" aria-hidden="true"><path d="M3 6l5 5 5-5"></path></svg></div></div>
-<div aria-hidden="true" style="background: rgb(255, 255, 141); border: 2px solid rgb(242, 242, 245); position: relative; padding-bottom: 0px; display: flex; flex-direction: row; color: rgb(41, 41, 41);"><img alt="" src="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" style="position: absolute; left: 14px; top: 14px; width: 64px; height: 64px; image-rendering: pixelated;"></div><div class="t-fnav"></div>
-<div style="display: flex; flex-direction: row; gap: 32px; align-items: flex-start; width: min(470px, 100%);">
+
+<div class="dp-win" id="dp-type">
+<div class="dp-sr"><h3>mateus resende</h3><p>características</p><ul><li>empático ao extremo</li><li>pensa com dados</li><li>executa com visão de negócio</li></ul></div>
 
 
+<p class="dp-l dp-cmd" aria-hidden="true"><b>thais@coffee</b>:~ $ whois mateusresende<span class="dp-ghost"></span></p>
+
+
+<p class="dp-l dp-name" aria-hidden="true"><b></b>mateus resende<span class="dp-ghost"></span></p>
+
+<a class="dp-lk" href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="linkedin de mateus resende (abre em nova aba)"><span>linkedin<span class="dp-ghost"></span></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5"></path></svg></a>
+
+
+
+<p class="dp-l dp-cmd dp-gap" aria-hidden="true"><b></b>$ cat caracteristicas.txt<span class="dp-ghost"></span></p>
+
+
+<p class="dp-l dp-li" aria-hidden="true"><b></b>empático ao extremo<span class="dp-ghost"></span></p>
+
+
+<p class="dp-l dp-li" aria-hidden="true"><b></b>pensa com dados<span class="dp-ghost"></span></p>
+
+
+<p class="dp-l dp-li" aria-hidden="true"><b></b>executa com visão de negócio<span class="dp-ghost"></span></p>
+
+
+<p class="dp-l dp-cmd dp-gap" aria-hidden="true"><b></b>$ <span class="dp-cur"></span><span class="dp-ghost"></span></p>
+
 </div>
-</div>
+<img alt="" src="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" style="position: absolute; left: 565px; top: 66px; width: 64px; height: 64px; image-rendering: pixelated;"></div>
 </section>
 </div><footer class="dsf" style="margin-top: 96px;">
 <div class="dsf-tape" aria-hidden="true"></div>
@@ -726,8 +764,8 @@ a:hover{color:#b9a6f2}
 <div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
-<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </div>
@@ -842,7 +880,7 @@ a:hover{color:#b9a6f2}
 
 <p class="lbl">pride</p>
 <h2 class="h2" id="sec-pacote" style="margin-bottom: 32px">grandes feitos_</h2>
-<p class="txt" style="font-size: 20px; line-height: 1.45; margin-bottom: 48px">E tenho como provar. Aqui vai o comprovante:</p>
+<p class="txt" style="font-size: 20px; line-height: 1.45; margin-bottom: 48px">e tenho como provar. aqui vai o comprovante:</p>
 <div class="rc-wrap" style="position: relative">
 <div>
 <div class="rc">
@@ -887,7 +925,7 @@ a:hover{color:#b9a6f2}
 <div class="rc-row" style="font-weight: 700"><span>forma pagamento</span><span class="rc-lead"></span><span style="white-space: nowrap">contrato clt</span></div>
 <div class="rc-row" style="font-weight: 700"><span>parcelamento</span><span class="rc-lead"></span><span style="white-space: nowrap">5 anos</span></div>
 </div><span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; text-align: center; letter-spacing: .2em" aria-hidden="true">|||| ||| |||| || ||||| | ||| ||||</span>
-<p style="margin: 0; font-family: 'Roboto Mono',monospace; font-weight: 400; font-size: 12px; line-height: 1.5">Os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo Banco Central em janeiro de 2026 e já não opera mais.</p>
+<p style="margin: 0; font-family: 'Roboto Mono',monospace; font-weight: 400; font-size: 12px; line-height: 1.5">os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026 e já não opera mais.</p>
 </div>
 <svg class="rc-zz" width="100%" height="16" aria-hidden="true" style="display: block"><defs><pattern id="zz" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 0 L8 12 L16 0 Z" fill="#292929"></path><path d="M0 1 L8 13 L16 1" fill="none" stroke="#f2f2f5" stroke-width="2" stroke-linejoin="miter"></path></pattern></defs><rect width="100%" height="16" fill="url(#zz)"></rect></svg>
 
@@ -898,7 +936,7 @@ a:hover{color:#b9a6f2}
 <div class="ax-bar"><span><b>anexo 1</b>  resultado do lembrete de pagamento</span></div>
 <div class="ax-body" role="img" aria-label="Resultado do lembrete de pagamento, grupo com e-mail contra o controle. Valor pago sobre a parcela: 98,4% contra 82,9% no total, alta de 18,6%. Saldo em atraso sobre o saldo total: 4,0% contra 11,4%, queda de 64,7%. Pagamentos parciais: 2,5% contra 1,2%, alta de 109,7%.">
 <div class="ch-leg" aria-hidden="true"><span><i class="on"></i>com e-mail</span><span><i class="off"></i>controle</span></div>
-<div class="ch-stack"><div class="ch"><div class="ch-head"><span class="ch-t">valor pago / valor da parcela</span><span class="ch-d">+18,6%</span></div><div class="hb"><div class="hb-row"><span class="hb-l">emp. pessoal</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 76.4%"></span><span class="hb-v">98,0%</span></div><div class="hb-b"><span class="hb-f off" style="width: 70.7%"></span><span class="hb-v">90,6%</span></div></div></div><div class="hb-row"><span class="hb-l">pix parcelado</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 76.9%"></span><span class="hb-v">98,6%</span></div><div class="hb-b"><span class="hb-f off" style="width: 61.0%"></span><span class="hb-v">78,2%</span></div></div></div><div class="hb-row"><span class="hb-l">total</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 76.8%"></span><span class="hb-v">98,4%</span></div><div class="hb-b"><span class="hb-f off" style="width: 64.7%"></span><span class="hb-v">82,9%</span></div></div></div></div></div><div class="ch"><div class="ch-head"><span class="ch-t">saldo em atraso / saldo total</span><span class="ch-d">−64,7%</span></div><div class="hb"><div class="hb-row"><span class="hb-l">emp. pessoal</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 27.3%"></span><span class="hb-v">4,2%</span></div><div class="hb-b"><span class="hb-f off" style="width: 71.5%"></span><span class="hb-v">11,0%</span></div></div></div><div class="hb-row"><span class="hb-l">pix parcelado</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 24.7%"></span><span class="hb-v">3,8%</span></div><div class="hb-b"><span class="hb-f off" style="width: 78.0%"></span><span class="hb-v">12,0%</span></div></div></div><div class="hb-row"><span class="hb-l">total</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 26.0%"></span><span class="hb-v">4,0%</span></div><div class="hb-b"><span class="hb-f off" style="width: 74.1%"></span><span class="hb-v">11,4%</span></div></div></div></div></div><div class="ch"><div class="ch-head"><span class="ch-t">pagamentos parciais / pagamentos</span><span class="ch-d">+109,7%</span></div><div class="hb"><div class="hb-row"><span class="hb-l">emp. pessoal</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 75.4%"></span><span class="hb-v">2,9%</span></div><div class="hb-b"><span class="hb-f off" style="width: 33.8%"></span><span class="hb-v">1,3%</span></div></div></div><div class="hb-row"><span class="hb-l">pix parcelado</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 59.8%"></span><span class="hb-v">2,3%</span></div><div class="hb-b"><span class="hb-f off" style="width: 28.6%"></span><span class="hb-v">1,1%</span></div></div></div><div class="hb-row"><span class="hb-l">total</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 65.0%"></span><span class="hb-v">2,5%</span></div><div class="hb-b"><span class="hb-f off" style="width: 31.2%"></span><span class="hb-v">1,2%</span></div></div></div></div></div></div>
+<div class="ch-stack"><div class="ch"><div class="ch-head"><span class="ch-t">valor pago / valor da parcela</span><span class="ch-d">+18,6%</span></div><div class="hb"><div class="hb-row"><span class="hb-l">emp. pessoal</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 76.4%"></span><span class="hb-v">98,0%</span></div><div class="hb-b"><span class="hb-f off" style="width: 70.7%"></span><span class="hb-v">90,6%</span></div></div></div><div class="hb-row"><span class="hb-l">Pix parcelado</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 76.9%"></span><span class="hb-v">98,6%</span></div><div class="hb-b"><span class="hb-f off" style="width: 61.0%"></span><span class="hb-v">78,2%</span></div></div></div><div class="hb-row"><span class="hb-l">total</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 76.8%"></span><span class="hb-v">98,4%</span></div><div class="hb-b"><span class="hb-f off" style="width: 64.7%"></span><span class="hb-v">82,9%</span></div></div></div></div></div><div class="ch"><div class="ch-head"><span class="ch-t">saldo em atraso / saldo total</span><span class="ch-d">−64,7%</span></div><div class="hb"><div class="hb-row"><span class="hb-l">emp. pessoal</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 27.3%"></span><span class="hb-v">4,2%</span></div><div class="hb-b"><span class="hb-f off" style="width: 71.5%"></span><span class="hb-v">11,0%</span></div></div></div><div class="hb-row"><span class="hb-l">Pix parcelado</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 24.7%"></span><span class="hb-v">3,8%</span></div><div class="hb-b"><span class="hb-f off" style="width: 78.0%"></span><span class="hb-v">12,0%</span></div></div></div><div class="hb-row"><span class="hb-l">total</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 26.0%"></span><span class="hb-v">4,0%</span></div><div class="hb-b"><span class="hb-f off" style="width: 74.1%"></span><span class="hb-v">11,4%</span></div></div></div></div></div><div class="ch"><div class="ch-head"><span class="ch-t">pagamentos parciais / pagamentos</span><span class="ch-d">+109,7%</span></div><div class="hb"><div class="hb-row"><span class="hb-l">emp. pessoal</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 75.4%"></span><span class="hb-v">2,9%</span></div><div class="hb-b"><span class="hb-f off" style="width: 33.8%"></span><span class="hb-v">1,3%</span></div></div></div><div class="hb-row"><span class="hb-l">Pix parcelado</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 59.8%"></span><span class="hb-v">2,3%</span></div><div class="hb-b"><span class="hb-f off" style="width: 28.6%"></span><span class="hb-v">1,1%</span></div></div></div><div class="hb-row"><span class="hb-l">total</span><div class="hb-bars"><div class="hb-b"><span class="hb-f on" style="width: 65.0%"></span><span class="hb-v">2,5%</span></div><div class="hb-b"><span class="hb-f off" style="width: 31.2%"></span><span class="hb-v">1,2%</span></div></div></div></div></div></div>
 </div>
 </figure>
 <figure class="ax" style="transform: rotate(-1deg)">
@@ -979,8 +1017,8 @@ a:hover{color:#b9a6f2}
 <section id="como-diz-o-outro" aria-labelledby="sec-dep" style="position: relative">
 <p class="lbl">they like me</p>
 <h2 class="h2" id="sec-dep">como diz<br>o outro_</h2>
-<p class="txt" style="font-size: 20px; line-height: 1.45; max-width: 800ch; width: min(887px, 100%)">Depoimentos de pessoas muito boas que já trabalharam comigo. Inclusive, indico todas.</p><div class="dep" style="align-items: center; padding-top: 32px; grid-template-rows: auto; gap: 86px; display: flex; width: min(799px, 100%)">
-<div class="t-card"><div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><div class="win-url">feed</div></div><div class="t-scroll" id="dep2-scroll" onScroll="{{onFeedScroll}}" tabindex="0" aria-label="depoimentos">
+<p class="txt" style="font-size: 20px; line-height: 1.45; max-width: 800ch; width: min(887px, 100%)">depoimentos de pessoas muito boas que já trabalharam comigo. inclusive, indico todas.</p><div class="dep dep-wide" style="align-items: center; padding-top: 32px; grid-template-rows: auto; gap: 86px; display: flex; width: min(1120px, 100%); position: relative">
+<div class="t-card" style="flex: 0 1 440px; min-width: 0"><div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><div class="win-url">feed</div></div><div class="t-scroll" id="dep2-scroll" onScroll="{{onFeedScroll}}" tabindex="0" aria-label="depoimentos">
 <sc-for list="{{slides}}" as="t" hint-placeholder-count="8">
 <article class="t-post" id="{{t.anchor}}">
 <div class="t-head"><a href="{{t.url}}" target="_blank" rel="noopener noreferrer" aria-label="{{t.linkLabel}}"><img class="t-avatar" src="{{t.img}}" alt=""></a><div><span class="t-name">{{t.name}}</span><span class="t-role">{{t.role}}</span></div></div>
@@ -990,12 +1028,15 @@ a:hover{color:#b9a6f2}
 </article>
 </sc-for>
 </div><sc-if value="{{hintOn}}" hint-placeholder-val="{{ true }}"><div class="t-hint" aria-hidden="true">role<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fffefe" stroke-width="2" aria-hidden="true"><path d="M3 6l5 5 5-5"></path></svg></div></sc-if></div>
-<div style="background: #ffff8d; border: 2px solid #f2f2f5; position: relative; padding-bottom: 0px; display: flex; flex-direction: row; color: #292929" aria-hidden="true"><img src="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" alt="" style="position: absolute; left: 14px; top: 14px; width: 64px; height: 64px; image-rendering: pixelated"></div><div class="t-fnav"></div>
-<div style="display: flex; flex-direction: row; gap: 32px; align-items: flex-start; width: min(470px, 100%)">
 
-
+<div class="dp-win" id="dp-type">
+<div class="dp-sr"><h3>{{dp.name}}</h3><p>características</p><ul><sc-for list="{{dp.caracteristicas}}" as="c" hint-placeholder-count="3"><li>{{c}}</li></sc-for></ul></div>
+<sc-for list="{{dpLines}}" as="l" hint-placeholder-count="8">
+<sc-if value="{{l.isLink}}" hint-placeholder-val="{{ false }}"><a class="dp-lk" href="{{dp.url}}" target="_blank" rel="noopener noreferrer" aria-label="{{dpLinkLabel}}"><span>{{l.typed}}<span class="dp-ghost">{{l.ghost}}</span></span><sc-if value="{{l.cur}}" hint-placeholder-val="{{ false }}"><span class="dp-cur"></span></sc-if><sc-if value="{{l.done}}" hint-placeholder-val="{{ true }}"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5"></path></svg></sc-if></a></sc-if>
+<sc-if value="{{l.isText}}" hint-placeholder-val="{{ true }}"><p class="{{l.cls}}" aria-hidden="true"><b>{{l.b}}</b>{{l.typed}}<sc-if value="{{l.cur}}" hint-placeholder-val="{{ false }}"><span class="dp-cur"></span></sc-if><span class="dp-ghost">{{l.ghost}}</span></p></sc-if>
+</sc-for>
 </div>
-</div>
+<img src="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" alt="" style="position: absolute; left: 565px; top: 66px; width: 64px; height: 64px; image-rendering: pixelated"></div>
 </section>
 </div><footer class="dsf" style="margin-top: 96px">
 <div class="dsf-tape" aria-hidden="true"></div>
@@ -1008,21 +1049,21 @@ a:hover{color:#b9a6f2}
 <div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
-<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </template>
 <script type="text/plain" id="dc-logic">
 class Component extends DCLogic {
-constructor(props) { super(props); this.state = { openId: null, liked: {}, menuOpen: false, navSub: '', zoom: 1, hintOn: true, pop: '' }; clearTimeout(window.__rpT); window.__rpT = setTimeout(() => { let seen = false; try { seen = sessionStorage.getItem('rp-visto') === '1'; } catch (e) {} if (!seen && !this.state.pop) { this.setState({ pop: 'ask' }); setTimeout(() => { const w = document.getElementById('rp-win'); if (w) w.focus(); }, 50); } }, 5000); this.__secs = [['jeito-pra-coisa','/jeito'],['grandes-feitos','/feitos'],['por-onde-andei','/andei'],['como-diz-o-outro','/dizem']]; const trackSec = () => { const mid = window.innerHeight * 0.4; let cur = ''; this.__secs.forEach(([id, sub]) => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top <= mid) cur = sub; }); if (cur !== this.state.navSub) this.setState({ navSub: cur }); }; if (window.__tnavScroll) window.removeEventListener('scroll', window.__tnavScroll); window.__tnavScroll = () => { cancelAnimationFrame(window.__tnavRaf); window.__tnavRaf = requestAnimationFrame(trackSec); }; window.addEventListener('scroll', window.__tnavScroll, { passive: true }); setTimeout(trackSec, 0); setTimeout(() => { const sc = document.getElementById('dep2-scroll'); if (sc && sc.scrollTop < 8) { sc.scrollTop = sc.scrollHeight / 3; } }, 400); setTimeout(() => { const sc = document.getElementById('dep2-scroll'); if (!sc) return; window.__feedBase = sc.scrollTop; const red = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; if (red || !('IntersectionObserver' in window)) return; if (window.__feedIO) window.__feedIO.disconnect(); const io = new IntersectionObserver((ents) => { if (!ents.some((e) => e.isIntersecting)) return; io.disconnect(); setTimeout(() => { if (!this.state.hintOn) return; const from = sc.scrollTop; const d = 120; const dur = 1100; const t0 = performance.now(); window.__feedNudging = true; sc.style.scrollSnapType = 'none'; const step = (now) => { const p = Math.min(1, (now - t0) / dur); sc.scrollTop = from + d * Math.sin(Math.PI * p); if (p < 1) { requestAnimationFrame(step); } else { sc.scrollTop = from; sc.style.scrollSnapType = ''; setTimeout(() => { window.__feedNudging = false; }, 200); } }; requestAnimationFrame(step); }, 500); }, { threshold: 0.6 }); window.__feedIO = io; io.observe(sc); }, 450); }
+constructor(props) { super(props); this.dpType = () => { clearInterval(window.__dpI); if (typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches) return this.setState({ dpN: null }); this.setState({ dpN: 0 }); window.__dpI = setInterval(() => { const n = (this.state.dpN || 0) + 2; if (n >= (window.__dpTotal || 0)) { clearInterval(window.__dpI); this.setState({ dpN: null }); } else this.setState({ dpN: n }); }, 30); }; this.afterPop = (id, ratio, fn) => { const visible = (el) => { const r = el.getBoundingClientRect(); const vis = Math.min(r.bottom, window.innerHeight) - Math.max(r.top, 0); return vis > 0 && vis / Math.min(r.height, window.innerHeight) >= ratio; }; const go = () => { if (this.state.pop || window.__rpPending) { setTimeout(go, 250); return; } const el = document.getElementById(id); if (!el) { setTimeout(go, 250); return; } if (visible(el)) { fn(); return; } const io2 = new IntersectionObserver((es) => { if (!es.some((e) => e.isIntersecting)) return; io2.disconnect(); this.afterPop(id, ratio, fn); }, { threshold: ratio }); io2.observe(el); }; if (this.state.pop || window.__rpPending) { const wait = () => { if (this.state.pop || window.__rpPending) { setTimeout(wait, 250); return; } setTimeout(go, 400); }; wait(); } else go(); }; setTimeout(() => { const el = document.getElementById('dp-type'); if (!el || typeof IntersectionObserver !== 'function') return; const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { io.disconnect(); this.afterPop('dp-type', 0.3, () => this.dpType()); } }, { threshold: 0.3 }); io.observe(el); }, 400); this.state = { openId: null, liked: {}, menuOpen: false, navSub: '', zoom: 1, hintOn: true, pop: '' }; clearTimeout(window.__rpT); try { window.__rpPending = sessionStorage.getItem('rp-visto') !== '1'; } catch (e) { window.__rpPending = true; } window.__rpT = setTimeout(() => { window.__rpPending = false; let seen = false; try { seen = sessionStorage.getItem('rp-visto') === '1'; } catch (e) {} if (!seen && !this.state.pop) { window.__rpPrev = document.activeElement; try { sessionStorage.setItem('rp-visto', '1'); } catch (e) {} this.setState({ pop: 'ask' }); setTimeout(() => { const w = document.getElementById('rp-win'); if (w) w.focus(); }, 50); } }, 5000); this.__secs = [['jeito-pra-coisa','/jeito'],['grandes-feitos','/feitos'],['por-onde-andei','/andei'],['como-diz-o-outro','/dizem']]; const trackSec = () => { const mid = window.innerHeight * 0.4; let cur = ''; this.__secs.forEach(([id, sub]) => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top <= mid) cur = sub; }); if (cur !== this.state.navSub) this.setState({ navSub: cur }); }; if (window.__tnavScroll) window.removeEventListener('scroll', window.__tnavScroll); window.__tnavScroll = () => { cancelAnimationFrame(window.__tnavRaf); window.__tnavRaf = requestAnimationFrame(trackSec); }; window.addEventListener('scroll', window.__tnavScroll, { passive: true }); setTimeout(trackSec, 0); setTimeout(() => { const sc = document.getElementById('dep2-scroll'); if (sc && sc.scrollTop < 8) { sc.scrollTop = sc.scrollHeight / 3; } }, 400); setTimeout(() => { const sc = document.getElementById('dep2-scroll'); if (!sc) return; window.__feedBase = sc.scrollTop; const red = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; if (red || !('IntersectionObserver' in window)) return; if (window.__feedIO) window.__feedIO.disconnect(); const io = new IntersectionObserver((ents) => { if (!ents.some((e) => e.isIntersecting)) return; io.disconnect(); this.afterPop('dep2-scroll', 0.6, () => setTimeout(() => { const sc = document.getElementById('dep2-scroll'); if (!sc) return; if (sc.scrollTop < 8) { sc.style.scrollSnapType = 'none'; sc.scrollTop = sc.scrollHeight / 3; sc.style.scrollSnapType = ''; } window.__feedBase = sc.scrollTop; if (!this.state.hintOn || this.state.pop) return; const from = sc.scrollTop; const d = 120; const dur = 1100; const t0 = performance.now(); window.__feedNudging = true; sc.style.scrollSnapType = 'none'; const step = (now) => { const p = Math.min(1, (now - t0) / dur); sc.scrollTop = from + d * Math.sin(Math.PI * p); if (p < 1) { requestAnimationFrame(step); } else { sc.scrollTop = from; sc.style.scrollSnapType = ''; setTimeout(() => { window.__feedNudging = false; }, 200); } }; requestAnimationFrame(step); }, 500)); }, { threshold: 0.6 }); window.__feedIO = io; io.observe(sc); }, 450); }
 renderVals() {
 const pr = this.props || {};
 const data = [
 { id: 'a', logo: '/assets/532327378cbb3fc10c587762775aa79e.png', logoScale: 0.75, company: '@ will bank', period: '11/2021 — 09/2026', role: 'senior product designer', level: 5,
-preview: 'Produtos de crédito e financiamento digital: jornadas completas de contratação, da simulação ao acompanhamento do contrato. Discovery, pesquisa com usuários, experimentos (fake doors, MVPs e testes A/B) e evolução do design system, com foco em dados e impacto no negócio.' },
+preview: 'produtos de crédito e financiamento digital: jornadas completas de contratação, da simulação ao acompanhamento do contrato. discovery, pesquisa com usuários, experimentos (fake doors, MVPs e testes a/b) e evolução do design system, com foco em dados e impacto no negócio.' },
 { id: 'b', logo: '/assets/952bdf8b56931ff02fc49fdfa3ed4da6.webp', logoScale: 1.8, company: '@ melhores destinos', period: '01/2015 — 11/2021', role: 'ux writer', level: 3,
-preview: 'Única pessoa de UX: discovery para diagnosticar dores da jornada, início do guia de escrita da marca (voz e tom) e microcopy de interface, evangelizando a cultura de design e conteúdo. Antes, seis anos como revisora de texto.' }
+preview: 'única pessoa de UX: discovery para diagnosticar dores da jornada, início do guia de escrita da marca (voz e tom) e microcopy de interface, evangelizando a cultura de design e conteúdo. antes, seis anos como revisora de texto.' }
 ];
 const mk = (a) => a.slice().reverse().map((s, i) => ({ role: s[0], period: s[1], cur: i === 0, past: i > 0 }));
 const stepsById = {
@@ -1038,40 +1079,68 @@ levelLabel: 'nível ' + j.level + ' de 5', dots: [1, 2, 3, 4, 5].map((n) => ({ o
 toggle: () => this.setState({ openId: open ? null : j.id }) };
 });
 const people = [
-{ name: 'Mateus Resende', role: 'Software Engineering Lead @ Resend', url: 'https://www.linkedin.com/in/mateus-resende/', img: '/assets/a1921ebd24593f381a46f329815ae39e.jpg', handle: 'mateusresende', text: 'Thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. Não tinha dessa de "isso é coisa de dev". Estávamos todos buscando o que era melhor para o produto em si.' },
-{ name: 'Mari Paladino', role: 'Group Product Manager @ Sem Parar', url: 'https://www.linkedin.com/in/marianapaladino/', img: '/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg', handle: 'maripaladino', text: 'Tive a oportunidade de trabalhar com a Thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.' },
-{ name: 'Atiara Braga', role: 'Associate Product Manager @ Neon', url: 'https://www.linkedin.com/in/atiara-braga/', img: '/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg', handle: 'atiarabraga', text: 'Já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! Você entende a dor e necessidade do cliente e faz o negócio acontecer.' },
-{ name: 'Maisa Holland', role: 'Senior Mobile Engineer @ iGlu', url: 'https://www.linkedin.com/in/maisaholland/', img: '/assets/26471d611f0542138846ef4c1a73823b.jpg', handle: 'maisaholland', text: 'Foi um prazer imenso trabalhar diretamente com a Thais. É uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.' },
-{ name: 'Juliana Nakata Zampronio', role: 'Software Engineer @ Itaú Unibanco', url: 'https://www.linkedin.com/in/juliananakata/', img: '/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg', handle: 'julianakata', text: 'Sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. Recomendo de olhos fechados.' },
-{ name: 'Jana Vallim', role: 'Conversational AI Designer @ Stone', url: 'https://www.linkedin.com/in/janaina-vallim-melo/', img: '/assets/9202fddc055098fdf619b1261af2eb81.jpg', handle: 'janavallim', text: 'Trabalhar com a Thais é incrível! Ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.' },
-{ name: 'Ana Beatriz Sulliman', role: 'Especialista de negócios @ Mercado Pago', url: 'https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/', img: '/assets/9f7fed6e11957850e7e6c4adff521e56.jpg', handle: 'anabeatriz', text: 'Thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.' },
-{ name: 'Thiago Bezerra', role: 'Staff Software Engineer @ Alice', url: 'https://www.linkedin.com/in/thiagomelobezerra/', img: '/assets/38ca2d8845c319a1af351810007faa3a.jpg', handle: 'thiagobezerra', text: 'Ouvindo o cliente, coletando dados, entendendo seu publico Thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.' }
+{ name: 'mateus resende', caracteristicas: ['empático ao extremo', 'pensa com dados', 'executa com visão de negócio'], role: 'software engineering lead @ resend', url: 'https://www.linkedin.com/in/mateus-resende/', img: '/assets/a1921ebd24593f381a46f329815ae39e.jpg', handle: 'mateusresende', text: 'thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. não tinha dessa de "isso é coisa de dev". estávamos todos buscando o que era melhor para o produto em si.' },
+{ name: 'mari paladino', caracteristicas: ['a marie kondo fez curso com ela', 'a mulher mais amável do brasil', '“veja com a mari que ela resolve”'], role: 'group product manager @ sem parar', url: 'https://www.linkedin.com/in/marianapaladino/', img: '/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg', handle: 'maripaladino', text: 'tive a oportunidade de trabalhar com a thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.' },
+{ name: 'atiara braga', caracteristicas: ['mais doce que doce de leite', 'curiosa', 'aprende rápido'], role: 'associate product manager @ neon', url: 'https://www.linkedin.com/in/atiara-braga/', img: '/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg', handle: 'atiarabraga', text: 'já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! você entende a dor e necessidade do cliente e faz o negócio acontecer.' },
+{ name: 'maisa holland', caracteristicas: ['mestre na arte do convencimento', 'resolutiva', 'criativa sem tanto'], role: 'senior mobile engineer @ iglu', url: 'https://www.linkedin.com/in/maisaholland/', img: '/assets/26471d611f0542138846ef4c1a73823b.jpg', handle: 'maisaholland', text: 'foi um prazer imenso trabalhar diretamente com a thais. é uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.' },
+{ name: 'juliana nakata zampronio', caracteristicas: ['inteligentérrima', 'se existisse nobel de colaboração, seria dela', 'o senso de responsabilidade lá em cima'], role: 'software engineer @ itaú unibanco', url: 'https://www.linkedin.com/in/juliananakata/', img: '/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg', handle: 'julianakata', text: 'sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. recomendo de olhos fechados.' },
+{ name: 'jana vallim', caracteristicas: ['é muito fácil ficar confortável perto dela', 'jana 🤝 dados', 'pensamento crítico e lógico absurdo'], role: 'conversational AI designer @ stone', url: 'https://www.linkedin.com/in/janaina-vallim-melo/', img: '/assets/9202fddc055098fdf619b1261af2eb81.jpg', handle: 'janavallim', text: 'trabalhar com a thais é incrível! ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.' },
+{ name: 'ana beatriz suliman', caracteristicas: ['quer rir de manhã? entre na call com ela', 'visão do todo ali é absurda', 'responsabilidade é o sobrenome dela'], role: 'especialista de negócios @ mercado pago', url: 'https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/', img: '/assets/9f7fed6e11957850e7e6c4adff521e56.jpg', handle: 'anabeatriz', text: 'thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.' },
+{ name: 'thiago bezerra', caracteristicas: ['falta pouco pra ser poeta', 'nada é tão complexo que não possa ser bem executado'], role: 'staff software engineer @ alice', url: 'https://www.linkedin.com/in/thiagomelobezerra/', img: '/assets/38ca2d8845c319a1af351810007faa3a.jpg', handle: 'thiagobezerra', text: 'ouvindo o cliente, coletando dados, entendendo seu publico thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.' }
 ];
 const total = people.length;
+const dpQ = people[(this.state.depCur || 0) % total] || people[0];
+const dp = { name: dpQ.name, url: dpQ.url, handle: dpQ.handle,
+caracteristicas: (dpQ.caracteristicas && dpQ.caracteristicas.length) ? dpQ.caracteristicas : ['[característica 1]', '[característica 2]', '[característica 3]'] };
+const dpRaw = [
+{ k: 'cmd', p: 'thais@coffee', t: ':~ $ whois ' + dp.handle },
+{ k: 'name', t: dp.name },
+{ k: 'link', t: 'linkedin' },
+{ k: 'cmd', t: '$ cat caracteristicas.txt', gap: true }]
+.concat(dp.caracteristicas.map((c) => ({ k: 'li', t: c })))
+.concat([{ k: 'cmd', t: '$ ', gap: true }]);
+const dpTotal = dpRaw.reduce((n, l) => n + (l.p || '').length + l.t.length, 0);
+window.__dpTotal = dpTotal;
+const dpReduce = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+let dpLeft = (dpReduce || this.state.dpN == null) ? dpTotal : this.state.dpN;
+let dpCurSet = false;
+const dpLines = dpRaw.map((l, i) => {
+const full = (l.p || '') + l.t; const take = Math.max(0, Math.min(full.length, dpLeft)); dpLeft -= take;
+const shown = full.slice(0, take); const pl = (l.p || '').length;
+let cur = false;
+if (!dpCurSet && (take < full.length || i === dpRaw.length - 1)) { cur = true; dpCurSet = true; }
+return { isLink: l.k === 'link', isText: l.k !== 'link', done: take === full.length, cur: cur,
+b: shown.slice(0, pl), typed: shown.slice(pl), ghost: full.slice(take),
+cls: 'dp-l ' + (l.k === 'cmd' ? 'dp-cmd' : l.k === 'name' ? 'dp-name' : 'dp-li') + (l.gap ? ' dp-gap' : '') };
+});
+const dpLinkLabel = 'linkedin de ' + dp.name + ' (abre em nova aba)';
+const feedCur = () => { const sc = document.getElementById('dep2-scroll'); if (!sc) return; const top = sc.getBoundingClientRect().top; let best = 0, bd = Infinity; for (let k = 0; k < 3 * total; k++) { const e = document.getElementById('dep2-' + k); if (!e) continue; const d = Math.abs(e.getBoundingClientRect().top - top); if (d < bd) { bd = d; best = k; } } const n = best % total; if (n !== (this.state.depCur || 0)) { this.setState({ depCur: n }); this.dpType(); } };
 const slides = [0, 1, 2].reduce((acc, c) => acc.concat(people.map((q, i) => ({ q: q, i: i, c: c }))), []).map((o) => {
 const q = o.q; const i = o.i; const liked = this.state.liked[i] !== false;
 return { anchor: 'dep2-' + (o.c * total + i), name: q.name, role: q.role, url: q.url, img: q.img, handle: q.handle, text: q.text,
-linkLabel: q.name + ' no LinkedIn (abre em nova aba)', liked: liked,
+linkLabel: q.name + ' no linkedin (abre em nova aba)', liked: liked,
 heartStyle: liked ? 'fill:#e97045;stroke:#292929;stroke-width:2' : 'fill:none;stroke:#292929;stroke-width:2',
 like: () => this.setState({ liked: Object.assign({}, this.state.liked, { [i]: !liked }) }) };
 });
 const feedLoop = () => { const sc = document.getElementById('dep2-scroll'); if (!sc) return; const third = sc.scrollHeight / 3; if (sc.scrollTop < third - 8) { sc.style.scrollSnapType = 'none'; sc.scrollTop += third; sc.style.scrollSnapType = ''; } else if (sc.scrollTop >= 2 * third - 8) { sc.style.scrollSnapType = 'none'; sc.scrollTop -= third; sc.style.scrollSnapType = ''; } };
 const reduce = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const feedGo = (dir) => { const sc = document.getElementById('dep2-scroll'); if (!sc) return; feedLoop(); const top = sc.getBoundingClientRect().top; const pos = []; for (let k = 0; k < 3 * total; k++) { const e = document.getElementById('dep2-' + k); if (e) pos.push(e.getBoundingClientRect().top - top + sc.scrollTop); } const cur = sc.scrollTop; const t = dir > 0 ? pos.find((p) => p > cur + 8) : pos.filter((p) => p < cur - 8).pop(); if (t === undefined) return; if (reduce) { sc.scrollTop = t; return; } const from = sc.scrollTop; const dist = t - from; const dur = Math.min(1100, 420 + Math.abs(dist) * 0.7); const ease = (x) => 1 - Math.pow(1 - x, 4); const t0 = performance.now(); const token = (window.__feed2 = (window.__feed2 || 0) + 1); sc.style.scrollSnapType = 'none'; const step = (now) => { if (window.__feed2 !== token) return; const p = Math.min(1, (now - t0) / dur); sc.scrollTop = from + dist * ease(p); if (p < 1) { requestAnimationFrame(step); } else { sc.scrollTop = t; sc.style.scrollSnapType = ''; } }; requestAnimationFrame(step); };
-const onFeedScroll = () => { clearTimeout(window.__feed2T); window.__feed2T = setTimeout(feedLoop, 120); const sc = document.getElementById('dep2-scroll'); if (this.state.hintOn && sc && !window.__feedNudging && window.__feedBase !== undefined && Math.abs(sc.scrollTop - window.__feedBase) > 24) this.setState({ hintOn: false }); };
+const onFeedScroll = () => { clearTimeout(window.__feed2T); window.__feed2T = setTimeout(() => { feedLoop(); feedCur(); }, 120); const sc = document.getElementById('dep2-scroll'); if (this.state.hintOn && sc && !window.__feedNudging && window.__feedBase !== undefined && Math.abs(sc.scrollTop - window.__feedBase) > 24) this.setState({ hintOn: false }); };
 const zoom = this.state.zoom || 1;
 const setZoom = (z) => this.setState({ zoom: Math.min(2, Math.max(0.5, Math.round(z * 4) / 4)) });
 const off = (pr.btnOffset ?? 4) + 'px';
 const menuOpen = !!this.state.menuOpen;
 const pop = this.state.pop || '';
-const popClose = () => { try { sessionStorage.setItem('rp-visto', '1'); } catch (e) {} this.setState({ pop: '' }); };
+const popFocusWin = () => setTimeout(() => { const w = document.getElementById('rp-win'); if (w) w.focus(); }, 30);
+const popClose = () => { try { sessionStorage.setItem('rp-visto', '1'); } catch (e) {} this.setState({ pop: '' }); const prev = window.__rpPrev; window.__rpPrev = null; setTimeout(() => { if (prev && prev !== document.body && document.contains(prev) && prev.focus) prev.focus(); else { const m = document.querySelector('main, h1'); if (m) { if (!m.hasAttribute('tabindex')) m.setAttribute('tabindex', '-1'); m.focus({ preventScroll: true }); } } }, 30); };
+const popTrap = (e) => { const w = document.getElementById('rp-win'); if (!w) return; const f = Array.from(w.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')).filter((el) => el.offsetParent !== null); if (!f.length) { e.preventDefault(); w.focus(); return; } const first = f[0], last = f[f.length - 1], cur = document.activeElement; if (e.shiftKey && (cur === first || cur === w)) { e.preventDefault(); last.focus(); } else if (!e.shiftKey && cur === last) { e.preventDefault(); first.focus(); } else if (!w.contains(cur)) { e.preventDefault(); first.focus(); } };
 return {
 navSub: this.state.navSub || '',
-popOn: !!pop, popAsk: pop === 'ask', popYes: pop === 'sim', popNo: pop === 'nao', popClose, popSim: () => this.setState({ pop: 'sim' }), popNao: () => this.setState({ pop: 'nao' }), popBackdrop: (e) => { if (e && e.target === e.currentTarget) popClose(); }, popKey: (e) => { if (e && e.key === 'Escape') popClose(); },
+popOn: !!pop, popAsk: pop === 'ask', popYes: pop === 'sim', popNo: pop === 'nao', popClose, popSim: () => { this.setState({ pop: 'sim' }); popFocusWin(); }, popNao: () => { this.setState({ pop: 'nao' }); popFocusWin(); }, popBackdrop: (e) => { if (e && e.target === e.currentTarget) popClose(); }, popKey: (e) => { if (!e) return; if (e.key === 'Escape') popClose(); else if (e.key === 'Tab') popTrap(e); },
 hintOn: !!this.state.hintOn, zoomT: 'scale(' + zoom + ')', zoomPct: Math.round(zoom * 100) + '%', zoomIn: () => setZoom((this.state.zoom || 1) + 0.25), zoomOut: () => setZoom((this.state.zoom || 1) - 0.25),
 menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? 'fechar menu' : 'abrir menu',
 toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: () => this.setState({ menuOpen: false }),
-jobs, toggleJob: (e) => { const id = e && e.currentTarget ? e.currentTarget.getAttribute('data-job') : null; if (!id) return; this.setState((st) => ({ openId: st.openId === id ? null : id })); }, slides, onFeedScroll, feedUp: () => feedGo(-1), feedDown: () => feedGo(1),
+jobs, toggleJob: (e) => { const id = e && e.currentTarget ? e.currentTarget.getAttribute('data-job') : null; if (!id) return; this.setState((st) => ({ openId: st.openId === id ? null : id })); }, slides, dp, dpLines, dpLinkLabel, onFeedScroll, feedUp: () => feedGo(-1), feedDown: () => feedGo(1),
 btnFundo: pr.btnFundo ?? '#1847e3', btnTexto: pr.btnTexto ?? '#fffefe', btnSombra: off + ' ' + off + ' 0 #292929',
 f1Cor: pr.f1Cor ?? '#f2f2f5', f1Ang: (pr.f1Ang ?? -45) + 'deg', f1Lis: (pr.f1Lis ?? 16) + 'px', f1Gap: (pr.f1Gap ?? 16) + 'px',
 f2Cor: pr.f2Cor ?? '#f2f2f5', f2Ang: (pr.f2Ang ?? -45) + 'deg', f2Lis: (pr.f2Lis ?? 8) + 'px', f2Gap: (pr.f2Gap ?? 8) + 'px',
@@ -1081,6 +1150,6 @@ f4Cor: pr.f4Cor ?? '#f2f2f5', f4Ang: (pr.f4Ang ?? 45) + 'deg', f4Lis: (pr.f4Lis 
 }
 }
 </script>
-<script src="/assets/dc.js?v=1793307327"></script>
+<script src="/assets/dc.js?v=1793316727"></script>
 </body>
 </html>

@@ -78,11 +78,8 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 .dsf-lk:hover{background:#ffff8d;color:#292929}
 .dsf-sig{position:relative;background:#292929;border-top:1px solid #f2f2f5;overflow:hidden;white-space:nowrap}
 .dsf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.dsf-track{display:inline-flex;animation:dsf-run 24s linear infinite}
-.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#ffff8d;padding:16px 24px}
-.dsf-track span.dsf-dot{color:#f2f2f5;padding:16px 0}
-@keyframes dsf-run{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-@media (prefers-reduced-motion:reduce){.dsf-track{animation:none}}
+.dsf-track{display:flex;justify-content:center;align-items:center;gap:16px;padding:16px 24px}
+.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#f2f2f5}
 .dsf-cp{background:#292929;color:#f2f2f5;font:300 14px/1.5 'Work Sans',sans-serif;text-align:center;padding:0 24px 16px;margin:0}
 @media (max-width:640px){.dsf-in{padding:48px 16px 32px}.dsf-cols{grid-template-columns:minmax(0,1fr)}.dsf-col+.dsf-col{border-left:0;border-top:1px solid #f2f2f5;padding-left:0;margin-top:24px}}
 
@@ -359,8 +356,8 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 <div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
 </div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
-<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </div>
@@ -423,6 +420,12 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 </sc-if>
 
 <sc-if value="{{isDenied}}" hint-placeholder-val="{{ false }}">
+<div class="dsf-sr">
+<h1>access denied</h1>
+<p>você não tem permissão para usar seu tempo com o teste agora.</p>
+<p>no momento, apenas vagas no modelo 100% remoto ou com idas mais espaçadas ao escritório estão no meu radar. se algum dia o modelo de trabalho da sua empresa mudar, vou adorar conversar!</p>
+</div>
+<div aria-hidden="true">
 <sc-if value="{{notGone}}" hint-placeholder-val="{{ true }}">
 <div class="{{msgCls}}">
 <span class="eyebrow">// erro 403</span>
@@ -433,6 +436,7 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 </div>
 </sc-if>
 <sc-if value="{{gone}}" hint-placeholder-val="{{ false }}"><p class="gone">&gt; mensagem apagada<span class="blink"></span></p></sc-if>
+</div>
 <div class="actions"><button type="button" class="btn ghost" onClick="{{restart}}">voltar ao início</button></div>
 </sc-if>
 
@@ -461,8 +465,8 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 <div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
 </div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
-<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </template>
@@ -558,7 +562,7 @@ function tierOf(p) {
 }
 
 const WHY = {
-  produto: "6 produtos de crédito criados end-to-end na will bank: empréstimo pessoal, antecipação do FGTS, pix parcelado e mais",
+  produto: "6 produtos de crédito criados end-to-end na will bank: empréstimo pessoal, antecipação do FGTS, Pix parcelado e mais",
   dor: "background em content design: deixo claro o que a pessoa está contratando",
   decisão: "valida antes de construir: fake door do refinanciamento em dia, teste de lembrete de pagamento por pix",
   conteúdo: "escreve a interface inteira, do microcopy ao e-mail de cobrança",
@@ -706,6 +710,6 @@ class Component extends DCLogic {
   }
 }
 </script>
-<script src="/assets/dc.js?v=1793307327"></script>
+<script src="/assets/dc.js?v=1793316727"></script>
 </body>
 </html>

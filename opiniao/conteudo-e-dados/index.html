@@ -135,11 +135,8 @@ body{margin:0;background:#121214;color:#f2f2f5}
 .dsf-lk:hover{background:#ffff8d;color:#292929}
 .dsf-sig{position:relative;background:#292929;border-top:1px solid #f2f2f5;overflow:hidden;white-space:nowrap}
 .dsf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.dsf-track{display:inline-flex;animation:dsf-run 24s linear infinite}
-.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#ffff8d;padding:16px 24px}
-.dsf-track span.dsf-dot{color:#f2f2f5;padding:16px 0}
-@keyframes dsf-run{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-@media (prefers-reduced-motion:reduce){.dsf-track{animation:none}}
+.dsf-track{display:flex;justify-content:center;align-items:center;gap:16px;padding:16px 24px}
+.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#f2f2f5}
 .dsf-cp{background:#292929;color:#f2f2f5;font:300 14px/1.5 'Work Sans',sans-serif;text-align:center;padding:0 24px 16px;margin:0}
 @media (max-width:640px){.dsf-in{padding:48px 16px 32px}.dsf-cols{grid-template-columns:minmax(0,1fr)}.dsf-col+.dsf-col{border-left:0;border-top:1px solid #f2f2f5;padding-left:0;margin-top:24px}}
 
@@ -196,54 +193,54 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><span class="doc-name" id="doc-name">conteudo-e-dados.txt</span></div>
 <div class="doc-b"><div class="txt">
 
-<p>Texto e dado não são mundos separados. No content design, o dado entra antes da palavra, durante o teste e depois, na hora de defender a decisão.</p>
+<p>texto e dado não são mundos separados. no content design, o dado entra antes da palavra, durante o teste e depois, na hora de defender a decisão.</p>
 
-<p>A dificuldade que mais vejo em quem trabalha com conteúdo é ligar uma métrica a um texto. A conversão subiu: foi a palavra, o layout ou a oferta? Os chamados caíram: foi a nova explicação ou a mudança na regra? Como o texto quase nunca é a única coisa que muda, isolar o efeito dele parece impossível. Na hora de montar um estudo de caso, sobra um antes e depois de telas e a frase “o texto ficou mais claro”. Ninguém consegue provar isso.</p>
+<p>a dificuldade que mais vejo em quem trabalha com conteúdo é ligar uma métrica a um texto. a conversão subiu: foi a palavra, o layout ou a oferta? os chamados caíram: foi a nova explicação ou a mudança na regra? como o texto quase nunca é a única coisa que muda, isolar o efeito dele parece impossível. na hora de montar um estudo de caso, sobra um antes e depois de telas e a frase “o texto ficou mais claro”. ninguém consegue provar isso.</p>
 
-<p>Passei alguns anos como content designer no time de empréstimos do will bank. Olhando para trás, quase tudo que fiz de mais importante teve número no meio. Não porque eu fosse analista, mas porque aprendi a usar dado de três jeitos: como matéria-prima, como teste e como argumento.</p>
+<p>passei alguns anos como content designer no time de empréstimos do will bank. olhando para trás, quase tudo que fiz de mais importante teve número no meio. não porque eu fosse analista, mas porque aprendi a usar dado de três jeitos: como matéria-prima, como teste e como argumento.</p>
 
 <h2>1. o dado como matéria-prima: ler antes de escrever_</h2>
 
-<p>O melhor texto que escrevi começou numa planilha de reclamações. No discovery do empréstimo pessoal, primeiro produto lançado pelo time, antes de abrir o Figma, li conversas do chat, reclamações no Reclame Aqui e avaliações nas lojas de app.</p>
+<p>o melhor texto que escrevi começou numa planilha de reclamações. no discovery do empréstimo pessoal, primeiro produto lançado pelo time, antes de abrir o figma, li conversas do chat, reclamações no reclame aqui e avaliações nas lojas de app.</p>
 
-<p>Eu queria saber duas coisas: o que as pessoas não entendiam e com que palavras falavam do produto. Um piloto de empréstimo foi rodado por 3 meses um ano antes, então eu tinha uma fonte valiosa de dados de clientes, o próprio atendimento.</p>
+<p>eu queria saber duas coisas: o que as pessoas não entendiam e com que palavras falavam do produto. um piloto de empréstimo foi rodado por 3 meses um ano antes, então eu tinha uma fonte valiosa de dados de clientes, o próprio atendimento.</p>
 
-<p>Uma pergunta aparecia o tempo todo no chat: “o que é esse IOF?”. E por que chamo de melhor texto: essa seção se repetiu em todos os produtos de crédito que criamos subsequentemente, virou marca registrada do empréstimo do will, a página “tim-tim por tim-tim” que explicava sem jargões e de maneira clara o que era cada sigla dos encargos, e a conta explícita “na ponta do lápis” sobre o custo do empréstimo.</p>
+<p>uma pergunta aparecia o tempo todo no chat: “o que é esse IOF?”. e por que chamo de melhor texto: essa seção se repetiu em todos os produtos de crédito que criamos subsequentemente, virou marca registrada do empréstimo do will, a página “tim-tim por tim-tim” que explicava sem jargões e de maneira clara o que era cada sigla dos encargos, e a conta explícita “na ponta do lápis” sobre o custo do empréstimo.</p>
 
-<p>O mesmo discovery trouxe uma coisa que nenhum briefing tinha: clientes já estavam caindo em golpe em nome de um empréstimo que a gente nem tinha lançado. Daí nasceu uma tela de interrupção no fluxo. Esse é o primeiro jeito de trabalhar com dado: ele decide o que precisa ser dito, antes de você decidir como dizer.</p>
+<p>o mesmo discovery trouxe uma coisa que nenhum briefing tinha: clientes já estavam caindo em golpe em nome de um empréstimo que a gente nem tinha lançado. daí nasceu uma tela de interrupção no fluxo. esse é o primeiro jeito de trabalhar com dado: ele decide o que precisa ser dito, antes de você decidir como dizer.</p>
 
-<p>O que serve de fonte para content, sem precisar de SQL:</p>
+<p>o que serve de fonte para content, sem precisar de SQL:</p>
 
 <ul class="fontes">
 <li>conversas do chat e motivos de contato</li>
-<li>Reclame Aqui e avaliações das lojas de app</li>
+<li>reclame aqui e avaliações das lojas de app</li>
 <li>buscas dentro do app, quando existem</li>
 <li>respostas abertas de pesquisa e NPS</li>
 </ul>
 
 <h2>2. o texto como hipótese: deixar o teste decidir_</h2>
 
-<p>Toda escolha de palavra é uma aposta. Content design fica mais forte quando trata essa aposta como hipótese, com critério de sucesso definido antes.</p>
+<p>toda escolha de palavra é uma aposta. content design fica mais forte quando trata essa aposta como hipótese, com critério de sucesso definido antes.</p>
 
-<p>Na tela de golpe, eu quis usar a palavra “golpistas”, direta, para gerar alarme de verdade. O time tinha receio de assustar o cliente. Em vez de discutir gosto, a gente testou. A mensagem ficou clara para todo mundo, não gerou desconforto e a tela foi considerada “muito importante”. O teste também mostrou o que falhou: a ilustração não foi entendida. As pessoas viram um cachorro bravo, não um cão de guarda, e não ligaram a imagem à ideia de segurança.</p>
+<p>na tela de golpe, eu quis usar a palavra “golpistas”, direta, para gerar alarme de verdade. o time tinha receio de assustar o cliente. em vez de discutir gosto, a gente testou. a mensagem ficou clara para todo mundo, não gerou desconforto e a tela foi considerada “muito importante”. o teste também mostrou o que falhou: a ilustração não foi entendida. as pessoas viram um cachorro bravo, não um cão de guarda, e não ligaram a imagem à ideia de segurança.</p>
 
-<p>No pagar antes, a dúvida era de negócio. Antecipar as últimas parcelas dá mais desconto para o cliente e é pior para o banco no curto prazo. Se o texto explicasse isso com todas as letras, as pessoas iam correr para as últimas parcelas? Planejei um teste A/B de conteúdo em dez/2023: descobrimos que a interferência era mínima e que sermos transparentes nesse caso não afetava de modo perigoso a receita. Hoje, em produção, o desconto está escrito por extenso.</p>
+<p>no pagar antes, a dúvida era de negócio. antecipar as últimas parcelas dá mais desconto para o cliente e é pior para o banco no curto prazo. se o texto explicasse isso com todas as letras, as pessoas iam correr para as últimas parcelas? planejei um teste a/b de conteúdo em dez/2023: descobrimos que a interferência era mínima e que sermos transparentes nesse caso não afetava de modo perigoso a receita. hoje, em produção, o desconto está escrito por extenso.</p>
 
-<p>Já como product designer, escrevi o e-mail de um experimento de lembrete de pagamento com Pix. A hipótese era sobre o meio de pagamento, oferecer Pix aumentaria a taxa de pagamentos em dia e recuperaria atrasos curtos (no teste, D+2).</p>
+<p>já como product designer, escrevi o e-mail de um experimento de lembrete de pagamento com Pix. a hipótese era sobre o meio de pagamento, oferecer Pix aumentaria a taxa de pagamentos em dia e recuperaria atrasos curtos (no teste, d+2).</p>
 
-<p>O resultado mostrou outra coisa: o grupo que recebeu o e-mail teve 64,7% menos saldo em atraso que o controle, e a análise apontou o reforço da mensagem como a causa principal, não o Pix, porque o aumento de pagamento por esse meio não foi tão significativo. <a href="/cases/lembrete-de-pagamento/">Leia o case completo.</a></p>
+<p>o resultado mostrou outra coisa: o grupo que recebeu o e-mail teve 64,7% menos saldo em atraso que o controle, e a análise apontou o reforço da mensagem como a causa principal, não o Pix, porque o aumento de pagamento por esse meio não foi tão significativo. <a href="/cases/lembrete-de-pagamento/">leia o case completo.</a></p>
 
 <h2>3. o dado como argumento: conteúdo que muda o roadmap_</h2>
 
-<p>O terceiro jeito é o que mais muda a posição de quem escreve no time. Quando o dado vem de conteúdo, ele mostra onde o produto deixa o cliente sem resposta.</p>
+<p>o terceiro jeito é o que mais muda a posição de quem escreve no time. quando o dado vem de conteúdo, ele mostra onde o produto deixa o cliente sem resposta.</p>
 
-<p>Na V1 do empréstimo, ninguém queria gastar tempo com uma tela de acompanhamento além do time de design. Queriam um MVP enxuto, apenas com contratação.</p>
+<p>na V1 do empréstimo, ninguém queria gastar tempo com uma tela de acompanhamento além do time de design. queriam um MVP enxuto, apenas com contratação.</p>
 
-<p>O problema disso é que a gente já havia cometido esse erro antes. Num teste anterior, o cliente contratava e o empréstimo sumia do app. Fui atrás dos chamados que essa tela teria evitado: 526 em pouco mais de um ano, isso com o teste tendo rodado apenas 3 meses para uma base de 10k. Desses 526, 66,3% o próprio cliente poderia resolver com uma tela de acompanhamento.</p>
+<p>o problema disso é que a gente já havia cometido esse erro antes. num teste anterior, o cliente contratava e o empréstimo sumia do app. fui atrás dos chamados que essa tela teria evitado: 526 em pouco mais de um ano, isso com o teste tendo rodado apenas 3 meses para uma base de 10k. desses 526, 66,3% o próprio cliente poderia resolver com uma tela de acompanhamento.</p>
 
-<p>Com o time de dados, projetamos 8.982 chamados evitáveis por ano para a nova base elegível de empréstimo que era muito maior. A tela entrou na V1.</p>
+<p>com o time de dados, projetamos 8.982 chamados evitáveis por ano para a nova base elegível de empréstimo que era muito maior. a tela entrou na V1.</p>
 
-<p>O pulo do gato foi o que veio depois. Cada dúvida do chat virou um pedaço da tela:</p>
+<p>o pulo do gato foi o que veio depois. cada dúvida do chat virou um pedaço da tela:</p>
 
 <table class="tab">
 <thead><tr><th scope="col">a dúvida no chat</th><th scope="col">a resposta na tela</th></tr></thead>
@@ -255,11 +252,11 @@ body{margin:0;background:#121214;color:#f2f2f5}
 </tbody>
 </table>
 
-<p>O dado defendeu a tela e também escreveu a arquitetura de conteúdo dela.</p>
+<p>o dado defendeu a tela e também escreveu a arquitetura de conteúdo dela.</p>
 
 <h2>4. como levar isso para um estudo de caso_</h2>
 
-<p>Um case de content com dados não mostra só a tela final. Mostra a pergunta, a fonte e o que mudou por causa dela.</p>
+<p>um case de content com dados não mostra só a tela final. mostra a pergunta, a fonte e o que mudou por causa dela.</p>
 
 <ol class="steps">
 <li><span class="st-n">01</span><strong>comece pela pergunta, não pela planilha.</strong> “por que as pessoas chamam o chat depois de contratar?” guia a leitura. “vou olhar os dados” não guia nada.</li>
@@ -267,17 +264,17 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <li><span class="st-n">03</span><strong>ligue cada dado a uma decisão de texto.</strong> a dúvida do IOF virou o tim-tim por tim-tim. sem essa ligação, o número vira enfeite.</li>
 <li><span class="st-n">04</span><strong>traduza para a língua do negócio.</strong> chamado evitável é custo. informação errada é risco. saldo em atraso é dinheiro.</li>
 <li><span class="st-n">05</span><strong>mostre o teste, mesmo sem resultado final.</strong> hipótese, versões, amostra e confiança já mostram método.</li>
-<li><span class="st-n">06</span><strong>sem acesso aos números, use prova externa.</strong> no meu <a href="/cases/transparencia/">case de transparência</a>, a prova foi o 3º lugar do will bank no Índice de transparência de empréstimos novücard, no 2º semestre de 2023, que avalia como os bancos dispõem informações para clientes.</li>
+<li><span class="st-n">06</span><strong>sem acesso aos números, use prova externa.</strong> no meu <a href="/cases/transparencia/">case de transparência</a>, a prova foi o 3º lugar do will bank no índice de transparência de empréstimos novücard, no 2º semestre de 2023, que avalia como os bancos dispõem informações para clientes.</li>
 <li><span class="st-n">07</span><strong>conte o que deu errado.</strong> o cão de guarda lido como cachorro bravo, o questionário longo demais. aprendizado honesto dá mais credibilidade que resultado perfeito.</li>
 </ol>
 
 <h2>então…_</h2>
 
-<p>Não precisa virar analista para trabalhar com dados. Precisa de curiosidade para ler o que o cliente já está dizendo e de coragem para colocar as próprias palavras à prova.</p>
+<p>não precisa virar analista para trabalhar com dados. precisa de curiosidade para ler o que o cliente já está dizendo e de coragem para colocar as próprias palavras à prova.</p>
 
-<p class="fecho">O texto é a parte do produto que mais conversa com o cliente. Por isso mesmo, ele deixa rastro em todo lugar: no chat, na reclamação, no clique que não aconteceu. <mark>Quem escreve só precisa aprender a ler esse rastro.</mark></p>
+<p class="fecho">o texto é a parte do produto que mais conversa com o cliente. por isso mesmo, ele deixa rastro em todo lugar: no chat, na reclamação, no clique que não aconteceu. <mark>quem escreve só precisa aprender a ler esse rastro.</mark></p>
 
-<p class="note-l">Os números do will bank só estão sendo compartilhados porque o banco teve liquidação extrajudicial decretada pelo Banco Central em janeiro de 2026.</p>
+<p class="note-l">os números do will bank só estão sendo compartilhados porque o banco teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026.</p>
 
 <p class="assina"><svg width="40" height="40" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>thais castro · product designer</p>
 
@@ -302,8 +299,8 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
-<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </div>
@@ -346,54 +343,54 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><span class="doc-name" id="doc-name">conteudo-e-dados.txt</span></div>
 <div class="doc-b"><div class="txt">
 
-<p>Texto e dado não são mundos separados. No content design, o dado entra antes da palavra, durante o teste e depois, na hora de defender a decisão.</p>
+<p>texto e dado não são mundos separados. no content design, o dado entra antes da palavra, durante o teste e depois, na hora de defender a decisão.</p>
 
-<p>A dificuldade que mais vejo em quem trabalha com conteúdo é ligar uma métrica a um texto. A conversão subiu: foi a palavra, o layout ou a oferta? Os chamados caíram: foi a nova explicação ou a mudança na regra? Como o texto quase nunca é a única coisa que muda, isolar o efeito dele parece impossível. Na hora de montar um estudo de caso, sobra um antes e depois de telas e a frase “o texto ficou mais claro”. Ninguém consegue provar isso.</p>
+<p>a dificuldade que mais vejo em quem trabalha com conteúdo é ligar uma métrica a um texto. a conversão subiu: foi a palavra, o layout ou a oferta? os chamados caíram: foi a nova explicação ou a mudança na regra? como o texto quase nunca é a única coisa que muda, isolar o efeito dele parece impossível. na hora de montar um estudo de caso, sobra um antes e depois de telas e a frase “o texto ficou mais claro”. ninguém consegue provar isso.</p>
 
-<p>Passei alguns anos como content designer no time de empréstimos do will bank. Olhando para trás, quase tudo que fiz de mais importante teve número no meio. Não porque eu fosse analista, mas porque aprendi a usar dado de três jeitos: como matéria-prima, como teste e como argumento.</p>
+<p>passei alguns anos como content designer no time de empréstimos do will bank. olhando para trás, quase tudo que fiz de mais importante teve número no meio. não porque eu fosse analista, mas porque aprendi a usar dado de três jeitos: como matéria-prima, como teste e como argumento.</p>
 
 <h2>1. o dado como matéria-prima: ler antes de escrever_</h2>
 
-<p>O melhor texto que escrevi começou numa planilha de reclamações. No discovery do empréstimo pessoal, primeiro produto lançado pelo time, antes de abrir o Figma, li conversas do chat, reclamações no Reclame Aqui e avaliações nas lojas de app.</p>
+<p>o melhor texto que escrevi começou numa planilha de reclamações. no discovery do empréstimo pessoal, primeiro produto lançado pelo time, antes de abrir o figma, li conversas do chat, reclamações no reclame aqui e avaliações nas lojas de app.</p>
 
-<p>Eu queria saber duas coisas: o que as pessoas não entendiam e com que palavras falavam do produto. Um piloto de empréstimo foi rodado por 3 meses um ano antes, então eu tinha uma fonte valiosa de dados de clientes, o próprio atendimento.</p>
+<p>eu queria saber duas coisas: o que as pessoas não entendiam e com que palavras falavam do produto. um piloto de empréstimo foi rodado por 3 meses um ano antes, então eu tinha uma fonte valiosa de dados de clientes, o próprio atendimento.</p>
 
-<p>Uma pergunta aparecia o tempo todo no chat: “o que é esse IOF?”. E por que chamo de melhor texto: essa seção se repetiu em todos os produtos de crédito que criamos subsequentemente, virou marca registrada do empréstimo do will, a página “tim-tim por tim-tim” que explicava sem jargões e de maneira clara o que era cada sigla dos encargos, e a conta explícita “na ponta do lápis” sobre o custo do empréstimo.</p>
+<p>uma pergunta aparecia o tempo todo no chat: “o que é esse IOF?”. e por que chamo de melhor texto: essa seção se repetiu em todos os produtos de crédito que criamos subsequentemente, virou marca registrada do empréstimo do will, a página “tim-tim por tim-tim” que explicava sem jargões e de maneira clara o que era cada sigla dos encargos, e a conta explícita “na ponta do lápis” sobre o custo do empréstimo.</p>
 
-<p>O mesmo discovery trouxe uma coisa que nenhum briefing tinha: clientes já estavam caindo em golpe em nome de um empréstimo que a gente nem tinha lançado. Daí nasceu uma tela de interrupção no fluxo. Esse é o primeiro jeito de trabalhar com dado: ele decide o que precisa ser dito, antes de você decidir como dizer.</p>
+<p>o mesmo discovery trouxe uma coisa que nenhum briefing tinha: clientes já estavam caindo em golpe em nome de um empréstimo que a gente nem tinha lançado. daí nasceu uma tela de interrupção no fluxo. esse é o primeiro jeito de trabalhar com dado: ele decide o que precisa ser dito, antes de você decidir como dizer.</p>
 
-<p>O que serve de fonte para content, sem precisar de SQL:</p>
+<p>o que serve de fonte para content, sem precisar de SQL:</p>
 
 <ul class="fontes">
 <li>conversas do chat e motivos de contato</li>
-<li>Reclame Aqui e avaliações das lojas de app</li>
+<li>reclame aqui e avaliações das lojas de app</li>
 <li>buscas dentro do app, quando existem</li>
 <li>respostas abertas de pesquisa e NPS</li>
 </ul>
 
 <h2>2. o texto como hipótese: deixar o teste decidir_</h2>
 
-<p>Toda escolha de palavra é uma aposta. Content design fica mais forte quando trata essa aposta como hipótese, com critério de sucesso definido antes.</p>
+<p>toda escolha de palavra é uma aposta. content design fica mais forte quando trata essa aposta como hipótese, com critério de sucesso definido antes.</p>
 
-<p>Na tela de golpe, eu quis usar a palavra “golpistas”, direta, para gerar alarme de verdade. O time tinha receio de assustar o cliente. Em vez de discutir gosto, a gente testou. A mensagem ficou clara para todo mundo, não gerou desconforto e a tela foi considerada “muito importante”. O teste também mostrou o que falhou: a ilustração não foi entendida. As pessoas viram um cachorro bravo, não um cão de guarda, e não ligaram a imagem à ideia de segurança.</p>
+<p>na tela de golpe, eu quis usar a palavra “golpistas”, direta, para gerar alarme de verdade. o time tinha receio de assustar o cliente. em vez de discutir gosto, a gente testou. a mensagem ficou clara para todo mundo, não gerou desconforto e a tela foi considerada “muito importante”. o teste também mostrou o que falhou: a ilustração não foi entendida. as pessoas viram um cachorro bravo, não um cão de guarda, e não ligaram a imagem à ideia de segurança.</p>
 
-<p>No pagar antes, a dúvida era de negócio. Antecipar as últimas parcelas dá mais desconto para o cliente e é pior para o banco no curto prazo. Se o texto explicasse isso com todas as letras, as pessoas iam correr para as últimas parcelas? Planejei um teste A/B de conteúdo em dez/2023: descobrimos que a interferência era mínima e que sermos transparentes nesse caso não afetava de modo perigoso a receita. Hoje, em produção, o desconto está escrito por extenso.</p>
+<p>no pagar antes, a dúvida era de negócio. antecipar as últimas parcelas dá mais desconto para o cliente e é pior para o banco no curto prazo. se o texto explicasse isso com todas as letras, as pessoas iam correr para as últimas parcelas? planejei um teste a/b de conteúdo em dez/2023: descobrimos que a interferência era mínima e que sermos transparentes nesse caso não afetava de modo perigoso a receita. hoje, em produção, o desconto está escrito por extenso.</p>
 
-<p>Já como product designer, escrevi o e-mail de um experimento de lembrete de pagamento com Pix. A hipótese era sobre o meio de pagamento, oferecer Pix aumentaria a taxa de pagamentos em dia e recuperaria atrasos curtos (no teste, D+2).</p>
+<p>já como product designer, escrevi o e-mail de um experimento de lembrete de pagamento com Pix. a hipótese era sobre o meio de pagamento, oferecer Pix aumentaria a taxa de pagamentos em dia e recuperaria atrasos curtos (no teste, d+2).</p>
 
-<p>O resultado mostrou outra coisa: o grupo que recebeu o e-mail teve 64,7% menos saldo em atraso que o controle, e a análise apontou o reforço da mensagem como a causa principal, não o Pix, porque o aumento de pagamento por esse meio não foi tão significativo. <a href="/cases/lembrete-de-pagamento/">Leia o case completo.</a></p>
+<p>o resultado mostrou outra coisa: o grupo que recebeu o e-mail teve 64,7% menos saldo em atraso que o controle, e a análise apontou o reforço da mensagem como a causa principal, não o Pix, porque o aumento de pagamento por esse meio não foi tão significativo. <a href="/cases/lembrete-de-pagamento/">leia o case completo.</a></p>
 
 <h2>3. o dado como argumento: conteúdo que muda o roadmap_</h2>
 
-<p>O terceiro jeito é o que mais muda a posição de quem escreve no time. Quando o dado vem de conteúdo, ele mostra onde o produto deixa o cliente sem resposta.</p>
+<p>o terceiro jeito é o que mais muda a posição de quem escreve no time. quando o dado vem de conteúdo, ele mostra onde o produto deixa o cliente sem resposta.</p>
 
-<p>Na V1 do empréstimo, ninguém queria gastar tempo com uma tela de acompanhamento além do time de design. Queriam um MVP enxuto, apenas com contratação.</p>
+<p>na V1 do empréstimo, ninguém queria gastar tempo com uma tela de acompanhamento além do time de design. queriam um MVP enxuto, apenas com contratação.</p>
 
-<p>O problema disso é que a gente já havia cometido esse erro antes. Num teste anterior, o cliente contratava e o empréstimo sumia do app. Fui atrás dos chamados que essa tela teria evitado: 526 em pouco mais de um ano, isso com o teste tendo rodado apenas 3 meses para uma base de 10k. Desses 526, 66,3% o próprio cliente poderia resolver com uma tela de acompanhamento.</p>
+<p>o problema disso é que a gente já havia cometido esse erro antes. num teste anterior, o cliente contratava e o empréstimo sumia do app. fui atrás dos chamados que essa tela teria evitado: 526 em pouco mais de um ano, isso com o teste tendo rodado apenas 3 meses para uma base de 10k. desses 526, 66,3% o próprio cliente poderia resolver com uma tela de acompanhamento.</p>
 
-<p>Com o time de dados, projetamos 8.982 chamados evitáveis por ano para a nova base elegível de empréstimo que era muito maior. A tela entrou na V1.</p>
+<p>com o time de dados, projetamos 8.982 chamados evitáveis por ano para a nova base elegível de empréstimo que era muito maior. a tela entrou na V1.</p>
 
-<p>O pulo do gato foi o que veio depois. Cada dúvida do chat virou um pedaço da tela:</p>
+<p>o pulo do gato foi o que veio depois. cada dúvida do chat virou um pedaço da tela:</p>
 
 <table class="tab">
 <thead><tr><th scope="col">a dúvida no chat</th><th scope="col">a resposta na tela</th></tr></thead>
@@ -405,11 +402,11 @@ body{margin:0;background:#121214;color:#f2f2f5}
 </tbody>
 </table>
 
-<p>O dado defendeu a tela e também escreveu a arquitetura de conteúdo dela.</p>
+<p>o dado defendeu a tela e também escreveu a arquitetura de conteúdo dela.</p>
 
 <h2>4. como levar isso para um estudo de caso_</h2>
 
-<p>Um case de content com dados não mostra só a tela final. Mostra a pergunta, a fonte e o que mudou por causa dela.</p>
+<p>um case de content com dados não mostra só a tela final. mostra a pergunta, a fonte e o que mudou por causa dela.</p>
 
 <ol class="steps">
 <li><span class="st-n">01</span><strong>comece pela pergunta, não pela planilha.</strong> “por que as pessoas chamam o chat depois de contratar?” guia a leitura. “vou olhar os dados” não guia nada.</li>
@@ -417,17 +414,17 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <li><span class="st-n">03</span><strong>ligue cada dado a uma decisão de texto.</strong> a dúvida do IOF virou o tim-tim por tim-tim. sem essa ligação, o número vira enfeite.</li>
 <li><span class="st-n">04</span><strong>traduza para a língua do negócio.</strong> chamado evitável é custo. informação errada é risco. saldo em atraso é dinheiro.</li>
 <li><span class="st-n">05</span><strong>mostre o teste, mesmo sem resultado final.</strong> hipótese, versões, amostra e confiança já mostram método.</li>
-<li><span class="st-n">06</span><strong>sem acesso aos números, use prova externa.</strong> no meu <a href="/cases/transparencia/">case de transparência</a>, a prova foi o 3º lugar do will bank no Índice de transparência de empréstimos novücard, no 2º semestre de 2023, que avalia como os bancos dispõem informações para clientes.</li>
+<li><span class="st-n">06</span><strong>sem acesso aos números, use prova externa.</strong> no meu <a href="/cases/transparencia/">case de transparência</a>, a prova foi o 3º lugar do will bank no índice de transparência de empréstimos novücard, no 2º semestre de 2023, que avalia como os bancos dispõem informações para clientes.</li>
 <li><span class="st-n">07</span><strong>conte o que deu errado.</strong> o cão de guarda lido como cachorro bravo, o questionário longo demais. aprendizado honesto dá mais credibilidade que resultado perfeito.</li>
 </ol>
 
 <h2>então…_</h2>
 
-<p>Não precisa virar analista para trabalhar com dados. Precisa de curiosidade para ler o que o cliente já está dizendo e de coragem para colocar as próprias palavras à prova.</p>
+<p>não precisa virar analista para trabalhar com dados. precisa de curiosidade para ler o que o cliente já está dizendo e de coragem para colocar as próprias palavras à prova.</p>
 
-<p class="fecho">O texto é a parte do produto que mais conversa com o cliente. Por isso mesmo, ele deixa rastro em todo lugar: no chat, na reclamação, no clique que não aconteceu. <mark>Quem escreve só precisa aprender a ler esse rastro.</mark></p>
+<p class="fecho">o texto é a parte do produto que mais conversa com o cliente. por isso mesmo, ele deixa rastro em todo lugar: no chat, na reclamação, no clique que não aconteceu. <mark>quem escreve só precisa aprender a ler esse rastro.</mark></p>
 
-<p class="note-l">Os números do will bank só estão sendo compartilhados porque o banco teve liquidação extrajudicial decretada pelo Banco Central em janeiro de 2026.</p>
+<p class="note-l">os números do will bank só estão sendo compartilhados porque o banco teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026.</p>
 
 <p class="assina"><svg width="40" height="40" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>thais castro · product designer</p>
 
@@ -452,8 +449,8 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
-<p class="dsf-cp">© 2026 Thais Castro | Product Designer | Content Designer</p>
+<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </template>
@@ -467,6 +464,6 @@ toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: 
 }
 }
 </script>
-<script src="/assets/dc.js?v=1793307327"></script>
+<script src="/assets/dc.js?v=1793316727"></script>
 </body>
 </html>
