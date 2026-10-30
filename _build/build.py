@@ -19,7 +19,7 @@ OGV = '2026-10-30'  # troque ao refazer as imagens, para as redes buscarem de no
 SITE = 'https://thais.coffee'
 PAGES = {
     'Prod.dc.html': ('/', 'thais castro · product designer',
-                     'portfólio de thais castro, product designer de crédito e fintech.'),
+                     'thais castro // portfólio // product designer // content designer // business design // UX // IA // banking // fintech :)'),
     'Portfolio.dc.html': ('/portfolio/', 'portfólio · thais castro',
                           'cases de thais castro: do problema ao número que eles moveram.'),
     'Case-Transparencia.dc.html': ('/cases/transparencia/', 'transparência como regra de produto · case · thais castro',
