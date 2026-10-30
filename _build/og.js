@@ -12,7 +12,7 @@ const OUT = path.join(ROOT, 'assets', 'og');
 const ICONS = path.join(ROOT, 'assets', 'icons');
 
 const OG_PAGES = [
-  ['sobre', 'sobre/', 'product designer', 'thais castro', 'crédito, fintech e content design'],
+  ['sobre', 'sobre/', 'product designer', 'thais castro', 'portfólio // product designer // content designer\nbusiness design // UX // IA // banking // fintech :)'],
   ['portfolio', 'portfolio/', 'cases', 'portfólio', 'do problema ao número que eles moveram'],
   ['transparencia', 'portfolio/transparencia', 'case', 'transparência como regra de produto', 'produtos de crédito · will bank'],
   ['este-portfolio', 'portfolio/este-portfolio', 'case', 'este portfólio, feito com ia', 'desenho, texto e código em parceria'],
@@ -47,7 +47,7 @@ body{width:1200px;height:630px;overflow:hidden;background:#292929;color:#f2f2f5;
 .txt{position:absolute;left:56px;top:200px;width:760px;display:flex;flex-direction:column;gap:20px}
 .k{font-size:22px;font-weight:500;color:#36d6a5;text-transform:uppercase;letter-spacing:.04em}
 h1{font-family:G,RM,monospace;font-weight:400;font-size:104px;line-height:.95;text-transform:lowercase}
-.s{font-family:WS,sans-serif;font-size:28px;line-height:1.35;color:#f2f2f5;opacity:.85}
+.s{font-family:WS,sans-serif;font-size:28px;line-height:1.35;white-space:pre-line;color:#f2f2f5;opacity:.85}
 .smile{position:absolute;right:96px;top:220px;width:224px;height:224px}
 .smile g{fill:#36d6a5}
 .tape{position:absolute;left:0;right:0;bottom:56px;height:32px;border-top:2px solid #f2f2f5;border-bottom:2px solid #f2f2f5;background:repeating-linear-gradient(-45deg,#f2f2f5 0 16px,#292929 16px 32px)}
