@@ -173,6 +173,8 @@ def convert(name):
 <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/assets/icons/favicon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="b3d30e39-c1ab-43f3-9dba-ab8cef6aa71f" data-domains="thais.coffee,www.thais.coffee"></script>
+<script defer src="/assets/track.js?v=1"></script>
 <style>html,body{{overflow-x:clip}}#dc-root{{position:relative;overflow:hidden}}@media (max-width:1000px){{.tnav-prompt{{flex-shrink:1!important;min-width:0!important}}}}@media (max-width:760px){{#dc-root p{{width:auto!important;max-width:100%;box-sizing:border-box}}#dc-root div[style*="flex-direction: row"]:has(> div > p.txt){{flex-direction:column!important}}#dc-root div[style*="flex-direction: row"]:has(> div > p.txt) img{{max-width:100%;height:auto}}}}</style>
 {helmet}
 </head>
