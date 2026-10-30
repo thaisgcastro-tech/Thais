@@ -35,7 +35,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@800&amp;family=Work+Sans:wght@300&amp;display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:'Gokschil';src:url('/assets/93ba42cb1e8b8a10050eb62645b75517.ttf') format('truetype');font-display:swap}
-body{margin:0;background:#121214;color:#f2f2f5}
+body{margin:0;background:#292929;color:#f2f2f5}
 a{color:#f2f2f5;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
 a:hover{color:#b9a6f2}
 .v2,.v2 *{box-sizing:border-box}
@@ -53,12 +53,12 @@ a:hover{color:#b9a6f2}
 .hero-t{font-family:'Gokschil','Roboto Mono',monospace;font-weight:400;font-size:clamp(56px,9vw,80px);line-height:.9;text-transform:lowercase;margin:0 0 32px;color:#f2f2f5}
 /* no celular o título do hero ocupa a largura da tela (a largura fixa do canvas cortava o texto) */
 @media (max-width:760px){.hero-t{width:auto!important;max-width:100%}}
-.win{border:2px solid #f2f2f5;border-radius:16px;background:#292929;overflow:hidden;color:#f2f2f5}
-.win-bar{display:flex;align-items:center;gap:16px;padding:8px 16px;background:#121214;border-bottom:2px solid #f2f2f5;color:#f2f2f5}
+.win{border:2px solid #f2f2f5;border-radius:16px;background:#121214;overflow:hidden;color:#f2f2f5}
+.win-bar{display:flex;align-items:center;gap:16px;padding:8px 16px;background:#292929;border-bottom:2px solid #f2f2f5;color:#f2f2f5}
 .win-dots{display:flex;gap:8px}
 .win-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;display:block}
-.win-url{flex:1 1 auto;min-width:0;padding:8px 16px;background:#292929;border:1px solid #f2f2f5;border-radius:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#f2f2f5}
-.sbtn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;flex-shrink:0;background:#f2f2f5;border:1px solid #121214;box-shadow:4px 4px 0 #f2f2f5;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease;color:#121214}
+.win-url{flex:1 1 auto;min-width:0;padding:8px 16px;background:#121214;border:1px solid #f2f2f5;border-radius:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#f2f2f5}
+.sbtn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;flex-shrink:0;background:#f2f2f5;border:1px solid #292929;box-shadow:4px 4px 0 #f2f2f5;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease;color:#292929}
 .sbtn-i{display:block}
 .sbtn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 #f2f2f5}
 .sbtn:active{transform:translate(4px,4px);box-shadow:0 0 0 #f2f2f5}
@@ -73,24 +73,24 @@ a:hover{color:#b9a6f2}
 .ill{width:100%;aspect-ratio:16/9;background-position:center;background-size:contain;background-repeat:no-repeat}
 .blk{display:flex;flex-direction:column;gap:16px}
 .num{font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;color:#b9a6f2}
-.spec{border:2px solid #f2f2f5;box-shadow:8px 8px 0 #f2f2f5;background:#292929;color:#f2f2f5}
+.spec{border:2px solid #f2f2f5;box-shadow:8px 8px 0 #f2f2f5;background:#121214;color:#f2f2f5}
 .spec-r{display:grid;grid-template-columns:240px minmax(0,1fr)}
 .spec-r + .spec-r{border-top:2px solid #f2f2f5}
-.spec-k{padding:24px;background:#ffff8d;border-right:2px solid #f2f2f5;display:flex;flex-direction:column;gap:8px;color:#292929}
+.spec-k{padding:24px;background:#ffff8d;border-right:2px solid #f2f2f5;display:flex;flex-direction:column;gap:8px;color:#121214}
 .spec-v{padding:24px;display:flex;flex-direction:column;gap:16px;justify-content:center}
 .spec-i{display:flex;gap:16px;align-items:baseline;font-family:'Roboto Mono',monospace;font-weight:500;font-size:16px;line-height:1.5;text-transform:lowercase}
 .tl{display:flex;flex-direction:column;gap:48px;position:relative;padding-left:32px;border-left:3px solid #f2f2f5}
-.tl-ico{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 0 0 8px;cursor:pointer;background:none;border:0;color:#fffefe}
+.tl-ico{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 0 0 8px;cursor:pointer;background:none;border:0;color:#f2f2f5}
 .tl-ico svg{overflow:visible}
 .tl-ico .sh{transform:translate(2px,2px)}
 .tl-ico .mn{transition:transform .12s ease}
 .tl-ico:active .mn{transform:translate(2px,2px)}
 .dep{display:grid;grid-template-columns:minmax(0,440px) 56px minmax(0,1fr);gap:48px;align-items:center}
-.t-card{border:2px solid #f2f2f5;border-radius:16px;background:#292929;overflow:hidden;color:#f2f2f5}
+.t-card{border:2px solid #f2f2f5;border-radius:16px;background:#121214;overflow:hidden;color:#f2f2f5}
 .t-scroll{height:720px;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none}
 .t-scroll::-webkit-scrollbar{display:none}
-.t-post{scroll-snap-align:start;background:#292929;border-bottom:2px solid #f2f2f5;color:#f2f2f5}
-.t-head{display:flex;align-items:center;gap:16px;padding:16px;border-bottom:2px solid #f2f2f5;background:#121214;color:#f2f2f5}
+.t-post{scroll-snap-align:start;background:#121214;border-bottom:2px solid #f2f2f5;color:#f2f2f5}
+.t-head{display:flex;align-items:center;gap:16px;padding:16px;border-bottom:2px solid #f2f2f5;background:#292929;color:#f2f2f5}
 .t-avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid #f2f2f5;display:block;filter:grayscale(1)}
 .t-name{font-family:'Roboto Mono',monospace;font-size:16px;font-weight:700;color:#f2f2f5;line-height:1.2;display:block}
 .t-role{font-family:'Roboto Mono',monospace;font-size:12px;color:#f2f2f5;display:block;margin-top:4px}
@@ -108,7 +108,7 @@ a:hover{color:#b9a6f2}
 .dp-gap{margin-top:16px}
 .dp-name{font-weight:500;font-size:clamp(24px,4vw,32px);line-height:1.1;color:#f2f2f5}
 .dp-lk{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:44px;font:500 16px/1 'Roboto Mono',monospace;color:#f2f2f5;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
-.dp-lk:hover{background:#ffff8d;color:#292929}
+.dp-lk:hover{background:#ffff8d;color:#121214}
 .dp-lk svg{flex-shrink:0}
 .dp-li{display:flex;gap:12px;font-family:'Work Sans',sans-serif;font-size:18px;line-height:1.5}
 .dp-li::before{content:'>';font-family:'Roboto Mono',monospace;color:#ffff8d;flex-shrink:0}
@@ -118,16 +118,16 @@ a:hover{color:#b9a6f2}
 .dp-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (max-width:1100px){.dep.dep-wide{flex-direction:column !important;align-items:stretch !important;gap:48px !important}.dep-wide .dp-win{flex:none}}
 .rc-wrap{display:grid;grid-template-columns:minmax(0,480px) minmax(0,1fr);gap:64px;align-items:start}
-.rc{background:#292929;border:2px solid #f2f2f5;border-bottom:0;padding:32px 32px 24px;display:flex;flex-direction:column;gap:24px;color:#f2f2f5}
+.rc{background:#121214;border:2px solid #f2f2f5;border-bottom:0;padding:32px 32px 24px;display:flex;flex-direction:column;gap:24px;color:#f2f2f5}
 .rc-row{display:flex;align-items:baseline;gap:8px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:16px;line-height:1.5}
 .rc-lead{flex:1 1 auto;min-width:24px;border-bottom:2px dotted #f2f2f5;transform:translateY(-6px)}
 .rc-item{display:flex;flex-direction:column;gap:8px}
 .rc-sub{display:flex;flex-direction:column;gap:4px;padding-left:16px;font-family:'Roboto Mono',monospace;font-weight:400;font-size:14px;line-height:1.5}
 .rc-ref{padding-left:16px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;color:#b9a6f2;white-space:nowrap}
-.rc-cut{height:16px;border-left:2px solid #f2f2f5;border-right:2px solid #f2f2f5;background:linear-gradient(-45deg,transparent 8px,#292929 0) 0 0/16px 16px repeat-x,linear-gradient(45deg,transparent 8px,#292929 0) 0 0/16px 16px repeat-x;color:#f2f2f5}
+.rc-cut{height:16px;border-left:2px solid #f2f2f5;border-right:2px solid #f2f2f5;background:linear-gradient(-45deg,transparent 8px,#121214 0) 0 0/16px 16px repeat-x,linear-gradient(45deg,transparent 8px,#121214 0) 0 0/16px 16px repeat-x;color:#f2f2f5}
 .ax-list{display:flex;flex-direction:column;gap:48px;padding-top:24px}
-.ax{position:relative;margin:0;background:#292929;border:2px solid #f2f2f5;border-radius:16px;color:#f2f2f5}
-.ax-bar{padding:8px 16px;background:#121214;border-bottom:2px solid #f2f2f5;border-radius:14px 14px 0 0;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase;color:#f2f2f5}
+.ax{position:relative;margin:0;background:#121214;border:2px solid #f2f2f5;border-radius:16px;color:#f2f2f5}
+.ax-bar{padding:8px 16px;background:#292929;border-bottom:2px solid #f2f2f5;border-radius:14px 14px 0 0;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;text-transform:lowercase;color:#f2f2f5}
 .ax-bar b{color:#b9a6f2;font-weight:500}
 .ax img{display:block;width:100%;height:auto;border-radius:0 0 14px 14px}
 .clip{position:absolute;top:-24px;left:32px;width:24px;height:48px;border:3px solid #f2f2f5;border-radius:12px;z-index:2}
@@ -153,9 +153,9 @@ a:hover{color:#b9a6f2}
 @media (prefers-reduced-motion:reduce){.btn,.tl-ico .mn{transition:none}}
 /* menu: linha de comando (igual ao site) */
 .tnav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);margin:0;font-family:'Roboto Mono',monospace;color:#f2f2f5}
-.tnav::before{content:"";position:absolute;z-index:-1;left:calc(50% - 50vw);width:100vw;top:-16px;height:46px;background:#121214;pointer-events:none}
+.tnav::before{content:"";position:absolute;z-index:-1;left:calc(50% - 50vw);width:100vw;top:-16px;height:46px;background:#292929;pointer-events:none}
 .tnav *{box-sizing:border-box}
-.tnav-win{display:flex;flex-direction:column;background:#292929;border:2px solid #f2f2f5;border-radius:16px;box-shadow:8px 8px 0 #1847e3;overflow:hidden;color:#f2f2f5}
+.tnav-win{display:flex;flex-direction:column;background:#121214;border:2px solid #f2f2f5;border-radius:16px;box-shadow:none;overflow:hidden;color:#f2f2f5}
 .tnav-line{display:flex;align-items:center;gap:16px;padding:8px 8px 8px 16px;min-height:56px}
 .tnav-dots{display:flex;gap:8px;flex-shrink:0}
 .tnav-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;display:block}
@@ -165,7 +165,7 @@ a:hover{color:#b9a6f2}
 .tnav-list{display:flex;align-items:center;gap:8px;margin:0;padding:0;list-style:none;min-width:0;overflow-x:auto;scrollbar-width:none}
 .tnav-list a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;font-size:14px;font-weight:500;color:#f2f2f5;text-decoration:none;text-transform:lowercase;white-space:nowrap;border:1px dashed transparent}
 .tnav-list a:hover{border-color:#ffff8d;color:#ffff8d}
-.tnav-ls{display:none;flex-shrink:0;margin-left:auto;width:48px;height:40px;padding:0;align-items:center;justify-content:center;background:#ffff8d;color:#292929;border:0;cursor:pointer}
+.tnav-ls{display:none;flex-shrink:0;margin-left:auto;width:48px;height:40px;padding:0;align-items:center;justify-content:center;background:#ffff8d;color:#121214;border:0;cursor:pointer}
 .tnav-out{order:2;display:block;margin:0;padding:8px 16px 16px;list-style:none;border-top:1px dashed #a3a3a3;font-size:14px}
 .tnav-out a{display:flex;gap:16px;align-items:center;min-height:44px;color:#f2f2f5;text-decoration:none;text-transform:lowercase}
 .tnav-out a span{color:#a3a3a3;font-size:12px;width:40px;flex-shrink:0}
@@ -174,29 +174,29 @@ a:hover{color:#b9a6f2}
 @media (max-width:1000px){
 .tnav::before{top:-8px;height:38px}
 .tnav{top:8px}
-.tnav-win{box-shadow:4px 4px 0 #1847e3}
+.tnav-win{box-shadow:none}
 .tnav-dots,.tnav-cmd,.tnav-list{display:none}
 .tnav-prompt{min-width:0;overflow:hidden;text-overflow:ellipsis}
 .tnav-ls{display:inline-flex}
 }
 .tnav-sub{color:#ffff8d}
-.tnav-soon{display:inline-flex;align-items:center;gap:16px;min-height:44px;padding:0 8px;font-size:14px;font-weight:500;color:#9a9a9a;white-space:nowrap;cursor:default}
+.tnav-soon{display:inline-flex;align-items:center;gap:16px;min-height:44px;padding:0 8px;font-size:14px;font-weight:500;color:#a3a3a3;white-space:nowrap;cursor:default}
 .tnav-out .tnav-soon{padding:0;min-height:44px}
-.tnav-out .tnav-soon span{color:#9a9a9a;font-size:12px;width:40px;flex-shrink:0}
+.tnav-out .tnav-soon span{color:#a3a3a3;font-size:12px;width:40px;flex-shrink:0}
 .tnav-out .tnav-subitem a{min-height:44px;padding-left:16px;color:#d6d6d6}
 .vw-bar{position:relative;justify-content:space-between}
 .vw-title{display:flex;align-items:center;gap:8px;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;white-space:nowrap}
 .vw-spacer{width:52px;flex-shrink:0}
-.vw-stage{padding:16px;background-color:#fffefe;background-image:linear-gradient(45deg,#e4e4ea 25%,transparent 25%,transparent 75%,#e4e4ea 75%),linear-gradient(45deg,#e4e4ea 25%,transparent 25%,transparent 75%,#e4e4ea 75%);background-size:16px 16px;background-position:0 0,8px 8px;color:#292929}
-.vw-stage img{border:2px solid #292929}
-.vw-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 16px;background:#121214;border-top:2px solid #f2f2f5;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;color:#f2f2f5}
+.vw-stage{padding:16px;background-color:#f2f2f5;background-image:linear-gradient(45deg,#e4e4ea 25%,transparent 25%,transparent 75%,#e4e4ea 75%),linear-gradient(45deg,#e4e4ea 25%,transparent 25%,transparent 75%,#e4e4ea 75%);background-size:16px 16px;background-position:0 0,8px 8px;color:#121214}
+.vw-stage img{border:2px solid #121214}
+.vw-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 16px;background:#292929;border-top:2px solid #f2f2f5;font-family:'Roboto Mono',monospace;font-weight:500;font-size:12px;color:#f2f2f5}
 .vw-zoom{display:flex;align-items:center;gap:8px}
-.vw-btn{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;padding:0;border:1px solid #f2f2f5;background:#292929;color:#f2f2f5;font-family:inherit;font-size:14px;line-height:1;cursor:pointer}
-.vw-btn:hover{background:#ffff8d;color:#292929}
+.vw-btn{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;padding:0;border:1px solid #f2f2f5;background:#121214;color:#f2f2f5;font-family:inherit;font-size:14px;line-height:1;cursor:pointer}
+.vw-btn:hover{background:#ffff8d;color:#121214}
 .vw-btn:active{transform:translate(1px,1px)}
 .vw-stage{overflow:hidden}
 .t-card{position:relative}
-.t-hint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:8px;padding:8px 16px;background:#4c1d95;border:2px solid #f2f2f5;box-shadow:4px 4px 0 #f2f2f5;color:#fffefe;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase;pointer-events:none;animation:t-bob 1.2s ease-in-out infinite}
+.t-hint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:8px;padding:8px 16px;background:#4c1d95;border:2px solid #f2f2f5;box-shadow:4px 4px 0 #f2f2f5;color:#f2f2f5;font-family:'Roboto Mono',monospace;font-weight:500;font-size:14px;text-transform:lowercase;pointer-events:none;animation:t-bob 1.2s ease-in-out infinite}
 @keyframes t-bob{0%,100%{transform:translate(-50%,-50%)}50%{transform:translate(-50%,calc(-50% + 8px))}}
 @media (prefers-reduced-motion:reduce){.t-hint{animation:none}.vw-stage img{transition:none !important}}
 .ax-body{padding:24px;display:flex;flex-direction:column;gap:24px;font-family:'Roboto Mono',monospace}
@@ -206,11 +206,11 @@ a:hover{color:#b9a6f2}
 .ch-stack .ch + .ch{padding-top:24px}
 .ch-head{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .ch-t{font-weight:500;font-size:14px;text-transform:lowercase}
-.ch-d{padding:4px 8px;background:#ffff8d;border:1px solid #f2f2f5;font-weight:700;font-size:14px;white-space:nowrap;color:#292929}
+.ch-d{padding:4px 8px;background:#ffff8d;border:1px solid #f2f2f5;font-weight:700;font-size:14px;white-space:nowrap;color:#121214}
 .ch-leg{display:flex;flex-wrap:wrap;gap:16px;font-size:12px}
 .ch-leg span{display:inline-flex;align-items:center;gap:8px}
 .ch-leg i{display:block;width:12px;height:12px;border:1px solid #f2f2f5}
-.on{background:#36d6a5;color:#292929}.off{background:#8a8a8a}
+.on{background:#36d6a5;color:#121214}.off{background:#a3a3a3}
 .hb{display:flex;flex-direction:column;gap:12px}
 .hb-row{display:grid;grid-template-columns:112px minmax(0,1fr);gap:12px;align-items:center}
 .hb-l{font-size:12px}
@@ -228,9 +228,9 @@ a:hover{color:#b9a6f2}
 .vb-one{flex:1 1 0;max-width:28px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px}
 .vb-one .vb-f{width:100%}
 .ax-body .vb{margin-bottom:24px}
-.vb-k{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;margin-right:4px;background:#ffff8d;border:2px solid #f2f2f5;font-size:12px;font-weight:700;line-height:1;flex-shrink:0;color:#292929}
+.vb-k{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;margin-right:4px;background:#ffff8d;border:2px solid #f2f2f5;font-size:12px;font-weight:700;line-height:1;flex-shrink:0;color:#121214}
 .vb-v{display:inline-flex;align-items:center}
-.vb-cut{background:repeating-linear-gradient(-45deg,#36d6a5 0 4px,#292929 4px 8px);color:#292929}
+.vb-cut{background:repeating-linear-gradient(-45deg,#36d6a5 0 4px,#121214 4px 8px);color:#121214}
 .ch-notes{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:1.5}
 .ch-notes li{display:flex;gap:8px;align-items:flex-start}
 .ch-notes .vb-k{margin-right:0}
@@ -246,18 +246,18 @@ a:hover{color:#b9a6f2}
 @media (prefers-reduced-motion:reduce){.li-ico .li-mn{transition:none}}
 /* feed: a foto cabe inteira sem empurrar o texto para fora do card */
 .t-scroll{height:760px}
-.t-photo{display:flex;justify-content:center;background:#121214;color:#f2f2f5}
+.t-photo{display:flex;justify-content:center;background:#292929;color:#f2f2f5}
 .t-photo img{width:auto !important;max-width:100%;max-height:400px}
 @media (max-width:820px){.t-scroll{height:640px}.t-photo img{max-height:280px}}
 /* footer do DS (portfólio thais) */
-.dsf{position:relative;overflow:hidden;background:#121214;color:#f2f2f5}
+.dsf{position:relative;overflow:hidden;background:#292929;color:#f2f2f5}
 .dsf *{box-sizing:border-box}
 .dsf-tape{height:16px;background:repeating-linear-gradient(-45deg,#f2f2f5 0 12px,transparent 12px 24px);border-top:1px solid #f2f2f5;border-bottom:1px solid #f2f2f5}
 .dsf-in{position:relative;max-width:1080px;margin:0 auto;padding:64px 32px 48px}
 .dsf-lbl{font:500 14px/1.5 'Roboto Mono',monospace;color:#b9a6f2;text-transform:uppercase;margin:0 0 16px}
 .dsf-cta{font:800 clamp(40px,7vw,72px)/.95 'Roboto Mono',monospace;letter-spacing:-.02em;text-transform:lowercase;margin:0 0 48px}
 .dsf-cta a{color:#f2f2f5;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:4px;text-underline-offset:8px}
-.dsf-cta a:hover{background:#ffff8d;color:#292929}
+.dsf-cta a:hover{background:#ffff8d;color:#121214}
 .dsf-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #f2f2f5}
 .dsf-col{padding:24px 24px 0 0}
 .dsf-col+.dsf-col{border-left:1px solid #f2f2f5;padding-left:24px}
@@ -271,12 +271,12 @@ a:hover{color:#b9a6f2}
 .dsf-ic:hover .li-mn{transform:translate(1px,1px)}
 .dsf-ic:active .li-mn{transform:translate(2px,2px)}
 @media (prefers-reduced-motion:reduce){.dsf-ic .li-mn{transition:none}}
-.dsf-lk:hover{background:#ffff8d;color:#292929}
-.dsf-sig{position:relative;background:#292929;border-top:1px solid #f2f2f5;overflow:hidden;white-space:nowrap}
+.dsf-lk:hover{background:#ffff8d;color:#121214}
+.dsf-sig{position:relative;background:#121214;border-top:1px solid #f2f2f5;overflow:hidden;white-space:nowrap}
 .dsf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .dsf-track{display:flex;justify-content:center;align-items:center;gap:16px;padding:16px 24px}
 .dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#f2f2f5}
-.dsf-cp{background:#292929;color:#f2f2f5;font:300 14px/1.5 'Work Sans',sans-serif;text-align:center;padding:0 24px 16px;margin:0}
+.dsf-cp{background:#121214;color:#f2f2f5;font:300 14px/1.5 'Work Sans',sans-serif;text-align:center;padding:0 24px 16px;margin:0}
 @media (max-width:640px){.dsf-in{padding:48px 16px 32px}.dsf-cols{grid-template-columns:minmax(0,1fr)}.dsf-col+.dsf-col{border-left:0;border-top:1px solid #f2f2f5;padding-left:0;margin-top:24px}}
 
 .vw-btn{position:relative}.vw-btn::before{content:'';position:absolute;inset:-10px}
@@ -284,9 +284,9 @@ a:hover{color:#b9a6f2}
 
 /* pop-up "está recrutando?" (janela de comando) */
 .rp-back{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(18,18,20,.72)}
-.rp-win{width:min(100%,560px);max-height:calc(100vh - 32px);overflow:auto;background:#292929;border:2px solid #f2f2f5;border-radius:16px;box-shadow:8px 8px 0 #1847e3;color:#f2f2f5;font-family:'Roboto Mono',monospace;outline:none;animation:rp-in .3s steps(4)}
+.rp-win{width:min(100%,560px);max-height:calc(100vh - 32px);overflow:auto;background:#121214;border:2px solid #f2f2f5;border-radius:16px;box-shadow:none;color:#f2f2f5;font-family:'Roboto Mono',monospace;outline:none;animation:rp-in .3s steps(4)}
 @keyframes rp-in{from{transform:translateY(16px) scale(.96);opacity:0}}
-.rp-bar{display:flex;align-items:center;gap:8px;padding:6px 6px 6px 16px;background:#121214;border-bottom:2px solid #f2f2f5}
+.rp-bar{display:flex;align-items:center;gap:8px;padding:6px 6px 6px 16px;background:#292929;border-bottom:2px solid #f2f2f5}
 .rp-bar .rp-dot{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;flex-shrink:0}
 .rp-file{margin-left:8px;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .rp-x{margin-left:auto;flex-shrink:0;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0;background:transparent;color:#f2f2f5;border:1px dashed transparent;cursor:pointer}
@@ -299,14 +299,14 @@ a:hover{color:#b9a6f2}
 .rp-p{margin:0;font-family:'Work Sans',sans-serif;font-size:18px;line-height:1.5}
 .rp-acts{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
 .rp-btn{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 24px;font:500 16px/1 'Roboto Mono',monospace;text-decoration:none;cursor:pointer;transition:transform .08s,box-shadow .08s}
-.rp-pri{background:#1847e3;color:#fffefe;border:1px solid #f2f2f5;box-shadow:4px 4px 0 #f2f2f5}
-.rp-pri:hover{color:#fffefe;transform:translate(2px,2px);box-shadow:2px 2px 0 #f2f2f5}
+.rp-pri{background:#1847e3;color:#f2f2f5;border:1px solid #f2f2f5;box-shadow:4px 4px 0 #f2f2f5}
+.rp-pri:hover{color:#f2f2f5;transform:translate(2px,2px);box-shadow:2px 2px 0 #f2f2f5}
 .rp-pri:active{transform:translate(4px,4px);box-shadow:0 0 0 #f2f2f5}
 .rp-sec{background:transparent;color:#f2f2f5;border:2px solid #f2f2f5}
 .rp-sec:hover{border-color:#ffff8d;color:#ffff8d}
 .rp-lk{display:inline;margin:0;padding:12px 0;background:none;border:0;font:inherit;color:#f2f2f5;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px;cursor:pointer}
-.rp-lk:hover{background:#ffff8d;color:#292929}
-.rp-k{font-size:12px;background:#f2f2f5;color:#292929;padding:2px 8px}
+.rp-lk:hover{background:#ffff8d;color:#121214}
+.rp-k{font-size:12px;background:#f2f2f5;color:#121214;padding:2px 8px}
 .rp-sec:hover .rp-k{background:#ffff8d}
 .rp-win :focus-visible{outline:3px solid #ffff8d;outline-offset:3px}
 @media (max-width:480px){.rp-body{padding:24px 16px}.rp-acts .rp-btn{flex:1 1 100%;justify-content:center}}
@@ -329,16 +329,16 @@ a:hover{color:#b9a6f2}
 <body>
 <div id="dc-root">
 
-<div class="v2" style="color: rgb(242, 242, 245); font-family: &quot;Work Sans&quot;, sans-serif; padding: 128px 0px 0px; position: relative; overflow: hidden; background-color: rgb(41, 41, 41);">
+<div class="v2" style="color: rgb(242, 242, 245); font-family: &quot;Work Sans&quot;, sans-serif; padding: 128px 0px 0px; position: relative; overflow: hidden; background-color: rgb(18, 18, 20);">
 <nav class="tnav" aria-label="menu">
 <div class="tnav-win">
 
 <div class="tnav-line">
-<div class="tnav-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div>
+<div class="tnav-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(18, 18, 20);"></span><span style="background: rgb(255, 255, 141); color: rgb(18, 18, 20);"></span><span style="background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span></div>
 <span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/sobre<span class="tnav-sub"></span> $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
 <ul class="tnav-list"><li><a href="/" aria-current="page">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/">opiniao/</a></li><li><a href="/contato/">contato/</a></li><li><a href="/quiz/">quiz/</a></li></ul>
-<div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
+<div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#f2f2f5" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#f2f2f5" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#f2f2f5" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
 
@@ -352,11 +352,11 @@ a:hover{color:#b9a6f2}
 
 <img class="gc" alt="" src="/assets/8629aae69fe2766b8e9923183143aa10.svg" style="left: calc(50% + 588px); top: 1240px; width: 96px; height: 96px;">
 <img class="gc" alt="" src="/assets/0dfd9617c5195d98fadcb2ddcebdc73a.svg" style="left: calc(50% - 668px); top: 1560px; width: 48px; height: 48px;">
-<div class="gc" style="left: calc(50% - 640px); top: 1240px; writing-mode: vertical-rl; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 12px; color: rgb(185, 166, 242); text-transform: lowercase;">feito com ia</div>
+<div class="gc" style="left: calc(50% - 640px); top: 1240px; writing-mode: vertical-rl; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 12px; color: rgb(185, 166, 242); text-transform: lowercase;">feito com IA</div>
 <img class="gc" alt="" src="/assets/6a809d3fe657ef01873722c90488e93d.svg" style="left: calc(50% + 588px); top: 2480px; width: 48px; height: 48px;">
 <img class="gc" alt="" src="/assets/0dfd9617c5195d98fadcb2ddcebdc73a.svg" style="left: calc(50% - 668px); top: 3240px; width: 48px; height: 48px;">
 <img class="gc" alt="" src="/assets/8629aae69fe2766b8e9923183143aa10.svg" style="left: calc(50% + 588px); top: 3920px; width: 96px; height: 96px;">
-<div class="gc" style="left: calc(50% - 640px); top: 4560px; writing-mode: vertical-rl; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 12px; color: rgb(185, 166, 242); text-transform: lowercase;">feito com ia</div>
+<div class="gc" style="left: calc(50% - 640px); top: 4560px; writing-mode: vertical-rl; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 12px; color: rgb(185, 166, 242); text-transform: lowercase;">feito com IA</div>
 <img class="gc" alt="" src="/assets/6a809d3fe657ef01873722c90488e93d.svg" style="left: calc(50% + 588px); top: 5200px; width: 48px; height: 48px;">
 <img class="gc" alt="" src="/assets/0dfd9617c5195d98fadcb2ddcebdc73a.svg" style="left: calc(50% - 668px); top: 5760px; width: 48px; height: 48px;">
 <img class="gc" alt="" src="/assets/8629aae69fe2766b8e9923183143aa10.svg" style="left: calc(50% + 588px); top: 6240px; width: 96px; height: 96px;">
@@ -366,11 +366,11 @@ a:hover{color:#b9a6f2}
 <div>
 <p class="lbl">product designer</p>
 <h1 class="hero-t" id="hero-t" style="width: 533px;">mitigo riscos através do design</h1>
-<p class="txt" style="font-size: 20px; line-height: 1.45; width: min(534px, 100%);">oi! meu nome é thais, senior product designer com muuuuuita bagagem em content design que acredita no equilíbrio entre boa UX &amp; negócio rentável.</p><div class="acts" style="justify-content: flex-end; width: min(534px, 100%);"><a class="li-ico" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></div>
+<p class="txt" style="font-size: 20px; line-height: 1.45; width: min(534px, 100%);">oi! meu nome é thais, senior product designer com muuuuuita bagagem em content design que acredita no equilíbrio entre boa UX &amp; negócio rentável.</p><div class="acts" style="justify-content: flex-end; width: min(534px, 100%);"><a class="li-ico" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#f2f2f5" d="M0 0h15v15h-15z"></path><path fill="#121214" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#121214" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></div>
 </div>
 <div class="hero-r" style="width: min(438px, 100%);">
 <div class="win" style="background: url(&quot;/assets/94403e6e550a390074ae31712590b81e.jpg&quot;) center center / cover no-repeat;">
-<div class="win-bar vw-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><div class="vw-title"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11"></rect><path d="M1.5 11l4-4 3 3 2-2 4 4"></path><rect x="10" y="5" width="2" height="2" fill="currentColor" stroke="none"></rect></svg>thais.png</div><div class="vw-spacer" aria-hidden="true"></div></div>
+<div class="win-bar vw-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(18, 18, 20);"></span><span style="background: rgb(255, 255, 141); color: rgb(18, 18, 20);"></span><span style="background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span></div><div class="vw-title"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11"></rect><path d="M1.5 11l4-4 3 3 2-2 4 4"></path><rect x="10" y="5" width="2" height="2" fill="currentColor" stroke="none"></rect></svg>thais.png</div><div class="vw-spacer" aria-hidden="true"></div></div>
 <div class="vw-stage"><img alt="foto da Thais" src="/assets/9818a630f8b2e600284306e4c6ba74b3.jpg" style="display: block; width: 100%; height: auto; transform: scale(1); transform-origin: center center; transition: transform 0.2s;"></div>
 <div class="vw-foot"><span>png · 1 de 1</span><span class="vw-zoom"><button type="button" class="vw-btn" aria-label="diminuir zoom">−</button><span aria-live="polite">100%</span><button type="button" class="vw-btn" aria-label="aumentar zoom">+</button></span></div>
 </div>
@@ -383,8 +383,8 @@ a:hover{color:#b9a6f2}
 <p class="lbl">características e competências</p>
 <h2 class="h2" id="sec-jeito">jeito pra coisa_</h2>
 <div class="row">
-<div class="ill"><svg role="img" aria-label="ilustração em pixel: janela de conversa entre uma pessoa e a ia" viewBox="0 0 96 54" shape-rendering="crispEdges" preserveAspectRatio="xMidYMid meet" style="display: block; width: 100%; height: 100%;"><g class="ill-g" style="--dx: -16px;"><path fill="#f2f2f5" d="M16 4h65v1h-65zM16 5h1v1h-1zM80 5h1v1h-1zM16 6h1v1h-1zM80 6h1v1h-1zM16 7h1v1h-1zM20 7h2v1h-2zM24 7h2v1h-2zM28 7h2v1h-2zM80 7h1v1h-1zM16 8h1v1h-1zM80 8h1v1h-1zM16 9h1v1h-1zM80 9h1v1h-1zM16 10h65v1h-65zM16 11h1v1h-1zM80 11h1v1h-1zM16 12h1v1h-1zM80 12h1v1h-1zM16 13h1v1h-1zM80 13h1v1h-1zM16 14h1v1h-1zM20 14h7v1h-7zM30 14h33v1h-33zM80 14h1v1h-1zM16 15h1v1h-1zM20 15h1v1h-1zM26 15h1v1h-1zM30 15h1v1h-1zM62 15h1v1h-1zM80 15h1v1h-1zM16 16h1v1h-1zM20 16h1v1h-1zM23 16h1v1h-1zM26 16h1v1h-1zM30 16h1v1h-1zM62 16h1v1h-1zM80 16h1v1h-1zM16 17h1v1h-1zM20 17h1v1h-1zM26 17h1v1h-1zM30 17h1v1h-1zM33 17h26v1h-26zM62 17h1v1h-1zM80 17h1v1h-1zM16 18h1v1h-1zM20 18h1v1h-1zM22 18h3v1h-3zM26 18h1v1h-1zM30 18h1v1h-1zM62 18h1v1h-1zM80 18h1v1h-1zM16 19h1v1h-1zM20 19h1v1h-1zM26 19h1v1h-1zM30 19h1v1h-1zM33 19h18v1h-18zM62 19h1v1h-1zM80 19h1v1h-1zM16 20h1v1h-1zM20 20h7v1h-7zM30 20h1v1h-1zM62 20h1v1h-1zM80 20h1v1h-1zM16 21h1v1h-1zM30 21h1v1h-1zM62 21h1v1h-1zM80 21h1v1h-1zM16 22h1v1h-1zM30 22h33v1h-33zM80 22h1v1h-1zM16 23h1v1h-1zM80 23h1v1h-1zM16 24h1v1h-1zM80 24h1v1h-1zM16 25h1v1h-1zM80 25h1v1h-1zM16 26h1v1h-1zM30 26h43v1h-43zM80 26h1v1h-1zM16 27h1v1h-1zM30 27h43v1h-43zM80 27h1v1h-1zM16 28h1v1h-1zM30 28h43v1h-43zM80 28h1v1h-1zM16 29h1v1h-1zM30 29h3v1h-3zM69 29h4v1h-4zM80 29h1v1h-1zM16 30h1v1h-1zM30 30h43v1h-43zM80 30h1v1h-1zM16 31h1v1h-1zM30 31h43v1h-43zM80 31h1v1h-1zM16 32h1v1h-1zM30 32h3v1h-3zM65 32h8v1h-8zM80 32h1v1h-1zM16 33h1v1h-1zM30 33h43v1h-43zM80 33h1v1h-1zM16 34h1v1h-1zM30 34h43v1h-43zM80 34h1v1h-1zM16 35h1v1h-1zM30 35h3v1h-3zM57 35h16v1h-16zM80 35h1v1h-1zM16 36h1v1h-1zM30 36h43v1h-43zM80 36h1v1h-1zM16 37h1v1h-1zM30 37h43v1h-43zM80 37h1v1h-1zM16 38h1v1h-1zM30 38h43v1h-43zM80 38h1v1h-1zM16 39h1v1h-1zM80 39h1v1h-1zM16 40h1v1h-1zM80 40h1v1h-1zM16 41h1v1h-1zM80 41h1v1h-1zM16 42h65v1h-65zM16 43h1v1h-1zM80 43h1v1h-1zM16 44h1v1h-1zM20 44h1v1h-1zM26 44h2v1h-2zM80 44h1v1h-1zM16 45h1v1h-1zM21 45h1v1h-1zM26 45h2v1h-2zM80 45h1v1h-1zM16 46h1v1h-1zM22 46h1v1h-1zM26 46h2v1h-2zM80 46h1v1h-1zM16 47h1v1h-1zM21 47h1v1h-1zM26 47h2v1h-2zM80 47h1v1h-1zM16 48h1v1h-1zM20 48h1v1h-1zM26 48h2v1h-2zM80 48h1v1h-1zM16 49h1v1h-1zM80 49h1v1h-1zM16 50h65v1h-65z"></path><path fill="#36d6a5" d="M23 27h1v1h-1zM23 28h1v1h-1zM23 29h1v1h-1zM21 30h5v1h-5zM23 31h1v1h-1zM23 32h1v1h-1zM23 33h1v1h-1z"></path></g></svg></div>
-<div class="blk"><span class="num">01</span><h3 class="h3">eu + claude =&nbsp;<svg role="img" aria-label="coração" width="36" height="32" viewBox="0 0 9 8" shape-rendering="crispEdges" style="display: inline-block; vertical-align: -2px;"><path fill="currentColor" d="M1 0h2v1h-2zM6 0h2v1h-2zM0 1h4v1h-4zM5 1h4v1h-4zM0 2h9v1h-9zM0 3h9v1h-9zM1 4h7v1h-7zM2 5h5v1h-5zM3 6h3v1h-3zM4 7h1v1h-1z"></path></svg></h3><p class="txt">uso ia como parceira de produção e mantenho a direção: defino o sistema, itero em ciclos curtos com feedback direto na tela e valido cada detalhe antes de seguir. este portfólio foi feito assim.</p></div>
+<div class="ill"><svg role="img" aria-label="ilustração em pixel: janela de conversa entre uma pessoa e a IA" viewBox="0 0 96 54" shape-rendering="crispEdges" preserveAspectRatio="xMidYMid meet" style="display: block; width: 100%; height: 100%;"><g class="ill-g" style="--dx: -16px;"><path fill="#f2f2f5" d="M16 4h65v1h-65zM16 5h1v1h-1zM80 5h1v1h-1zM16 6h1v1h-1zM80 6h1v1h-1zM16 7h1v1h-1zM20 7h2v1h-2zM24 7h2v1h-2zM28 7h2v1h-2zM80 7h1v1h-1zM16 8h1v1h-1zM80 8h1v1h-1zM16 9h1v1h-1zM80 9h1v1h-1zM16 10h65v1h-65zM16 11h1v1h-1zM80 11h1v1h-1zM16 12h1v1h-1zM80 12h1v1h-1zM16 13h1v1h-1zM80 13h1v1h-1zM16 14h1v1h-1zM20 14h7v1h-7zM30 14h33v1h-33zM80 14h1v1h-1zM16 15h1v1h-1zM20 15h1v1h-1zM26 15h1v1h-1zM30 15h1v1h-1zM62 15h1v1h-1zM80 15h1v1h-1zM16 16h1v1h-1zM20 16h1v1h-1zM23 16h1v1h-1zM26 16h1v1h-1zM30 16h1v1h-1zM62 16h1v1h-1zM80 16h1v1h-1zM16 17h1v1h-1zM20 17h1v1h-1zM26 17h1v1h-1zM30 17h1v1h-1zM33 17h26v1h-26zM62 17h1v1h-1zM80 17h1v1h-1zM16 18h1v1h-1zM20 18h1v1h-1zM22 18h3v1h-3zM26 18h1v1h-1zM30 18h1v1h-1zM62 18h1v1h-1zM80 18h1v1h-1zM16 19h1v1h-1zM20 19h1v1h-1zM26 19h1v1h-1zM30 19h1v1h-1zM33 19h18v1h-18zM62 19h1v1h-1zM80 19h1v1h-1zM16 20h1v1h-1zM20 20h7v1h-7zM30 20h1v1h-1zM62 20h1v1h-1zM80 20h1v1h-1zM16 21h1v1h-1zM30 21h1v1h-1zM62 21h1v1h-1zM80 21h1v1h-1zM16 22h1v1h-1zM30 22h33v1h-33zM80 22h1v1h-1zM16 23h1v1h-1zM80 23h1v1h-1zM16 24h1v1h-1zM80 24h1v1h-1zM16 25h1v1h-1zM80 25h1v1h-1zM16 26h1v1h-1zM30 26h43v1h-43zM80 26h1v1h-1zM16 27h1v1h-1zM30 27h43v1h-43zM80 27h1v1h-1zM16 28h1v1h-1zM30 28h43v1h-43zM80 28h1v1h-1zM16 29h1v1h-1zM30 29h3v1h-3zM69 29h4v1h-4zM80 29h1v1h-1zM16 30h1v1h-1zM30 30h43v1h-43zM80 30h1v1h-1zM16 31h1v1h-1zM30 31h43v1h-43zM80 31h1v1h-1zM16 32h1v1h-1zM30 32h3v1h-3zM65 32h8v1h-8zM80 32h1v1h-1zM16 33h1v1h-1zM30 33h43v1h-43zM80 33h1v1h-1zM16 34h1v1h-1zM30 34h43v1h-43zM80 34h1v1h-1zM16 35h1v1h-1zM30 35h3v1h-3zM57 35h16v1h-16zM80 35h1v1h-1zM16 36h1v1h-1zM30 36h43v1h-43zM80 36h1v1h-1zM16 37h1v1h-1zM30 37h43v1h-43zM80 37h1v1h-1zM16 38h1v1h-1zM30 38h43v1h-43zM80 38h1v1h-1zM16 39h1v1h-1zM80 39h1v1h-1zM16 40h1v1h-1zM80 40h1v1h-1zM16 41h1v1h-1zM80 41h1v1h-1zM16 42h65v1h-65zM16 43h1v1h-1zM80 43h1v1h-1zM16 44h1v1h-1zM20 44h1v1h-1zM26 44h2v1h-2zM80 44h1v1h-1zM16 45h1v1h-1zM21 45h1v1h-1zM26 45h2v1h-2zM80 45h1v1h-1zM16 46h1v1h-1zM22 46h1v1h-1zM26 46h2v1h-2zM80 46h1v1h-1zM16 47h1v1h-1zM21 47h1v1h-1zM26 47h2v1h-2zM80 47h1v1h-1zM16 48h1v1h-1zM20 48h1v1h-1zM26 48h2v1h-2zM80 48h1v1h-1zM16 49h1v1h-1zM80 49h1v1h-1zM16 50h65v1h-65z"></path><path fill="#36d6a5" d="M23 27h1v1h-1zM23 28h1v1h-1zM23 29h1v1h-1zM21 30h5v1h-5zM23 31h1v1h-1zM23 32h1v1h-1zM23 33h1v1h-1z"></path></g></svg></div>
+<div class="blk"><span class="num">01</span><h3 class="h3">eu + claude =&nbsp;<svg role="img" aria-label="coração" width="36" height="32" viewBox="0 0 9 8" shape-rendering="crispEdges" style="display: inline-block; vertical-align: -2px;"><path fill="currentColor" d="M1 0h2v1h-2zM6 0h2v1h-2zM0 1h4v1h-4zM5 1h4v1h-4zM0 2h9v1h-9zM0 3h9v1h-9zM1 4h7v1h-7zM2 5h5v1h-5zM3 6h3v1h-3zM4 7h1v1h-1z"></path></svg></h3><p class="txt">uso IA como parceira de produção e mantenho a direção: defino o sistema, itero em ciclos curtos com feedback direto na tela e valido cada detalhe antes de seguir. este portfólio foi feito assim.</p></div>
 </div>
 <div class="row rev">
 <div class="ill"><svg role="img" aria-label="ilustração em pixel: claquete abrindo" viewBox="0 0 96 54" shape-rendering="crispEdges" preserveAspectRatio="xMidYMid meet" style="display: block; width: 100%; height: 100%;"><g class="ill-g" style="--dx: -28px;"><path fill="#f2f2f5" d="M68 4h1v1h-1zM64 5h5v1h-5zM60 6h9v1h-9zM56 7h4v1h-4zM62 7h7v1h-7zM52 8h7v1h-7zM63 8h6v1h-6zM48 9h13v1h-13zM64 9h4v1h-4zM44 10h5v1h-5zM53 10h11v1h-11zM40 11h10v1h-10zM54 11h6v1h-6zM36 12h4v1h-4zM42 12h9v1h-9zM52 12h4v1h-4zM32 13h7v1h-7zM43 13h9v1h-9zM28 14h13v1h-13zM44 14h4v1h-4zM28 15h1v1h-1zM33 15h11v1h-11zM28 16h2v1h-2zM34 16h6v1h-6zM28 17h3v1h-3zM32 17h4v1h-4zM28 18h4v1h-4zM28 19h2v1h-2zM28 20h41v1h-41zM28 21h6v1h-6zM37 21h7v1h-7zM47 21h7v1h-7zM57 21h7v1h-7zM67 21h2v1h-2zM28 22h4v1h-4zM36 22h6v1h-6zM46 22h6v1h-6zM56 22h6v1h-6zM66 22h3v1h-3zM28 23h3v1h-3zM34 23h7v1h-7zM44 23h7v1h-7zM54 23h7v1h-7zM64 23h5v1h-5zM28 24h41v1h-41zM28 25h41v1h-41zM28 26h1v1h-1zM68 26h1v1h-1zM28 27h1v1h-1zM68 27h1v1h-1zM28 28h1v1h-1zM68 28h1v1h-1zM28 29h1v1h-1zM68 29h1v1h-1zM28 30h1v1h-1zM68 30h1v1h-1zM28 31h41v1h-41zM28 32h1v1h-1zM48 32h1v1h-1zM68 32h1v1h-1zM28 33h1v1h-1zM48 33h1v1h-1zM68 33h1v1h-1zM28 34h1v1h-1zM48 34h1v1h-1zM68 34h1v1h-1zM28 35h1v1h-1zM48 35h1v1h-1zM68 35h1v1h-1zM28 36h1v1h-1zM32 36h14v1h-14zM48 36h1v1h-1zM51 36h14v1h-14zM68 36h1v1h-1zM28 37h1v1h-1zM48 37h1v1h-1zM68 37h1v1h-1zM28 38h1v1h-1zM48 38h1v1h-1zM68 38h1v1h-1zM28 39h1v1h-1zM48 39h1v1h-1zM68 39h1v1h-1zM28 40h1v1h-1zM48 40h1v1h-1zM68 40h1v1h-1zM28 41h1v1h-1zM32 41h14v1h-14zM48 41h1v1h-1zM51 41h14v1h-14zM68 41h1v1h-1zM28 42h1v1h-1zM48 42h1v1h-1zM68 42h1v1h-1zM28 43h1v1h-1zM48 43h1v1h-1zM68 43h1v1h-1zM28 44h1v1h-1zM48 44h1v1h-1zM68 44h1v1h-1zM28 45h1v1h-1zM48 45h1v1h-1zM68 45h1v1h-1zM28 46h1v1h-1zM32 46h14v1h-14zM48 46h1v1h-1zM51 46h14v1h-14zM68 46h1v1h-1zM28 47h1v1h-1zM48 47h1v1h-1zM68 47h1v1h-1zM28 48h1v1h-1zM48 48h1v1h-1zM68 48h1v1h-1zM28 49h1v1h-1zM48 49h1v1h-1zM68 49h1v1h-1zM28 50h1v1h-1zM68 50h1v1h-1zM28 51h41v1h-41z"></path><path fill="#36d6a5" d="M76 3h1v1h-1zM76 4h1v1h-1zM76 5h1v1h-1zM74 6h5v1h-5zM76 7h1v1h-1zM76 8h1v1h-1zM76 9h1v1h-1zM82 11h1v1h-1zM81 12h3v1h-3zM82 13h1v1h-1z"></path></g></svg></div>
@@ -419,7 +419,7 @@ a:hover{color:#b9a6f2}
 <span style="font-family: &quot;Roboto Mono&quot;, monospace; font-weight: 700; font-size: 20px; text-transform: lowercase;">comprovante de feitos</span>
 <span style="font-family: &quot;Roboto Mono&quot;, monospace; font-weight: 500; font-size: 12px; color: rgb(185, 166, 242);">thais castro / product designer / will bank</span>
 </div>
-<span aria-hidden="true" style="width: 56px; height: 56px; background: rgb(255, 255, 141); border: 2px solid rgb(242, 242, 245); transform: rotate(-8deg); position: relative; flex-shrink: 0; color: rgb(41, 41, 41);"><img alt="" src="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" style="position: absolute; left: 8px; top: 8px; width: 36px; height: 36px; image-rendering: pixelated;"></span>
+<span aria-hidden="true" style="width: 56px; height: 56px; background: rgb(255, 255, 141); border: 2px solid rgb(242, 242, 245); transform: rotate(-8deg); position: relative; flex-shrink: 0; color: rgb(18, 18, 20);"><img alt="" src="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" style="position: absolute; left: 8px; top: 8px; width: 36px; height: 36px; image-rendering: pixelated;"></span>
 </div>
 <div style="border-top: 2px dashed rgb(242, 242, 245);"></div>
 <div style="display: flex; flex-direction: column; gap: 24px;">
@@ -457,7 +457,7 @@ a:hover{color:#b9a6f2}
 </div><span aria-hidden="true" style="font-family: &quot;Roboto Mono&quot;, monospace; font-weight: 500; font-size: 12px; text-align: center; letter-spacing: 0.2em;">|||| ||| |||| || ||||| | ||| ||||</span>
 <p style="margin: 0px; font-family: &quot;Roboto Mono&quot;, monospace; font-weight: 400; font-size: 12px; line-height: 1.5;">os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026 e já não opera mais.</p>
 </div>
-<svg class="rc-zz" width="100%" height="16" aria-hidden="true" style="display: block;"><defs><pattern id="zz" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 0 L8 12 L16 0 Z" fill="#292929"></path><path d="M0 1 L8 13 L16 1" fill="none" stroke="#f2f2f5" stroke-width="2" stroke-linejoin="miter"></path></pattern></defs><rect width="100%" height="16" fill="url(#zz)"></rect></svg>
+<svg class="rc-zz" width="100%" height="16" aria-hidden="true" style="display: block;"><defs><pattern id="zz" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 0 L8 12 L16 0 Z" fill="#121214"></path><path d="M0 1 L8 13 L16 1" fill="none" stroke="#f2f2f5" stroke-width="2" stroke-linejoin="miter"></path></pattern></defs><rect width="100%" height="16" fill="url(#zz)"></rect></svg>
 
 </div>
 <div class="ax-list">
@@ -501,9 +501,9 @@ a:hover{color:#b9a6f2}
 <div class="tl">
 
 <div style="position: relative;">
-<div aria-hidden="true" style="position: absolute; left: -44px; top: 24px; width: 18px; height: 18px; background: rgb(255, 255, 141); border: 3px solid rgb(242, 242, 245); color: rgb(41, 41, 41);"></div>
+<div aria-hidden="true" style="position: absolute; left: -44px; top: 24px; width: 18px; height: 18px; background: rgb(255, 255, 141); border: 3px solid rgb(242, 242, 245); color: rgb(18, 18, 20);"></div>
 <div class="win">
-<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><div class="win-url">@ will bank</div></div>
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(18, 18, 20);"></span><span style="background: rgb(255, 255, 141); color: rgb(18, 18, 20);"></span><span style="background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span></div><div class="win-url">@ will bank</div></div>
 <div style="padding: 24px 40px; display: flex; flex-direction: column; gap: 24px;">
 <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center;">
 <div style="width: 96px; height: 72px; display: flex; align-items: center; justify-content: center;"><img alt="@ will bank" src="/assets/532327378cbb3fc10c587762775aa79e.png" style="width: 100%; height: 100%; object-fit: contain; display: block; transform: scale(0.75);"></div>
@@ -514,24 +514,24 @@ a:hover{color:#b9a6f2}
 <span style="font-family: &quot;Roboto Mono&quot;, monospace; font-weight: 500; font-size: 12px; text-transform: lowercase;">nível de responsabilidade</span>
 <div role="img" aria-label="nível 5 de 5" style="display: flex; gap: 8px;">
 
-<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(41, 41, 41);"></span>
+<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span>
 
 
-<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(41, 41, 41);"></span>
+<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span>
 
 
-<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(41, 41, 41);"></span>
+<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span>
 
 
-<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(41, 41, 41);"></span>
+<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span>
 
 
-<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(41, 41, 41);"></span>
+<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span>
 
 
 </div>
 </div>
-<p style="margin: 0px; border-left: 16px solid rgb(233, 112, 69); padding: 8px 0px 8px 16px; font-size: 16px; line-height: 1.5; max-width: 64ch;">produtos de crédito e financiamento digital: jornadas completas de contratação, da simulação ao acompanhamento do contrato. discovery, pesquisa com usuários, experimentos (fake doors, MVPs e testes a/b) e evolução do design system, com foco em dados e impacto no negócio.</p>
+<p style="margin: 0px; border-left: 8px solid rgb(233, 112, 69); padding: 8px 0px 8px 16px; font-size: 16px; line-height: 1.5; max-width: 64ch;">produtos de crédito e financiamento digital: jornadas completas de contratação, da simulação ao acompanhamento do contrato. discovery, pesquisa com usuários, experimentos (fake doors, MVPs e testes a/b) e evolução do design system, com foco em dados e impacto no negócio.</p>
 
 <div style="display: flex; justify-content: flex-end;"><button type="button" class="sbtn" data-job="a" aria-expanded="false" aria-label="expandir"><svg class="sbtn-i" width="27" height="27" viewBox="0 0 9 9" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M1 2h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM4 6h1v1h-1zM5 4h1v1h-1zM5 5h1v1h-1zM6 3h1v1h-1zM6 4h1v1h-1zM7 2h1v1h-1zM7 3h1v1h-1z"></path></svg></button></div>
 </div>
@@ -539,9 +539,9 @@ a:hover{color:#b9a6f2}
 </div>
 
 <div style="position: relative;">
-<div aria-hidden="true" style="position: absolute; left: -44px; top: 24px; width: 18px; height: 18px; background: rgb(255, 255, 141); border: 3px solid rgb(242, 242, 245); color: rgb(41, 41, 41);"></div>
+<div aria-hidden="true" style="position: absolute; left: -44px; top: 24px; width: 18px; height: 18px; background: rgb(255, 255, 141); border: 3px solid rgb(242, 242, 245); color: rgb(18, 18, 20);"></div>
 <div class="win">
-<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><div class="win-url">@ melhores destinos</div></div>
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(18, 18, 20);"></span><span style="background: rgb(255, 255, 141); color: rgb(18, 18, 20);"></span><span style="background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span></div><div class="win-url">@ melhores destinos</div></div>
 <div style="padding: 24px 40px; display: flex; flex-direction: column; gap: 24px;">
 <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center;">
 <div style="width: 96px; height: 72px; display: flex; align-items: center; justify-content: center;"><img alt="@ melhores destinos" src="/assets/952bdf8b56931ff02fc49fdfa3ed4da6.webp" style="width: 100%; height: 100%; object-fit: contain; display: block; transform: scale(1.8);"></div>
@@ -552,13 +552,13 @@ a:hover{color:#b9a6f2}
 <span style="font-family: &quot;Roboto Mono&quot;, monospace; font-weight: 500; font-size: 12px; text-transform: lowercase;">nível de responsabilidade</span>
 <div role="img" aria-label="nível 3 de 5" style="display: flex; gap: 8px;">
 
-<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(41, 41, 41);"></span>
+<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span>
 
 
-<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(41, 41, 41);"></span>
+<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span>
 
 
-<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(41, 41, 41);"></span>
+<span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); display: block; background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span>
 
 
 
@@ -569,7 +569,7 @@ a:hover{color:#b9a6f2}
 
 </div>
 </div>
-<p style="margin: 0px; border-left: 16px solid rgb(233, 112, 69); padding: 8px 0px 8px 16px; font-size: 16px; line-height: 1.5; max-width: 64ch;">única pessoa de UX: discovery para diagnosticar dores da jornada, início do guia de escrita da marca (voz e tom) e microcopy de interface, evangelizando a cultura de design e conteúdo. antes, seis anos como revisora de texto.</p>
+<p style="margin: 0px; border-left: 8px solid rgb(233, 112, 69); padding: 8px 0px 8px 16px; font-size: 16px; line-height: 1.5; max-width: 64ch;">única pessoa de UX: discovery para diagnosticar dores da jornada, início do guia de escrita da marca (voz e tom) e microcopy de interface, evangelizando a cultura de design e conteúdo. antes, seis anos como revisora de texto.</p>
 
 <div style="display: flex; justify-content: flex-end;"><button type="button" class="sbtn" data-job="b" aria-expanded="false" aria-label="expandir"><svg class="sbtn-i" width="27" height="27" viewBox="0 0 9 9" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M1 2h1v1h-1zM1 3h1v1h-1zM2 3h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM3 5h1v1h-1zM4 5h1v1h-1zM4 6h1v1h-1zM5 4h1v1h-1zM5 5h1v1h-1zM6 3h1v1h-1zM6 4h1v1h-1zM7 2h1v1h-1zM7 3h1v1h-1z"></path></svg></button></div>
 </div>
@@ -584,177 +584,177 @@ a:hover{color:#b9a6f2}
 <p class="lbl">they like me</p>
 <h2 class="h2" id="sec-dep">como diz<br>o outro_</h2>
 <p class="txt" style="font-size: 20px; line-height: 1.45; max-width: 800ch; width: min(887px, 100%);">depoimentos de pessoas muito boas que já trabalharam comigo. inclusive, indico todas.</p><div class="dep dep-wide" style="align-items: center; padding-top: 32px; grid-template-rows: auto; gap: 86px; display: flex; width: min(1120px, 100%); position: relative;">
-<div class="t-card" style="flex: 0 1 440px; min-width: 0px;"><div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(41, 41, 41);"></span><span style="background: rgb(255, 255, 141); color: rgb(41, 41, 41);"></span><span style="background: rgb(76, 29, 149);"></span></div><div class="win-url">feed</div></div><div class="t-scroll" id="dep2-scroll" tabindex="0" aria-label="depoimentos">
+<div class="t-card" style="flex: 0 1 440px; min-width: 0px;"><div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: rgb(233, 112, 69); color: rgb(18, 18, 20);"></span><span style="background: rgb(255, 255, 141); color: rgb(18, 18, 20);"></span><span style="background: rgb(54, 214, 165); color: rgb(18, 18, 20);"></span></div><div class="win-url">feed</div></div><div class="t-scroll" id="dep2-scroll" tabindex="0" aria-label="depoimentos">
 
 <article class="t-post" id="dep2-0">
 <div class="t-head"><a href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="mateus resende no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></a><div><span class="t-name">mateus resende</span><span class="t-role">software engineering lead @ resend</span></div></div>
 <div class="t-photo"><img alt="mateus resende" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">mateusresende</span>thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. não tinha dessa de "isso é coisa de dev". estávamos todos buscando o que era melhor para o produto em si.</p>
 </article>
 
 <article class="t-post" id="dep2-1">
 <div class="t-head"><a href="https://www.linkedin.com/in/marianapaladino/" target="_blank" rel="noopener noreferrer" aria-label="mari paladino no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></a><div><span class="t-name">mari paladino</span><span class="t-role">group product manager @ sem parar</span></div></div>
 <div class="t-photo"><img alt="mari paladino" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">maripaladino</span>tive a oportunidade de trabalhar com a thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.</p>
 </article>
 
 <article class="t-post" id="dep2-2">
 <div class="t-head"><a href="https://www.linkedin.com/in/atiara-braga/" target="_blank" rel="noopener noreferrer" aria-label="atiara braga no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></a><div><span class="t-name">atiara braga</span><span class="t-role">associate product manager @ neon</span></div></div>
 <div class="t-photo"><img alt="atiara braga" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">atiarabraga</span>já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! você entende a dor e necessidade do cliente e faz o negócio acontecer.</p>
 </article>
 
 <article class="t-post" id="dep2-3">
 <div class="t-head"><a href="https://www.linkedin.com/in/maisaholland/" target="_blank" rel="noopener noreferrer" aria-label="maisa holland no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></a><div><span class="t-name">maisa holland</span><span class="t-role">senior mobile engineer @ iglu</span></div></div>
 <div class="t-photo"><img alt="maisa holland" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">maisaholland</span>foi um prazer imenso trabalhar diretamente com a thais. é uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.</p>
 </article>
 
 <article class="t-post" id="dep2-4">
 <div class="t-head"><a href="https://www.linkedin.com/in/juliananakata/" target="_blank" rel="noopener noreferrer" aria-label="juliana nakata zampronio no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></a><div><span class="t-name">juliana nakata zampronio</span><span class="t-role">software engineer @ itaú unibanco</span></div></div>
 <div class="t-photo"><img alt="juliana nakata zampronio" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">julianakata</span>sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. recomendo de olhos fechados.</p>
 </article>
 
 <article class="t-post" id="dep2-5">
 <div class="t-head"><a href="https://www.linkedin.com/in/janaina-vallim-melo/" target="_blank" rel="noopener noreferrer" aria-label="jana vallim no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></a><div><span class="t-name">jana vallim</span><span class="t-role">conversational AI designer @ stone</span></div></div>
 <div class="t-photo"><img alt="jana vallim" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">janavallim</span>trabalhar com a thais é incrível! ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.</p>
 </article>
 
 <article class="t-post" id="dep2-6">
 <div class="t-head"><a href="https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/" target="_blank" rel="noopener noreferrer" aria-label="ana beatriz suliman no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></a><div><span class="t-name">ana beatriz suliman</span><span class="t-role">especialista de negócios @ mercado pago</span></div></div>
 <div class="t-photo"><img alt="ana beatriz suliman" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">anabeatriz</span>thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.</p>
 </article>
 
 <article class="t-post" id="dep2-7">
 <div class="t-head"><a href="https://www.linkedin.com/in/thiagomelobezerra/" target="_blank" rel="noopener noreferrer" aria-label="thiago bezerra no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></a><div><span class="t-name">thiago bezerra</span><span class="t-role">staff software engineer @ alice</span></div></div>
 <div class="t-photo"><img alt="thiago bezerra" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">thiagobezerra</span>ouvindo o cliente, coletando dados, entendendo seu publico thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.</p>
 </article>
 
 <article class="t-post" id="dep2-8">
 <div class="t-head"><a href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="mateus resende no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></a><div><span class="t-name">mateus resende</span><span class="t-role">software engineering lead @ resend</span></div></div>
 <div class="t-photo"><img alt="mateus resende" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">mateusresende</span>thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. não tinha dessa de "isso é coisa de dev". estávamos todos buscando o que era melhor para o produto em si.</p>
 </article>
 
 <article class="t-post" id="dep2-9">
 <div class="t-head"><a href="https://www.linkedin.com/in/marianapaladino/" target="_blank" rel="noopener noreferrer" aria-label="mari paladino no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></a><div><span class="t-name">mari paladino</span><span class="t-role">group product manager @ sem parar</span></div></div>
 <div class="t-photo"><img alt="mari paladino" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">maripaladino</span>tive a oportunidade de trabalhar com a thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.</p>
 </article>
 
 <article class="t-post" id="dep2-10">
 <div class="t-head"><a href="https://www.linkedin.com/in/atiara-braga/" target="_blank" rel="noopener noreferrer" aria-label="atiara braga no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></a><div><span class="t-name">atiara braga</span><span class="t-role">associate product manager @ neon</span></div></div>
 <div class="t-photo"><img alt="atiara braga" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">atiarabraga</span>já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! você entende a dor e necessidade do cliente e faz o negócio acontecer.</p>
 </article>
 
 <article class="t-post" id="dep2-11">
 <div class="t-head"><a href="https://www.linkedin.com/in/maisaholland/" target="_blank" rel="noopener noreferrer" aria-label="maisa holland no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></a><div><span class="t-name">maisa holland</span><span class="t-role">senior mobile engineer @ iglu</span></div></div>
 <div class="t-photo"><img alt="maisa holland" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">maisaholland</span>foi um prazer imenso trabalhar diretamente com a thais. é uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.</p>
 </article>
 
 <article class="t-post" id="dep2-12">
 <div class="t-head"><a href="https://www.linkedin.com/in/juliananakata/" target="_blank" rel="noopener noreferrer" aria-label="juliana nakata zampronio no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></a><div><span class="t-name">juliana nakata zampronio</span><span class="t-role">software engineer @ itaú unibanco</span></div></div>
 <div class="t-photo"><img alt="juliana nakata zampronio" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">julianakata</span>sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. recomendo de olhos fechados.</p>
 </article>
 
 <article class="t-post" id="dep2-13">
 <div class="t-head"><a href="https://www.linkedin.com/in/janaina-vallim-melo/" target="_blank" rel="noopener noreferrer" aria-label="jana vallim no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></a><div><span class="t-name">jana vallim</span><span class="t-role">conversational AI designer @ stone</span></div></div>
 <div class="t-photo"><img alt="jana vallim" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">janavallim</span>trabalhar com a thais é incrível! ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.</p>
 </article>
 
 <article class="t-post" id="dep2-14">
 <div class="t-head"><a href="https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/" target="_blank" rel="noopener noreferrer" aria-label="ana beatriz suliman no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></a><div><span class="t-name">ana beatriz suliman</span><span class="t-role">especialista de negócios @ mercado pago</span></div></div>
 <div class="t-photo"><img alt="ana beatriz suliman" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">anabeatriz</span>thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.</p>
 </article>
 
 <article class="t-post" id="dep2-15">
 <div class="t-head"><a href="https://www.linkedin.com/in/thiagomelobezerra/" target="_blank" rel="noopener noreferrer" aria-label="thiago bezerra no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></a><div><span class="t-name">thiago bezerra</span><span class="t-role">staff software engineer @ alice</span></div></div>
 <div class="t-photo"><img alt="thiago bezerra" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">thiagobezerra</span>ouvindo o cliente, coletando dados, entendendo seu publico thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.</p>
 </article>
 
 <article class="t-post" id="dep2-16">
 <div class="t-head"><a href="https://www.linkedin.com/in/mateus-resende/" target="_blank" rel="noopener noreferrer" aria-label="mateus resende no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></a><div><span class="t-name">mateus resende</span><span class="t-role">software engineering lead @ resend</span></div></div>
 <div class="t-photo"><img alt="mateus resende" src="/assets/a1921ebd24593f381a46f329815ae39e.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">mateusresende</span>thais sempre trouxe para a mesa seu pensamento crítico para nos dar feedback sobre o que estava sendo desenvolvido. não tinha dessa de "isso é coisa de dev". estávamos todos buscando o que era melhor para o produto em si.</p>
 </article>
 
 <article class="t-post" id="dep2-17">
 <div class="t-head"><a href="https://www.linkedin.com/in/marianapaladino/" target="_blank" rel="noopener noreferrer" aria-label="mari paladino no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></a><div><span class="t-name">mari paladino</span><span class="t-role">group product manager @ sem parar</span></div></div>
 <div class="t-photo"><img alt="mari paladino" src="/assets/5371f918e5556dbedaf0b50ae52d8ddb.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">maripaladino</span>tive a oportunidade de trabalhar com a thaís em diferentes momentos da sua evolução profissional e é impressionante como ela combina profundidade analítica, clareza de pensamento e excelência em execução.</p>
 </article>
 
 <article class="t-post" id="dep2-18">
 <div class="t-head"><a href="https://www.linkedin.com/in/atiara-braga/" target="_blank" rel="noopener noreferrer" aria-label="atiara braga no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></a><div><span class="t-name">atiara braga</span><span class="t-role">associate product manager @ neon</span></div></div>
 <div class="t-photo"><img alt="atiara braga" src="/assets/4e3aed058834b31d77c3cfd50b2877a3.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">atiarabraga</span>já te falei algumas vezes, mas vou chover no molhado pra dizer que você é fora da curva e seu trabalho é uma obra de arte! você entende a dor e necessidade do cliente e faz o negócio acontecer.</p>
 </article>
 
 <article class="t-post" id="dep2-19">
 <div class="t-head"><a href="https://www.linkedin.com/in/maisaholland/" target="_blank" rel="noopener noreferrer" aria-label="maisa holland no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></a><div><span class="t-name">maisa holland</span><span class="t-role">senior mobile engineer @ iglu</span></div></div>
 <div class="t-photo"><img alt="maisa holland" src="/assets/26471d611f0542138846ef4c1a73823b.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">maisaholland</span>foi um prazer imenso trabalhar diretamente com a thais. é uma pessoa atenta, criativa, organizada, divertida e tem um olhar absurdo para os detalhes.</p>
 </article>
 
 <article class="t-post" id="dep2-20">
 <div class="t-head"><a href="https://www.linkedin.com/in/juliananakata/" target="_blank" rel="noopener noreferrer" aria-label="juliana nakata zampronio no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></a><div><span class="t-name">juliana nakata zampronio</span><span class="t-role">software engineer @ itaú unibanco</span></div></div>
 <div class="t-photo"><img alt="juliana nakata zampronio" src="/assets/80ab0ea69e705cbfbf21a5cb169be6e8.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">julianakata</span>sem dúvida, é uma profissional completa, colaborativa e extremamente comprometida com qualidade e experiência do usuário. recomendo de olhos fechados.</p>
 </article>
 
 <article class="t-post" id="dep2-21">
 <div class="t-head"><a href="https://www.linkedin.com/in/janaina-vallim-melo/" target="_blank" rel="noopener noreferrer" aria-label="jana vallim no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></a><div><span class="t-name">jana vallim</span><span class="t-role">conversational AI designer @ stone</span></div></div>
 <div class="t-photo"><img alt="jana vallim" src="/assets/9202fddc055098fdf619b1261af2eb81.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">janavallim</span>trabalhar com a thais é incrível! ela consegue entregar capacidade analítica, criatividade, visão crítica, cooperação e irreverência nos textos, mas também seriedade.</p>
 </article>
 
 <article class="t-post" id="dep2-22">
 <div class="t-head"><a href="https://www.linkedin.com/in/ana-beatriz-sulimam-682211190/" target="_blank" rel="noopener noreferrer" aria-label="ana beatriz suliman no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></a><div><span class="t-name">ana beatriz suliman</span><span class="t-role">especialista de negócios @ mercado pago</span></div></div>
 <div class="t-photo"><img alt="ana beatriz suliman" src="/assets/9f7fed6e11957850e7e6c4adff521e56.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">anabeatriz</span>thais vai além do esperado ao conectar experiência, design e visão de negócio de forma extremamente madura.</p>
 </article>
 
 <article class="t-post" id="dep2-23">
 <div class="t-head"><a href="https://www.linkedin.com/in/thiagomelobezerra/" target="_blank" rel="noopener noreferrer" aria-label="thiago bezerra no linkedin (abre em nova aba)"><img class="t-avatar" alt="" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></a><div><span class="t-name">thiago bezerra</span><span class="t-role">staff software engineer @ alice</span></div></div>
 <div class="t-photo"><img alt="thiago bezerra" src="/assets/38ca2d8845c319a1af351810007faa3a.jpg"></div>
-<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(41, 41, 41); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
+<div class="t-acts"><button class="t-ibtn" type="button" aria-pressed="true" aria-label="curtir"><svg viewBox="0 0 24 24" aria-hidden="true" style="fill: rgb(233, 112, 69); stroke: rgb(18, 18, 20); stroke-width: 2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button></div>
 <p class="t-cap" style="margin: 0px;"><span class="t-capuser">thiagobezerra</span>ouvindo o cliente, coletando dados, entendendo seu publico thais consegue materializar como produtos e serviços precisam falar e aparecer para os clientes de forma a torna-los super atrativos e usáveis.</p>
 </article>
 
-</div><div class="t-hint" aria-hidden="true">role<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fffefe" stroke-width="2" aria-hidden="true"><path d="M3 6l5 5 5-5"></path></svg></div></div>
+</div><div class="t-hint" aria-hidden="true">role<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#f2f2f5" stroke-width="2" aria-hidden="true"><path d="M3 6l5 5 5-5"></path></svg></div></div>
 
 <div class="dp-win" id="dp-type">
 <div class="dp-sr"><h3>mateus resende</h3><p>características</p><ul><li>empático ao extremo</li><li>pensa com dados</li><li>executa com visão de negócio</li></ul></div>
@@ -794,9 +794,9 @@ a:hover{color:#b9a6f2}
 <div class="dsf-cols">
 <div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
 <div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
-<div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#f2f2f5" d="M0 0h15v15h-15z"></path><path fill="#121214" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#121214" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
-<div class="dsf-lang"><p class="dsf-lbl">idioma</p><div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
+<div class="dsf-lang"><p class="dsf-lbl">idioma</p><div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#f2f2f5" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#f2f2f5" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#f2f2f5" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
 <div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
@@ -805,18 +805,18 @@ a:hover{color:#b9a6f2}
 </div>
 <template id="dc-tpl">
 
-<div class="v2" style="color: #f2f2f5; font-family: 'Work Sans',sans-serif; padding: 128px 0 0; position: relative; overflow: hidden; background-color: #292929">
+<div class="v2" style="color: #f2f2f5; font-family: 'Work Sans',sans-serif; padding: 128px 0 0; position: relative; overflow: hidden; background-color: #121214">
 <nav class="tnav" aria-label="menu">
 <div class="tnav-win">
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
 <ul class="tnav-out" id="tnav-out"><li><a href="/" aria-current="page"><span>01</span>{{L.nAbout}}</a></li><li class="tnav-subitem"><a href="#jeito-pra-coisa" onClick="{{closeMenu}}"><span></span>{{L.nJeito}}</a></li><li class="tnav-subitem"><a href="#grandes-feitos" onClick="{{closeMenu}}"><span></span>{{L.nFeitos}}</a></li><li class="tnav-subitem"><a href="#por-onde-andei" onClick="{{closeMenu}}"><span></span>{{L.nAndei}}</a></li><li class="tnav-subitem"><a href="#como-diz-o-outro" onClick="{{closeMenu}}"><span></span>{{L.nDizem}}</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/"><span>03</span>{{L.nOp}}</a></li><li><a href="/contato/"><span>04</span>{{L.nCt}}</a></li><li><a href="/quiz/"><span>05</span>quiz/</a></li></ul>
 </sc-if>
 <div class="tnav-line">
-<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div>
+<div class="tnav-dots" aria-hidden="true"><span style="background: #e97045; color: #121214"></span><span style="background: #ffff8d; color: #121214"></span><span style="background: #36d6a5; color: #121214"></span></div>
 <span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/{{L.nRoot}}<span class="tnav-sub">{{navSub}}</span> $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
 <ul class="tnav-list"><li><a href="/" aria-current="page">{{L.nAbout}}</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/">{{L.nOp}}</a></li><li><a href="/contato/">{{L.nCt}}</a></li><li><a href="/quiz/">quiz/</a></li></ul>
-<div class="lng" role="group" aria-label="{{L.langGroup}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
+<div class="lng" role="group" aria-label="{{L.langGroup}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#f2f2f5" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#f2f2f5" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#f2f2f5" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuOpen}}" aria-controls="tnav-out" aria-label="{{menuLabel}}">
 <sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
@@ -871,11 +871,11 @@ a:hover{color:#b9a6f2}
 <div>
 <p class="lbl">product designer</p>
 <h1 class="hero-t" id="hero-t" style="width: 533px">{{L.heroT}}</h1>
-<p class="txt" style="font-size: 20px; line-height: 1.45; width: min(534px, 100%)">{{L.heroP}}</p><div class="acts" style="justify-content: flex-end; width: min(534px, 100%)"><a class="li-ico" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="{{L.liLabel}}"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></div>
+<p class="txt" style="font-size: 20px; line-height: 1.45; width: min(534px, 100%)">{{L.heroP}}</p><div class="acts" style="justify-content: flex-end; width: min(534px, 100%)"><a class="li-ico" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="{{L.liLabel}}"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#f2f2f5" d="M0 0h15v15h-15z"></path><path fill="#121214" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#121214" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></div>
 </div>
 <div class="hero-r" style="width: min(438px, 100%)">
 <div class="win" style="background: url(&quot;/assets/94403e6e550a390074ae31712590b81e.jpg&quot;) center / cover no-repeat">
-<div class="win-bar vw-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><div class="vw-title"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11"></rect><path d="M1.5 11l4-4 3 3 2-2 4 4"></path><rect x="10" y="5" width="2" height="2" fill="currentColor" stroke="none"></rect></svg>thais.png</div><div class="vw-spacer" aria-hidden="true"></div></div>
+<div class="win-bar vw-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045; color: #121214"></span><span style="background: #ffff8d; color: #121214"></span><span style="background: #36d6a5; color: #121214"></span></div><div class="vw-title"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11"></rect><path d="M1.5 11l4-4 3 3 2-2 4 4"></path><rect x="10" y="5" width="2" height="2" fill="currentColor" stroke="none"></rect></svg>thais.png</div><div class="vw-spacer" aria-hidden="true"></div></div>
 <div class="vw-stage"><img src="/assets/9818a630f8b2e600284306e4c6ba74b3.jpg" alt="{{L.photoAlt}}" style="display: block; width: 100%; height: auto; transform: {{zoomT}}; transform-origin: center; transition: transform .2s ease"></div>
 <div class="vw-foot"><span>{{L.png}}</span><span class="vw-zoom"><button type="button" class="vw-btn" onClick="{{zoomOut}}" aria-label="{{L.zOut}}">−</button><span aria-live="polite">{{zoomPct}}</span><button type="button" class="vw-btn" onClick="{{zoomIn}}" aria-label="{{L.zIn}}">+</button></span></div>
 </div>
@@ -924,7 +924,7 @@ a:hover{color:#b9a6f2}
 <span style="font-family: 'Roboto Mono',monospace; font-weight: 700; font-size: 20px; text-transform: lowercase">{{L.rcT}}</span>
 <span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; color: #b9a6f2">thais castro / product designer / will bank</span>
 </div>
-<span style="width: 56px; height: 56px; background: #ffff8d; border: 2px solid #f2f2f5; transform: rotate(-8deg); position: relative; flex-shrink: 0; color: #292929" aria-hidden="true"><img src="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" alt="" style="position: absolute; left: 8px; top: 8px; width: 36px; height: 36px; image-rendering: pixelated"></span>
+<span style="width: 56px; height: 56px; background: #ffff8d; border: 2px solid #f2f2f5; transform: rotate(-8deg); position: relative; flex-shrink: 0; color: #121214" aria-hidden="true"><img src="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" alt="" style="position: absolute; left: 8px; top: 8px; width: 36px; height: 36px; image-rendering: pixelated"></span>
 </div>
 <div style="border-top: 2px dashed #f2f2f5"></div>
 <div style="display: flex; flex-direction: column; gap: 24px">
@@ -962,7 +962,7 @@ a:hover{color:#b9a6f2}
 </div><span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; text-align: center; letter-spacing: .2em" aria-hidden="true">|||| ||| |||| || ||||| | ||| ||||</span>
 <p style="margin: 0; font-family: 'Roboto Mono',monospace; font-weight: 400; font-size: 12px; line-height: 1.5">{{L.rcFoot}}</p>
 </div>
-<svg class="rc-zz" width="100%" height="16" aria-hidden="true" style="display: block"><defs><pattern id="zz" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 0 L8 12 L16 0 Z" fill="#292929"></path><path d="M0 1 L8 13 L16 1" fill="none" stroke="#f2f2f5" stroke-width="2" stroke-linejoin="miter"></path></pattern></defs><rect width="100%" height="16" fill="url(#zz)"></rect></svg>
+<svg class="rc-zz" width="100%" height="16" aria-hidden="true" style="display: block"><defs><pattern id="zz" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 0 L8 12 L16 0 Z" fill="#121214"></path><path d="M0 1 L8 13 L16 1" fill="none" stroke="#f2f2f5" stroke-width="2" stroke-linejoin="miter"></path></pattern></defs><rect width="100%" height="16" fill="url(#zz)"></rect></svg>
 
 </div>
 <div class="ax-list">
@@ -1006,9 +1006,9 @@ a:hover{color:#b9a6f2}
 <div class="tl">
 <sc-for list="{{jobs}}" as="job" hint-placeholder-count="2">
 <div style="position: relative">
-<div aria-hidden="true" style="position: absolute; left: -44px; top: 24px; width: 18px; height: 18px; background: #ffff8d; border: 3px solid #f2f2f5; color: #292929"></div>
+<div aria-hidden="true" style="position: absolute; left: -44px; top: 24px; width: 18px; height: 18px; background: #ffff8d; border: 3px solid #f2f2f5; color: #121214"></div>
 <div class="win">
-<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><div class="win-url">{{job.company}}</div></div>
+<div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045; color: #121214"></span><span style="background: #ffff8d; color: #121214"></span><span style="background: #36d6a5; color: #121214"></span></div><div class="win-url">{{job.company}}</div></div>
 <div style="padding: 24px 40px; display: flex; flex-direction: column; gap: 24px">
 <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center">
 <div style="width: 96px; height: 72px; display: flex; align-items: center; justify-content: center"><img src="{{job.logo}}" alt="{{job.company}}" style="{{job.logoImgStyle}}"></div>
@@ -1019,20 +1019,20 @@ a:hover{color:#b9a6f2}
 <span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; text-transform: lowercase">{{L.lvl}}</span>
 <div role="img" aria-label="{{job.levelLabel}}" style="display: flex; gap: 8px">
 <sc-for list="{{job.dots}}" as="d" hint-placeholder-count="5">
-<sc-if value="{{d.on}}" hint-placeholder-val="{{ true }}"><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #f2f2f5; display: block; background: #36d6a5; color: #292929"></span></sc-if>
+<sc-if value="{{d.on}}" hint-placeholder-val="{{ true }}"><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #f2f2f5; display: block; background: #36d6a5; color: #121214"></span></sc-if>
 <sc-if value="{{d.off}}" hint-placeholder-val="{{ false }}"><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #f2f2f5; display: block"></span></sc-if>
 </sc-for>
 </div>
 </div>
-<p style="margin: 0; border-left: 16px solid #e97045; padding: 8px 0 8px 16px; font-size: 16px; line-height: 1.5; max-width: 64ch">{{job.preview}}</p>
+<p style="margin: 0; border-left: 8px solid #e97045; padding: 8px 0 8px 16px; font-size: 16px; line-height: 1.5; max-width: 64ch">{{job.preview}}</p>
 <sc-if value="{{job.open}}" hint-placeholder-val="{{ false }}">
 <div style="display: flex; flex-direction: column; gap: 16px">
 <span style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; text-transform: lowercase; color: #b9a6f2">{{L.evo}}</span>
 <div style="display: flex; flex-direction: column; gap: 16px; border-left: 2px solid #f2f2f5; padding-left: 24px; margin-left: 8px">
 <sc-for list="{{job.steps}}" as="s" hint-placeholder-count="2">
 <div style="position: relative">
-<sc-if value="{{s.cur}}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="position: absolute; left: -33px; top: 4px; width: 16px; height: 16px; border: 2px solid #f2f2f5; display: block; background: #36d6a5; color: #292929"></span></sc-if>
-<sc-if value="{{s.past}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position: absolute; left: -33px; top: 4px; width: 16px; height: 16px; border: 2px solid #f2f2f5; display: block; background: #121214; color: #f2f2f5"></span></sc-if>
+<sc-if value="{{s.cur}}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="position: absolute; left: -33px; top: 4px; width: 16px; height: 16px; border: 2px solid #f2f2f5; display: block; background: #36d6a5; color: #121214"></span></sc-if>
+<sc-if value="{{s.past}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position: absolute; left: -33px; top: 4px; width: 16px; height: 16px; border: 2px solid #f2f2f5; display: block; background: #292929; color: #f2f2f5"></span></sc-if>
 <div style="font-weight: 800; font-size: 16px; text-transform: lowercase">{{s.role}}</div>
 <div style="font-family: 'Roboto Mono',monospace; font-weight: 500; font-size: 12px; margin-top: 4px">{{s.period}}</div>
 </div>
@@ -1053,7 +1053,7 @@ a:hover{color:#b9a6f2}
 <p class="lbl">they like me</p>
 <h2 class="h2" id="sec-dep">{{L.dz1}}<br>{{L.dz2}}</h2>
 <p class="txt" style="font-size: 20px; line-height: 1.45; max-width: 800ch; width: min(887px, 100%)">{{L.depP}}</p><div class="dep dep-wide" style="align-items: center; padding-top: 32px; grid-template-rows: auto; gap: 86px; display: flex; width: min(1120px, 100%); position: relative">
-<div class="t-card" style="flex: 0 1 440px; min-width: 0"><div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><div class="win-url">feed</div></div><div class="t-scroll" id="dep2-scroll" onScroll="{{onFeedScroll}}" tabindex="0" aria-label="{{L.depL}}">
+<div class="t-card" style="flex: 0 1 440px; min-width: 0"><div class="win-bar"><div class="win-dots" aria-hidden="true"><span style="background: #e97045; color: #121214"></span><span style="background: #ffff8d; color: #121214"></span><span style="background: #36d6a5; color: #121214"></span></div><div class="win-url">feed</div></div><div class="t-scroll" id="dep2-scroll" onScroll="{{onFeedScroll}}" tabindex="0" aria-label="{{L.depL}}">
 <sc-for list="{{slides}}" as="t" hint-placeholder-count="8">
 <article class="t-post" id="{{t.anchor}}">
 <div class="t-head"><a href="{{t.url}}" target="_blank" rel="noopener noreferrer" aria-label="{{t.linkLabel}}"><img class="t-avatar" src="{{t.img}}" alt=""></a><div><span class="t-name">{{t.name}}</span><span class="t-role">{{t.role}}</span></div></div>
@@ -1062,7 +1062,7 @@ a:hover{color:#b9a6f2}
 <p class="t-cap" style="margin: 0"><span class="t-capuser">{{t.handle}}</span>{{t.text}}</p>
 </article>
 </sc-for>
-</div><sc-if value="{{hintOn}}" hint-placeholder-val="{{ true }}"><div class="t-hint" aria-hidden="true">{{L.hint}}<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fffefe" stroke-width="2" aria-hidden="true"><path d="M3 6l5 5 5-5"></path></svg></div></sc-if></div>
+</div><sc-if value="{{hintOn}}" hint-placeholder-val="{{ true }}"><div class="t-hint" aria-hidden="true">{{L.hint}}<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#f2f2f5" stroke-width="2" aria-hidden="true"><path d="M3 6l5 5 5-5"></path></svg></div></sc-if></div>
 
 <div class="dp-win" id="dp-type">
 <div class="dp-sr"><h3>{{dp.name}}</h3><p>{{L.traits}}</p><ul><sc-for list="{{dp.caracteristicas}}" as="c" hint-placeholder-count="3"><li>{{c}}</li></sc-for></ul></div>
@@ -1081,9 +1081,9 @@ a:hover{color:#b9a6f2}
 <div class="dsf-cols">
 <div class="dsf-col"><p class="dsf-lbl">{{L.fNav}}</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">{{L.fAbout}}</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">{{L.fPort}}</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">{{L.fOp}}</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">{{L.fCt}}</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
 <div class="dsf-col"><p class="dsf-lbl">{{L.fMail}}</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
-<div class="dsf-col"><p class="dsf-lbl">{{L.fFind}}</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="{{L.liLabel}}"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{L.fFind}}</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="{{L.liLabel}}"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#f2f2f5" d="M0 0h15v15h-15z"></path><path fill="#121214" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#121214" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
-<div class="dsf-lang"><p class="dsf-lbl">{{L.fLang}}</p><div class="lng" role="group" aria-label="{{L.langGroup}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
+<div class="dsf-lang"><p class="dsf-lbl">{{L.fLang}}</p><div class="lng" role="group" aria-label="{{L.langGroup}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#f2f2f5" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#f2f2f5" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#f2f2f5" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
 <div class="dsf-sig"><span class="dsf-sr">{{L.fMade}}</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>{{L.fMade}} ッ</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
@@ -1096,7 +1096,7 @@ constructor(props) { super(props); this.dpType = () => { clearInterval(this.__dp
 renderVals() {
 const pr = this.props || {};
 const en = this.state.lang === 'en';
-const I18N = {"pt": {"nAbout": "sobre/", "nJeito": "sobre/jeito", "nFeitos": "sobre/feitos", "nAndei": "sobre/andei", "nDizem": "sobre/dizem", "nOp": "opiniao/", "nCt": "contato/", "nRoot": "sobre", "rpFile": "recrutando.sh", "close": "fechar", "rpQ": "está recrutando?_", "yk": "s", "yes": "sim", "no": "não", "rpYes1": "para agilizar seu trampo, responda o quiz e descubra se a gente dá match. ou", "rpKeep": "continue navegando", "rpQuiz": "responder quiz →", "rpNo1": "pois entre e fique à vontade!", "rpNo2": "feedbacks são bem-vindos", "thx": "obg!", "madeAi": "feito com ia", "heroT": "mitigo riscos através do design", "heroP": "oi! meu nome é thais, senior product designer com muuuuuita bagagem em content design que acredita no equilíbrio entre boa UX & negócio rentável.", "liLabel": "LinkedIn da Thais (abre em nova aba)", "photoAlt": "foto da Thais", "png": "png · 1 de 1", "zOut": "diminuir zoom", "zIn": "aumentar zoom", "jLbl": "características e competências", "jH": "jeito pra coisa_", "il1": "ilustração em pixel: janela de conversa entre uma pessoa e a ia", "heart": "coração", "il2": "ilustração em pixel: claquete abrindo", "il3": "ilustração em pixel: papéis com gráfico de barras em alta", "il4": "ilustração em pixel: três dados rolando no ar", "il5": "ilustração em pixel: pauta com notas musicais subindo", "j1t": "eu + claude = ", "j1": "uso ia como parceira de produção e mantenho a direção: defino o sistema, itero em ciclos curtos com feedback direto na tela e valido cada detalhe antes de seguir. este portfólio foi feito assim.", "j2t": "até os créditos finais", "j2": "da simulação à contratação e ao pós-venda, em ambiente regulado: transformo regras de negócio e linguagem técnica em uma história clara, segura e transparente. com começo, meio, fim e cena pós-créditos.", "j3t": "estudar antes de desenhar", "j3": "antes de abrir o figma, quero saber que problema o produto resolve, pra quem e como ele funciona por dentro: juros, prazos, regras. a tela é só a parte que o cliente vê.", "j4t": "design (muito) orientado a dados", "j4a": "não tomo decisões sem evidência.", "j4b": "minhas decisões são baseadas em dados, não no que suponho.", "j5t": "é assim que a banda toca", "j5": "gosto de estar envolvida com o time para saber onde o negócio quer ir e junto com devs, PM, marketing, definir o que temos que fazer para chegar lá, da melhor maneira possível.", "j5b": "eu acredito muito no poder da transversalidade de disciplinas.", "gfH": "grandes feitos_", "gfP": "e tenho como provar. aqui vai o comprovante:", "rcT": "comprovante de feitos", "rc1": "produtos entregues end-to-end", "p1": "empréstimo pessoal", "p2": "antecipação do saque-aniversário do FGTS", "pix": "Pix parcelado", "p4": "parcelamento de compras à vista", "adj": "ajuste de empréstimo", "p6": "renegociação de empréstimos", "rc2": "experimento lembrete", "rc2v": "−64,7% em atraso", "rc2a": "+18,6% no valor pago sobre a parcela", "rc2b": "+109,7% em pagamentos parciais", "rc3v": "+R$ 500 mil", "rc3a": "406 contratos refinanciados", "rc3b": "2,70% de penetração em ~15 mil elegíveis", "rc3c": "+66% prazo médio", "rc3d": "conversão de 7%", "rc4": "transparência em empréstimos", "rc4v": "3º lugar", "rc4a": "índice novücard, 2º semestre de 2023", "tot1": "qtd total de itens", "tot2": "valor total R$", "hund": "centenas de milhões", "tot3": "valor a pagar R$", "tot4": "forma pagamento", "tot4v": "contrato clt", "tot5": "parcelamento", "tot5v": "5 anos", "fullCase": "case completo", "fullRes": "resultado na íntegra", "att1": "anexo 1", "att2": "anexo 2", "att3": "anexo 3", "rcFoot": "os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026 e já não opera mais.", "ax1": "resultado do lembrete de pagamento", "ax1L": "Resultado do lembrete de pagamento, grupo com e-mail contra o controle. Valor pago sobre a parcela: 98,4% contra 82,9% no total, alta de 18,6%. Saldo em atraso sobre o saldo total: 4,0% contra 11,4%, queda de 64,7%. Pagamentos parciais: 2,5% contra 1,2%, alta de 109,7%.", "legMail": "com e-mail", "legCtl": "controle", "ch1": "valor pago / valor da parcela", "ch2": "saldo em atraso / saldo total", "ch3": "pagamentos parciais / pagamentos", "empP": "emp. pessoal", "ax2": "refin em dia: produção de set/25 a jan/26", "ax2L": "Contratos de refinanciamento por mês: setembro 33, outubro 87, novembro 77, dezembro 143, janeiro 66. Dezembro foi o único mês completo com o produto liberado para 100% da base. Janeiro também estava com 100% da base, mas o will bank foi liquidado e a produção parou.", "cpm": "contratos por mês", "tot406": "406 no total", "mSep": "set", "mOct": "out", "mDec": "dez", "note1": "dezembro foi o único mês completo com o produto liberado para 100% da base.", "note2": "janeiro também estava com 100% da base, mas o will bank foi liquidado e a produção parou.", "ax2bL": "Parcela média em reais, antes e depois do refinanciamento: setembro 281 para 197, outubro 245 para 172, novembro 226 para 166, dezembro 304 para 220, janeiro 215 para 153. Queda média de 28,5% no valor da parcela.", "pm1": "parcela média (", "pm2": "): antes × depois", "legAfter": "depois do refin", "legOrig": "contrato de origem", "ax3": "índice de transparência: top instituições", "ax3Alt": "Ranking Top Instituições do índice de transparência: 1º Banco do Brasil com 3,57, 2º Nubank com 3,28, 3º Itaú com 3,06 e will bank também em 3º, com 3,06, marcado como novo", "resH": "por onde andei_", "lvl": "nível de responsabilidade", "evo": "evolução de cargo", "dz1": "como diz", "dz2": "o outro_", "depP": "depoimentos de pessoas muito boas que já trabalharam comigo. inclusive, indico todas.", "depL": "depoimentos", "like": "curtir", "hint": "role", "traits": "características", "fEnd": "fim da página", "fNav": "navegue", "fAbout": "sobre", "fPort": "portfólio", "fOp": "opinião", "fCt": "contato", "fMail": "manda um e-mail lá", "fFind": "me encontre também", "fMade": "feito com talento e IA", "n0": "+18,6%", "n1": "98,0%", "n2": "90,6%", "n3": "98,6%", "n4": "78,2%", "n5": "98,4%", "n6": "82,9%", "n7": "−64,7%", "n8": "4,2%", "n9": "11,0%", "n10": "3,8%", "n11": "12,0%", "n12": "4,0%", "n13": "11,4%", "n14": "+109,7%", "n15": "2,9%", "n16": "1,3%", "n17": "2,3%", "n18": "1,1%", "n19": "2,5%", "n20": "1,2%", "n21": "−28,5%", "langGroup": "idioma", "fLang": "idioma"}, "en": {"nAbout": "about/", "nJeito": "about/craft", "nFeitos": "about/wins", "nAndei": "about/path", "nDizem": "about/said", "nOp": "opinion/", "nCt": "contact/", "nRoot": "about", "rpFile": "hiring.sh", "close": "close", "rpQ": "hiring?_", "yk": "y", "yes": "yes", "no": "no", "rpYes1": "to speed up your job, take the quiz and find out if we’re a match. or", "rpKeep": "keep browsing", "rpQuiz": "take the quiz →", "rpNo1": "well, come in and make yourself at home!", "rpNo2": "feedback is welcome", "thx": "thx!", "madeAi": "made with ai", "heroT": "i mitigate risk through design", "heroP": "hi! i’m thais, a senior product designer with waaaaay too much content design baggage who believes in the balance between good UX & profitable business.", "liLabel": "Thais on LinkedIn (opens in a new tab)", "photoAlt": "photo of Thais", "png": "png · 1 of 1", "zOut": "zoom out", "zIn": "zoom in", "jLbl": "traits and skills", "jH": "a knack for it_", "il1": "pixel illustration: chat window between a person and ai", "heart": "heart", "il2": "pixel illustration: clapperboard opening", "il3": "pixel illustration: papers with a rising bar chart", "il4": "pixel illustration: three dice rolling in the air", "il5": "pixel illustration: music staff with rising notes", "j1t": "me + claude = ", "j1": "i use ai as a production partner and keep the direction: i define the system, iterate in short cycles with feedback right on screen and validate every detail before moving on. this portfolio was made that way.", "j2t": "all the way to the end credits", "j2": "from simulation to signing to after-sales, in a regulated environment: i turn business rules and technical language into a clear, safe and transparent story. with a beginning, a middle, an end and a post-credits scene.", "j3t": "study before sketching", "j3": "before opening figma, i want to know what problem the product solves, for whom, and how it works under the hood: interest, terms, rules. the screen is just the part the customer sees.", "j4t": "(very) data-driven design", "j4a": "i don’t make decisions without evidence.", "j4b": "my decisions are based on data, not on what i assume.", "j5t": "that’s how the band plays", "j5": "i like being involved with the team to know where the business wants to go and, together with devs, PM and marketing, define what we need to do to get there, in the best way possible.", "j5b": "i truly believe in the power of cross-disciplinary work.", "gfH": "big wins_", "gfP": "and i can prove it. here’s the receipt:", "rcT": "receipt of wins", "rc1": "products shipped end-to-end", "p1": "personal loan", "p2": "FGTS birthday-withdrawal advance", "pix": "Pix in installments", "p4": "installments for upfront purchases", "adj": "loan adjustment", "p6": "loan renegotiation", "rc2": "reminder experiment", "rc2v": "−64.7% overdue", "rc2a": "+18.6% in amount paid vs. installment", "rc2b": "+109.7% in partial payments", "rc3v": "+R$ 500k", "rc3a": "406 contracts refinanced", "rc3b": "2.70% penetration across ~15k eligible", "rc3c": "+66% average term", "rc3d": "7% conversion", "rc4": "loan transparency", "rc4v": "3rd place", "rc4a": "novücard index, 2nd half of 2023", "tot1": "total items", "tot2": "total value R$", "hund": "hundreds of millions", "tot3": "amount due R$", "tot4": "payment method", "tot4v": "full-time contract (clt)", "tot5": "installments", "tot5v": "5 years", "fullCase": "full case", "fullRes": "full results", "att1": "attachment 1", "att2": "attachment 2", "att3": "attachment 3", "rcFoot": "these numbers are only being shared because will bank was placed under extrajudicial liquidation by brazil’s central bank in january 2026 and no longer operates.", "ax1": "payment reminder results", "ax1L": "Payment reminder results, email group versus control. Amount paid over installment: 98.4% versus 82.9% overall, up 18.6%. Overdue balance over total balance: 4.0% versus 11.4%, down 64.7%. Partial payments: 2.5% versus 1.2%, up 109.7%.", "legMail": "with email", "legCtl": "control", "ch1": "amount paid / installment", "ch2": "overdue balance / total balance", "ch3": "partial payments / payments", "empP": "personal loan", "ax2": "on-time refi: production sep/25 to jan/26", "ax2L": "Refinancing contracts per month: September 33, October 87, November 77, December 143, January 66. December was the only full month with the product available to 100% of the base. January was also at 100% of the base, but will bank was liquidated and production stopped.", "cpm": "contracts per month", "tot406": "406 total", "mSep": "sep", "mOct": "oct", "mDec": "dec", "note1": "december was the only full month with the product available to 100% of the base.", "note2": "january was also at 100% of the base, but will bank was liquidated and production stopped.", "ax2bL": "Average installment in reais, before and after refinancing: September 281 to 197, October 245 to 172, November 226 to 166, December 304 to 220, January 215 to 153. Average drop of 28.5% in installment amount.", "pm1": "average installment (", "pm2": "): before × after", "legAfter": "after refi", "legOrig": "original contract", "ax3": "transparency index: top institutions", "ax3Alt": "Top Institutions ranking of the transparency index: 1st Banco do Brasil with 3.57, 2nd Nubank with 3.28, 3rd Itaú with 3.06 and will bank also 3rd, with 3.06, marked as new", "resH": "where i’ve been_", "lvl": "level of responsibility", "evo": "role progression", "dz1": "word on", "dz2": "the street_", "depP": "testimonials from really great people who’ve worked with me. by the way, i recommend every single one of them.", "depL": "testimonials", "like": "like", "hint": "scroll", "traits": "traits", "fEnd": "end of page", "fNav": "browse", "fAbout": "about", "fPort": "portfolio", "fOp": "opinion", "fCt": "contact", "fMail": "drop me an email", "fFind": "find me too", "fMade": "made with talent and AI", "n0": "+18.6%", "n1": "98.0%", "n2": "90.6%", "n3": "98.6%", "n4": "78.2%", "n5": "98.4%", "n6": "82.9%", "n7": "−64.7%", "n8": "4.2%", "n9": "11.0%", "n10": "3.8%", "n11": "12.0%", "n12": "4.0%", "n13": "11.4%", "n14": "+109.7%", "n15": "2.9%", "n16": "1.3%", "n17": "2.3%", "n18": "1.1%", "n19": "2.5%", "n20": "1.2%", "n21": "−28.5%", "langGroup": "language", "fLang": "language"}};
+const I18N = {"pt": {"nAbout": "sobre/", "nJeito": "sobre/jeito", "nFeitos": "sobre/feitos", "nAndei": "sobre/andei", "nDizem": "sobre/dizem", "nOp": "opiniao/", "nCt": "contato/", "nRoot": "sobre", "rpFile": "recrutando.sh", "close": "fechar", "rpQ": "está recrutando?_", "yk": "s", "yes": "sim", "no": "não", "rpYes1": "para agilizar seu trampo, responda o quiz e descubra se a gente dá match. ou", "rpKeep": "continue navegando", "rpQuiz": "responder quiz →", "rpNo1": "pois entre e fique à vontade!", "rpNo2": "feedbacks são bem-vindos", "thx": "obg!", "madeAi": "feito com IA", "heroT": "mitigo riscos através do design", "heroP": "oi! meu nome é thais, senior product designer com muuuuuita bagagem em content design que acredita no equilíbrio entre boa UX & negócio rentável.", "liLabel": "LinkedIn da Thais (abre em nova aba)", "photoAlt": "foto da Thais", "png": "png · 1 de 1", "zOut": "diminuir zoom", "zIn": "aumentar zoom", "jLbl": "características e competências", "jH": "jeito pra coisa_", "il1": "ilustração em pixel: janela de conversa entre uma pessoa e a IA", "heart": "coração", "il2": "ilustração em pixel: claquete abrindo", "il3": "ilustração em pixel: papéis com gráfico de barras em alta", "il4": "ilustração em pixel: três dados rolando no ar", "il5": "ilustração em pixel: pauta com notas musicais subindo", "j1t": "eu + claude = ", "j1": "uso IA como parceira de produção e mantenho a direção: defino o sistema, itero em ciclos curtos com feedback direto na tela e valido cada detalhe antes de seguir. este portfólio foi feito assim.", "j2t": "até os créditos finais", "j2": "da simulação à contratação e ao pós-venda, em ambiente regulado: transformo regras de negócio e linguagem técnica em uma história clara, segura e transparente. com começo, meio, fim e cena pós-créditos.", "j3t": "estudar antes de desenhar", "j3": "antes de abrir o figma, quero saber que problema o produto resolve, pra quem e como ele funciona por dentro: juros, prazos, regras. a tela é só a parte que o cliente vê.", "j4t": "design (muito) orientado a dados", "j4a": "não tomo decisões sem evidência.", "j4b": "minhas decisões são baseadas em dados, não no que suponho.", "j5t": "é assim que a banda toca", "j5": "gosto de estar envolvida com o time para saber onde o negócio quer ir e junto com devs, PM, marketing, definir o que temos que fazer para chegar lá, da melhor maneira possível.", "j5b": "eu acredito muito no poder da transversalidade de disciplinas.", "gfH": "grandes feitos_", "gfP": "e tenho como provar. aqui vai o comprovante:", "rcT": "comprovante de feitos", "rc1": "produtos entregues end-to-end", "p1": "empréstimo pessoal", "p2": "antecipação do saque-aniversário do FGTS", "pix": "Pix parcelado", "p4": "parcelamento de compras à vista", "adj": "ajuste de empréstimo", "p6": "renegociação de empréstimos", "rc2": "experimento lembrete", "rc2v": "−64,7% em atraso", "rc2a": "+18,6% no valor pago sobre a parcela", "rc2b": "+109,7% em pagamentos parciais", "rc3v": "+R$ 500 mil", "rc3a": "406 contratos refinanciados", "rc3b": "2,70% de penetração em ~15 mil elegíveis", "rc3c": "+66% prazo médio", "rc3d": "conversão de 7%", "rc4": "transparência em empréstimos", "rc4v": "3º lugar", "rc4a": "índice novücard, 2º semestre de 2023", "tot1": "qtd total de itens", "tot2": "valor total R$", "hund": "centenas de milhões", "tot3": "valor a pagar R$", "tot4": "forma pagamento", "tot4v": "contrato clt", "tot5": "parcelamento", "tot5v": "5 anos", "fullCase": "case completo", "fullRes": "resultado na íntegra", "att1": "anexo 1", "att2": "anexo 2", "att3": "anexo 3", "rcFoot": "os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026 e já não opera mais.", "ax1": "resultado do lembrete de pagamento", "ax1L": "Resultado do lembrete de pagamento, grupo com e-mail contra o controle. Valor pago sobre a parcela: 98,4% contra 82,9% no total, alta de 18,6%. Saldo em atraso sobre o saldo total: 4,0% contra 11,4%, queda de 64,7%. Pagamentos parciais: 2,5% contra 1,2%, alta de 109,7%.", "legMail": "com e-mail", "legCtl": "controle", "ch1": "valor pago / valor da parcela", "ch2": "saldo em atraso / saldo total", "ch3": "pagamentos parciais / pagamentos", "empP": "emp. pessoal", "ax2": "refin em dia: produção de set/25 a jan/26", "ax2L": "Contratos de refinanciamento por mês: setembro 33, outubro 87, novembro 77, dezembro 143, janeiro 66. Dezembro foi o único mês completo com o produto liberado para 100% da base. Janeiro também estava com 100% da base, mas o will bank foi liquidado e a produção parou.", "cpm": "contratos por mês", "tot406": "406 no total", "mSep": "set", "mOct": "out", "mDec": "dez", "note1": "dezembro foi o único mês completo com o produto liberado para 100% da base.", "note2": "janeiro também estava com 100% da base, mas o will bank foi liquidado e a produção parou.", "ax2bL": "Parcela média em reais, antes e depois do refinanciamento: setembro 281 para 197, outubro 245 para 172, novembro 226 para 166, dezembro 304 para 220, janeiro 215 para 153. Queda média de 28,5% no valor da parcela.", "pm1": "parcela média (", "pm2": "): antes × depois", "legAfter": "depois do refin", "legOrig": "contrato de origem", "ax3": "índice de transparência: top instituições", "ax3Alt": "Ranking Top Instituições do índice de transparência: 1º Banco do Brasil com 3,57, 2º Nubank com 3,28, 3º Itaú com 3,06 e will bank também em 3º, com 3,06, marcado como novo", "resH": "por onde andei_", "lvl": "nível de responsabilidade", "evo": "evolução de cargo", "dz1": "como diz", "dz2": "o outro_", "depP": "depoimentos de pessoas muito boas que já trabalharam comigo. inclusive, indico todas.", "depL": "depoimentos", "like": "curtir", "hint": "role", "traits": "características", "fEnd": "fim da página", "fNav": "navegue", "fAbout": "sobre", "fPort": "portfólio", "fOp": "opinião", "fCt": "contato", "fMail": "manda um e-mail lá", "fFind": "me encontre também", "fMade": "feito com talento e IA", "n0": "+18,6%", "n1": "98,0%", "n2": "90,6%", "n3": "98,6%", "n4": "78,2%", "n5": "98,4%", "n6": "82,9%", "n7": "−64,7%", "n8": "4,2%", "n9": "11,0%", "n10": "3,8%", "n11": "12,0%", "n12": "4,0%", "n13": "11,4%", "n14": "+109,7%", "n15": "2,9%", "n16": "1,3%", "n17": "2,3%", "n18": "1,1%", "n19": "2,5%", "n20": "1,2%", "n21": "−28,5%", "langGroup": "idioma", "fLang": "idioma"}, "en": {"nAbout": "about/", "nJeito": "about/craft", "nFeitos": "about/wins", "nAndei": "about/path", "nDizem": "about/said", "nOp": "opinion/", "nCt": "contact/", "nRoot": "about", "rpFile": "hiring.sh", "close": "close", "rpQ": "hiring?_", "yk": "y", "yes": "yes", "no": "no", "rpYes1": "to speed up your job, take the quiz and find out if we’re a match. or", "rpKeep": "keep browsing", "rpQuiz": "take the quiz →", "rpNo1": "well, come in and make yourself at home!", "rpNo2": "feedback is welcome", "thx": "thx!", "madeAi": "made with AI", "heroT": "i mitigate risk through design", "heroP": "hi! i’m thais, a senior product designer with waaaaay too much content design baggage who believes in the balance between good UX & profitable business.", "liLabel": "Thais on LinkedIn (opens in a new tab)", "photoAlt": "photo of Thais", "png": "png · 1 of 1", "zOut": "zoom out", "zIn": "zoom in", "jLbl": "traits and skills", "jH": "a knack for it_", "il1": "pixel illustration: chat window between a person and AI", "heart": "heart", "il2": "pixel illustration: clapperboard opening", "il3": "pixel illustration: papers with a rising bar chart", "il4": "pixel illustration: three dice rolling in the air", "il5": "pixel illustration: music staff with rising notes", "j1t": "me + claude = ", "j1": "i use AI as a production partner and keep the direction: i define the system, iterate in short cycles with feedback right on screen and validate every detail before moving on. this portfolio was made that way.", "j2t": "all the way to the end credits", "j2": "from simulation to signing to after-sales, in a regulated environment: i turn business rules and technical language into a clear, safe and transparent story. with a beginning, a middle, an end and a post-credits scene.", "j3t": "study before sketching", "j3": "before opening figma, i want to know what problem the product solves, for whom, and how it works under the hood: interest, terms, rules. the screen is just the part the customer sees.", "j4t": "(very) data-driven design", "j4a": "i don’t make decisions without evidence.", "j4b": "my decisions are based on data, not on what i assume.", "j5t": "that’s how the band plays", "j5": "i like being involved with the team to know where the business wants to go and, together with devs, PM and marketing, define what we need to do to get there, in the best way possible.", "j5b": "i truly believe in the power of cross-disciplinary work.", "gfH": "big wins_", "gfP": "and i can prove it. here’s the receipt:", "rcT": "receipt of wins", "rc1": "products shipped end-to-end", "p1": "personal loan", "p2": "FGTS birthday-withdrawal advance", "pix": "Pix in installments", "p4": "installments for upfront purchases", "adj": "loan adjustment", "p6": "loan renegotiation", "rc2": "reminder experiment", "rc2v": "−64.7% overdue", "rc2a": "+18.6% in amount paid vs. installment", "rc2b": "+109.7% in partial payments", "rc3v": "+R$ 500k", "rc3a": "406 contracts refinanced", "rc3b": "2.70% penetration across ~15k eligible", "rc3c": "+66% average term", "rc3d": "7% conversion", "rc4": "loan transparency", "rc4v": "3rd place", "rc4a": "novücard index, 2nd half of 2023", "tot1": "total items", "tot2": "total value R$", "hund": "hundreds of millions", "tot3": "amount due R$", "tot4": "payment method", "tot4v": "full-time contract (clt)", "tot5": "installments", "tot5v": "5 years", "fullCase": "full case", "fullRes": "full results", "att1": "attachment 1", "att2": "attachment 2", "att3": "attachment 3", "rcFoot": "these numbers are only being shared because will bank was placed under extrajudicial liquidation by brazil’s central bank in january 2026 and no longer operates.", "ax1": "payment reminder results", "ax1L": "Payment reminder results, email group versus control. Amount paid over installment: 98.4% versus 82.9% overall, up 18.6%. Overdue balance over total balance: 4.0% versus 11.4%, down 64.7%. Partial payments: 2.5% versus 1.2%, up 109.7%.", "legMail": "with email", "legCtl": "control", "ch1": "amount paid / installment", "ch2": "overdue balance / total balance", "ch3": "partial payments / payments", "empP": "personal loan", "ax2": "on-time refi: production sep/25 to jan/26", "ax2L": "Refinancing contracts per month: September 33, October 87, November 77, December 143, January 66. December was the only full month with the product available to 100% of the base. January was also at 100% of the base, but will bank was liquidated and production stopped.", "cpm": "contracts per month", "tot406": "406 total", "mSep": "sep", "mOct": "oct", "mDec": "dec", "note1": "december was the only full month with the product available to 100% of the base.", "note2": "january was also at 100% of the base, but will bank was liquidated and production stopped.", "ax2bL": "Average installment in reais, before and after refinancing: September 281 to 197, October 245 to 172, November 226 to 166, December 304 to 220, January 215 to 153. Average drop of 28.5% in installment amount.", "pm1": "average installment (", "pm2": "): before × after", "legAfter": "after refi", "legOrig": "original contract", "ax3": "transparency index: top institutions", "ax3Alt": "Top Institutions ranking of the transparency index: 1st Banco do Brasil with 3.57, 2nd Nubank with 3.28, 3rd Itaú with 3.06 and will bank also 3rd, with 3.06, marked as new", "resH": "where i’ve been_", "lvl": "level of responsibility", "evo": "role progression", "dz1": "word on", "dz2": "the street_", "depP": "testimonials from really great people who’ve worked with me. by the way, i recommend every single one of them.", "depL": "testimonials", "like": "like", "hint": "scroll", "traits": "traits", "fEnd": "end of page", "fNav": "browse", "fAbout": "about", "fPort": "portfolio", "fOp": "opinion", "fCt": "contact", "fMail": "drop me an email", "fFind": "find me too", "fMade": "made with talent and AI", "n0": "+18.6%", "n1": "98.0%", "n2": "90.6%", "n3": "98.6%", "n4": "78.2%", "n5": "98.4%", "n6": "82.9%", "n7": "−64.7%", "n8": "4.2%", "n9": "11.0%", "n10": "3.8%", "n11": "12.0%", "n12": "4.0%", "n13": "11.4%", "n14": "+109.7%", "n15": "2.9%", "n16": "1.3%", "n17": "2.3%", "n18": "1.1%", "n19": "2.5%", "n20": "1.2%", "n21": "−28.5%", "langGroup": "language", "fLang": "language"}};
 const L = en ? I18N.en : I18N.pt;
 const data = [
 { id: 'a', logo: '/assets/532327378cbb3fc10c587762775aa79e.png', logoScale: 0.75, company: '@ will bank', period: '11/2021 — 09/2026', role: 'senior product designer', level: 5,
@@ -1161,7 +1161,7 @@ const slides = [0, 1, 2].reduce((acc, c) => acc.concat(people.map((q, i) => ({ q
 const q = o.q; const i = o.i; const liked = this.state.liked[i] !== false;
 return { anchor: 'dep2-' + (o.c * total + i), name: q.name, role: q.role, url: q.url, img: q.img, handle: q.handle, text: q.text,
 linkLabel: q.name + (en ? ' on linkedin (opens in a new tab)' : ' no linkedin (abre em nova aba)'), liked: liked,
-heartStyle: liked ? 'fill:#e97045;stroke:#292929;stroke-width:2' : 'fill:none;stroke:#292929;stroke-width:2',
+heartStyle: liked ? 'fill:#e97045;stroke:#121214;stroke-width:2' : 'fill:none;stroke:#121214;stroke-width:2',
 like: () => this.setState({ liked: Object.assign({}, this.state.liked, { [i]: !liked }) }) };
 });
 const feedLoop = () => { const sc = document.getElementById('dep2-scroll'); if (!sc) return; const third = sc.scrollHeight / 3; if (sc.scrollTop < third - 8) { sc.style.scrollSnapType = 'none'; sc.scrollTop += third; sc.style.scrollSnapType = ''; } else if (sc.scrollTop >= 2 * third - 8) { sc.style.scrollSnapType = 'none'; sc.scrollTop -= third; sc.style.scrollSnapType = ''; } };
@@ -1184,7 +1184,7 @@ hintOn: !!this.state.hintOn, zoomT: 'scale(' + zoom + ')', zoomPct: Math.round(z
 menuOpen, menuClosed: !menuOpen, menuLabel: en ? (menuOpen ? 'close menu' : 'open menu') : (menuOpen ? 'fechar menu' : 'abrir menu'),
 toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: () => this.setState({ menuOpen: false }),
 jobs, toggleJob: (e) => { const id = e && e.currentTarget ? e.currentTarget.getAttribute('data-job') : null; if (!id) return; this.setState((st) => ({ openId: st.openId === id ? null : id })); }, slides, dp, dpLines, dpLinkLabel, onFeedScroll, feedUp: () => feedGo(-1), feedDown: () => feedGo(1),
-btnFundo: pr.btnFundo ?? '#1847e3', btnTexto: pr.btnTexto ?? '#fffefe', btnSombra: off + ' ' + off + ' 0 #292929',
+btnFundo: pr.btnFundo ?? '#1847e3', btnTexto: pr.btnTexto ?? '#f2f2f5', btnSombra: off + ' ' + off + ' 0 #121214',
 f1Cor: pr.f1Cor ?? '#f2f2f5', f1Ang: (pr.f1Ang ?? -45) + 'deg', f1Lis: (pr.f1Lis ?? 16) + 'px', f1Gap: (pr.f1Gap ?? 16) + 'px',
 f2Cor: pr.f2Cor ?? '#f2f2f5', f2Ang: (pr.f2Ang ?? -45) + 'deg', f2Lis: (pr.f2Lis ?? 8) + 'px', f2Gap: (pr.f2Gap ?? 8) + 'px',
 f3Cor: pr.f3Cor ?? '#f2f2f5', f3Ang: (pr.f3Ang ?? 45) + 'deg', f3Lis: (pr.f3Lis ?? 24) + 'px', f3Gap: (pr.f3Gap ?? 24) + 'px',
@@ -1193,6 +1193,6 @@ f4Cor: pr.f4Cor ?? '#f2f2f5', f4Ang: (pr.f4Ang ?? 45) + 'deg', f4Lis: (pr.f4Lis 
 }
 }
 </script>
-<script src="/assets/dc.js?v=1793370411"></script>
+<script src="/assets/dc.js?v=1793378985"></script>
 </body>
 </html>
