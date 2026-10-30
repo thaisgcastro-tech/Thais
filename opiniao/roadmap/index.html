@@ -147,6 +147,18 @@ body{margin:0;background:#121214;color:#f2f2f5}
 .pn-next:hover .pn-t{color:#f2f2f5}
 .pn-back:active,.pn-next:active{transform:translate(4px,4px);box-shadow:0 0 0 #f2f2f5}
 @media (prefers-reduced-motion:reduce){.pn-back,.pn-next{transition:none}}
+/* seletor de idioma (bandeiras em pixel) */
+.lng{display:flex;align-items:center;gap:4px;flex-shrink:0;margin-left:auto}
+.lng-b{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 8px;background:transparent;color:#f2f2f5;border:1px dashed transparent;font:500 14px/1 'Roboto Mono',monospace;text-transform:lowercase;cursor:pointer}
+.lng-b svg{display:block;flex-shrink:0;box-shadow:0 0 0 1px #f2f2f5}
+.lng-b:hover{border-color:#ffff8d;color:#ffff8d}
+.lng-b[aria-pressed="true"]{border:1px solid #f2f2f5}
+.tnav-line .lng + .tnav-ls{margin-left:0}
+.dsf-lang{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid #f2f2f5}
+.dsf-lang .dsf-lbl{margin:0}
+.dsf-lang .lng{margin-left:0}
+.dsf-lang .lng-b{font-size:16px}
+@media (max-width:480px){.tnav-line .lng-b span{display:none}.tnav-line .lng-b{padding:0 10px}}
 </style>
 </head>
 <body>
@@ -161,6 +173,7 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/opiniao<span class="tnav-sub">/roadmap.txt</span> $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
 <ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">opiniao/</a></li><li><a href="/contato/">contato/</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
 
@@ -259,6 +272,7 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
 <div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
+<div class="dsf-lang"><p class="dsf-lbl">idioma</p><div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
 <div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
@@ -271,13 +285,14 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <nav class="tnav" aria-label="menu">
 <div class="tnav-win">
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
-<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/" aria-current="true"><span>03</span>opiniao/</a></li><li class="tnav-subitem"><a href="/opiniao/conteudo-e-dados/"><span></span>opiniao/conteudo-e-dados.txt</a></li><li class="tnav-subitem"><a href="/opiniao/roadmap/" aria-current="page"><span></span>opiniao/roadmap.txt</a></li><li class="tnav-subitem"><a href="/opiniao/ia/"><span></span>opiniao/ia.txt</a></li><li><a href="/contato/"><span>04</span>contato/</a></li><li><a href="/quiz/"><span>05</span>quiz/</a></li></ul>
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>{{T.k1}}</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/" aria-current="true"><span>03</span>{{T.k2}}</a></li><li class="tnav-subitem"><a href="/opiniao/conteudo-e-dados/"><span></span>{{T.k3}}</a></li><li class="tnav-subitem"><a href="/opiniao/roadmap/" aria-current="page"><span></span>{{T.k4}}</a></li><li class="tnav-subitem"><a href="/opiniao/ia/"><span></span>{{T.k5}}</a></li><li><a href="/contato/"><span>04</span>{{T.k6}}</a></li><li><a href="/quiz/"><span>05</span>quiz/</a></li></ul>
 </sc-if>
 <div class="tnav-line">
 <div class="tnav-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div>
-<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/opiniao<span class="tnav-sub">/roadmap.txt</span> $</span>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>{{T.k7}}<span class="tnav-sub">/roadmap.txt</span> $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
-<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">opiniao/</a></li><li><a href="/contato/">contato/</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<ul class="tnav-list"><li><a href="/">{{T.k1}}</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">{{T.k2}}</a></li><li><a href="/contato/">{{T.k6}}</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuOpen}}" aria-controls="tnav-out" aria-label="{{menuLabel}}">
 <sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
@@ -290,69 +305,69 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="fita" aria-hidden="true"></div>
 <section class="op-hero">
 <div>
-<p class="lbl">opinião</p>
-<h1 class="hero-t">ninguém me chamou pra mesa do roadmap</h1>
-<ul class="meta" aria-label="sobre este texto">
-<li class="meta-t">3 min de leitura</li>
-<li class="tag">dados</li><li class="tag">discovery</li><li class="tag">carreira</li>
+<p class="lbl">{{T.k8}}</p>
+<h1 class="hero-t">{{T.k9}}</h1>
+<ul class="meta" aria-label="{{T.k59}}">
+<li class="meta-t">{{T.k10}}</li>
+<li class="tag">{{T.k11}}</li><li class="tag">discovery</li><li class="tag">{{T.k12}}</li>
 </ul>
 </div>
 <svg class="op-g" viewBox="0 0 400 260" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 250 H392"></path><rect x="24" y="190" width="48" height="60"></rect><path d="M24 206 H72"></path><path d="M24 222 H72"></path><path d="M24 238 H72"></path><rect x="88" y="154" width="48" height="96"></rect><path d="M88 170 H136"></path><path d="M88 186 H136"></path><path d="M88 202 H136"></path><path d="M88 218 H136"></path><path d="M88 234 H136"></path><rect x="152" y="118" width="48" height="132"></rect><path d="M152 134 H200"></path><path d="M152 150 H200"></path><path d="M152 166 H200"></path><path d="M152 182 H200"></path><path d="M152 198 H200"></path><path d="M152 214 H200"></path><path d="M152 230 H200"></path><path d="M152 246 H200"></path><rect x="216" y="80" width="48" height="170"></rect><path d="M216 96 H264"></path><path d="M216 112 H264"></path><path d="M216 128 H264"></path><path d="M216 144 H264"></path><path d="M216 160 H264"></path><path d="M216 176 H264"></path><path d="M216 192 H264"></path><path d="M216 208 H264"></path><path d="M216 224 H264"></path><path d="M216 240 H264"></path><rect x="280" y="40" width="48" height="210"></rect><path d="M280 56 H328"></path><path d="M280 72 H328"></path><path d="M280 88 H328"></path><path d="M280 104 H328"></path><path d="M280 120 H328"></path><path d="M280 136 H328"></path><path d="M280 152 H328"></path><path d="M280 168 H328"></path><path d="M280 184 H328"></path><path d="M280 200 H328"></path><path d="M280 216 H328"></path><path d="M280 232 H328"></path><path d="M280 248 H328"></path><rect x="344" y="10" width="48" height="240" fill="#e97045" stroke="currentColor"></rect><path d="M24 170 L112 140 L176 104 L240 80 L304 40 L368 6" stroke-width="2.5" stroke-dasharray="6 6"></path><rect x="360" y="0" width="16" height="16" fill="currentColor" stroke="none"></rect></svg>
 </section>
 
 <article class="doc" aria-labelledby="doc-name">
-<div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><span class="doc-name" id="doc-name">ninguem-me-chamou-pra-mesa.txt</span></div>
+<div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><span class="doc-name" id="doc-name">{{T.k13}}</span></div>
 <div class="doc-b"><div class="txt">
 
-<p>todo designer quer estar na mesa quando o roadmap é decidido. mas ninguém senta ali só por ter boas ideias. senta quem chega com um argumento que o time não consegue ignorar. e, na maioria das vezes, esse argumento é um dado.</p>
+<p>{{T.k14}}</p>
 
-<p>aprendi isso quando ainda era product writer no time de empréstimos. eu não desenhava tela nem tinha cargo para decidir prioridade. o que eu tinha era tempo para ler o que os clientes diziam no chat.</p>
+<p>{{T.k15}}</p>
 
-<h2>o chat conta o que o painel esconde_</h2>
+<h2>{{T.k16}}</h2>
 
-<p>em 2024, li 187 conversas do atendimento humano, uma por uma, e comparei o que o cliente queria com o que ficou registrado.</p>
-
-<div class="case-box">
-<span class="why-l">o que eu encontrei</span>
-<ul class="nums" aria-label="achados do discovery do atendimento humano"><li class="num">48% das tags erradas</li><li class="num">25% de informação incorreta</li><li class="num">11,5% fora do produto</li></ul>
-<p>quase metade das tags não refletia o motivo real do contato. um quarto das informações passadas ao cliente estava parcial ou totalmente errada. e 11,5% da fila de empréstimos nem era sobre empréstimo: em 74% desses casos, era Pix no crédito confundido com Pix parcelado.</p>
-</div>
-
-<p>o dado mais curioso era outro: mais de 80% das notas para os atendentes eram positivas. cliente satisfeito não é, necessariamente, cliente bem informado. sem ler as conversas, a gente teria comemorado o CSAT.</p>
-
-<p>esses números viraram plano de ação: treinamento de regras de produto, treinamento de uso das tags e um material separando Pix parcelado de Pix no crédito.</p>
-
-<h2>o mesmo método, de novo_</h2>
-
-<p>meses depois, repeti o mesmo método com o Pix parcelado: 200 chats, de julho de 2024 a janeiro de 2025.</p>
+<p>{{T.k17}}</p>
 
 <div class="case-box">
-<span class="why-l">o que eu encontrei</span>
-<ul class="nums" aria-label="achados do discovery do pix parcelado"><li class="num">40,99% inelegíveis</li><li class="num">35,14% elegíveis sem bot</li><li class="num">70,27% resolvíveis</li></ul>
-<p>quase metade das conversas era de gente querendo saber por que não tinha o produto. um terço era de clientes com dúvidas simples, sobre pagamento, acompanhamento e o que o produto era. nenhum bot respondia essas dúvidas, então elas iam obrigatoriamente para um humano.</p>
+<span class="why-l">{{T.k18}}</span>
+<ul class="nums" aria-label="{{T.k60}}"><li class="num">{{T.k19}}</li><li class="num">{{T.k20}}</li><li class="num">{{T.k21}}</li></ul>
+<p>{{T.k22}}</p>
 </div>
 
-<p>a conclusão cabia num slide: dava para agir sobre 70,27% dos casos com um bot dedicado, ajustes de texto e melhorias no fluxo de pagamento e acompanhamento. parece óbvio, mas só fica óbvio depois que alguém conta.</p>
+<p>{{T.k23}}</p>
 
-<p>e quando o dado convence, ele muda o que vai ser construído. foi assim com a tela de acompanhamento do empréstimo. ninguém queria essa tela na V1. levei 526 chamados, mostrei que 66,3% poderiam ser resolvidos pelo próprio cliente e que isso projetava 8.982 chamados evitáveis por ano. a tela entrou. a história completa está no <a href="/cases/transparencia/">case de transparência</a>.</p>
+<p>{{T.k24}}</p>
 
-<p class="pausa"><span>então…</span>dado sozinho não convence ninguém.</p>
+<h2>{{T.k25}}</h2>
 
-<h2>estar preparada é mais do que ter número_</h2>
+<p>{{T.k26}}</p>
 
-<p>o que eu aprendi a levar junto:</p>
+<div class="case-box">
+<span class="why-l">{{T.k18}}</span>
+<ul class="nums" aria-label="{{T.k61}}"><li class="num">{{T.k27}}</li><li class="num">{{T.k28}}</li><li class="num">{{T.k29}}</li></ul>
+<p>{{T.k30}}</p>
+</div>
+
+<p>{{T.k31}}</p>
+
+<p>{{T.k32}} <a href="/cases/transparencia/">{{T.k33}}</a>.</p>
+
+<p class="pausa"><span>{{T.k34}}</span>{{T.k35}}</p>
+
+<h2>{{T.k36}}</h2>
+
+<p>{{T.k37}}</p>
 
 <ol class="steps">
-<li><span class="st-n">01</span>a pergunta antes da planilha. eu sabia o que queria descobrir antes de abrir o primeiro chat</li>
-<li><span class="st-n">02</span>amostra e período declarados. “187 chats, de fevereiro a abril” é difícil de contestar. “muita gente reclama” é fácil</li>
-<li><span class="st-n">03</span>a tradução para o negócio. chamado evitável é custo, e informação errada é risco. é essa a língua de quem prioriza</li>
-<li><span class="st-n">04</span>o plano junto com o problema. toda apresentação terminava com “e aí, o que a gente faz com isso?”</li>
-<li><span class="st-n">05</span>a fronteira clara. o que era do meu time ia para o roadmap. o que era de outro time ia para quem resolvia, com o dado anexado</li>
+<li><span class="st-n">01</span>{{T.k38}}</li>
+<li><span class="st-n">02</span>{{T.k39}}</li>
+<li><span class="st-n">03</span>{{T.k40}}</li>
+<li><span class="st-n">04</span>{{T.k41}}</li>
+<li><span class="st-n">05</span>{{T.k42}}</li>
 </ol>
 
-<p class="fecho">ninguém me deu lugar no roadmap. <mark>eu cheguei lá com 187 conversas lidas.</mark></p>
+<p class="fecho">{{T.k43}} <mark>{{T.k44}}</mark></p>
 
-<p class="note-l">os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026.</p>
+<p class="note-l">{{T.k45}}</p>
 
 <p class="assina"><svg width="40" height="40" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>thais castro · product designer</p>
 
@@ -360,38 +375,52 @@ body{margin:0;background:#121214;color:#f2f2f5}
 </article>
 
 <div class="next">
-<p class="lbl next-l">e agora?</p>
-<a class="btn btn-p" href="/cases/transparencia/">ver o case →</a>
+<p class="lbl next-l">{{T.k46}}</p>
+<a class="btn btn-p" href="/cases/transparencia/">{{T.k47}}</a>
 </div>
-<nav class="pn" aria-label="navegação entre textos"><a class="pn-back" href="/opiniao/" aria-label="voltar para os textos"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 12H5M11 5l-7 7 7 7"></path></svg></a><a class="pn-next" href="/opiniao/ia/"><span class="pn-txt"><span class="pn-l">próximo texto</span><span class="pn-t">ia não faz bons designers</span></span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"></path></svg></a></nav>
+<nav class="pn" aria-label="{{T.k62}}"><a class="pn-back" href="/opiniao/" aria-label="{{T.k63}}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 12H5M11 5l-7 7 7 7"></path></svg></a><a class="pn-next" href="/opiniao/ia/"><span class="pn-txt"><span class="pn-l">{{T.k48}}</span><span class="pn-t">{{T.k49}}</span></span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"></path></svg></a></nav>
 </main>
 
 <footer class="dsf" style="margin-top: 96px">
 <div class="dsf-tape" aria-hidden="true"></div>
 <div class="dsf-in">
-<p class="dsf-lbl">fim da página</p>
+<p class="dsf-lbl">{{T.k50}}</p>
 
 <div class="dsf-cols">
-<div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
-<div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
-<div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k51}}</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">{{T.k52}}</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">{{T.k53}}</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">{{T.k8}}</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">{{T.k54}}</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k55}}</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k56}}</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="{{T.k64}}"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
+<div class="dsf-lang"><p class="dsf-lbl">{{T.__fl}}</p><div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<div class="dsf-sig"><span class="dsf-sr">{{T.k57}}</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>{{T.k58}}</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </template>
 <script type="text/plain" id="dc-logic">
+// idioma (pt/en): mesmo esquema da página sobre, guardado em localStorage 'thais-lang'
+var __EN = {"fechar menu": "close menu", "abrir menu": "open menu"};
+var __T = {"pt": {"k1": "sobre/", "k2": "opiniao/", "k3": "opiniao/conteudo-e-dados.txt", "k4": "opiniao/roadmap.txt", "k5": "opiniao/ia.txt", "k6": "contato/", "k7": ":~/opiniao", "k8": "opinião", "k9": "ninguém me chamou pra mesa do roadmap", "k10": "3 min de leitura", "k11": "dados", "k12": "carreira", "k13": "ninguem-me-chamou-pra-mesa.txt", "k14": "todo designer quer estar na mesa quando o roadmap é decidido. mas ninguém senta ali só por ter boas ideias. senta quem chega com um argumento que o time não consegue ignorar. e, na maioria das vezes, esse argumento é um dado.", "k15": "aprendi isso quando ainda era product writer no time de empréstimos. eu não desenhava tela nem tinha cargo para decidir prioridade. o que eu tinha era tempo para ler o que os clientes diziam no chat.", "k16": "o chat conta o que o painel esconde_", "k17": "em 2024, li 187 conversas do atendimento humano, uma por uma, e comparei o que o cliente queria com o que ficou registrado.", "k18": "o que eu encontrei", "k19": "48% das tags erradas", "k20": "25% de informação incorreta", "k21": "11,5% fora do produto", "k22": "quase metade das tags não refletia o motivo real do contato. um quarto das informações passadas ao cliente estava parcial ou totalmente errada. e 11,5% da fila de empréstimos nem era sobre empréstimo: em 74% desses casos, era Pix no crédito confundido com Pix parcelado.", "k23": "o dado mais curioso era outro: mais de 80% das notas para os atendentes eram positivas. cliente satisfeito não é, necessariamente, cliente bem informado. sem ler as conversas, a gente teria comemorado o CSAT.", "k24": "esses números viraram plano de ação: treinamento de regras de produto, treinamento de uso das tags e um material separando Pix parcelado de Pix no crédito.", "k25": "o mesmo método, de novo_", "k26": "meses depois, repeti o mesmo método com o Pix parcelado: 200 chats, de julho de 2024 a janeiro de 2025.", "k27": "40,99% inelegíveis", "k28": "35,14% elegíveis sem bot", "k29": "70,27% resolvíveis", "k30": "quase metade das conversas era de gente querendo saber por que não tinha o produto. um terço era de clientes com dúvidas simples, sobre pagamento, acompanhamento e o que o produto era. nenhum bot respondia essas dúvidas, então elas iam obrigatoriamente para um humano.", "k31": "a conclusão cabia num slide: dava para agir sobre 70,27% dos casos com um bot dedicado, ajustes de texto e melhorias no fluxo de pagamento e acompanhamento. parece óbvio, mas só fica óbvio depois que alguém conta.", "k32": "e quando o dado convence, ele muda o que vai ser construído. foi assim com a tela de acompanhamento do empréstimo. ninguém queria essa tela na V1. levei 526 chamados, mostrei que 66,3% poderiam ser resolvidos pelo próprio cliente e que isso projetava 8.982 chamados evitáveis por ano. a tela entrou. a história completa está no", "k33": "case de transparência", "k34": "então…", "k35": "dado sozinho não convence ninguém.", "k36": "estar preparada é mais do que ter número_", "k37": "o que eu aprendi a levar junto:", "k38": "a pergunta antes da planilha. eu sabia o que queria descobrir antes de abrir o primeiro chat", "k39": "amostra e período declarados. “187 chats, de fevereiro a abril” é difícil de contestar. “muita gente reclama” é fácil", "k40": "a tradução para o negócio. chamado evitável é custo, e informação errada é risco. é essa a língua de quem prioriza", "k41": "o plano junto com o problema. toda apresentação terminava com “e aí, o que a gente faz com isso?”", "k42": "a fronteira clara. o que era do meu time ia para o roadmap. o que era de outro time ia para quem resolvia, com o dado anexado", "k43": "ninguém me deu lugar no roadmap.", "k44": "eu cheguei lá com 187 conversas lidas.", "k45": "os números só estão sendo compartilhados porque o will bank teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026.", "k46": "e agora?", "k47": "ver o case →", "k48": "próximo texto", "k49": "ia não faz bons designers", "k50": "fim da página", "k51": "navegue", "k52": "sobre", "k53": "portfólio", "k54": "contato", "k55": "manda um e-mail lá", "k56": "me encontre também", "k57": "feito com talento e IA", "k58": "feito com talento e IA ッ", "k59": "sobre este texto", "k60": "achados do discovery do atendimento humano", "k61": "achados do discovery do pix parcelado", "k62": "navegação entre textos", "k63": "voltar para os textos", "k64": "LinkedIn da Thais (abre em nova aba)", "__lg": "idioma", "__fl": "idioma"}, "en": {"k1": "about/", "k2": "opinion/", "k3": "opinion/content-and-data.txt", "k4": "opinion/roadmap.txt", "k5": "opinion/ai.txt", "k6": "contact/", "k7": ":~/opinion", "k8": "opinion", "k9": "nobody invited me to the roadmap table", "k10": "3 min read", "k11": "data", "k12": "career", "k13": "nobody-invited-me-to-the-table.txt", "k14": "every designer wants a seat at the table when the roadmap is decided. but nobody gets a seat just for having good ideas. the seat goes to whoever shows up with an argument the team can’t ignore. and, most of the time, that argument is data.", "k15": "i learned this back when i was a product writer on the loans team. i didn’t design screens and didn’t have the title to decide priorities. what i had was time to read what customers were saying in the chat.", "k16": "the chat tells what the dashboard hides_", "k17": "in 2024, i read 187 conversations from human customer support, one by one, and compared what the customer wanted with what got logged.", "k18": "what i found", "k19": "48% of tags wrong", "k20": "25% incorrect information", "k21": "11.5% off-product", "k22": "almost half of the tags didn’t reflect the real reason for contact. a quarter of the information given to customers was partly or completely wrong. and 11.5% of the loans queue wasn’t even about loans: in 74% of those cases, it was Pix on credit being confused with Pix in installments.", "k23": "the most curious number was another one: more than 80% of agent ratings were positive. a satisfied customer isn’t necessarily a well-informed customer. without reading the conversations, we would have celebrated the CSAT.", "k24": "those numbers became an action plan: training on product rules, training on how to use the tags and a guide separating Pix in installments from Pix on credit.", "k25": "the same method, again_", "k26": "months later, i repeated the same method with Pix in installments: 200 chats, from july 2024 to january 2025.", "k27": "40.99% ineligible", "k28": "35.14% eligible, no bot", "k29": "70.27% solvable", "k30": "almost half of the conversations were people wanting to know why they didn’t have the product. a third were customers with simple questions about payment, tracking and what the product was. no bot answered those questions, so they all had to go to a human.", "k31": "the conclusion fit on one slide: we could act on 70.27% of cases with a dedicated bot, copy tweaks and improvements to the payment and tracking flow. it sounds obvious, but it only becomes obvious after someone counts.", "k32": "and when data convinces, it changes what gets built. that’s what happened with the loan tracking screen. nobody wanted that screen in the V1. i brought 526 tickets, showed that 66.3% could be solved by the customers themselves and that this projected 8,982 avoidable tickets a year. the screen made it in. the full story is in the", "k33": "transparency case", "k34": "so…", "k35": "data alone doesn’t convince anyone.", "k36": "being prepared is more than having numbers_", "k37": "what i learned to bring along:", "k38": "the question before the spreadsheet. i knew what i wanted to find out before opening the first chat", "k39": "a stated sample and period. “187 chats, from february to april” is hard to dispute. “lots of people complain” is easy", "k40": "the translation into business terms. an avoidable ticket is cost, and wrong information is risk. that’s the language of the people who prioritize", "k41": "the plan together with the problem. every presentation ended with “so, what do we do about it?”", "k42": "a clear boundary. what belonged to my team went into the roadmap. what belonged to another team went to whoever could fix it, with the data attached", "k43": "nobody gave me a seat at the roadmap.", "k44": "i got there with 187 conversations read.", "k45": "these numbers are only being shared because will bank was placed under extrajudicial liquidation by brazil’s central bank in january 2026.", "k46": "what now?", "k47": "see the case →", "k48": "next piece", "k49": "ai doesn’t make good designers", "k50": "end of page", "k51": "browse", "k52": "about", "k53": "portfolio", "k54": "contact", "k55": "drop me an email", "k56": "find me too", "k57": "made with talent and AI", "k58": "made with talent and AI ッ", "k59": "about this piece", "k60": "findings from the human support discovery", "k61": "findings from the Pix in installments discovery", "k62": "navigation between pieces", "k63": "back to the pieces", "k64": "Thais on LinkedIn (opens in a new tab)", "__lg": "language", "__fl": "language"}};
+var __TITLE = "nobody invited me to the roadmap table · thais castro";
+var __SKIP = /^(k|cur|value|v|d|l|name|type|tab|cls|.*Cls|id|href|src|key|style|.*Style|path|sub|.*Bg|color|.*Color)$/;
+function __lang() { if (window.__thaisLang) return window.__thaisLang; let l = 'pt'; try { if (localStorage.getItem('thais-lang') === 'en') l = 'en'; } catch (e) {} window.__thaisLang = l; return l; }
+function __t(s) { return __lang() === 'en' && Object.prototype.hasOwnProperty.call(__EN, s) ? __EN[s] : s; }
+function __map(v, d, k) { if (d > 7) return v; if (typeof v === 'string') return k && __SKIP.test(k) ? v : __t(v); if (Array.isArray(v)) return v.map((x) => __map(x, d + 1, k)); if (v && typeof v === 'object' && Object.getPrototypeOf(v) === Object.prototype) { const o = {}; for (const kk in v) o[kk] = __map(v[kk], d + 1, kk); return o; } return v; }
+function __doc(l) { setTimeout(() => { try { document.documentElement.lang = l === 'en' ? 'en' : 'pt-BR'; if (document.getElementById('dc-root') && __TITLE) { if (window.__ptTitle == null) window.__ptTitle = document.title; document.title = l === 'en' ? __TITLE : window.__ptTitle; } } catch (e) {} }, 0); }
+
 class Component extends DCLogic {
+renderVals() { const l = __lang(); if (!this.__docOk) { this.__docOk = 1; __doc(l); } const v0 = this.__rv0() || {}; const v = l === 'en' ? __map(v0, 0) : Object.assign({}, v0); v.T = __T[l]; v.isPt = l !== 'en'; v.isEn = l === 'en'; v.setPt = () => this.__setLang('pt'); v.setEn = () => this.__setLang('en'); return v; }
+__setLang(l) { window.__thaisLang = l; try { localStorage.setItem('thais-lang', l); } catch (e) {} __doc(l); this.setState({ __lang: l }); }
+
 constructor(props) { super(props); this.state = { menuOpen: false }; }
-renderVals() {
+__rv0() {
 const menuOpen = !!this.state.menuOpen;
-return { menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? 'fechar menu' : 'abrir menu',
+return { menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? __t('fechar menu') : __t('abrir menu'),
 toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: () => this.setState({ menuOpen: false }) };
 }
 }
 </script>
-<script src="/assets/dc.js?v=1793316727"></script>
+<script src="/assets/dc.js?v=1793318809"></script>
 </body>
 </html>

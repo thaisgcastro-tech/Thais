@@ -174,6 +174,18 @@ button.pf-tab:hover .pf-tab-l{color:#292929}
 .dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#f2f2f5}
 .dsf-cp{background:#292929;color:#f2f2f5;font:300 14px/1.5 'Work Sans',sans-serif;text-align:center;padding:0 24px 16px;margin:0}
 @media (max-width:640px){.dsf-in{padding:48px 16px 32px}.dsf-cols{grid-template-columns:minmax(0,1fr)}.dsf-col+.dsf-col{border-left:0;border-top:1px solid #f2f2f5;padding-left:0;margin-top:24px}}
+/* seletor de idioma (bandeiras em pixel) */
+.lng{display:flex;align-items:center;gap:4px;flex-shrink:0;margin-left:auto}
+.lng-b{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 8px;background:transparent;color:#f2f2f5;border:1px dashed transparent;font:500 14px/1 'Roboto Mono',monospace;text-transform:lowercase;cursor:pointer}
+.lng-b svg{display:block;flex-shrink:0;box-shadow:0 0 0 1px #f2f2f5}
+.lng-b:hover{border-color:#ffff8d;color:#ffff8d}
+.lng-b[aria-pressed="true"]{border:1px solid #f2f2f5}
+.tnav-line .lng + .tnav-ls{margin-left:0}
+.dsf-lang{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid #f2f2f5}
+.dsf-lang .dsf-lbl{margin:0}
+.dsf-lang .lng{margin-left:0}
+.dsf-lang .lng-b{font-size:16px}
+@media (max-width:480px){.tnav-line .lng-b span{display:none}.tnav-line .lng-b{padding:0 10px}}
 </style>
 </head>
 <body>
@@ -188,6 +200,7 @@ button.pf-tab:hover .pf-tab-l{color:#292929}
 <span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/opiniao<span class="tnav-sub"></span> $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
 <ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">opiniao/</a></li><li><a href="/contato/">contato/</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
 
@@ -236,6 +249,7 @@ button.pf-tab:hover .pf-tab-l{color:#292929}
 <div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
 <div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
+<div class="dsf-lang"><p class="dsf-lbl">idioma</p><div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
 <div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
@@ -248,13 +262,14 @@ button.pf-tab:hover .pf-tab-l{color:#292929}
 <nav class="tnav" aria-label="menu">
 <div class="tnav-win">
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
-<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/" aria-current="page"><span>03</span>opiniao/</a></li><li class="tnav-subitem"><a href="/opiniao/conteudo-e-dados/"><span></span>opiniao/conteudo-e-dados.txt</a></li><li class="tnav-subitem"><a href="/opiniao/roadmap/"><span></span>opiniao/roadmap.txt</a></li><li class="tnav-subitem"><a href="/opiniao/ia/"><span></span>opiniao/ia.txt</a></li><li><a href="/contato/"><span>04</span>contato/</a></li><li><a href="/quiz/"><span>05</span>quiz/</a></li></ul>
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>{{T.k1}}</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/" aria-current="page"><span>03</span>{{T.k2}}</a></li><li class="tnav-subitem"><a href="/opiniao/conteudo-e-dados/"><span></span>{{T.k3}}</a></li><li class="tnav-subitem"><a href="/opiniao/roadmap/"><span></span>{{T.k4}}</a></li><li class="tnav-subitem"><a href="/opiniao/ia/"><span></span>{{T.k5}}</a></li><li><a href="/contato/"><span>04</span>{{T.k6}}</a></li><li><a href="/quiz/"><span>05</span>quiz/</a></li></ul>
 </sc-if>
 <div class="tnav-line">
 <div class="tnav-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div>
-<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/opiniao<span class="tnav-sub">{{navSub}}</span> $</span>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>{{T.k7}}<span class="tnav-sub">{{navSub}}</span> $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
-<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">opiniao/</a></li><li><a href="/contato/">contato/</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<ul class="tnav-list"><li><a href="/">{{T.k1}}</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">{{T.k2}}</a></li><li><a href="/contato/">{{T.k6}}</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuOpen}}" aria-controls="tnav-out" aria-label="{{menuLabel}}">
 <sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
@@ -267,61 +282,75 @@ button.pf-tab:hover .pf-tab-l{color:#292929}
 <div class="fita" aria-hidden="true"></div>
 <section class="op-hero">
 <div>
-<p class="lbl">OPINIÃO</p>
-<h1 class="hero-t">gaveta de pensamentos</h1>
-<p class="item-d" style="margin: 0; max-width: 960px">textos longos sobre design de produto, dados e IA, escritos a partir do que eu vivi nos times.</p>
+<p class="lbl">{{T.k8}}</p>
+<h1 class="hero-t">{{T.k9}}</h1>
+<p class="item-d" style="margin: 0; max-width: 960px">{{T.k10}}</p>
 </div>
 </section>
 <div class="gaveta" data-navsub="on" style="border-style: none">
 <div class="gav-in" style="border-style: none">
 <sc-for list="{{fundo}}" as="f" hint-placeholder-count="2">
 <div class="pf-sheet">
-<button type="button" class="pf-tab {{f.pos}}" onClick="{{f.puxar}}" aria-label="puxar a pasta {{f.num}}: {{f.titulo}}" title="{{f.titulo}}"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="{{f.cor}}" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>{{f.aba}}</span></button>
+<button type="button" class="pf-tab {{f.pos}}" onClick="{{f.puxar}}" aria-label="{{T.k24}}{{f.num}}: {{f.titulo}}" title="{{f.titulo}}"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="{{f.cor}}" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>{{f.aba}}</span></button>
 </div>
 </sc-for>
 <a class="item pf-front" href="{{frente.href}}">
 <span class="pf-tab {{frente.pos}}" aria-hidden="true"><svg class="pf-bg" aria-hidden="true" width="344" height="42" viewBox="0 0 344 42"><polygon points="8,50 8,8 304,8 344,50" fill="currentColor"></polygon><polygon points="0,44 0,0 296,0 336,44" fill="currentColor"></polygon></svg><span class="pf-tab-l"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 5 5" shape-rendering="crispEdges"><path fill="{{frente.cor}}" d="M0 0h1v1h-1zM2 0h1v1h-1zM4 0h1v1h-1zM1 1h3v1h-3zM0 2h5v1h-5zM1 3h3v1h-3zM0 4h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1z"></path></svg>{{frente.aba}}</span></span>
-<span class="pf-bar"><span>texto nº {{frente.num}}</span><span>{{frente.tempo}}</span></span>
+<span class="pf-bar"><span>{{T.k11}}{{frente.num}}</span><span>{{frente.tempo}}</span></span>
 <span class="pf-in"><span class="item-path">{{frente.path}}</span><span class="item-t">{{frente.titulo}}</span><span class="item-d">{{frente.desc}}</span><span class="item-f"><sc-for list="{{frente.tags}}" as="t" hint-placeholder-count="3"><span class="tag">{{t}}</span></sc-for><span class="item-go" aria-hidden="true"><span class="sbtn"><svg class="sbtn-i" width="27" height="27" viewBox="0 0 9 9" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M2 1h1v1h-1zM3 1h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM2 7h1v1h-1zM3 7h1v1h-1z"></path></svg></span></span></span></span>
 </a>
 </div>
-<div class="gav-frente"><span>gaveta 03 · <b>opinião</b></span><span class="gav-puxador" aria-hidden="true"></span><span>3 pastas em arquivo</span></div>
+<div class="gav-frente"><span>{{T.k12}} <b>{{T.k13}}</b></span><span class="gav-puxador" aria-hidden="true"></span><span>{{T.k14}}</span></div>
 </div>
 </main>
 
 <footer class="dsf" style="margin-top: 96px">
 <div class="dsf-tape" aria-hidden="true"></div>
 <div class="dsf-in">
-<p class="dsf-lbl">fim da página</p>
+<p class="dsf-lbl">{{T.k15}}</p>
 
 <div class="dsf-cols">
-<div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
-<div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
-<div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k16}}</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">{{T.k17}}</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">{{T.k18}}</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">{{T.k13}}</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">{{T.k19}}</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k20}}</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k21}}</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="{{T.k25}}"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
+<div class="dsf-lang"><p class="dsf-lbl">{{T.__fl}}</p><div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<div class="dsf-sig"><span class="dsf-sr">{{T.k22}}</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>{{T.k23}}</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </template>
 <script type="text/plain" id="dc-logic">
+// idioma (pt/en): mesmo esquema da página sobre, guardado em localStorage 'thais-lang'
+var __EN = {"conteúdo + dados": "content + data", "~/opiniao/conteudo-e-dados.txt": "~/opinion/content-and-data.txt", "content designer também abre planilha": "content designers open spreadsheets too", "ligar métrica a texto parece impossível. três jeitos de usar dado no content design, e como levar isso para um estudo de caso.": "tying metrics to copy seems impossible. three ways to use data in content design, and how to bring that into a case study.", "6 min de leitura": "6 min read", "estudo de caso": "case study", "~/opiniao/roadmap.txt": "~/opinion/roadmap.txt", "ninguém me chamou pra mesa do roadmap": "nobody invited me to the roadmap table", "como 187 conversas lidas no chat viraram argumento para entrar na discussão de prioridade, e o que eu aprendi a levar junto com os números.": "how 187 chat conversations i read became my ticket into the prioritization discussion, and what i learned to bring along with the numbers.", "3 min de leitura": "3 min read", "~/opiniao/ia.txt": "~/opinion/ai.txt", "ia não faz bons designers": "ai doesn’t make good designers", "uso IA, e uso bastante. mas a qualidade do produto está no processo, e esse eu não terceirizo.": "i use AI, and i use it a lot. but product quality lives in the process, and that’s something i don’t outsource.", "2 min de leitura": "2 min read", "~/opiniao": "~/opinion", "fechar menu": "close menu", "abrir menu": "open menu"};
+var __T = {"pt": {"k1": "sobre/", "k2": "opiniao/", "k3": "opiniao/conteudo-e-dados.txt", "k4": "opiniao/roadmap.txt", "k5": "opiniao/ia.txt", "k6": "contato/", "k7": ":~/opiniao", "k8": "OPINIÃO", "k9": "gaveta de pensamentos", "k10": "textos longos sobre design de produto, dados e IA, escritos a partir do que eu vivi nos times.", "k11": "texto nº ", "k12": "gaveta 03 ·", "k13": "opinião", "k14": "3 pastas em arquivo", "k15": "fim da página", "k16": "navegue", "k17": "sobre", "k18": "portfólio", "k19": "contato", "k20": "manda um e-mail lá", "k21": "me encontre também", "k22": "feito com talento e IA", "k23": "feito com talento e IA ッ", "k24": "puxar a pasta ", "k25": "LinkedIn da Thais (abre em nova aba)", "__lg": "idioma", "__fl": "idioma"}, "en": {"k1": "about/", "k2": "opinion/", "k3": "opinion/content-and-data.txt", "k4": "opinion/roadmap.txt", "k5": "opinion/ai.txt", "k6": "contact/", "k7": ":~/opinion", "k8": "OPINION", "k9": "drawer of thoughts", "k10": "long reads on product design, data and AI, written from what i lived through on product teams.", "k11": "piece no. ", "k12": "drawer 03 ·", "k13": "opinion", "k14": "3 folders on file", "k15": "end of page", "k16": "browse", "k17": "about", "k18": "portfolio", "k19": "contact", "k20": "drop me an email", "k21": "find me too", "k22": "made with talent and AI", "k23": "made with talent and AI ッ", "k24": "pull folder ", "k25": "Thais on LinkedIn (opens in a new tab)", "__lg": "language", "__fl": "language"}};
+var __TITLE = "opinion · thais castro";
+var __SKIP = /^(k|cur|value|v|d|l|name|type|tab|cls|.*Cls|id|href|src|key|style|.*Style|path|sub|.*Bg|color|.*Color)$/;
+function __lang() { if (window.__thaisLang) return window.__thaisLang; let l = 'pt'; try { if (localStorage.getItem('thais-lang') === 'en') l = 'en'; } catch (e) {} window.__thaisLang = l; return l; }
+function __t(s) { return __lang() === 'en' && Object.prototype.hasOwnProperty.call(__EN, s) ? __EN[s] : s; }
+function __map(v, d, k) { if (d > 7) return v; if (typeof v === 'string') return k && __SKIP.test(k) ? v : __t(v); if (Array.isArray(v)) return v.map((x) => __map(x, d + 1, k)); if (v && typeof v === 'object' && Object.getPrototypeOf(v) === Object.prototype) { const o = {}; for (const kk in v) o[kk] = __map(v[kk], d + 1, kk); return o; } return v; }
+function __doc(l) { setTimeout(() => { try { document.documentElement.lang = l === 'en' ? 'en' : 'pt-BR'; if (document.getElementById('dc-root') && __TITLE) { if (window.__ptTitle == null) window.__ptTitle = document.title; document.title = l === 'en' ? __TITLE : window.__ptTitle; } } catch (e) {} }, 0); }
+
 class Component extends DCLogic {
+renderVals() { const l = __lang(); if (!this.__docOk) { this.__docOk = 1; __doc(l); } const v0 = this.__rv0() || {}; const v = l === 'en' ? __map(v0, 0) : Object.assign({}, v0); v.T = __T[l]; v.isPt = l !== 'en'; v.isEn = l === 'en'; v.setPt = () => this.__setLang('pt'); v.setEn = () => this.__setLang('en'); return v; }
+__setLang(l) { window.__thaisLang = l; try { localStorage.setItem('thais-lang', l); } catch (e) {} __doc(l); this.setState({ __lang: l }); }
+
 constructor(props) { super(props); this.state = { menuOpen: false, ativa: '01', navSub: '' }; const trackSec = () => { const mid = window.innerHeight * 0.4; let cur = ''; let best = -Infinity; document.querySelectorAll('[data-navsub]').forEach((el) => { const t = el.getBoundingClientRect().top; if (t <= mid && t > best + 8) { best = t; cur = el.getAttribute('data-navsub') || ''; } }); if (cur !== this.state.navSub) this.setState({ navSub: cur }); }; if (window.__tnavScroll) window.removeEventListener('scroll', window.__tnavScroll); window.__tnavScroll = () => { cancelAnimationFrame(window.__tnavRaf); window.__tnavRaf = requestAnimationFrame(trackSec); }; window.addEventListener('scroll', window.__tnavScroll, { passive: true }); setTimeout(trackSec, 0); }
-renderVals() {
+__rv0() {
 const menuOpen = !!this.state.menuOpen;
 const pastas = [
-{ num: '01', aba: 'conteúdo + dados', pos: 'pf-a', cor: '#e97045', href: '/opiniao/conteudo-e-dados/', path: '~/opiniao/conteudo-e-dados.txt', titulo: 'content designer também abre planilha', desc: 'ligar métrica a texto parece impossível. três jeitos de usar dado no content design, e como levar isso para um estudo de caso.', tempo: '6 min de leitura', tags: ['content design', 'dados', 'estudo de caso'] },
-{ num: '02', aba: 'roadmap', pos: 'pf-b', cor: '#1847e3', href: '/opiniao/roadmap/', path: '~/opiniao/roadmap.txt', titulo: 'ninguém me chamou pra mesa do roadmap', desc: 'como 187 conversas lidas no chat viraram argumento para entrar na discussão de prioridade, e o que eu aprendi a levar junto com os números.', tempo: '3 min de leitura', tags: ['dados', 'discovery', 'carreira'] },
-{ num: '03', aba: 'ia', pos: 'pf-c', cor: '#b9a6f2', href: '/opiniao/ia/', path: '~/opiniao/ia.txt', titulo: 'ia não faz bons designers', desc: 'uso IA, e uso bastante. mas a qualidade do produto está no processo, e esse eu não terceirizo.', tempo: '2 min de leitura', tags: ['ia', 'processo', 'carreira'] }
+{ num: '01', aba: __t('conteúdo + dados'), pos: 'pf-a', cor: '#e97045', href: '/opiniao/conteudo-e-dados/', path: __t('~/opiniao/conteudo-e-dados.txt'), titulo: __t('content designer também abre planilha'), desc: __t('ligar métrica a texto parece impossível. três jeitos de usar dado no content design, e como levar isso para um estudo de caso.'), tempo: __t('6 min de leitura'), tags: ['content design', 'dados', __t('estudo de caso')] },
+{ num: '02', aba: 'roadmap', pos: 'pf-b', cor: '#1847e3', href: '/opiniao/roadmap/', path: __t('~/opiniao/roadmap.txt'), titulo: __t('ninguém me chamou pra mesa do roadmap'), desc: __t('como 187 conversas lidas no chat viraram argumento para entrar na discussão de prioridade, e o que eu aprendi a levar junto com os números.'), tempo: __t('3 min de leitura'), tags: ['dados', 'discovery', 'carreira'] },
+{ num: '03', aba: 'ia', pos: 'pf-c', cor: '#b9a6f2', href: '/opiniao/ia/', path: __t('~/opiniao/ia.txt'), titulo: __t('ia não faz bons designers'), desc: __t('uso IA, e uso bastante. mas a qualidade do produto está no processo, e esse eu não terceirizo.'), tempo: __t('2 min de leitura'), tags: ['ia', 'processo', 'carreira'] }
 ].map((p) => ({ ...p, puxar: () => this.setState({ ativa: p.num }) }));
 const frente = pastas.find((p) => p.num === this.state.ativa) || pastas[0];
 const fundo = pastas.filter((p) => p !== frente).reverse();
-return { navSub: this.state.navSub ? frente.path.replace('~/opiniao', '') : '', fundo, frente, menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? 'fechar menu' : 'abrir menu',
+return { navSub: this.state.navSub ? frente.path.replace(__t('~/opiniao'), '') : '', fundo, frente, menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? __t('fechar menu') : __t('abrir menu'),
 toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: () => this.setState({ menuOpen: false }) };
 }
 }
 </script>
-<script src="/assets/dc.js?v=1793316727"></script>
+<script src="/assets/dc.js?v=1793318809"></script>
 </body>
 </html>

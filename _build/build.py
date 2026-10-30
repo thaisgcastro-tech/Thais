@@ -77,10 +77,11 @@ CONTATO_SUBMIT_NEW = (
     ".then((r) => { if (!r.ok) throw new Error(r.status); this.setState({ sent: true, sending: false }); f.reset(); })"
     ".catch(() => this.setState({ sending: false, failed: true })); }")
 HONEYPOT = ('<div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">'
-            '<label for="f-site">não preencha</label><input id="f-site" name="site" type="text" tabindex="-1" autocomplete="off"></div>'
+            '<label for="f-site">não preencha / leave blank</label><input id="f-site" name="site" type="text" tabindex="-1" autocomplete="off"></div>'
             '<sc-if value="{{ failed }}"><p role="alert" style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px;">'
             '<span aria-hidden="true" style="display: inline-block; width: 8px; height: 8px; background: #e97045;"></span>'
-            'Não consegui enviar agora. Tenta de novo em alguns minutos?</p></sc-if>')
+            '<sc-if value="{{ isPt }}">Não consegui enviar agora. Tenta de novo em alguns minutos?</sc-if>'
+            '<sc-if value="{{ isEn }}">I couldn’t send it right now. Try again in a few minutes?</sc-if></p></sc-if>')
 
 
 def contato(tpl, js):

@@ -153,6 +153,18 @@ body{margin:0;background:#121214;color:#f2f2f5}
 .pn-next:hover .pn-t{color:#f2f2f5}
 .pn-back:active,.pn-next:active{transform:translate(4px,4px);box-shadow:0 0 0 #f2f2f5}
 @media (prefers-reduced-motion:reduce){.pn-back,.pn-next{transition:none}}
+/* seletor de idioma (bandeiras em pixel) */
+.lng{display:flex;align-items:center;gap:4px;flex-shrink:0;margin-left:auto}
+.lng-b{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 8px;background:transparent;color:#f2f2f5;border:1px dashed transparent;font:500 14px/1 'Roboto Mono',monospace;text-transform:lowercase;cursor:pointer}
+.lng-b svg{display:block;flex-shrink:0;box-shadow:0 0 0 1px #f2f2f5}
+.lng-b:hover{border-color:#ffff8d;color:#ffff8d}
+.lng-b[aria-pressed="true"]{border:1px solid #f2f2f5}
+.tnav-line .lng + .tnav-ls{margin-left:0}
+.dsf-lang{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid #f2f2f5}
+.dsf-lang .dsf-lbl{margin:0}
+.dsf-lang .lng{margin-left:0}
+.dsf-lang .lng-b{font-size:16px}
+@media (max-width:480px){.tnav-line .lng-b span{display:none}.tnav-line .lng-b{padding:0 10px}}
 </style>
 </head>
 <body>
@@ -167,6 +179,7 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/opiniao<span class="tnav-sub">/conteudo-e-dados.txt</span> $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
 <ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">opiniao/</a></li><li><a href="/contato/">contato/</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
 
@@ -298,6 +311,7 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
 <div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
+<div class="dsf-lang"><p class="dsf-lbl">idioma</p><div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
 <div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
@@ -310,13 +324,14 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <nav class="tnav" aria-label="menu">
 <div class="tnav-win">
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
-<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/" aria-current="true"><span>03</span>opiniao/</a></li><li class="tnav-subitem"><a href="/opiniao/conteudo-e-dados/" aria-current="page"><span></span>opiniao/conteudo-e-dados.txt</a></li><li class="tnav-subitem"><a href="/opiniao/roadmap/"><span></span>opiniao/roadmap.txt</a></li><li class="tnav-subitem"><a href="/opiniao/ia/"><span></span>opiniao/ia.txt</a></li><li><a href="/contato/"><span>04</span>contato/</a></li><li><a href="/quiz/"><span>05</span>quiz/</a></li></ul>
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>{{T.k1}}</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/" aria-current="true"><span>03</span>{{T.k2}}</a></li><li class="tnav-subitem"><a href="/opiniao/conteudo-e-dados/" aria-current="page"><span></span>{{T.k3}}</a></li><li class="tnav-subitem"><a href="/opiniao/roadmap/"><span></span>{{T.k4}}</a></li><li class="tnav-subitem"><a href="/opiniao/ia/"><span></span>{{T.k5}}</a></li><li><a href="/contato/"><span>04</span>{{T.k6}}</a></li><li><a href="/quiz/"><span>05</span>quiz/</a></li></ul>
 </sc-if>
 <div class="tnav-line">
 <div class="tnav-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div>
-<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/opiniao<span class="tnav-sub">/conteudo-e-dados.txt</span> $</span>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>{{T.k7}}<span class="tnav-sub">{{T.k8}}</span> $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
-<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">opiniao/</a></li><li><a href="/contato/">contato/</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<ul class="tnav-list"><li><a href="/">{{T.k1}}</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">{{T.k2}}</a></li><li><a href="/contato/">{{T.k6}}</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuOpen}}" aria-controls="tnav-out" aria-label="{{menuLabel}}">
 <sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
@@ -329,102 +344,102 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="fita" aria-hidden="true"></div>
 <section class="op-hero">
 <div>
-<p class="lbl">opinião</p>
-<h1 class="hero-t">content designer também abre planilha</h1>
-<ul class="meta" aria-label="sobre este texto">
-<li class="meta-t">6 min de leitura</li>
-<li class="tag">content design</li><li class="tag">dados</li><li class="tag">estudo de caso</li>
+<p class="lbl">{{T.k9}}</p>
+<h1 class="hero-t">{{T.k10}}</h1>
+<ul class="meta" aria-label="{{T.k88}}">
+<li class="meta-t">{{T.k11}}</li>
+<li class="tag">content design</li><li class="tag">{{T.k12}}</li><li class="tag">{{T.k13}}</li>
 </ul>
 </div>
 <svg class="op-g" viewBox="0 0 400 260" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="8" y="8" width="384" height="244"></rect><path d="M8 40 H392"></path><path d="M8 82 H392"></path><path d="M8 124 H392"></path><path d="M8 166 H392"></path><path d="M8 208 H392"></path><path d="M56 8 V252"></path><path d="M168 8 V252"></path><path d="M280 8 V252"></path><rect x="168" y="124" width="112" height="42" fill="#e97045"></rect><path d="M184 145 H232" stroke-width="2.5"></path><rect x="240" y="133" width="4" height="24" fill="currentColor" stroke="none"></rect><path d="M72 103 H136" stroke-dasharray="6 6"></path><path d="M72 187 H120" stroke-dasharray="6 6"></path><path d="M296 61 H360" stroke-dasharray="6 6"></path><path d="M296 229 H344" stroke-dasharray="6 6"></path><path d="M184 61 H248" stroke-dasharray="6 6"></path></svg>
 </section>
 
 <article class="doc" aria-labelledby="doc-name">
-<div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><span class="doc-name" id="doc-name">conteudo-e-dados.txt</span></div>
+<div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><span class="doc-name" id="doc-name">{{T.k14}}</span></div>
 <div class="doc-b"><div class="txt">
 
-<p>texto e dado não são mundos separados. no content design, o dado entra antes da palavra, durante o teste e depois, na hora de defender a decisão.</p>
+<p>{{T.k15}}</p>
 
-<p>a dificuldade que mais vejo em quem trabalha com conteúdo é ligar uma métrica a um texto. a conversão subiu: foi a palavra, o layout ou a oferta? os chamados caíram: foi a nova explicação ou a mudança na regra? como o texto quase nunca é a única coisa que muda, isolar o efeito dele parece impossível. na hora de montar um estudo de caso, sobra um antes e depois de telas e a frase “o texto ficou mais claro”. ninguém consegue provar isso.</p>
+<p>{{T.k16}}</p>
 
-<p>passei alguns anos como content designer no time de empréstimos do will bank. olhando para trás, quase tudo que fiz de mais importante teve número no meio. não porque eu fosse analista, mas porque aprendi a usar dado de três jeitos: como matéria-prima, como teste e como argumento.</p>
+<p>{{T.k17}}</p>
 
-<h2>1. o dado como matéria-prima: ler antes de escrever_</h2>
+<h2>{{T.k18}}</h2>
 
-<p>o melhor texto que escrevi começou numa planilha de reclamações. no discovery do empréstimo pessoal, primeiro produto lançado pelo time, antes de abrir o figma, li conversas do chat, reclamações no reclame aqui e avaliações nas lojas de app.</p>
+<p>{{T.k19}}</p>
 
-<p>eu queria saber duas coisas: o que as pessoas não entendiam e com que palavras falavam do produto. um piloto de empréstimo foi rodado por 3 meses um ano antes, então eu tinha uma fonte valiosa de dados de clientes, o próprio atendimento.</p>
+<p>{{T.k20}}</p>
 
-<p>uma pergunta aparecia o tempo todo no chat: “o que é esse IOF?”. e por que chamo de melhor texto: essa seção se repetiu em todos os produtos de crédito que criamos subsequentemente, virou marca registrada do empréstimo do will, a página “tim-tim por tim-tim” que explicava sem jargões e de maneira clara o que era cada sigla dos encargos, e a conta explícita “na ponta do lápis” sobre o custo do empréstimo.</p>
+<p>{{T.k21}}</p>
 
-<p>o mesmo discovery trouxe uma coisa que nenhum briefing tinha: clientes já estavam caindo em golpe em nome de um empréstimo que a gente nem tinha lançado. daí nasceu uma tela de interrupção no fluxo. esse é o primeiro jeito de trabalhar com dado: ele decide o que precisa ser dito, antes de você decidir como dizer.</p>
+<p>{{T.k22}}</p>
 
-<p>o que serve de fonte para content, sem precisar de SQL:</p>
+<p>{{T.k23}}</p>
 
 <ul class="fontes">
-<li>conversas do chat e motivos de contato</li>
-<li>reclame aqui e avaliações das lojas de app</li>
-<li>buscas dentro do app, quando existem</li>
-<li>respostas abertas de pesquisa e NPS</li>
+<li>{{T.k24}}</li>
+<li>{{T.k25}}</li>
+<li>{{T.k26}}</li>
+<li>{{T.k27}}</li>
 </ul>
 
-<h2>2. o texto como hipótese: deixar o teste decidir_</h2>
+<h2>{{T.k28}}</h2>
 
-<p>toda escolha de palavra é uma aposta. content design fica mais forte quando trata essa aposta como hipótese, com critério de sucesso definido antes.</p>
+<p>{{T.k29}}</p>
 
-<p>na tela de golpe, eu quis usar a palavra “golpistas”, direta, para gerar alarme de verdade. o time tinha receio de assustar o cliente. em vez de discutir gosto, a gente testou. a mensagem ficou clara para todo mundo, não gerou desconforto e a tela foi considerada “muito importante”. o teste também mostrou o que falhou: a ilustração não foi entendida. as pessoas viram um cachorro bravo, não um cão de guarda, e não ligaram a imagem à ideia de segurança.</p>
+<p>{{T.k30}}</p>
 
-<p>no pagar antes, a dúvida era de negócio. antecipar as últimas parcelas dá mais desconto para o cliente e é pior para o banco no curto prazo. se o texto explicasse isso com todas as letras, as pessoas iam correr para as últimas parcelas? planejei um teste a/b de conteúdo em dez/2023: descobrimos que a interferência era mínima e que sermos transparentes nesse caso não afetava de modo perigoso a receita. hoje, em produção, o desconto está escrito por extenso.</p>
+<p>{{T.k31}}</p>
 
-<p>já como product designer, escrevi o e-mail de um experimento de lembrete de pagamento com Pix. a hipótese era sobre o meio de pagamento, oferecer Pix aumentaria a taxa de pagamentos em dia e recuperaria atrasos curtos (no teste, d+2).</p>
+<p>{{T.k32}}</p>
 
-<p>o resultado mostrou outra coisa: o grupo que recebeu o e-mail teve 64,7% menos saldo em atraso que o controle, e a análise apontou o reforço da mensagem como a causa principal, não o Pix, porque o aumento de pagamento por esse meio não foi tão significativo. <a href="/cases/lembrete-de-pagamento/">leia o case completo.</a></p>
+<p>{{T.k33}} <a href="/cases/lembrete-de-pagamento/">{{T.k34}}</a></p>
 
-<h2>3. o dado como argumento: conteúdo que muda o roadmap_</h2>
+<h2>{{T.k35}}</h2>
 
-<p>o terceiro jeito é o que mais muda a posição de quem escreve no time. quando o dado vem de conteúdo, ele mostra onde o produto deixa o cliente sem resposta.</p>
+<p>{{T.k36}}</p>
 
-<p>na V1 do empréstimo, ninguém queria gastar tempo com uma tela de acompanhamento além do time de design. queriam um MVP enxuto, apenas com contratação.</p>
+<p>{{T.k37}}</p>
 
-<p>o problema disso é que a gente já havia cometido esse erro antes. num teste anterior, o cliente contratava e o empréstimo sumia do app. fui atrás dos chamados que essa tela teria evitado: 526 em pouco mais de um ano, isso com o teste tendo rodado apenas 3 meses para uma base de 10k. desses 526, 66,3% o próprio cliente poderia resolver com uma tela de acompanhamento.</p>
+<p>{{T.k38}}</p>
 
-<p>com o time de dados, projetamos 8.982 chamados evitáveis por ano para a nova base elegível de empréstimo que era muito maior. a tela entrou na V1.</p>
+<p>{{T.k39}}</p>
 
-<p>o pulo do gato foi o que veio depois. cada dúvida do chat virou um pedaço da tela:</p>
+<p>{{T.k40}}</p>
 
 <table class="tab">
-<thead><tr><th scope="col">a dúvida no chat</th><th scope="col">a resposta na tela</th></tr></thead>
+<thead><tr><th scope="col">{{T.k41}}</th><th scope="col">{{T.k42}}</th></tr></thead>
 <tbody>
-<tr><td>quando pago? como pago?</td><td>próxima parcela, com valor e data</td></tr>
-<tr><td>e meu contrato?</td><td>e-mail com contrato enviado no ato da contratação</td></tr>
-<tr><td>posso antecipar? posso quitar?</td><td>informação já na tela de simulação com essa resposta</td></tr>
-<tr><td>o que é esse IOF?</td><td>o tim-tim por tim-tim dos encargos</td></tr>
+<tr><td>{{T.k43}}</td><td>{{T.k44}}</td></tr>
+<tr><td>{{T.k45}}</td><td>{{T.k46}}</td></tr>
+<tr><td>{{T.k47}}</td><td>{{T.k48}}</td></tr>
+<tr><td>{{T.k49}}</td><td>{{T.k50}}</td></tr>
 </tbody>
 </table>
 
-<p>o dado defendeu a tela e também escreveu a arquitetura de conteúdo dela.</p>
+<p>{{T.k51}}</p>
 
-<h2>4. como levar isso para um estudo de caso_</h2>
+<h2>{{T.k52}}</h2>
 
-<p>um case de content com dados não mostra só a tela final. mostra a pergunta, a fonte e o que mudou por causa dela.</p>
+<p>{{T.k53}}</p>
 
 <ol class="steps">
-<li><span class="st-n">01</span><strong>comece pela pergunta, não pela planilha.</strong> “por que as pessoas chamam o chat depois de contratar?” guia a leitura. “vou olhar os dados” não guia nada.</li>
-<li><span class="st-n">02</span><strong>declare amostra e período.</strong> “526 chamados, de mar/2021 a mar/2022” é difícil de contestar. “muita gente reclamava” é fácil.</li>
-<li><span class="st-n">03</span><strong>ligue cada dado a uma decisão de texto.</strong> a dúvida do IOF virou o tim-tim por tim-tim. sem essa ligação, o número vira enfeite.</li>
-<li><span class="st-n">04</span><strong>traduza para a língua do negócio.</strong> chamado evitável é custo. informação errada é risco. saldo em atraso é dinheiro.</li>
-<li><span class="st-n">05</span><strong>mostre o teste, mesmo sem resultado final.</strong> hipótese, versões, amostra e confiança já mostram método.</li>
-<li><span class="st-n">06</span><strong>sem acesso aos números, use prova externa.</strong> no meu <a href="/cases/transparencia/">case de transparência</a>, a prova foi o 3º lugar do will bank no índice de transparência de empréstimos novücard, no 2º semestre de 2023, que avalia como os bancos dispõem informações para clientes.</li>
-<li><span class="st-n">07</span><strong>conte o que deu errado.</strong> o cão de guarda lido como cachorro bravo, o questionário longo demais. aprendizado honesto dá mais credibilidade que resultado perfeito.</li>
+<li><span class="st-n">01</span><strong>{{T.k54}}</strong> {{T.k55}}</li>
+<li><span class="st-n">02</span><strong>{{T.k56}}</strong> {{T.k57}}</li>
+<li><span class="st-n">03</span><strong>{{T.k58}}</strong> {{T.k59}}</li>
+<li><span class="st-n">04</span><strong>{{T.k60}}</strong> {{T.k61}}</li>
+<li><span class="st-n">05</span><strong>{{T.k62}}</strong> {{T.k63}}</li>
+<li><span class="st-n">06</span><strong>{{T.k64}}</strong> {{T.k65}} <a href="/cases/transparencia/">{{T.k66}}</a>{{T.k67}}</li>
+<li><span class="st-n">07</span><strong>{{T.k68}}</strong> {{T.k69}}</li>
 </ol>
 
-<h2>então…_</h2>
+<h2>{{T.k70}}</h2>
 
-<p>não precisa virar analista para trabalhar com dados. precisa de curiosidade para ler o que o cliente já está dizendo e de coragem para colocar as próprias palavras à prova.</p>
+<p>{{T.k71}}</p>
 
-<p class="fecho">o texto é a parte do produto que mais conversa com o cliente. por isso mesmo, ele deixa rastro em todo lugar: no chat, na reclamação, no clique que não aconteceu. <mark>quem escreve só precisa aprender a ler esse rastro.</mark></p>
+<p class="fecho">{{T.k72}} <mark>{{T.k73}}</mark></p>
 
-<p class="note-l">os números do will bank só estão sendo compartilhados porque o banco teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026.</p>
+<p class="note-l">{{T.k74}}</p>
 
 <p class="assina"><svg width="40" height="40" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>thais castro · product designer</p>
 
@@ -432,38 +447,52 @@ body{margin:0;background:#121214;color:#f2f2f5}
 </article>
 
 <div class="next">
-<p class="lbl next-l">e agora?</p>
-<a class="btn btn-p" href="/cases/transparencia/">ver o case →</a>
+<p class="lbl next-l">{{T.k75}}</p>
+<a class="btn btn-p" href="/cases/transparencia/">{{T.k76}}</a>
 </div>
-<nav class="pn" aria-label="navegação entre textos"><a class="pn-back" href="/opiniao/" aria-label="voltar para os textos"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 12H5M11 5l-7 7 7 7"></path></svg></a><a class="pn-next" href="/opiniao/roadmap/"><span class="pn-txt"><span class="pn-l">próximo texto</span><span class="pn-t">ninguém me chamou pra mesa do roadmap</span></span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"></path></svg></a></nav>
+<nav class="pn" aria-label="{{T.k89}}"><a class="pn-back" href="/opiniao/" aria-label="{{T.k90}}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 12H5M11 5l-7 7 7 7"></path></svg></a><a class="pn-next" href="/opiniao/roadmap/"><span class="pn-txt"><span class="pn-l">{{T.k77}}</span><span class="pn-t">{{T.k78}}</span></span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"></path></svg></a></nav>
 </main>
 
 <footer class="dsf" style="margin-top: 96px">
 <div class="dsf-tape" aria-hidden="true"></div>
 <div class="dsf-in">
-<p class="dsf-lbl">fim da página</p>
+<p class="dsf-lbl">{{T.k79}}</p>
 
 <div class="dsf-cols">
-<div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
-<div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
-<div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k80}}</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">{{T.k81}}</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">{{T.k82}}</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">{{T.k9}}</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">{{T.k83}}</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k84}}</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k85}}</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="{{T.k91}}"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
+<div class="dsf-lang"><p class="dsf-lbl">{{T.__fl}}</p><div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<div class="dsf-sig"><span class="dsf-sr">{{T.k86}}</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>{{T.k87}}</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </template>
 <script type="text/plain" id="dc-logic">
+// idioma (pt/en): mesmo esquema da página sobre, guardado em localStorage 'thais-lang'
+var __EN = {"fechar menu": "close menu", "abrir menu": "open menu"};
+var __T = {"pt": {"k1": "sobre/", "k2": "opiniao/", "k3": "opiniao/conteudo-e-dados.txt", "k4": "opiniao/roadmap.txt", "k5": "opiniao/ia.txt", "k6": "contato/", "k7": ":~/opiniao", "k8": "/conteudo-e-dados.txt", "k9": "opinião", "k10": "content designer também abre planilha", "k11": "6 min de leitura", "k12": "dados", "k13": "estudo de caso", "k14": "conteudo-e-dados.txt", "k15": "texto e dado não são mundos separados. no content design, o dado entra antes da palavra, durante o teste e depois, na hora de defender a decisão.", "k16": "a dificuldade que mais vejo em quem trabalha com conteúdo é ligar uma métrica a um texto. a conversão subiu: foi a palavra, o layout ou a oferta? os chamados caíram: foi a nova explicação ou a mudança na regra? como o texto quase nunca é a única coisa que muda, isolar o efeito dele parece impossível. na hora de montar um estudo de caso, sobra um antes e depois de telas e a frase “o texto ficou mais claro”. ninguém consegue provar isso.", "k17": "passei alguns anos como content designer no time de empréstimos do will bank. olhando para trás, quase tudo que fiz de mais importante teve número no meio. não porque eu fosse analista, mas porque aprendi a usar dado de três jeitos: como matéria-prima, como teste e como argumento.", "k18": "1. o dado como matéria-prima: ler antes de escrever_", "k19": "o melhor texto que escrevi começou numa planilha de reclamações. no discovery do empréstimo pessoal, primeiro produto lançado pelo time, antes de abrir o figma, li conversas do chat, reclamações no reclame aqui e avaliações nas lojas de app.", "k20": "eu queria saber duas coisas: o que as pessoas não entendiam e com que palavras falavam do produto. um piloto de empréstimo foi rodado por 3 meses um ano antes, então eu tinha uma fonte valiosa de dados de clientes, o próprio atendimento.", "k21": "uma pergunta aparecia o tempo todo no chat: “o que é esse IOF?”. e por que chamo de melhor texto: essa seção se repetiu em todos os produtos de crédito que criamos subsequentemente, virou marca registrada do empréstimo do will, a página “tim-tim por tim-tim” que explicava sem jargões e de maneira clara o que era cada sigla dos encargos, e a conta explícita “na ponta do lápis” sobre o custo do empréstimo.", "k22": "o mesmo discovery trouxe uma coisa que nenhum briefing tinha: clientes já estavam caindo em golpe em nome de um empréstimo que a gente nem tinha lançado. daí nasceu uma tela de interrupção no fluxo. esse é o primeiro jeito de trabalhar com dado: ele decide o que precisa ser dito, antes de você decidir como dizer.", "k23": "o que serve de fonte para content, sem precisar de SQL:", "k24": "conversas do chat e motivos de contato", "k25": "reclame aqui e avaliações das lojas de app", "k26": "buscas dentro do app, quando existem", "k27": "respostas abertas de pesquisa e NPS", "k28": "2. o texto como hipótese: deixar o teste decidir_", "k29": "toda escolha de palavra é uma aposta. content design fica mais forte quando trata essa aposta como hipótese, com critério de sucesso definido antes.", "k30": "na tela de golpe, eu quis usar a palavra “golpistas”, direta, para gerar alarme de verdade. o time tinha receio de assustar o cliente. em vez de discutir gosto, a gente testou. a mensagem ficou clara para todo mundo, não gerou desconforto e a tela foi considerada “muito importante”. o teste também mostrou o que falhou: a ilustração não foi entendida. as pessoas viram um cachorro bravo, não um cão de guarda, e não ligaram a imagem à ideia de segurança.", "k31": "no pagar antes, a dúvida era de negócio. antecipar as últimas parcelas dá mais desconto para o cliente e é pior para o banco no curto prazo. se o texto explicasse isso com todas as letras, as pessoas iam correr para as últimas parcelas? planejei um teste a/b de conteúdo em dez/2023: descobrimos que a interferência era mínima e que sermos transparentes nesse caso não afetava de modo perigoso a receita. hoje, em produção, o desconto está escrito por extenso.", "k32": "já como product designer, escrevi o e-mail de um experimento de lembrete de pagamento com Pix. a hipótese era sobre o meio de pagamento, oferecer Pix aumentaria a taxa de pagamentos em dia e recuperaria atrasos curtos (no teste, d+2).", "k33": "o resultado mostrou outra coisa: o grupo que recebeu o e-mail teve 64,7% menos saldo em atraso que o controle, e a análise apontou o reforço da mensagem como a causa principal, não o Pix, porque o aumento de pagamento por esse meio não foi tão significativo.", "k34": "leia o case completo.", "k35": "3. o dado como argumento: conteúdo que muda o roadmap_", "k36": "o terceiro jeito é o que mais muda a posição de quem escreve no time. quando o dado vem de conteúdo, ele mostra onde o produto deixa o cliente sem resposta.", "k37": "na V1 do empréstimo, ninguém queria gastar tempo com uma tela de acompanhamento além do time de design. queriam um MVP enxuto, apenas com contratação.", "k38": "o problema disso é que a gente já havia cometido esse erro antes. num teste anterior, o cliente contratava e o empréstimo sumia do app. fui atrás dos chamados que essa tela teria evitado: 526 em pouco mais de um ano, isso com o teste tendo rodado apenas 3 meses para uma base de 10k. desses 526, 66,3% o próprio cliente poderia resolver com uma tela de acompanhamento.", "k39": "com o time de dados, projetamos 8.982 chamados evitáveis por ano para a nova base elegível de empréstimo que era muito maior. a tela entrou na V1.", "k40": "o pulo do gato foi o que veio depois. cada dúvida do chat virou um pedaço da tela:", "k41": "a dúvida no chat", "k42": "a resposta na tela", "k43": "quando pago? como pago?", "k44": "próxima parcela, com valor e data", "k45": "e meu contrato?", "k46": "e-mail com contrato enviado no ato da contratação", "k47": "posso antecipar? posso quitar?", "k48": "informação já na tela de simulação com essa resposta", "k49": "o que é esse IOF?", "k50": "o tim-tim por tim-tim dos encargos", "k51": "o dado defendeu a tela e também escreveu a arquitetura de conteúdo dela.", "k52": "4. como levar isso para um estudo de caso_", "k53": "um case de content com dados não mostra só a tela final. mostra a pergunta, a fonte e o que mudou por causa dela.", "k54": "comece pela pergunta, não pela planilha.", "k55": "“por que as pessoas chamam o chat depois de contratar?” guia a leitura. “vou olhar os dados” não guia nada.", "k56": "declare amostra e período.", "k57": "“526 chamados, de mar/2021 a mar/2022” é difícil de contestar. “muita gente reclamava” é fácil.", "k58": "ligue cada dado a uma decisão de texto.", "k59": "a dúvida do IOF virou o tim-tim por tim-tim. sem essa ligação, o número vira enfeite.", "k60": "traduza para a língua do negócio.", "k61": "chamado evitável é custo. informação errada é risco. saldo em atraso é dinheiro.", "k62": "mostre o teste, mesmo sem resultado final.", "k63": "hipótese, versões, amostra e confiança já mostram método.", "k64": "sem acesso aos números, use prova externa.", "k65": "no meu", "k66": "case de transparência", "k67": ", a prova foi o 3º lugar do will bank no índice de transparência de empréstimos novücard, no 2º semestre de 2023, que avalia como os bancos dispõem informações para clientes.", "k68": "conte o que deu errado.", "k69": "o cão de guarda lido como cachorro bravo, o questionário longo demais. aprendizado honesto dá mais credibilidade que resultado perfeito.", "k70": "então…_", "k71": "não precisa virar analista para trabalhar com dados. precisa de curiosidade para ler o que o cliente já está dizendo e de coragem para colocar as próprias palavras à prova.", "k72": "o texto é a parte do produto que mais conversa com o cliente. por isso mesmo, ele deixa rastro em todo lugar: no chat, na reclamação, no clique que não aconteceu.", "k73": "quem escreve só precisa aprender a ler esse rastro.", "k74": "os números do will bank só estão sendo compartilhados porque o banco teve liquidação extrajudicial decretada pelo banco central em janeiro de 2026.", "k75": "e agora?", "k76": "ver o case →", "k77": "próximo texto", "k78": "ninguém me chamou pra mesa do roadmap", "k79": "fim da página", "k80": "navegue", "k81": "sobre", "k82": "portfólio", "k83": "contato", "k84": "manda um e-mail lá", "k85": "me encontre também", "k86": "feito com talento e IA", "k87": "feito com talento e IA ッ", "k88": "sobre este texto", "k89": "navegação entre textos", "k90": "voltar para os textos", "k91": "LinkedIn da Thais (abre em nova aba)", "__lg": "idioma", "__fl": "idioma"}, "en": {"k1": "about/", "k2": "opinion/", "k3": "opinion/content-and-data.txt", "k4": "opinion/roadmap.txt", "k5": "opinion/ai.txt", "k6": "contact/", "k7": ":~/opinion", "k8": "/content-and-data.txt", "k9": "opinion", "k10": "content designers open spreadsheets too", "k11": "6 min read", "k12": "data", "k13": "case study", "k14": "content-and-data.txt", "k15": "copy and data aren’t separate worlds. in content design, data comes in before the words, during the test and afterwards, when it’s time to defend the decision.", "k16": "the struggle i see most among people who work with content is tying a metric to copy. conversion went up: was it the wording, the layout or the offer? tickets went down: was it the new explanation or the rule change? since copy is almost never the only thing that changes, isolating its effect seems impossible. when it’s time to put together a case study, all that’s left is a before-and-after of screens and the line “the copy got clearer”. nobody can prove that.", "k17": "i spent a few years as a content designer on will bank’s loans team. looking back, almost everything important i did had numbers in the middle of it. not because i was an analyst, but because i learned to use data in three ways: as raw material, as a test and as an argument.", "k18": "1. data as raw material: read before you write_", "k19": "the best copy i ever wrote started in a spreadsheet of complaints. in the personal loan discovery, the first product the team launched, before opening figma, i read chat conversations, complaints on reclame aqui (brazil’s big consumer complaints site) and app store reviews.", "k20": "i wanted to know two things: what people didn’t understand and which words they used to talk about the product. a loan pilot had run for 3 months a year earlier, so i had a valuable source of customer data: customer support itself.", "k21": "one question came up all the time in the chat: “what is this IOF?” (a brazilian tax on credit). and here’s why i call it my best copy: that section was repeated in every credit product we created afterwards and became a trademark of will’s loan: the “nitty-gritty” page that explained, clearly and without jargon, what each acronym in the charges meant, plus the explicit “pencil-to-paper” math on the cost of the loan.", "k22": "the same discovery surfaced something no brief had: customers were already falling for scams in the name of a loan we hadn’t even launched. that’s where an interruption screen in the flow came from. this is the first way to work with data: it decides what needs to be said, before you decide how to say it.", "k23": "what works as a source for content, no SQL needed:", "k24": "chat conversations and contact reasons", "k25": "reclame aqui and app store reviews", "k26": "in-app searches, when there are any", "k27": "open-ended survey and NPS answers", "k28": "2. copy as a hypothesis: let the test decide_", "k29": "every word choice is a bet. content design gets stronger when it treats that bet as a hypothesis, with success criteria defined up front.", "k30": "on the scam screen, i wanted to use the word “scammers”, straight up, to raise a real alarm. the team was afraid of scaring customers. instead of arguing about taste, we tested it. the message was clear to everyone, didn’t cause discomfort and the screen was rated “very important”. the test also showed what failed: the illustration wasn’t understood. people saw an angry dog, not a guard dog, and didn’t connect the image to the idea of safety.", "k31": "in early payment, the question was a business one. paying off the last installments early gives the customer a bigger discount and is worse for the bank in the short term. if the copy spelled that out, would people rush to the last installments? i planned a content a/b test in dec/2023: we found that the impact was minimal and that being transparent in this case didn’t put revenue at risk. today, in production, the discount is written out in full.", "k32": "later, as a product designer, i wrote the email for a payment reminder experiment with Pix. the hypothesis was about the payment method: offering Pix would increase the on-time payment rate and recover short delays (in the test, d+2).", "k33": "the result showed something else: the group that got the email had 64.7% less overdue balance than the control group, and the analysis pointed to the reinforcement of the message as the main cause, not Pix, since the increase in payments through that method wasn’t that significant.", "k34": "read the full case.", "k35": "3. data as an argument: content that changes the roadmap_", "k36": "the third way is the one that most changes the writer’s position on the team. when data comes from content, it shows where the product leaves customers without an answer.", "k37": "in the loan V1, nobody besides the design team wanted to spend time on a tracking screen. they wanted a lean MVP, with just the application.", "k38": "the problem is that we had made this mistake before. in an earlier test, the customer took out the loan and it disappeared from the app. i went after the tickets that screen would have prevented: 526 in a little over a year, and that with the test having run for only 3 months for a base of 10k. of those 526, 66.3% could have been solved by the customers themselves with a tracking screen.", "k39": "with the data team, we projected 8,982 avoidable tickets a year for the new, much larger base eligible for the loan. the screen made it into the V1.", "k40": "the clever part was what came next. each question from the chat became a piece of the screen:", "k41": "the question in the chat", "k42": "the answer on screen", "k43": "when do i pay? how do i pay?", "k44": "next installment, with amount and date", "k45": "what about my contract?", "k46": "email with the contract sent the moment the loan is taken out", "k47": "can i pay early? can i pay it off?", "k48": "the answer is already on the simulation screen", "k49": "what is this IOF?", "k50": "the nitty-gritty of the charges", "k51": "the data defended the screen and also wrote its content architecture.", "k52": "4. how to bring this into a case study_", "k53": "a content case with data doesn’t just show the final screen. it shows the question, the source and what changed because of it.", "k54": "start with the question, not the spreadsheet.", "k55": "“why do people reach out to chat after taking out a loan?” guides the reading. “i’ll look at the data” guides nothing.", "k56": "state the sample and period.", "k57": "“526 tickets, from mar/2021 to mar/2022” is hard to dispute. “lots of people complained” is easy.", "k58": "tie each data point to a copy decision.", "k59": "the IOF question became the nitty-gritty page. without that link, the number is just decoration.", "k60": "translate it into business language.", "k61": "an avoidable ticket is cost. wrong information is risk. overdue balance is money.", "k62": "show the test, even without a final result.", "k63": "hypothesis, versions, sample and confidence already show method.", "k64": "no access to the numbers? use external proof.", "k65": "in my", "k66": "transparency case", "k67": ", the proof was will bank’s 3rd place in novücard’s loan transparency index, in the 2nd half of 2023, which assesses how banks present information to customers.", "k68": "tell what went wrong.", "k69": "the guard dog read as an angry dog, the survey that was too long. honest learnings give you more credibility than a perfect result.", "k70": "so…_", "k71": "you don’t need to become an analyst to work with data. you need the curiosity to read what customers are already saying and the courage to put your own words to the test.", "k72": "copy is the part of the product that talks to customers the most. that’s exactly why it leaves traces everywhere: in the chat, in the complaint, in the click that never happened.", "k73": "writers just need to learn to read those traces.", "k74": "will bank’s numbers are only being shared because the bank was placed under extrajudicial liquidation by brazil’s central bank in january 2026.", "k75": "what now?", "k76": "see the case →", "k77": "next piece", "k78": "nobody invited me to the roadmap table", "k79": "end of page", "k80": "browse", "k81": "about", "k82": "portfolio", "k83": "contact", "k84": "drop me an email", "k85": "find me too", "k86": "made with talent and AI", "k87": "made with talent and AI ッ", "k88": "about this piece", "k89": "navigation between pieces", "k90": "back to the pieces", "k91": "Thais on LinkedIn (opens in a new tab)", "__lg": "language", "__fl": "language"}};
+var __TITLE = "content designers open spreadsheets too · thais castro";
+var __SKIP = /^(k|cur|value|v|d|l|name|type|tab|cls|.*Cls|id|href|src|key|style|.*Style|path|sub|.*Bg|color|.*Color)$/;
+function __lang() { if (window.__thaisLang) return window.__thaisLang; let l = 'pt'; try { if (localStorage.getItem('thais-lang') === 'en') l = 'en'; } catch (e) {} window.__thaisLang = l; return l; }
+function __t(s) { return __lang() === 'en' && Object.prototype.hasOwnProperty.call(__EN, s) ? __EN[s] : s; }
+function __map(v, d, k) { if (d > 7) return v; if (typeof v === 'string') return k && __SKIP.test(k) ? v : __t(v); if (Array.isArray(v)) return v.map((x) => __map(x, d + 1, k)); if (v && typeof v === 'object' && Object.getPrototypeOf(v) === Object.prototype) { const o = {}; for (const kk in v) o[kk] = __map(v[kk], d + 1, kk); return o; } return v; }
+function __doc(l) { setTimeout(() => { try { document.documentElement.lang = l === 'en' ? 'en' : 'pt-BR'; if (document.getElementById('dc-root') && __TITLE) { if (window.__ptTitle == null) window.__ptTitle = document.title; document.title = l === 'en' ? __TITLE : window.__ptTitle; } } catch (e) {} }, 0); }
+
 class Component extends DCLogic {
+renderVals() { const l = __lang(); if (!this.__docOk) { this.__docOk = 1; __doc(l); } const v0 = this.__rv0() || {}; const v = l === 'en' ? __map(v0, 0) : Object.assign({}, v0); v.T = __T[l]; v.isPt = l !== 'en'; v.isEn = l === 'en'; v.setPt = () => this.__setLang('pt'); v.setEn = () => this.__setLang('en'); return v; }
+__setLang(l) { window.__thaisLang = l; try { localStorage.setItem('thais-lang', l); } catch (e) {} __doc(l); this.setState({ __lang: l }); }
+
 constructor(props) { super(props); this.state = { menuOpen: false }; }
-renderVals() {
+__rv0() {
 const menuOpen = !!this.state.menuOpen;
-return { menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? 'fechar menu' : 'abrir menu',
+return { menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? __t('fechar menu') : __t('abrir menu'),
 toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: () => this.setState({ menuOpen: false }) };
 }
 }
 </script>
-<script src="/assets/dc.js?v=1793316727"></script>
+<script src="/assets/dc.js?v=1793318809"></script>
 </body>
 </html>

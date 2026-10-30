@@ -91,6 +91,18 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
 @media (max-width:640px){.dsf-in{padding:48px 16px 32px}.dsf-cols{grid-template-columns:minmax(0,1fr)}.dsf-col+.dsf-col{border-left:0;border-top:1px solid #f2f2f5;padding-left:0;margin-top:24px}}
 
 @media (max-width:820px){.ct-main{padding:64px 16px !important}}
+/* seletor de idioma (bandeiras em pixel) */
+.lng{display:flex;align-items:center;gap:4px;flex-shrink:0;margin-left:auto}
+.lng-b{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 8px;background:transparent;color:#f2f2f5;border:1px dashed transparent;font:500 14px/1 'Roboto Mono',monospace;text-transform:lowercase;cursor:pointer}
+.lng-b svg{display:block;flex-shrink:0;box-shadow:0 0 0 1px #f2f2f5}
+.lng-b:hover{border-color:#ffff8d;color:#ffff8d}
+.lng-b[aria-pressed="true"]{border:1px solid #f2f2f5}
+.tnav-line .lng + .tnav-ls{margin-left:0}
+.dsf-lang{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid #f2f2f5}
+.dsf-lang .dsf-lbl{margin:0}
+.dsf-lang .lng{margin-left:0}
+.dsf-lang .lng-b{font-size:16px}
+@media (max-width:480px){.tnav-line .lng-b span{display:none}.tnav-line .lng-b{padding:0 10px}}
 </style>
 </head>
 <body>
@@ -106,6 +118,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
 <span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/contato $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
 <ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/">opiniao/</a></li><li><a href="/contato/" aria-current="page">contato/</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
 
@@ -150,7 +163,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
             <div style="display: flex; flex-direction: column; gap: 8px;">
               <label for="f-msg" style="font-family: &quot;Roboto Mono&quot;, monospace; font-size: 14px; font-weight: 500;">mensagem</label>
               <textarea id="f-msg" name="mensagem" rows="5" placeholder="conta um pouco sobre o projeto ou a vaga" style="padding: 16px; border: 2px solid rgb(242, 242, 245); border-radius: 0px; background: rgb(41, 41, 41); font-family: &quot;Work Sans&quot;, sans-serif; font-size: 16px; color: rgb(242, 242, 245); resize: vertical;"></textarea>
-            </div><div aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;"><label for="f-site">não preencha</label><input id="f-site" tabindex="-1" autocomplete="off" type="text" name="site"></div>
+            </div><div aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;"><label for="f-site">não preencha / leave blank</label><input id="f-site" tabindex="-1" autocomplete="off" type="text" name="site"></div>
             <div>
               <button type="submit" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0px 24px; background: rgb(24, 71, 227); color: rgb(255, 254, 254); border: 1px solid rgb(242, 242, 245); box-shadow: rgb(242, 242, 245) 4px 4px 0px; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 16px; font-weight: 500;">enviar mensagem →</button>
             </div>
@@ -170,6 +183,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
 <div class="dsf-cols">
 <div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
 </div>
+<div class="dsf-lang"><p class="dsf-lbl">idioma</p><div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
 <div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
@@ -183,13 +197,14 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
 <nav class="tnav" aria-label="menu">
 <div class="tnav-win">
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
-<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/"><span>03</span>opiniao/</a></li><li><a href="/contato/" aria-current="page"><span>04</span>contato/</a></li><li><a href="/quiz/"><span>05</span>quiz/</a></li></ul>
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>{{T.k1}}</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/"><span>03</span>{{T.k2}}</a></li><li><a href="/contato/" aria-current="page"><span>04</span>{{T.k3}}</a></li><li><a href="/quiz/"><span>05</span>quiz/</a></li></ul>
 </sc-if>
 <div class="tnav-line">
 <div class="tnav-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div>
-<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/contato $</span>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>{{T.k4}}</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
-<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/">opiniao/</a></li><li><a href="/contato/" aria-current="page">contato/</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<ul class="tnav-list"><li><a href="/">{{T.k1}}</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/">{{T.k2}}</a></li><li><a href="/contato/" aria-current="page">{{T.k3}}</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuOpen}}" aria-controls="tnav-out" aria-label="{{menuLabel}}">
 <sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
@@ -203,11 +218,11 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
     <div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start;">
       <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 32px;">
         <div class="cafe" aria-hidden="true"><svg width="96" height="96" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path fill="#292929" d="M6 1h1v1h-1zM10 1h1v1h-1zM5 2h1v1h-1zM9 2h1v1h-1zM6 3h1v1h-1zM10 3h1v1h-1zM5 4h1v1h-1zM9 4h1v1h-1zM2 6h10v1h-10zM2 7h1v1h-1zM11 7h4v1h-4zM2 8h1v1h-1zM11 8h1v1h-1zM14 8h1v1h-1zM2 9h1v1h-1zM11 9h1v1h-1zM14 9h1v1h-1zM2 10h1v1h-1zM11 10h4v1h-4zM2 11h1v1h-1zM11 11h1v1h-1zM3 12h1v1h-1zM10 12h1v1h-1zM4 13h6v1h-6zM1 15h14v1h-14z"></path><path fill="#e97045" d="M3 7h8v1h-8z"></path><path fill="#fffefe" d="M3 8h8v4h-8zM4 12h6v1h-6z"></path></svg></div>
-        <p style="margin: 0; font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500; color: #b9a6f2; text-transform: uppercase;">contato</p>
-        <h1 style="margin: 0; font-family: 'Gokschil', 'Roboto Mono', monospace; font-weight: 400; font-size: clamp(48px, 7vw, 80px); line-height: 0.95;">vamos conversar</h1>
-        <p style="margin: 0; max-width: 440px; font-size: 20px;">deixe seu e-mail e uma mensagem que eu respondo por lá.</p>
+        <p style="margin: 0; font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500; color: #b9a6f2; text-transform: uppercase;">{{T.k5}}</p>
+        <h1 style="margin: 0; font-family: 'Gokschil', 'Roboto Mono', monospace; font-weight: 400; font-size: clamp(48px, 7vw, 80px); line-height: 0.95;">{{T.k6}}</h1>
+        <p style="margin: 0; max-width: 440px; font-size: 20px;">{{T.k7}}</p>
         <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; font-family: 'Roboto Mono', monospace;">
-          <li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li>
+          <li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="{{T.k25}}"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li>
           <li><a href="mailto:oi@thais.coffee">oi@thais.coffee</a></li>
         </ul>
       </div>
@@ -217,28 +232,28 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
           <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid #f2f2f5; background: #e97045; color: #292929"></span>
           <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid #f2f2f5; background: #ffff8d; color: #292929"></span>
           <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid #f2f2f5; background: #4c1d95;"></span>
-          <span style="margin-left: 16px; font-family: 'Roboto Mono', monospace; font-size: 14px;">nova-mensagem.txt</span>
+          <span style="margin-left: 16px; font-family: 'Roboto Mono', monospace; font-size: 14px;">{{T.k8}}</span>
         </div>
 
         <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
           <form onSubmit="{{ submit }}" action="/contato/enviar.php" method="post" novalidate style="padding: 32px; display: flex; flex-direction: column; gap: 24px;">
             <div style="display: flex; flex-direction: column; gap: 8px;">
-              <label for="f-nome" style="font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500;">nome</label>
-              <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="como posso te chamar?" style="min-height: 48px; padding: 0 16px; border: 2px solid #f2f2f5; border-radius: 0; background: #292929; font-family: 'Work Sans', sans-serif; font-size: 16px; color: #f2f2f5;">
+              <label for="f-nome" style="font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500;">{{T.k9}}</label>
+              <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="{{T.k26}}" style="min-height: 48px; padding: 0 16px; border: 2px solid #f2f2f5; border-radius: 0; background: #292929; font-family: 'Work Sans', sans-serif; font-size: 16px; color: #f2f2f5;">
             </div>
             <div style="display: flex; flex-direction: column; gap: 8px;">
-              <label for="f-email" style="font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500;">e-mail <span style="color: #b9a6f2;">(obrigatório)</span></label>
-              <input id="f-email" name="email" type="email" aria-required="true" autocomplete="email" placeholder="voce@empresa.com" value="{{ email }}" onChange="{{ setEmail }}" aria-invalid="{{ emailInvalid }}" aria-describedby="f-email-erro" style="min-height: 48px; padding: 0 16px; border: 2px solid #f2f2f5; border-radius: 0; background: #292929; font-family: 'Work Sans', sans-serif; font-size: 16px; color: #f2f2f5;">
+              <label for="f-email" style="font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500;">{{T.k10}} <span style="color: #b9a6f2;">{{T.k11}}</span></label>
+              <input id="f-email" name="email" type="email" aria-required="true" autocomplete="email" placeholder="{{T.k27}}" value="{{ email }}" onChange="{{ setEmail }}" aria-invalid="{{ emailInvalid }}" aria-describedby="f-email-erro" style="min-height: 48px; padding: 0 16px; border: 2px solid #f2f2f5; border-radius: 0; background: #292929; font-family: 'Work Sans', sans-serif; font-size: 16px; color: #f2f2f5;">
               <sc-if value="{{ emailInvalid }}" hint-placeholder-val="{{ false }}">
-                <p id="f-email-erro" style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px;"><span aria-hidden="true" style="display: inline-block; width: 8px; height: 8px; background: #e97045; color: #292929"></span>confira o e-mail: falta o @ ou o domínio.</p>
+                <p id="f-email-erro" style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px;"><span aria-hidden="true" style="display: inline-block; width: 8px; height: 8px; background: #e97045; color: #292929"></span>{{T.k12}}</p>
               </sc-if>
             </div>
             <div style="display: flex; flex-direction: column; gap: 8px;">
-              <label for="f-msg" style="font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500;">mensagem</label>
-              <textarea id="f-msg" name="mensagem" rows="5" placeholder="conta um pouco sobre o projeto ou a vaga" style="padding: 16px; border: 2px solid #f2f2f5; border-radius: 0; background: #292929; font-family: 'Work Sans', sans-serif; font-size: 16px; color: #f2f2f5; resize: vertical;"></textarea>
-            </div><div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="f-site">não preencha</label><input id="f-site" name="site" type="text" tabindex="-1" autocomplete="off"></div><sc-if value="{{ failed }}"><p role="alert" style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px;"><span aria-hidden="true" style="display: inline-block; width: 8px; height: 8px; background: #e97045;"></span>Não consegui enviar agora. Tenta de novo em alguns minutos?</p></sc-if>
+              <label for="f-msg" style="font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500;">{{T.k13}}</label>
+              <textarea id="f-msg" name="mensagem" rows="5" placeholder="{{T.k28}}" style="padding: 16px; border: 2px solid #f2f2f5; border-radius: 0; background: #292929; font-family: 'Work Sans', sans-serif; font-size: 16px; color: #f2f2f5; resize: vertical;"></textarea>
+            </div><div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="f-site">não preencha / leave blank</label><input id="f-site" name="site" type="text" tabindex="-1" autocomplete="off"></div><sc-if value="{{ failed }}"><p role="alert" style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px;"><span aria-hidden="true" style="display: inline-block; width: 8px; height: 8px; background: #e97045;"></span><sc-if value="{{ isPt }}">Não consegui enviar agora. Tenta de novo em alguns minutos?</sc-if><sc-if value="{{ isEn }}">I couldn’t send it right now. Try again in a few minutes?</sc-if></p></sc-if>
             <div>
-              <button type="submit" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 24px; background: #1847e3; color: #fffefe; border: 1px solid #f2f2f5; box-shadow: 4px 4px 0 #f2f2f5; font-family: 'Roboto Mono', monospace; font-size: 16px; font-weight: 500;">enviar mensagem →</button>
+              <button type="submit" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 24px; background: #1847e3; color: #fffefe; border: 1px solid #f2f2f5; box-shadow: 4px 4px 0 #f2f2f5; font-family: 'Roboto Mono', monospace; font-size: 16px; font-weight: 500;">{{T.k14}}</button>
             </div>
           </form>
         </sc-if>
@@ -246,9 +261,9 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
         <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
           <div role="status" style="padding: 48px 32px; display: flex; flex-direction: column; gap: 24px; align-items: flex-start;">
             <svg width="64" height="64" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>
-            <h2 style="margin: 0; font-family: 'Roboto Mono', monospace; font-size: 32px; font-weight: 500; line-height: 1.1;">mensagem enviada_</h2>
-            <p style="margin: 0;">obrigada! vou responder no e-mail que você deixou.</p>
-            <button type="button" onClick="{{ reset }}" style="min-height: 44px; padding: 0 16px; background: #292929; border: 2px solid #f2f2f5; box-shadow: 2px 2px 0 #f2f2f5; font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500; color: #f2f2f5;">escrever outra</button>
+            <h2 style="margin: 0; font-family: 'Roboto Mono', monospace; font-size: 32px; font-weight: 500; line-height: 1.1;">{{T.k15}}</h2>
+            <p style="margin: 0;">{{T.k16}}</p>
+            <button type="button" onClick="{{ reset }}" style="min-height: 44px; padding: 0 16px; background: #292929; border: 2px solid #f2f2f5; box-shadow: 2px 2px 0 #f2f2f5; font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500; color: #f2f2f5;">{{T.k17}}</button>
           </div>
         </sc-if>
       </div>
@@ -258,29 +273,43 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
   <footer class="dsf">
 <div class="dsf-tape" aria-hidden="true"></div>
 <div class="dsf-in">
-<p class="dsf-lbl">fim da página</p>
+<p class="dsf-lbl">{{T.k18}}</p>
 
 <div class="dsf-cols">
-<div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k19}}</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">{{T.k20}}</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">{{T.k21}}</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">{{T.k22}}</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">{{T.k5}}</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
 </div>
+<div class="dsf-lang"><p class="dsf-lbl">{{T.__fl}}</p><div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<div class="dsf-sig"><span class="dsf-sr">{{T.k23}}</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>{{T.k24}}</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </template>
 <script type="text/plain" id="dc-logic">
+// idioma (pt/en): mesmo esquema da página sobre, guardado em localStorage 'thais-lang'
+var __EN = {"fechar menu": "close menu", "abrir menu": "open menu"};
+var __T = {"pt": {"k1": "sobre/", "k2": "opiniao/", "k3": "contato/", "k4": ":~/contato $", "k5": "contato", "k6": "vamos conversar", "k7": "deixe seu e-mail e uma mensagem que eu respondo por lá.", "k8": "nova-mensagem.txt", "k9": "nome", "k10": "e-mail", "k11": "(obrigatório)", "k12": "confira o e-mail: falta o @ ou o domínio.", "k13": "mensagem", "k14": "enviar mensagem →", "k15": "mensagem enviada_", "k16": "obrigada! vou responder no e-mail que você deixou.", "k17": "escrever outra", "k18": "fim da página", "k19": "navegue", "k20": "sobre", "k21": "portfólio", "k22": "opinião", "k23": "feito com talento e IA", "k24": "feito com talento e IA ッ", "k25": "LinkedIn da Thais (abre em nova aba)", "k26": "como posso te chamar?", "k27": "voce@empresa.com", "k28": "conta um pouco sobre o projeto ou a vaga", "__lg": "idioma", "__fl": "idioma"}, "en": {"k1": "about/", "k2": "opinion/", "k3": "contact/", "k4": ":~/contact $", "k5": "contact", "k6": "let’s talk", "k7": "leave your email and a message, and i’ll reply there.", "k8": "new-message.txt", "k9": "name", "k10": "email", "k11": "(required)", "k12": "check the email: the @ or the domain is missing.", "k13": "message", "k14": "send message →", "k15": "message sent_", "k16": "thank you! i’ll reply to the email you left.", "k17": "write another", "k18": "end of page", "k19": "browse", "k20": "about", "k21": "portfolio", "k22": "opinion", "k23": "made with talent and AI", "k24": "made with talent and AI ッ", "k25": "Thais on LinkedIn (opens in a new tab)", "k26": "what should i call you?", "k27": "you@company.com", "k28": "tell me a bit about the project or the role", "__lg": "language", "__fl": "language"}};
+var __TITLE = "contact · thais castro";
+var __SKIP = /^(k|cur|value|v|d|l|name|type|tab|cls|.*Cls|id|href|src|key|style|.*Style|path|sub|.*Bg|color|.*Color)$/;
+function __lang() { if (window.__thaisLang) return window.__thaisLang; let l = 'pt'; try { if (localStorage.getItem('thais-lang') === 'en') l = 'en'; } catch (e) {} window.__thaisLang = l; return l; }
+function __t(s) { return __lang() === 'en' && Object.prototype.hasOwnProperty.call(__EN, s) ? __EN[s] : s; }
+function __map(v, d, k) { if (d > 7) return v; if (typeof v === 'string') return k && __SKIP.test(k) ? v : __t(v); if (Array.isArray(v)) return v.map((x) => __map(x, d + 1, k)); if (v && typeof v === 'object' && Object.getPrototypeOf(v) === Object.prototype) { const o = {}; for (const kk in v) o[kk] = __map(v[kk], d + 1, kk); return o; } return v; }
+function __doc(l) { setTimeout(() => { try { document.documentElement.lang = l === 'en' ? 'en' : 'pt-BR'; if (document.getElementById('dc-root') && __TITLE) { if (window.__ptTitle == null) window.__ptTitle = document.title; document.title = l === 'en' ? __TITLE : window.__ptTitle; } } catch (e) {} }, 0); }
+
 class Component extends DCLogic {
+renderVals() { const l = __lang(); if (!this.__docOk) { this.__docOk = 1; __doc(l); } const v0 = this.__rv0() || {}; const v = l === 'en' ? __map(v0, 0) : Object.assign({}, v0); v.T = __T[l]; v.isPt = l !== 'en'; v.isEn = l === 'en'; v.setPt = () => this.__setLang('pt'); v.setEn = () => this.__setLang('en'); return v; }
+__setLang(l) { window.__thaisLang = l; try { localStorage.setItem('thais-lang', l); } catch (e) {} __doc(l); this.setState({ __lang: l }); }
+
   constructor(props) {
     super(props);
     this.state = { email: '', tried: false, sent: false, menuOpen: false };
   }
-  renderVals() {
+  __rv0() {
     const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.email);
     const emailInvalid = this.state.tried && !valid;
     const menuOpen = !!this.state.menuOpen;
     return {
-      menuOpen: menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? 'fechar menu' : 'abrir menu',
+      menuOpen: menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? __t('fechar menu') : __t('abrir menu'),
       toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: () => this.setState({ menuOpen: false }),
       email: this.state.email,
       emailInvalid: emailInvalid,
@@ -297,6 +326,6 @@ class Component extends DCLogic {
   }
 }
 </script>
-<script src="/assets/dc.js?v=1793316727"></script>
+<script src="/assets/dc.js?v=1793318809"></script>
 </body>
 </html>

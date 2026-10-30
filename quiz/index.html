@@ -303,6 +303,18 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 @media (prefers-reduced-motion: reduce) { .mq *, .mq *::before { animation: none !important; transition: none !important; } }
 
 .mq-main{flex:1 0 auto;width:100%;max-width:672px;margin:0 auto;padding:48px 16px 96px;display:flex;flex-direction:column;gap:24px}
+/* seletor de idioma (bandeiras em pixel) */
+.lng{display:flex;align-items:center;gap:4px;flex-shrink:0;margin-left:auto}
+.lng-b{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 8px;background:transparent;color:#f2f2f5;border:1px dashed transparent;font:500 14px/1 'Roboto Mono',monospace;text-transform:lowercase;cursor:pointer}
+.lng-b svg{display:block;flex-shrink:0;box-shadow:0 0 0 1px #f2f2f5}
+.lng-b:hover{border-color:#ffff8d;color:#ffff8d}
+.lng-b[aria-pressed="true"]{border:1px solid #f2f2f5}
+.tnav-line .lng + .tnav-ls{margin-left:0}
+.dsf-lang{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid #f2f2f5}
+.dsf-lang .dsf-lbl{margin:0}
+.dsf-lang .lng{margin-left:0}
+.dsf-lang .lng-b{font-size:16px}
+@media (max-width:480px){.tnav-line .lng-b span{display:none}.tnav-line .lng-b{padding:0 10px}}
 </style>
 </head>
 <body>
@@ -317,6 +329,7 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 <span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/match $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
 <ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/">opiniao/</a></li><li><a href="/contato/">contato/</a></li><li><a href="/quiz/" aria-current="page">quiz/</a></li></ul>
+<div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
 
@@ -355,6 +368,7 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 <div class="dsf-cols">
 <div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
 </div>
+<div class="dsf-lang"><p class="dsf-lbl">idioma</p><div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
 <div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
@@ -367,13 +381,14 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 <nav class="tnav" aria-label="menu">
 <div class="tnav-win">
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
-<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/"><span>03</span>opiniao/</a></li><li><a href="/contato/"><span>04</span>contato/</a></li><li><a href="/quiz/" aria-current="page"><span>05</span>quiz/</a></li></ul>
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>{{T.k1}}</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/"><span>03</span>{{T.k2}}</a></li><li><a href="/contato/"><span>04</span>{{T.k3}}</a></li><li><a href="/quiz/" aria-current="page"><span>05</span>quiz/</a></li></ul>
 </sc-if>
 <div class="tnav-line">
 <div class="tnav-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div>
 <span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/match $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
-<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/">opiniao/</a></li><li><a href="/contato/">contato/</a></li><li><a href="/quiz/" aria-current="page">quiz/</a></li></ul>
+<ul class="tnav-list"><li><a href="/">{{T.k1}}</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/">{{T.k2}}</a></li><li><a href="/contato/">{{T.k3}}</a></li><li><a href="/quiz/" aria-current="page">quiz/</a></li></ul>
+<div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuOpen}}" aria-controls="tnav-out" aria-label="{{menuLabel}}">
 <sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
@@ -382,20 +397,20 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 </div>
 </nav>
 <div class="mq-main">
-<a class="mq-back" href="/" aria-label="voltar para a página sobre"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+<a class="mq-back" href="/" aria-label="{{T.k33}}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
 <div class="term" aria-hidden="true"><span>thais.coffee/<b>match</b>/ <span class="blink"></span></span><span>{{termRight}}</span></div>
 <main class="{{cardCls}}" aria-live="polite">
 
 <sc-if value="{{isIntro}}" hint-placeholder-val="{{ true }}">
-<div class="intro-top"><div style="display: flex; flex-direction: column; gap: 16px; min-width: 0"><span class="eyebrow">quiz para recrutadores</span><h1>será que dá <span class="hl">match</span>?</h1></div><svg class="smiley" viewBox="-0.5 -1 12 11" shape-rendering="crispEdges" aria-hidden="true"><rect x="1" y="0" width="3" height="1" fill="var(--accent)"></rect><rect x="7" y="0" width="3" height="1" fill="var(--accent)"></rect><rect x="0" y="1" width="5" height="1" fill="var(--accent)"></rect><rect x="6" y="1" width="5" height="1" fill="var(--accent)"></rect><rect x="0" y="2" width="11" height="1" fill="var(--accent)"></rect><rect x="0" y="3" width="11" height="1" fill="var(--accent)"></rect><rect x="1" y="4" width="9" height="1" fill="var(--accent)"></rect><rect x="2" y="5" width="7" height="1" fill="var(--accent)"></rect><rect x="3" y="6" width="5" height="1" fill="var(--accent)"></rect><rect x="4" y="7" width="3" height="1" fill="var(--accent)"></rect><rect x="5" y="8" width="1" height="1" fill="var(--accent)"></rect><rect x="1" y="1" width="2" height="1" fill="var(--fg)"></rect><rect x="1" y="2" width="1" height="1" fill="var(--fg)"></rect></svg></div>
-<p>responda o quiz e veja se vale a pena me chamar para um papo.</p>
-<button type="button" class="btn" onClick="{{start}}">começar →</button>
+<div class="intro-top"><div style="display: flex; flex-direction: column; gap: 16px; min-width: 0"><span class="eyebrow">{{T.k4}}</span><h1>{{T.k5}} <span class="hl">match</span>?</h1></div><svg class="smiley" viewBox="-0.5 -1 12 11" shape-rendering="crispEdges" aria-hidden="true"><rect x="1" y="0" width="3" height="1" fill="var(--accent)"></rect><rect x="7" y="0" width="3" height="1" fill="var(--accent)"></rect><rect x="0" y="1" width="5" height="1" fill="var(--accent)"></rect><rect x="6" y="1" width="5" height="1" fill="var(--accent)"></rect><rect x="0" y="2" width="11" height="1" fill="var(--accent)"></rect><rect x="0" y="3" width="11" height="1" fill="var(--accent)"></rect><rect x="1" y="4" width="9" height="1" fill="var(--accent)"></rect><rect x="2" y="5" width="7" height="1" fill="var(--accent)"></rect><rect x="3" y="6" width="5" height="1" fill="var(--accent)"></rect><rect x="4" y="7" width="3" height="1" fill="var(--accent)"></rect><rect x="5" y="8" width="1" height="1" fill="var(--accent)"></rect><rect x="1" y="1" width="2" height="1" fill="var(--fg)"></rect><rect x="1" y="2" width="1" height="1" fill="var(--fg)"></rect></svg></div>
+<p>{{T.k6}}</p>
+<button type="button" class="btn" onClick="{{start}}">{{T.k7}}</button>
 </sc-if>
 
 <sc-if value="{{isTri}}" hint-placeholder-val="{{ false }}">
 <sc-if value="{{answered}}" hint-placeholder-val="{{ false }}"><span class="passed">passed!</span></sc-if>
-<div class="hud"><span class="lvl">fase {{phase}}</span><div class="bar" aria-hidden="true" style="grid-template-columns: repeat({{total}}, 1fr)"><sc-for list="{{segs}}" as="s" hint-placeholder-count="10"><i class="{{s.cls}}"></i></sc-for></div></div>
-<span class="eyebrow">// pergunta eliminatória</span>
+<div class="hud"><span class="lvl">{{T.k8}}{{phase}}</span><div class="bar" aria-hidden="true" style="grid-template-columns: repeat({{total}}, 1fr)"><sc-for list="{{segs}}" as="s" hint-placeholder-count="10"><i class="{{s.cls}}"></i></sc-for></div></div>
+<span class="eyebrow">{{T.k9}}</span>
 <h2>{{question}}</h2>
 <div class="opts"><sc-for list="{{opts}}" as="o" hint-placeholder-count="4"><button type="button" class="{{o.cls}}" disabled="{{o.disabled}}" onClick="{{o.pick}}"><span class="k">{{o.key}}</span><span>{{o.label}}</span></button></sc-for></div>
 <div class="react"><sc-if value="{{answered}}" hint-placeholder-val="{{ false }}"><span class="who">thais&gt;</span> {{reaction}}</sc-if><sc-if value="{{notAnswered}}" hint-placeholder-val="{{ true }}"><span class="muted">{{hint}}</span></sc-if></div>
@@ -403,7 +418,7 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 </sc-if>
 
 <sc-if value="{{isQ}}" hint-placeholder-val="{{ false }}">
-<div class="hud"><span class="lvl">fase {{phase}}</span><div class="bar" aria-hidden="true" style="grid-template-columns: repeat({{total}}, 1fr)"><sc-for list="{{segs}}" as="s" hint-placeholder-count="10"><i class="{{s.cls}}"></i></sc-for></div></div>
+<div class="hud"><span class="lvl">{{T.k8}}{{phase}}</span><div class="bar" aria-hidden="true" style="grid-template-columns: repeat({{total}}, 1fr)"><sc-for list="{{segs}}" as="s" hint-placeholder-count="10"><i class="{{s.cls}}"></i></sc-for></div></div>
 <span class="eyebrow">// {{tag}}</span>
 <h2>{{question}}</h2>
 <div class="opts"><sc-for list="{{opts}}" as="o" hint-placeholder-count="4"><button type="button" class="{{o.cls}}" disabled="{{o.disabled}}" onClick="{{o.pick}}"><span class="k">{{o.key}}</span><span>{{o.label}}</span></button></sc-for></div>
@@ -412,45 +427,45 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 </sc-if>
 
 <sc-if value="{{isLoading}}" hint-placeholder-val="{{ false }}">
-<span class="eyebrow">// processando</span>
-<h2>calculando o match</h2>
-<div class="load" role="progressbar" aria-label="calculando o resultado" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{loadPct}}"><span style="width: {{loadPct}}%"></span></div>
-<div class="load-meta" aria-hidden="true"><span>carregando</span><b>{{loadPct}}%</b></div>
+<span class="eyebrow">{{T.k10}}</span>
+<h2>{{T.k11}}</h2>
+<div class="load" role="progressbar" aria-label="{{T.k34}}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{loadPct}}"><span style="width: {{loadPct}}%"></span></div>
+<div class="load-meta" aria-hidden="true"><span>{{T.k12}}</span><b>{{loadPct}}%</b></div>
 <ul class="cmd"><sc-for list="{{cmdLines}}" as="l" hint-placeholder-count="2"><li class="{{l.cls}}">{{l.text}}<sc-if value="{{l.typing}}" hint-placeholder-val="{{ false }}"><span class="blink" aria-hidden="true"></span></sc-if></li></sc-for></ul>
 </sc-if>
 
 <sc-if value="{{isDenied}}" hint-placeholder-val="{{ false }}">
 <div class="dsf-sr">
 <h1>access denied</h1>
-<p>você não tem permissão para usar seu tempo com o teste agora.</p>
-<p>no momento, apenas vagas no modelo 100% remoto ou com idas mais espaçadas ao escritório estão no meu radar. se algum dia o modelo de trabalho da sua empresa mudar, vou adorar conversar!</p>
+<p>{{T.k13}}</p>
+<p>{{T.k14}}</p>
 </div>
 <div aria-hidden="true">
 <sc-if value="{{notGone}}" hint-placeholder-val="{{ true }}">
 <div class="{{msgCls}}">
-<span class="eyebrow">// erro 403</span>
+<span class="eyebrow">{{T.k15}}</span>
 <h1>access denied</h1>
-<p>você não tem permissão para usar seu tempo com o teste agora.</p>
-<p>no momento, apenas vagas no modelo 100% remoto ou com idas mais espaçadas ao escritório estão no meu radar. se algum dia o modelo de trabalho da sua empresa mudar, vou adorar conversar!</p>
-<p class="countdown" aria-live="off">essa mensagem se autodestruirá em <b class="{{secsCls}}">{{secs}}</b> segundos</p>
+<p>{{T.k13}}</p>
+<p>{{T.k14}}</p>
+<p class="countdown" aria-live="off">{{T.k16}} <b class="{{secsCls}}">{{secs}}</b> {{T.k17}}</p>
 </div>
 </sc-if>
-<sc-if value="{{gone}}" hint-placeholder-val="{{ false }}"><p class="gone">&gt; mensagem apagada<span class="blink"></span></p></sc-if>
+<sc-if value="{{gone}}" hint-placeholder-val="{{ false }}"><p class="gone">{{T.k18}}<span class="blink"></span></p></sc-if>
 </div>
-<div class="actions"><button type="button" class="btn ghost" onClick="{{restart}}">voltar ao início</button></div>
+<div class="actions"><button type="button" class="btn ghost" onClick="{{restart}}">{{T.k19}}</button></div>
 </sc-if>
 
 <sc-if value="{{isResult}}" hint-placeholder-val="{{ false }}">
-<span class="eyebrow">resultado</span>
+<span class="eyebrow">{{T.k20}}</span>
 <div class="result-top">
 <svg class="mug" viewBox="0 -20 100 120" shape-rendering="crispEdges" role="img" aria-label="{{mugLabel}}"><g class="steam s1"><rect x="28" y="8" width="4" height="4" fill="var(--muted)"></rect><rect x="32" y="4" width="4" height="4" fill="var(--muted)"></rect><rect x="28" y="0" width="4" height="4" fill="var(--muted)"></rect></g><g class="steam s2"><rect x="46" y="8" width="4" height="4" fill="var(--muted)"></rect><rect x="42" y="4" width="4" height="4" fill="var(--muted)"></rect><rect x="46" y="0" width="4" height="4" fill="var(--muted)"></rect></g><g class="steam s3"><rect x="58" y="8" width="4" height="4" fill="var(--muted)"></rect><rect x="62" y="4" width="4" height="4" fill="var(--muted)"></rect><rect x="58" y="0" width="4" height="4" fill="var(--muted)"></rect></g><rect x="12" y="16" width="64" height="68" fill="var(--fg)"></rect><rect x="18" y="20" width="52" height="56" fill="var(--bg)"></rect><rect x="18" y="{{mugY}}" width="52" height="{{mugFill}}" fill="var(--coffee)"></rect><rect x="18" y="{{mugY}}" width="52" height="4" fill="var(--accent)" opacity="{{mugTop}}"></rect><rect x="76" y="28" width="14" height="8" fill="var(--fg)"></rect><rect x="84" y="36" width="6" height="28" fill="var(--fg)"></rect><rect x="76" y="64" width="14" height="8" fill="var(--fg)"></rect><rect x="6" y="84" width="76" height="8" fill="var(--accent)"></rect></svg>
 <div style="display: flex; flex-direction: column; gap: 8px; min-width: 0"><div class="pct">{{num}}%</div><div class="tier">{{tier}}</div><p class="muted">{{tierLine}}</p></div>
 </div>
-<div style="display: flex; flex-direction: column; gap: 12px"><h2>onde a gente combina</h2><ul class="why"><sc-for list="{{reasons}}" as="r" hint-placeholder-count="4"><li>{{r.text}}</li></sc-for></ul></div>
-<sc-if value="{{hasGaps}}" hint-placeholder-val="{{ false }}"><div class="gaps-sec" style="display: flex; flex-direction: column; gap: 12px"><h2>onde o match não é 100%</h2><ul class="gaps"><sc-for list="{{gaps}}" as="g" hint-placeholder-count="2"><li>{{g.text}}</li></sc-for></ul></div></sc-if>
+<div style="display: flex; flex-direction: column; gap: 12px"><h2>{{T.k21}}</h2><ul class="why"><sc-for list="{{reasons}}" as="r" hint-placeholder-count="4"><li>{{r.text}}</li></sc-for></ul></div>
+<sc-if value="{{hasGaps}}" hint-placeholder-val="{{ false }}"><div class="gaps-sec" style="display: flex; flex-direction: column; gap: 12px"><h2>{{T.k22}}</h2><ul class="gaps"><sc-for list="{{gaps}}" as="g" hint-placeholder-count="2"><li>{{g.text}}</li></sc-for></ul></div></sc-if>
 <div class="contact">
-<h2>vamos conversar</h2>
-<div class="links"><a class="btn" href="/contato/">enviar mensagem →</a><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></div>
+<h2>{{T.k23}}</h2>
+<div class="links"><a class="btn" href="/contato/">{{T.k24}}</a><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="{{T.k35}}"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></div>
 </div>
 </sc-if>
 
@@ -459,89 +474,100 @@ a{color:#f2f2f5}a:hover{color:#ffff8d}
 <footer class="dsf">
 <div class="dsf-tape" aria-hidden="true"></div>
 <div class="dsf-in">
-<p class="dsf-lbl">fim da página</p>
+<p class="dsf-lbl">{{T.k25}}</p>
 
 <div class="dsf-cols">
-<div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k26}}</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">{{T.k27}}</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">{{T.k28}}</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">{{T.k29}}</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">{{T.k30}}</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
 </div>
+<div class="dsf-lang"><p class="dsf-lbl">{{T.__fl}}</p><div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<div class="dsf-sig"><span class="dsf-sr">{{T.k31}}</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>{{T.k32}}</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </template>
 <script type="text/plain" id="dc-logic">
+// idioma (pt/en): mesmo esquema da página sobre, guardado em localStorage 'thais-lang'
+var __EN = {"onde a gente combina": "where we match", "onde o match não é 100%": "where the match isn’t 100%", "em que tipo de produto essa pessoa vai trabalhar?": "what kind of product will this person work on?", "crédito, banco digital ou fintech": "credit, digital banking or fintech", "território conhecido. já criei 6 produtos de crédito do zero até o lançamento.": "familiar territory. i’ve built 6 credit products from scratch to launch.", "já criei 6 produtos de crédito do zero até o lançamento, é território conhecido": "i’ve built 6 credit products from scratch to launch, it’s familiar territory", "app B2C de outro segmento": "a B2C app in another industry", "gente lidando com coisa difícil no celular é exatamente meu tema.": "people dealing with hard stuff on their phones is exactly my thing.", "saas B2B, ferramenta interna": "B2B saas, internal tool", "dá jogo. só vou fazer muita pergunta sobre quem usa.": "could work. i’ll just ask a lot of questions about who uses it.", "precisamos entender qual é o segmento do produto primeiro": "we need to understand the product’s industry first", "é outra coisa": "something else", "curiosidade não falta. me conta mais na conversa.": "i’m never short on curiosity. tell me more when we talk.", "qual é a maior dor do produto hoje?": "what’s the product’s biggest pain point today?", "as pessoas não entendem o que estão contratando": "people don’t understand what they’re signing up for", "meu assunto favorito. venho de content design e transparência é pilar no que faço.": "my favorite subject. i come from content design and transparency is a pillar of what i do.", "venho de content design e deixar claro o que a pessoa está contratando é tipo minha arma secreta": "i come from content design, and making clear what people are signing up for is kind of my secret weapon", "a conversão está baixa": "conversion is low", "bora abrir o funil e testar hipótese antes de redesenhar tudo.": "let’s open up the funnel and test hypotheses before redesigning everything.", "gosto de abrir o funil e testar hipótese antes de sair redesenhando tudo": "i like to open up the funnel and test hypotheses before redesigning everything", "falta diferencial frente ao mercado": "it doesn’t stand out from the market", "experiência clara e honesta é um diferencial que o concorrente demora pra copiar.": "a clear, honest experience is an edge that competitors take a long time to copy.", "meu maior prazer é servir de bench para outros apps do mesmo segmento. acho uma delícia pensar em como ser diferente.": "my greatest joy is being the benchmark for other apps in the same space. i love thinking about how to be different.", "o visual está datado": "the visuals look dated", "resolvo, mas vou perguntar o que mais está doendo por trás disso.": "i can fix it, but i’ll ask what else is hurting behind it.", "eu sou generalista, algo focado exclusivamente em UI não é muito minha praia": "i’m a generalist, something focused purely on UI isn’t really my thing", "como o time decide o que entra no roadmap?": "how does the team decide what goes on the roadmap?", "decisão": "decision", "teste, experimento, fake door, piloto": "tests, experiments, fake doors, pilots", "já validei refinanciamento com fake door antes de construir. me sinto em casa.": "i’ve validated refinancing with a fake door before building it. i feel right at home.", "já validei produto com fake door antes de construir, é o jeito que eu gosto de trabalhar": "i’ve validated products with fake doors before building, it’s how i like to work", "discovery com usuário e dados juntos": "discovery with users and data together", "combinação perfeita. pode me chamar pra mesa.": "perfect combo. save me a seat at the table.", "acredito em decidir com usuário e dados juntos, um sem o outro fica pela metade": "i believe in deciding with users and data together, one without the other is only half the story", "não é o time que decide": "the team doesn’t decide", "gosto de estar onde as decisões são tomadas, e time sem voz no roadmap entrega menos do que poderia": "i like being where decisions are made, and a team with no say in the roadmap delivers less than it could", "ainda estamos descobrindo": "we’re still figuring it out", "honesto. gosto de ajudar a desenhar esse processo também.": "honest. i like helping design that process too.", "quanto texto existe no produto?": "how much copy is there in the product?", "conteúdo": "content", "muito: contrato, taxa, termo, regra": "a lot: contracts, rates, terms, rules", "explicar juros de um jeito que dá pra entender é minha especialidade.": "explaining interest in a way people can understand is my specialty.", "explicar contrato, taxa e juros de um jeito que dá pra entender é minha especialidade": "explaining contracts, rates and interest in a way people can understand is my specialty", "bastante, e ninguém é dono dele": "quite a lot, and nobody owns it", "essa é uma coisa da qual gosto de ser dona. microcopy, e-mail, push, tela de erro... cada palavra importa.": "that’s something i like to own. microcopy, email, push, error screens... every word matters.", "gosto de ser dona do texto do produto, do microcopy ao e-mail": "i like owning the product’s copy, from microcopy to email", "o normal de qualquer app": "the usual for any app", "texto bom faz diferença até no botão.": "good copy makes a difference even on a button.", "texto bom faz diferença até no botão, e eu cuido disso junto com o fluxo": "good copy makes a difference even on a button, and i take care of it along with the flow", "quase nada, é tudo visual": "almost none, it’s all visual", "tudo bem. interface sem texto também comunica.": "that’s fine. an interface without copy communicates too.", "qual o tamanho do escopo da vaga?": "how big is the role’s scope?", "do problema ao lançamento, ponta a ponta": "from problem to launch, end to end", "é como eu gosto de trabalhar: discovery, fluxo, tela, texto e métrica.": "that’s how i like to work: discovery, flow, screens, copy and metrics.", "trabalho do problema ao lançamento, passando por discovery, fluxo, tela, texto e métrica": "i work from problem to launch, through discovery, flow, screens, copy and metrics", "discovery e estratégia de produto": "discovery and product strategy", "ótimo. gosto de estar na conversa antes da solução.": "great. i like being in the conversation before the solution.", "gosto de estar na conversa antes da solução existir": "i like being in the conversation before the solution exists", "execução de telas dentro de um design system": "executing screens within a design system", "hmm... é uma posição mais UI do que estratégica, então... ok, continuando.": "hmm... that’s more of a UI role than a strategic one, so... ok, moving on.", "ainda vamos definir": "we haven’t defined it yet", "então vamos definir juntos.": "then let’s define it together.", "e IA, como entra no dia a dia do time?": "and AI, how does it fit into the team’s day-to-day?", "ferramenta no fluxo, com critério humano": "a tool in the workflow, with human judgment", "exatamente o que penso. fiz meu portfólio com IA, e quem decidiu fui eu.": "exactly what i think. i made my portfolio with AI, and i was the one making the calls.", "já viu aquele filme que o cara destrava os 100% do cérebro com um comprimido? então, a IA pra mim é tipo isso.": "seen that movie where the guy unlocks 100% of his brain with a pill? yeah, AI is kind of that for me.", "estamos explorando ainda": "we’re still exploring", "posso contribuir com o que aprendi usando no meu processo.": "i can contribute what i’ve learned using it in my process.", "não usamos e não pretendemos usar": "we don’t use it and don’t plan to", "respeito. mas vou querer entender o porquê.": "i respect that. but i’ll want to understand why.", "eu já acho estranho trabalhar hoje sem usar IA": "i find it strange to work without AI these days", "ainda não usamos, mas pretendemos": "we don’t use it yet, but we plan to", "posso ajudar a começar com critério.": "i can help get started thoughtfully.", "a IA já faz parte do meu processo, então eu teria que me adaptar a um ritmo diferente no começo": "AI is already part of my process, so i’d have to adapt to a different pace at first", "o produto mexe com dinheiro ou regulação?": "does the product deal with money or regulation?", "sim, e erro de comunicação vira reclamação": "yes, and miscommunication turns into complaints", "na will bank chegamos ao 3º lugar no índice de transparência novücard.": "at will bank we reached 3rd place in the novücard transparency index.", "trabalhar com transparência e honestidade com o cliente já me rendeu até prêmio": "being transparent and honest with customers has even won me an award", "mexe com dinheiro, mas sem muita regra": "it deals with money, but without many rules", "dinheiro sempre pede clareza extra. já sei onde costuma doer.": "money always calls for extra clarity. i already know where it usually hurts.", "dinheiro sempre pede clareza extra, e eu já sei onde costuma doer": "money always calls for extra clarity, and i already know where it usually hurts", "não, mas tem informação sensível": "no, but there’s sensitive information", "confiança se constrói do mesmo jeito: deixando claro o que acontece.": "trust is built the same way: by making clear what happens.", "nada disso": "none of that", "menos pressão, mais espaço pra brincar com a experiência.": "less pressure, more room to play with the experience.", "como é a cultura da empresa em relação à autonomia e ao protagonismo de designers?": "what’s the company culture like when it comes to designers’ autonomy and ownership?", "esperado e muito incentivado": "expected and strongly encouraged", "ótimo. gosto de puxar problema, não só receber tarefa.": "great. i like going after problems, not just receiving tasks.", "gosto de puxar o problema, não só receber a tarefa": "i like going after the problem, not just receiving the task", "designers são mais executores, decisões são tomadas por produto e negócio": "designers mostly execute; product and business make the decisions", "consigo trabalhar assim, mas sinto que meu potencial não seria 100% extraído.": "i can work like that, but i feel my potential wouldn’t be fully used.", "eu acredito demais no trabalho multidisciplinar e o design tem muito a contribuir nas decisões de produto": "i strongly believe in cross-functional work, and design has a lot to contribute to product decisions", "existe certa autonomia, mas é um ambiente com processos bem definidos": "there’s some autonomy, but it’s an environment with well-defined processes", "processo bem definido ajuda. autonomia dentro dele eu sei usar.": "a well-defined process helps. i know how to use autonomy within it.", "é pré-requisito do cargo": "it’s a requirement for the role", "perfeito. já levei produtos inteiros do problema ao lançamento.": "perfect. i’ve taken whole products from problem to launch.", "já levei produtos inteiros do problema ao lançamento, autonomia é meu modo padrão": "i’ve taken whole products from problem to launch, autonomy is my default mode", "pergunta técnica final: como é o café da firma?": "final technical question: how’s the office coffee?", "café": "coffee", "sem açúcar": "no sugar", "como deve ser. meu site chama thais.coffee, você entendeu tudo.": "as it should be. my site is called thais.coffee, you get it.", "café sem açúcar, como deve ser. meu site chama thais.coffee": "coffee with no sugar, as it should be. my site is called thais.coffee", "com açúcar": "with sugar", "aceito. com uma careta discreta.": "i’ll take it. with a discreet grimace.", "é remoto, cada um com o seu": "it’s remote, everyone has their own", "cafezin caseiro, perfeito.": "homemade coffee, perfect.", "cafezinho caseiro e trabalho remoto, combinação perfeita": "homemade coffee and remote work, a perfect combo", "não tem café, só chá": "there’s no coffee, only tea", "o site se chama thais.coffee por um motivo": "the site is called thais.coffee for a reason", "qual é o modelo de trabalho da vaga?": "what’s the role’s work model?", "100% remoto": "fully remote", "perfeito. é exatamente o que eu procuro.": "perfect. that’s exactly what i’m looking for.", "remoto, com encontros presenciais a cada 3 meses ou mais": "remote, with in-person meetups every 3 months or less often", "combinado. encontro trimestral eu topo com prazer.": "deal. i’m happy to do a quarterly meetup.", "híbrido, com presencial todo mês ou toda semana": "hybrid, in the office every month or every week", "analisando os dados": "analyzing the data", "cruzando preferências": "cross-checking preferences", "compilando resultado": "compiling result", "match de café coado na hora": "a freshly brewed coffee match", "isso aqui tem cara de vaga feita pra mim. vamos marcar uma conversa?": "this looks like a role made for me. shall we set up a chat?", "combinação forte": "strong match", "muita coisa em comum entre o que vocês precisam e o que eu faço bem.": "a lot in common between what you need and what i do well.", "tem química": "there’s chemistry", "alguns pontos batem em cheio, outros dá pra descobrir numa conversa.": "some points hit the mark, others we can find out in a conversation.", "match em construção": "match in progress", "talvez não seja óbvio, mas curiosidade eu tenho de sobra. me conta mais?": "it may not be obvious, but i have curiosity to spare. tell me more?", "6 produtos de crédito criados end-to-end na will bank: empréstimo pessoal, antecipação do FGTS, Pix parcelado e mais": "6 credit products built end-to-end at will bank: personal loan, FGTS advance, Pix in installments and more", "background em content design: deixo claro o que a pessoa está contratando": "a background in content design: i make clear what people are signing up for", "valida antes de construir: fake door do refinanciamento em dia, teste de lembrete de pagamento por pix": "validates before building: the on-time refinancing fake door, the Pix payment reminder test", "escreve a interface inteira, do microcopy ao e-mail de cobrança": "writes the whole interface, from microcopy to the collections email", "trabalha do discovery à métrica pós-lançamento": "works from discovery to post-launch metrics", "usa IA no processo, com critério de designer (o próprio portfólio foi feito assim)": "uses AI in the process, with a designer’s judgment (this very portfolio was made that way)", "tem protagonismo: puxa o problema, propõe a solução e defende com dados": "takes ownership: goes after the problem, proposes the solution and defends it with data", "transparência como pilar: will bank em 3º no índice de transparência novücard (2S23)": "transparency as a pillar: will bank 3rd in the novücard transparency index (2H23)", "thais.coffee. precisa dizer mais?": "thais.coffee. need i say more?", "copiar e-mail": "copy email", "fechar menu": "close menu", "abrir menu": "open menu", "acesso negado": "access denied", "fase ": "level ", "esta pergunta não entra na pontuação.": "this question doesn’t count toward the score.", "escolha uma opção (ou aperte A, B, C ou D).": "pick an option (or press A, B, C or D).", "ver resultado →": "see result →", "próxima →": "next →", "caneca ": "mug ", "% cheia": "% full", "copiado!": "copied!", "selecione o e-mail": "select the email", "dor": "pain", "presencial": "fully on-site", "ia": "ai", "escopo": "scope", "eita...": "yikes...", "produto": "product", "risco": "risk", "autonomia": "autonomy", "pronto": "done"};
+var __T = {"pt": {"k1": "sobre/", "k2": "opiniao/", "k3": "contato/", "k4": "quiz para recrutadores", "k5": "será que dá", "k6": "responda o quiz e veja se vale a pena me chamar para um papo.", "k7": "começar →", "k8": "fase ", "k9": "// pergunta eliminatória", "k10": "// processando", "k11": "calculando o match", "k12": "carregando", "k13": "você não tem permissão para usar seu tempo com o teste agora.", "k14": "no momento, apenas vagas no modelo 100% remoto ou com idas mais espaçadas ao escritório estão no meu radar. se algum dia o modelo de trabalho da sua empresa mudar, vou adorar conversar!", "k15": "// erro 403", "k16": "essa mensagem se autodestruirá em", "k17": "segundos", "k18": "> mensagem apagada", "k19": "voltar ao início", "k20": "resultado", "k21": "onde a gente combina", "k22": "onde o match não é 100%", "k23": "vamos conversar", "k24": "enviar mensagem →", "k25": "fim da página", "k26": "navegue", "k27": "sobre", "k28": "portfólio", "k29": "opinião", "k30": "contato", "k31": "feito com talento e IA", "k32": "feito com talento e IA ッ", "k33": "voltar para a página sobre", "k34": "calculando o resultado", "k35": "LinkedIn da Thais (abre em nova aba)", "__lg": "idioma", "__fl": "idioma"}, "en": {"k1": "about/", "k2": "opinion/", "k3": "contact/", "k4": "a quiz for recruiters", "k5": "is it a", "k6": "take the quiz and see if it’s worth reaching out for a chat.", "k7": "start →", "k8": "level ", "k9": "// deal-breaker question", "k10": "// processing", "k11": "calculating the match", "k12": "loading", "k13": "you don’t have permission to spend your time on this test right now.", "k14": "right now, only fully remote roles or roles with occasional office visits are on my radar. if your company’s work model ever changes, i’d love to talk!", "k15": "// error 403", "k16": "this message will self-destruct in", "k17": "seconds", "k18": "> message deleted", "k19": "back to start", "k20": "result", "k21": "where we match", "k22": "where the match isn’t 100%", "k23": "let’s talk", "k24": "send message →", "k25": "end of page", "k26": "browse", "k27": "about", "k28": "portfolio", "k29": "opinion", "k30": "contact", "k31": "made with talent and AI", "k32": "made with talent and AI ッ", "k33": "back to the about page", "k34": "calculating the result", "k35": "Thais on LinkedIn (opens in a new tab)", "__lg": "language", "__fl": "language"}};
+var __TITLE = "am i the right person for you? · quiz · thais castro";
+var __SKIP = /^(k|cur|value|v|d|l|name|type|tab|cls|.*Cls|id|href|src|key|style|.*Style|path|sub|.*Bg|color|.*Color)$/;
+function __lang() { if (window.__thaisLang) return window.__thaisLang; let l = 'pt'; try { if (localStorage.getItem('thais-lang') === 'en') l = 'en'; } catch (e) {} window.__thaisLang = l; return l; }
+function __t(s) { return __lang() === 'en' && Object.prototype.hasOwnProperty.call(__EN, s) ? __EN[s] : s; }
+function __map(v, d, k) { if (d > 7) return v; if (typeof v === 'string') return k && __SKIP.test(k) ? v : __t(v); if (Array.isArray(v)) return v.map((x) => __map(x, d + 1, k)); if (v && typeof v === 'object' && Object.getPrototypeOf(v) === Object.prototype) { const o = {}; for (const kk in v) o[kk] = __map(v[kk], d + 1, kk); return o; } return v; }
+function __doc(l) { setTimeout(() => { try { document.documentElement.lang = l === 'en' ? 'en' : 'pt-BR'; if (document.getElementById('dc-root') && __TITLE) { if (window.__ptTitle == null) window.__ptTitle = document.title; document.title = l === 'en' ? __TITLE : window.__ptTitle; } } catch (e) {} }, 0); }
+
 // Cada resposta: [texto, peso, reação na hora, frase do resultado]
-// A frase do resultado aparece em "onde a gente combina" (peso 3) ou "onde o match não é 100%" (peso 0 ou 1).
+// A frase do resultado aparece em __t("onde a gente combina") (peso 3) ou __t("onde o match não é 100%") (peso 0 ou 1).
 const Q = [
-  { q: "em que tipo de produto essa pessoa vai trabalhar?", tag: "produto",
+  { q: __t("em que tipo de produto essa pessoa vai trabalhar?"), tag: "produto",
     a: [
-      ["crédito, banco digital ou fintech", 3, "território conhecido. já criei 6 produtos de crédito do zero até o lançamento.", "já criei 6 produtos de crédito do zero até o lançamento, é território conhecido"],
-      ["app B2C de outro segmento", 2, "gente lidando com coisa difícil no celular é exatamente meu tema.", ""],
-      ["saas B2B, ferramenta interna", 1, "dá jogo. só vou fazer muita pergunta sobre quem usa.", "precisamos entender qual é o segmento do produto primeiro"],
-      ["é outra coisa", 1, "curiosidade não falta. me conta mais na conversa.", "precisamos entender qual é o segmento do produto primeiro"] ] },
-  { q: "qual é a maior dor do produto hoje?", tag: "dor",
+      [__t("crédito, banco digital ou fintech"), 3, __t("território conhecido. já criei 6 produtos de crédito do zero até o lançamento."), __t("já criei 6 produtos de crédito do zero até o lançamento, é território conhecido")],
+      [__t("app B2C de outro segmento"), 2, __t("gente lidando com coisa difícil no celular é exatamente meu tema."), ""],
+      [__t("saas B2B, ferramenta interna"), 1, __t("dá jogo. só vou fazer muita pergunta sobre quem usa."), __t("precisamos entender qual é o segmento do produto primeiro")],
+      [__t("é outra coisa"), 1, __t("curiosidade não falta. me conta mais na conversa."), __t("precisamos entender qual é o segmento do produto primeiro")] ] },
+  { q: __t("qual é a maior dor do produto hoje?"), tag: "dor",
     a: [
-      ["as pessoas não entendem o que estão contratando", 3, "meu assunto favorito. venho de content design e transparência é pilar no que faço.", "venho de content design e deixar claro o que a pessoa está contratando é tipo minha arma secreta"],
-      ["a conversão está baixa", 3, "bora abrir o funil e testar hipótese antes de redesenhar tudo.", "gosto de abrir o funil e testar hipótese antes de sair redesenhando tudo"],
-      ["falta diferencial frente ao mercado", 3, "experiência clara e honesta é um diferencial que o concorrente demora pra copiar.", "meu maior prazer é servir de bench para outros apps do mesmo segmento. acho uma delícia pensar em como ser diferente."],
-      ["o visual está datado", 1, "resolvo, mas vou perguntar o que mais está doendo por trás disso.", "eu sou generalista, algo focado exclusivamente em UI não é muito minha praia"] ] },
-  { q: "como o time decide o que entra no roadmap?", tag: "decisão",
+      [__t("as pessoas não entendem o que estão contratando"), 3, __t("meu assunto favorito. venho de content design e transparência é pilar no que faço."), __t("venho de content design e deixar claro o que a pessoa está contratando é tipo minha arma secreta")],
+      [__t("a conversão está baixa"), 3, __t("bora abrir o funil e testar hipótese antes de redesenhar tudo."), __t("gosto de abrir o funil e testar hipótese antes de sair redesenhando tudo")],
+      [__t("falta diferencial frente ao mercado"), 3, __t("experiência clara e honesta é um diferencial que o concorrente demora pra copiar."), __t("meu maior prazer é servir de bench para outros apps do mesmo segmento. acho uma delícia pensar em como ser diferente.")],
+      [__t("o visual está datado"), 1, __t("resolvo, mas vou perguntar o que mais está doendo por trás disso."), __t("eu sou generalista, algo focado exclusivamente em UI não é muito minha praia")] ] },
+  { q: __t("como o time decide o que entra no roadmap?"), tag: "decisão",
     a: [
-      ["teste, experimento, fake door, piloto", 3, "já validei refinanciamento com fake door antes de construir. me sinto em casa.", "já validei produto com fake door antes de construir, é o jeito que eu gosto de trabalhar"],
-      ["discovery com usuário e dados juntos", 3, "combinação perfeita. pode me chamar pra mesa.", "acredito em decidir com usuário e dados juntos, um sem o outro fica pela metade"],
-      ["não é o time que decide", 1, "eita...", "gosto de estar onde as decisões são tomadas, e time sem voz no roadmap entrega menos do que poderia"],
-      ["ainda estamos descobrindo", 2, "honesto. gosto de ajudar a desenhar esse processo também.", ""] ] },
-  { q: "quanto texto existe no produto?", tag: "conteúdo",
+      [__t("teste, experimento, fake door, piloto"), 3, __t("já validei refinanciamento com fake door antes de construir. me sinto em casa."), __t("já validei produto com fake door antes de construir, é o jeito que eu gosto de trabalhar")],
+      [__t("discovery com usuário e dados juntos"), 3, __t("combinação perfeita. pode me chamar pra mesa."), __t("acredito em decidir com usuário e dados juntos, um sem o outro fica pela metade")],
+      [__t("não é o time que decide"), 1, "eita...", __t("gosto de estar onde as decisões são tomadas, e time sem voz no roadmap entrega menos do que poderia")],
+      [__t("ainda estamos descobrindo"), 2, __t("honesto. gosto de ajudar a desenhar esse processo também."), ""] ] },
+  { q: __t("quanto texto existe no produto?"), tag: "conteúdo",
     a: [
-      ["muito: contrato, taxa, termo, regra", 3, "explicar juros de um jeito que dá pra entender é minha especialidade.", "explicar contrato, taxa e juros de um jeito que dá pra entender é minha especialidade"],
-      ["bastante, e ninguém é dono dele", 3, "essa é uma coisa da qual gosto de ser dona. microcopy, e-mail, push, tela de erro... cada palavra importa.", "gosto de ser dona do texto do produto, do microcopy ao e-mail"],
-      ["o normal de qualquer app", 3, "texto bom faz diferença até no botão.", "texto bom faz diferença até no botão, e eu cuido disso junto com o fluxo"],
-      ["quase nada, é tudo visual", 2, "tudo bem. interface sem texto também comunica.", ""] ] },
-  { q: "qual o tamanho do escopo da vaga?", tag: "escopo",
+      [__t("muito: contrato, taxa, termo, regra"), 3, __t("explicar juros de um jeito que dá pra entender é minha especialidade."), __t("explicar contrato, taxa e juros de um jeito que dá pra entender é minha especialidade")],
+      [__t("bastante, e ninguém é dono dele"), 3, __t("essa é uma coisa da qual gosto de ser dona. microcopy, e-mail, push, tela de erro... cada palavra importa."), __t("gosto de ser dona do texto do produto, do microcopy ao e-mail")],
+      [__t("o normal de qualquer app"), 3, __t("texto bom faz diferença até no botão."), __t("texto bom faz diferença até no botão, e eu cuido disso junto com o fluxo")],
+      [__t("quase nada, é tudo visual"), 2, __t("tudo bem. interface sem texto também comunica."), ""] ] },
+  { q: __t("qual o tamanho do escopo da vaga?"), tag: "escopo",
     a: [
-      ["do problema ao lançamento, ponta a ponta", 3, "é como eu gosto de trabalhar: discovery, fluxo, tela, texto e métrica.", "trabalho do problema ao lançamento, passando por discovery, fluxo, tela, texto e métrica"],
-      ["discovery e estratégia de produto", 3, "ótimo. gosto de estar na conversa antes da solução.", "gosto de estar na conversa antes da solução existir"],
-      ["execução de telas dentro de um design system", 2, "hmm... é uma posição mais UI do que estratégica, então... ok, continuando.", ""],
-      ["ainda vamos definir", 2, "então vamos definir juntos.", ""] ] },
-  { q: "e IA, como entra no dia a dia do time?", tag: "ia",
+      [__t("do problema ao lançamento, ponta a ponta"), 3, __t("é como eu gosto de trabalhar: discovery, fluxo, tela, texto e métrica."), __t("trabalho do problema ao lançamento, passando por discovery, fluxo, tela, texto e métrica")],
+      [__t("discovery e estratégia de produto"), 3, __t("ótimo. gosto de estar na conversa antes da solução."), __t("gosto de estar na conversa antes da solução existir")],
+      [__t("execução de telas dentro de um design system"), 2, __t("hmm... é uma posição mais UI do que estratégica, então... ok, continuando."), ""],
+      [__t("ainda vamos definir"), 2, __t("então vamos definir juntos."), ""] ] },
+  { q: __t("e IA, como entra no dia a dia do time?"), tag: "ia",
     a: [
-      ["ferramenta no fluxo, com critério humano", 3, "exatamente o que penso. fiz meu portfólio com IA, e quem decidiu fui eu.", "já viu aquele filme que o cara destrava os 100% do cérebro com um comprimido? então, a IA pra mim é tipo isso."],
-      ["estamos explorando ainda", 2, "posso contribuir com o que aprendi usando no meu processo.", ""],
-      ["não usamos e não pretendemos usar", 0, "respeito. mas vou querer entender o porquê.", "eu já acho estranho trabalhar hoje sem usar IA"],
-      ["ainda não usamos, mas pretendemos", 1, "posso ajudar a começar com critério.", "a IA já faz parte do meu processo, então eu teria que me adaptar a um ritmo diferente no começo"] ] },
-  { q: "o produto mexe com dinheiro ou regulação?", tag: "risco",
+      [__t("ferramenta no fluxo, com critério humano"), 3, __t("exatamente o que penso. fiz meu portfólio com IA, e quem decidiu fui eu."), __t("já viu aquele filme que o cara destrava os 100% do cérebro com um comprimido? então, a IA pra mim é tipo isso.")],
+      [__t("estamos explorando ainda"), 2, __t("posso contribuir com o que aprendi usando no meu processo."), ""],
+      [__t("não usamos e não pretendemos usar"), 0, __t("respeito. mas vou querer entender o porquê."), __t("eu já acho estranho trabalhar hoje sem usar IA")],
+      [__t("ainda não usamos, mas pretendemos"), 1, __t("posso ajudar a começar com critério."), __t("a IA já faz parte do meu processo, então eu teria que me adaptar a um ritmo diferente no começo")] ] },
+  { q: __t("o produto mexe com dinheiro ou regulação?"), tag: "risco",
     a: [
-      ["sim, e erro de comunicação vira reclamação", 3, "na will bank chegamos ao 3º lugar no índice de transparência novücard.", "trabalhar com transparência e honestidade com o cliente já me rendeu até prêmio"],
-      ["mexe com dinheiro, mas sem muita regra", 3, "dinheiro sempre pede clareza extra. já sei onde costuma doer.", "dinheiro sempre pede clareza extra, e eu já sei onde costuma doer"],
-      ["não, mas tem informação sensível", 2, "confiança se constrói do mesmo jeito: deixando claro o que acontece.", ""],
-      ["nada disso", 2, "menos pressão, mais espaço pra brincar com a experiência.", ""] ] },
-  { q: "como é a cultura da empresa em relação à autonomia e ao protagonismo de designers?", tag: "autonomia",
+      [__t("sim, e erro de comunicação vira reclamação"), 3, __t("na will bank chegamos ao 3º lugar no índice de transparência novücard."), __t("trabalhar com transparência e honestidade com o cliente já me rendeu até prêmio")],
+      [__t("mexe com dinheiro, mas sem muita regra"), 3, __t("dinheiro sempre pede clareza extra. já sei onde costuma doer."), __t("dinheiro sempre pede clareza extra, e eu já sei onde costuma doer")],
+      [__t("não, mas tem informação sensível"), 2, __t("confiança se constrói do mesmo jeito: deixando claro o que acontece."), ""],
+      [__t("nada disso"), 2, __t("menos pressão, mais espaço pra brincar com a experiência."), ""] ] },
+  { q: __t("como é a cultura da empresa em relação à autonomia e ao protagonismo de designers?"), tag: "autonomia",
     a: [
-      ["esperado e muito incentivado", 3, "ótimo. gosto de puxar problema, não só receber tarefa.", "gosto de puxar o problema, não só receber a tarefa"],
-      ["designers são mais executores, decisões são tomadas por produto e negócio", 1, "consigo trabalhar assim, mas sinto que meu potencial não seria 100% extraído.", "eu acredito demais no trabalho multidisciplinar e o design tem muito a contribuir nas decisões de produto"],
-      ["existe certa autonomia, mas é um ambiente com processos bem definidos", 2, "processo bem definido ajuda. autonomia dentro dele eu sei usar.", ""],
-      ["é pré-requisito do cargo", 3, "perfeito. já levei produtos inteiros do problema ao lançamento.", "já levei produtos inteiros do problema ao lançamento, autonomia é meu modo padrão"] ] },
-  { q: "pergunta técnica final: como é o café da firma?", tag: "café", noScore: true,
+      [__t("esperado e muito incentivado"), 3, __t("ótimo. gosto de puxar problema, não só receber tarefa."), __t("gosto de puxar o problema, não só receber a tarefa")],
+      [__t("designers são mais executores, decisões são tomadas por produto e negócio"), 1, __t("consigo trabalhar assim, mas sinto que meu potencial não seria 100% extraído."), __t("eu acredito demais no trabalho multidisciplinar e o design tem muito a contribuir nas decisões de produto")],
+      [__t("existe certa autonomia, mas é um ambiente com processos bem definidos"), 2, __t("processo bem definido ajuda. autonomia dentro dele eu sei usar."), ""],
+      [__t("é pré-requisito do cargo"), 3, __t("perfeito. já levei produtos inteiros do problema ao lançamento."), __t("já levei produtos inteiros do problema ao lançamento, autonomia é meu modo padrão")] ] },
+  { q: __t("pergunta técnica final: como é o café da firma?"), tag: "café", noScore: true,
     a: [
-      ["sem açúcar", 3, "como deve ser. meu site chama thais.coffee, você entendeu tudo.", "café sem açúcar, como deve ser. meu site chama thais.coffee"],
-      ["com açúcar", 2, "aceito. com uma careta discreta.", ""],
-      ["é remoto, cada um com o seu", 3, "cafezin caseiro, perfeito.", "cafezinho caseiro e trabalho remoto, combinação perfeita"],
-      ["não tem café, só chá", 1, "buuuuuuuuuuuuuuuu", "o site se chama thais.coffee por um motivo"] ] }
+      [__t("sem açúcar"), 3, __t("como deve ser. meu site chama thais.coffee, você entendeu tudo."), __t("café sem açúcar, como deve ser. meu site chama thais.coffee")],
+      [__t("com açúcar"), 2, __t("aceito. com uma careta discreta."), ""],
+      [__t("é remoto, cada um com o seu"), 3, __t("cafezin caseiro, perfeito."), __t("cafezinho caseiro e trabalho remoto, combinação perfeita")],
+      [__t("não tem café, só chá"), 1, "buuuuuuuuuuuuuuuu", __t("o site se chama thais.coffee por um motivo")] ] }
 ];
 
 // Triagem: eliminatória, não entra na pontuação. ok=true segue para o quiz.
 const TRIAGEM = {
-  q: "qual é o modelo de trabalho da vaga?",
+  q: __t("qual é o modelo de trabalho da vaga?"),
   a: [
-    ["100% remoto", true, "perfeito. é exatamente o que eu procuro."],
-    ["remoto, com encontros presenciais a cada 3 meses ou mais", true, "combinado. encontro trimestral eu topo com prazer."],
-    ["híbrido, com presencial todo mês ou toda semana", false, ""],
+    [__t("100% remoto"), true, __t("perfeito. é exatamente o que eu procuro.")],
+    [__t("remoto, com encontros presenciais a cada 3 meses ou mais"), true, __t("combinado. encontro trimestral eu topo com prazer.")],
+    [__t("híbrido, com presencial todo mês ou toda semana"), false, ""],
     ["presencial", false, ""] ] };
 
 
 // Tela de carregamento: comandos digitados um caractere por tick
-const LOAD_LINES = ["analisando os dados", "cruzando preferências", "compilando resultado", "pronto"];
+const LOAD_LINES = [__t("analisando os dados"), __t("cruzando preferências"), __t("compilando resultado"), __t("pronto")];
 const LOAD_TICK = 40, LOAD_GAP = 5;
 const LOAD_STARTS = [];
 (function () { let s = 0; LOAD_LINES.forEach(l => { LOAD_STARTS.push(s); s += l.length + LOAD_GAP; }); })();
@@ -555,29 +581,32 @@ function scoreOf(picks) {
 }
 const TOTAL = Q.length + 1;
 function tierOf(p) {
-  if (p >= 90) return ["match de café coado na hora", "isso aqui tem cara de vaga feita pra mim. vamos marcar uma conversa?"];
-  if (p >= 75) return ["combinação forte", "muita coisa em comum entre o que vocês precisam e o que eu faço bem."];
-  if (p >= 55) return ["tem química", "alguns pontos batem em cheio, outros dá pra descobrir numa conversa."];
-  return ["match em construção", "talvez não seja óbvio, mas curiosidade eu tenho de sobra. me conta mais?"];
+  if (p >= 90) return [__t("match de café coado na hora"), __t("isso aqui tem cara de vaga feita pra mim. vamos marcar uma conversa?")];
+  if (p >= 75) return [__t("combinação forte"), __t("muita coisa em comum entre o que vocês precisam e o que eu faço bem.")];
+  if (p >= 55) return [__t("tem química"), __t("alguns pontos batem em cheio, outros dá pra descobrir numa conversa.")];
+  return [__t("match em construção"), __t("talvez não seja óbvio, mas curiosidade eu tenho de sobra. me conta mais?")];
 }
 
 const WHY = {
-  produto: "6 produtos de crédito criados end-to-end na will bank: empréstimo pessoal, antecipação do FGTS, Pix parcelado e mais",
-  dor: "background em content design: deixo claro o que a pessoa está contratando",
-  decisão: "valida antes de construir: fake door do refinanciamento em dia, teste de lembrete de pagamento por pix",
-  conteúdo: "escreve a interface inteira, do microcopy ao e-mail de cobrança",
-  escopo: "trabalha do discovery à métrica pós-lançamento",
-  ia: "usa IA no processo, com critério de designer (o próprio portfólio foi feito assim)",
-  autonomia: "tem protagonismo: puxa o problema, propõe a solução e defende com dados",
-  risco: "transparência como pilar: will bank em 3º no índice de transparência novücard (2S23)",
-  café: "thais.coffee. precisa dizer mais?"
+  produto: __t("6 produtos de crédito criados end-to-end na will bank: empréstimo pessoal, antecipação do FGTS, Pix parcelado e mais"),
+  dor: __t("background em content design: deixo claro o que a pessoa está contratando"),
+  decisão: __t("valida antes de construir: fake door do refinanciamento em dia, teste de lembrete de pagamento por pix"),
+  conteúdo: __t("escreve a interface inteira, do microcopy ao e-mail de cobrança"),
+  escopo: __t("trabalha do discovery à métrica pós-lançamento"),
+  ia: __t("usa IA no processo, com critério de designer (o próprio portfólio foi feito assim)"),
+  autonomia: __t("tem protagonismo: puxa o problema, propõe a solução e defende com dados"),
+  risco: __t("transparência como pilar: will bank em 3º no índice de transparência novücard (2S23)"),
+  café: __t("thais.coffee. precisa dizer mais?")
 };
 
 
 class Component extends DCLogic {
+renderVals() { const l = __lang(); if (!this.__docOk) { this.__docOk = 1; __doc(l); } const v0 = this.__rv0() || {}; const v = l === 'en' ? __map(v0, 0) : Object.assign({}, v0); v.T = __T[l]; v.isPt = l !== 'en'; v.isEn = l === 'en'; v.setPt = () => this.__setLang('pt'); v.setEn = () => this.__setLang('en'); return v; }
+__setLang(l) { window.__thaisLang = l; try { localStorage.setItem('thais-lang', l); } catch (e) {} __doc(l); this.setState({ __lang: l }); }
+
   constructor(props) {
     super(props);
-    this.state = { screen: 'intro', i: 0, picks: [], answered: null, secs: 60, glitch: false, gone: false, num: 0, copyLabel: 'copiar e-mail', menuOpen: false };
+    this.state = { screen: 'intro', i: 0, picks: [], answered: null, secs: 60, glitch: false, gone: false, num: 0, copyLabel: __t('copiar e-mail'), menuOpen: false };
     this.timers = [];
   }
   componentWillUnmount() { this.clear(); }
@@ -616,7 +645,7 @@ class Component extends DCLogic {
   result(picks) {
     const p = scoreOf(picks);
     this.clear();
-    this.go({ screen: 'result', picks, num: 0, copyLabel: 'copiar e-mail' });
+    this.go({ screen: 'result', picks, num: 0, copyLabel: __t('copiar e-mail') });
     let reduce = false;
     try { reduce = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
     if (reduce) return this.setState({ num: p });
@@ -627,7 +656,7 @@ class Component extends DCLogic {
     }, 25);
     this.timers.push(t);
   }
-  renderVals() {
+  __rv0() {
     const st = this.state, scr = st.screen;
     const menuOpen = !!st.menuOpen;
     const isTri = scr === 'tri', isQ = scr === 'q';
@@ -669,7 +698,7 @@ class Component extends DCLogic {
     });
     return {
       isLoading: scr === 'loading', loadPct, cmdLines,
-      menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? 'fechar menu' : 'abrir menu',
+      menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? __t('fechar menu') : __t('abrir menu'),
       toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }),
       setRoot: (el) => { this.root = el; },
       onKey: (e) => {
@@ -679,7 +708,7 @@ class Component extends DCLogic {
         if (tag === 'INPUT' || tag === 'TEXTAREA') return;
         opts[k].pick();
       },
-      termRight: scr === 'intro' ? 'player 1' : scr === 'denied' ? 'acesso negado' : scr === 'result' ? 'game over' : scr === 'loading' ? 'carregando...' : 'fase ' + (isTri ? 1 : st.i + 2) + '/' + TOTAL,
+      termRight: scr === 'intro' ? 'player 1' : scr === 'denied' ? __t('acesso negado') : scr === 'result' ? 'game over' : scr === 'loading' ? 'carregando...' : __t('fase ') + (isTri ? 1 : st.i + 2) + '/' + TOTAL,
       cardCls: 'card pop' + (scr === 'denied' ? ' denied' : ''),
       isIntro: scr === 'intro', isTri, isQ, isDenied: scr === 'denied', isResult: scr === 'result',
       start: () => this.go({ screen: 'tri', i: 0, picks: [] }),
@@ -687,9 +716,9 @@ class Component extends DCLogic {
       phase: isTri ? 1 : st.i + 2, total: TOTAL, segs,
       tag: item && item.tag ? item.tag : '', question: item ? item.q : '', opts,
       answered, notAnswered: !answered,
-      hint: isTri ? 'esta pergunta não entra na pontuação.' : 'escolha uma opção (ou aperte A, B, C ou D).',
+      hint: isTri ? __t('esta pergunta não entra na pontuação.') : __t('escolha uma opção (ou aperte A, B, C ou D).'),
       reaction: answered && item ? item.a[st.answered][2] : '',
-      nextLabel: last ? 'ver resultado →' : 'próxima →',
+      nextLabel: last ? __t('ver resultado →') : __t('próxima →'),
       next: () => {
         if (isTri) return this.go({ screen: 'q', i: 0, picks: [] });
         const picks = this.state.picks.concat([this.state.answered]);
@@ -699,17 +728,17 @@ class Component extends DCLogic {
       msgCls: 'msg' + (st.glitch ? ' glitch' : ''), secs: st.secs, secsCls: st.secs <= 10 ? 'hot' : '',
       gone: st.gone, notGone: !st.gone,
       num: st.num, tier: tl[0], tierLine: tl[1], reasons, gaps, hasGaps: gaps.length > 0,
-      mugFill: fill, mugY: 20 + (H - fill), mugTop: p ? 1 : 0, mugLabel: 'caneca ' + p + '% cheia',
+      mugFill: fill, mugY: 20 + (H - fill), mugTop: p ? 1 : 0, mugLabel: __t('caneca ') + p + __t('% cheia'),
       copyLabel: st.copyLabel,
       copy: () => {
-        const done = (t) => { this.setState({ copyLabel: t }); this.timers.push(setTimeout(() => this.setState({ copyLabel: 'copiar e-mail' }), 1800)); };
-        try { navigator.clipboard.writeText('oi@thais.coffee').then(() => done('copiado!'), () => done('selecione o e-mail')); }
-        catch (e) { done('selecione o e-mail'); }
+        const done = (t) => { this.setState({ copyLabel: t }); this.timers.push(setTimeout(() => this.setState({ copyLabel: __t('copiar e-mail') }), 1800)); };
+        try { navigator.clipboard.writeText('oi@thais.coffee').then(() => done(__t('copiado!')), () => done(__t('selecione o e-mail'))); }
+        catch (e) { done(__t('selecione o e-mail')); }
       }
     };
   }
 }
 </script>
-<script src="/assets/dc.js?v=1793316727"></script>
+<script src="/assets/dc.js?v=1793318809"></script>
 </body>
 </html>

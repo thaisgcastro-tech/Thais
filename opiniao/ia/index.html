@@ -146,6 +146,18 @@ body{margin:0;background:#121214;color:#f2f2f5}
 .pn-next:hover .pn-t{color:#f2f2f5}
 .pn-back:active,.pn-next:active{transform:translate(4px,4px);box-shadow:0 0 0 #f2f2f5}
 @media (prefers-reduced-motion:reduce){.pn-back,.pn-next{transition:none}}
+/* seletor de idioma (bandeiras em pixel) */
+.lng{display:flex;align-items:center;gap:4px;flex-shrink:0;margin-left:auto}
+.lng-b{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 8px;background:transparent;color:#f2f2f5;border:1px dashed transparent;font:500 14px/1 'Roboto Mono',monospace;text-transform:lowercase;cursor:pointer}
+.lng-b svg{display:block;flex-shrink:0;box-shadow:0 0 0 1px #f2f2f5}
+.lng-b:hover{border-color:#ffff8d;color:#ffff8d}
+.lng-b[aria-pressed="true"]{border:1px solid #f2f2f5}
+.tnav-line .lng + .tnav-ls{margin-left:0}
+.dsf-lang{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid #f2f2f5}
+.dsf-lang .dsf-lbl{margin:0}
+.dsf-lang .lng{margin-left:0}
+.dsf-lang .lng-b{font-size:16px}
+@media (max-width:480px){.tnav-line .lng-b span{display:none}.tnav-line .lng-b{padding:0 10px}}
 </style>
 </head>
 <body>
@@ -160,6 +172,7 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/opiniao<span class="tnav-sub">/ia.txt</span> $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
 <ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">opiniao/</a></li><li><a href="/contato/">contato/</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
 
@@ -240,6 +253,7 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
 <div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
+<div class="dsf-lang"><p class="dsf-lbl">idioma</p><div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
 <div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
@@ -252,13 +266,14 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <nav class="tnav" aria-label="menu">
 <div class="tnav-win">
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
-<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>sobre/</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/" aria-current="true"><span>03</span>opiniao/</a></li><li class="tnav-subitem"><a href="/opiniao/conteudo-e-dados/"><span></span>opiniao/conteudo-e-dados.txt</a></li><li class="tnav-subitem"><a href="/opiniao/roadmap/"><span></span>opiniao/roadmap.txt</a></li><li class="tnav-subitem"><a href="/opiniao/ia/" aria-current="page"><span></span>opiniao/ia.txt</a></li><li><a href="/contato/"><span>04</span>contato/</a></li><li><a href="/quiz/"><span>05</span>quiz/</a></li></ul>
+<ul class="tnav-out" id="tnav-out"><li><a href="/"><span>01</span>{{T.k1}}</a></li><li><a href="/portfolio/"><span>02</span>portfolio/</a></li><li><a href="/opiniao/" aria-current="true"><span>03</span>{{T.k2}}</a></li><li class="tnav-subitem"><a href="/opiniao/conteudo-e-dados/"><span></span>{{T.k3}}</a></li><li class="tnav-subitem"><a href="/opiniao/roadmap/"><span></span>{{T.k4}}</a></li><li class="tnav-subitem"><a href="/opiniao/ia/" aria-current="page"><span></span>{{T.k5}}</a></li><li><a href="/contato/"><span>04</span>{{T.k6}}</a></li><li><a href="/quiz/"><span>05</span>quiz/</a></li></ul>
 </sc-if>
 <div class="tnav-line">
 <div class="tnav-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div>
-<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/opiniao<span class="tnav-sub">/ia.txt</span> $</span>
+<span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>{{T.k7}}<span class="tnav-sub">{{T.k8}}</span> $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
-<ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">opiniao/</a></li><li><a href="/contato/">contato/</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<ul class="tnav-list"><li><a href="/">{{T.k1}}</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/" aria-current="page">{{T.k2}}</a></li><li><a href="/contato/">{{T.k6}}</a></li><li><a href="/quiz/">quiz/</a></li></ul>
+<div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
 <button class="tnav-ls" type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuOpen}}" aria-controls="tnav-out" aria-label="{{menuLabel}}">
 <sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
@@ -271,51 +286,51 @@ body{margin:0;background:#121214;color:#f2f2f5}
 <div class="fita" aria-hidden="true"></div>
 <section class="op-hero">
 <div>
-<p class="lbl">opinião</p>
-<h1 class="hero-t">ia não faz bons designers</h1>
-<ul class="meta" aria-label="sobre este texto">
-<li class="meta-t">2 min de leitura</li>
-<li class="tag">ia</li><li class="tag">processo</li><li class="tag">carreira</li>
+<p class="lbl">{{T.k9}}</p>
+<h1 class="hero-t">{{T.k10}}</h1>
+<ul class="meta" aria-label="{{T.k51}}">
+<li class="meta-t">{{T.k11}}</li>
+<li class="tag">{{T.k12}}</li><li class="tag">{{T.k13}}</li><li class="tag">{{T.k14}}</li>
 </ul>
 </div>
 <svg class="op-g" viewBox="0 0 400 260" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><defs><clipPath id="op-floor"><rect x="8" y="100" width="384" height="152"></rect></clipPath></defs><g clip-path="url(#op-floor)" stroke-width="1.5"><path d="M200 40 L-400 250"></path><path d="M200 40 L-350 250"></path><path d="M200 40 L-300 250"></path><path d="M200 40 L-250 250"></path><path d="M200 40 L-200 250"></path><path d="M200 40 L-150 250"></path><path d="M200 40 L-100 250"></path><path d="M200 40 L-50 250"></path><path d="M200 40 L0 250"></path><path d="M200 40 L50 250"></path><path d="M200 40 L100 250"></path><path d="M200 40 L150 250"></path><path d="M200 40 L200 250"></path><path d="M200 40 L250 250"></path><path d="M200 40 L300 250"></path><path d="M200 40 L350 250"></path><path d="M200 40 L400 250"></path><path d="M200 40 L450 250"></path><path d="M200 40 L500 250"></path><path d="M200 40 L550 250"></path><path d="M200 40 L600 250"></path><path d="M200 40 L650 250"></path><path d="M200 40 L700 250"></path><path d="M200 40 L750 250"></path><path d="M200 40 L800 250"></path></g><path d="M8 100 H392"></path><path d="M8 110 H392"></path><path d="M8 124 H392"></path><path d="M8 142 H392"></path><path d="M8 166 H392"></path><path d="M8 198 H392"></path><path d="M8 250 H392"></path><rect x="8" y="100" width="384" height="150"></rect><rect x="304" y="0" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="320" y="0" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="336" y="0" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="352" y="0" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="288" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="304" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="320" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="336" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="352" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="368" y="16" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="288" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="304" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="320" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="336" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="352" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="368" y="32" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="304" y="48" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="320" y="48" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="336" y="48" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="352" y="48" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="304" y="64" width="16" height="16" fill="#e97045" stroke="none"></rect><rect x="308" y="28" width="8" height="8" fill="currentColor" stroke="none"></rect><rect x="324" y="28" width="8" height="8" fill="currentColor" stroke="none"></rect><rect x="340" y="28" width="8" height="8" fill="currentColor" stroke="none"></rect><rect x="356" y="28" width="8" height="8" fill="currentColor" stroke="none"></rect></svg>
 </section>
 
 <article class="doc" aria-labelledby="doc-name">
-<div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><span class="doc-name" id="doc-name">ia-nao-faz-bons-designers.txt</span></div>
+<div class="doc-bar"><div class="doc-dots" aria-hidden="true"><span style="background: #e97045; color: #292929"></span><span style="background: #ffff8d; color: #292929"></span><span style="background: #4c1d95"></span></div><span class="doc-name" id="doc-name">{{T.k15}}</span></div>
 <div class="doc-b"><div class="txt">
 
-<p>a maior parte do meu tempo eu não passo desenhando tela, assim como não passava a maior parte do tempo escrevendo quando era content designer. comecei pelas palavras, fui parar nas interfaces e, no caminho, entendi que nenhuma das duas se sustenta sozinha.</p>
+<p>{{T.k16}}</p>
 
-<p>uma boa experiência passa por conhecer com profundidade a dor de quem usa, a necessidade de quem vende, os desafios de quem desenvolve e as limitações técnicas no meio do caminho. isso demanda tempo, maturidade e jogo de cintura. e é aí que eu gosto de estar:</p>
+<p>{{T.k17}}</p>
 
 <ol class="steps">
-<li><span class="st-n">01</span>mergulhar em um discovery</li>
-<li><span class="st-n">02</span>investigar dores com dados e pesquisa</li>
-<li><span class="st-n">03</span>resolver com os devs os detalhes técnicos que mudam a experiência</li>
-<li><span class="st-n">04</span>negociar com outros times quando os produtos se entrelaçam</li>
-<li><span class="st-n">05</span>entender com o negócio o que a feature precisa entregar</li>
-<li><span class="st-n">06</span>e provocar todo mundo a perguntar se aquilo resolve de verdade algum problema</li>
+<li><span class="st-n">01</span>{{T.k18}}</li>
+<li><span class="st-n">02</span>{{T.k19}}</li>
+<li><span class="st-n">03</span>{{T.k20}}</li>
+<li><span class="st-n">04</span>{{T.k21}}</li>
+<li><span class="st-n">05</span>{{T.k22}}</li>
+<li><span class="st-n">06</span>{{T.k23}}</li>
 </ol>
 
-<p>interface, arquitetura de informação e usabilidade são peças fundamentais. mas, pra mim, elas são o resultado do processo, e é no processo que está a qualidade do produto.</p>
+<p>{{T.k24}}</p>
 
 <div class="case-box">
-<span class="why-l">na prática</span>
-<p>no will bank, descobrimos que estávamos punindo bons clientes: quem estava em dia e previa um aperto não tinha como renegociar. precisava atrasar, sujar o nome e esperar a cobrança. um fake door mostrou que essa demanda era real, e o resultado virou o ajuste de empréstimo:</p>
-<ul class="nums" aria-label="resultado em cinco meses"><li class="num">406 contratos</li><li class="num">+R$ 500 mil gerados</li><li class="num">5 meses</li></ul>
-<p><a href="/cases/refinanciamento-em-dia/">veja o case</a></p>
+<span class="why-l">{{T.k25}}</span>
+<p>{{T.k26}}</p>
+<ul class="nums" aria-label="{{T.k52}}"><li class="num">{{T.k27}}</li><li class="num">{{T.k28}}</li><li class="num">{{T.k29}}</li></ul>
+<p><a href="/cases/refinanciamento-em-dia/">{{T.k30}}</a></p>
 </div>
 
-<p class="pausa"><span>enfim…</span>processo.</p>
+<p class="pausa"><span>{{T.k31}}</span>{{T.k32}}</p>
 
-<h2>e a ia nisso tudo?_</h2>
+<h2>{{T.k33}}</h2>
 
-<p>uso, e uso bastante. no ajuste de empréstimo, ela me ajudou a clusterizar as respostas da survey, refinar a análise dos dados, criar um novo componente e prototipar a primeira versão do fluxo. trabalho operacional que antes levaria dias saiu em horas, e esse tempo voltou para onde ele faz diferença: conversar com o time, questionar premissas, testar caminhos.</p>
+<p>{{T.k34}}</p>
 
-<p>mas a IA é parte do processo, não o todo. eu não acredito nessa ideia de que “foi a IA que fez”. fui eu que fiz, com a ajuda de alguma IA. não terceirizo essa responsabilidade e não abro mão de pensar: decidir começar por esticar o prazo em vez do troco, trocar “renegociar” por “ajustar”. cada vez que a gente deixa a IA pensar no nosso lugar, perde um pouco da capacidade de crescer, de criar conexões com as próprias experiências, perde o que nos torna únicos e passa a repetir padrões simplórios. e eu tenho personalidade demais pra deixar isso acontecer comigo.</p>
+<p>{{T.k35}}</p>
 
-<p class="fecho">ela entrega telas lindas e pixel perfect. <mark>o molho continua com quem entende o produto em profundidade.</mark></p>
+<p class="fecho">{{T.k36}} <mark>{{T.k37}}</mark></p>
 
 <p class="assina"><svg width="40" height="40" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>thais castro · product designer</p>
 
@@ -323,38 +338,52 @@ body{margin:0;background:#121214;color:#f2f2f5}
 </article>
 
 <div class="next">
-<p class="lbl next-l">e agora?</p>
-<a class="btn btn-p" href="/cases/refinanciamento-em-dia/">case do ajuste →</a>
+<p class="lbl next-l">{{T.k38}}</p>
+<a class="btn btn-p" href="/cases/refinanciamento-em-dia/">{{T.k39}}</a>
 </div>
-<nav class="pn" aria-label="navegação entre textos"><a class="pn-back" href="/opiniao/" aria-label="voltar para os textos"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 12H5M11 5l-7 7 7 7"></path></svg></a><a class="pn-next" href="/opiniao/conteudo-e-dados/"><span class="pn-txt"><span class="pn-l">próximo texto</span><span class="pn-t">content designer também abre planilha</span></span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"></path></svg></a></nav>
+<nav class="pn" aria-label="{{T.k53}}"><a class="pn-back" href="/opiniao/" aria-label="{{T.k54}}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 12H5M11 5l-7 7 7 7"></path></svg></a><a class="pn-next" href="/opiniao/conteudo-e-dados/"><span class="pn-txt"><span class="pn-l">{{T.k40}}</span><span class="pn-t">{{T.k41}}</span></span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"></path></svg></a></nav>
 </main>
 
 <footer class="dsf" style="margin-top: 96px">
 <div class="dsf-tape" aria-hidden="true"></div>
 <div class="dsf-in">
-<p class="dsf-lbl">fim da página</p>
+<p class="dsf-lbl">{{T.k42}}</p>
 
 <div class="dsf-cols">
-<div class="dsf-col"><p class="dsf-lbl">navegue</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">sobre</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">portfólio</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">opinião</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">contato</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
-<div class="dsf-col"><p class="dsf-lbl">manda um e-mail lá</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
-<div class="dsf-col"><p class="dsf-lbl">me encontre também</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Thais (abre em nova aba)"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k43}}</p><ul><li><span class="dsf-n">01</span><a class="dsf-lk" href="/">{{T.k44}}</a></li><li><span class="dsf-n">02</span><a class="dsf-lk" href="/portfolio/">{{T.k45}}</a></li><li><span class="dsf-n">03</span><a class="dsf-lk" href="/opiniao/">{{T.k9}}</a></li><li><span class="dsf-n">04</span><a class="dsf-lk" href="/contato/">{{T.k46}}</a></li><li><span class="dsf-n">05</span><a class="dsf-lk" href="/quiz/">quiz</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k47}}</p><ul><li><a class="dsf-lk" href="mailto:oi@thais.coffee">oi@thais.coffee</a></li></ul></div>
+<div class="dsf-col"><p class="dsf-lbl">{{T.k48}}</p><ul><li><a class="dsf-ic" href="https://www.linkedin.com/in/thaisgcastro" target="_blank" rel="noopener noreferrer" aria-label="{{T.k55}}"><svg width="48" height="48" viewBox="0 0 15 15" shape-rendering="crispEdges" aria-hidden="true"><g class="li-mn"><path fill="#fffefe" d="M0 0h15v15h-15z"></path><path fill="#292929" d="M0 0h15v1h-15zM0 14h15v1h-15zM0 1h1v13h-1zM14 1h1v13h-1z"></path><path fill="#292929" d="M3 3h2v2h-2zM3 6h2v6h-2zM6 6h4v2h-4zM6 8h2v4h-2zM10 7h2v5h-2z"></path></g></svg></a></li></ul></div>
 </div>
+<div class="dsf-lang"><p class="dsf-lbl">{{T.__fl}}</p><div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#fffefe" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fffefe" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#fffefe" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div></div>
 </div>
-<div class="dsf-sig"><span class="dsf-sr">feito com talento e IA</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>feito com talento e IA ッ</span><span class="dsf-dot">✦</span></div></div>
+<div class="dsf-sig"><span class="dsf-sr">{{T.k49}}</span><div class="dsf-track" aria-hidden="true"><span class="dsf-dot">✦</span><span>{{T.k50}}</span><span class="dsf-dot">✦</span></div></div>
 <p class="dsf-cp">© 2026 thais castro | product designer | content designer</p>
 </footer>
 </div>
 </template>
 <script type="text/plain" id="dc-logic">
+// idioma (pt/en): mesmo esquema da página sobre, guardado em localStorage 'thais-lang'
+var __EN = {"fechar menu": "close menu", "abrir menu": "open menu"};
+var __T = {"pt": {"k1": "sobre/", "k2": "opiniao/", "k3": "opiniao/conteudo-e-dados.txt", "k4": "opiniao/roadmap.txt", "k5": "opiniao/ia.txt", "k6": "contato/", "k7": ":~/opiniao", "k8": "/ia.txt", "k9": "opinião", "k10": "ia não faz bons designers", "k11": "2 min de leitura", "k12": "ia", "k13": "processo", "k14": "carreira", "k15": "ia-nao-faz-bons-designers.txt", "k16": "a maior parte do meu tempo eu não passo desenhando tela, assim como não passava a maior parte do tempo escrevendo quando era content designer. comecei pelas palavras, fui parar nas interfaces e, no caminho, entendi que nenhuma das duas se sustenta sozinha.", "k17": "uma boa experiência passa por conhecer com profundidade a dor de quem usa, a necessidade de quem vende, os desafios de quem desenvolve e as limitações técnicas no meio do caminho. isso demanda tempo, maturidade e jogo de cintura. e é aí que eu gosto de estar:", "k18": "mergulhar em um discovery", "k19": "investigar dores com dados e pesquisa", "k20": "resolver com os devs os detalhes técnicos que mudam a experiência", "k21": "negociar com outros times quando os produtos se entrelaçam", "k22": "entender com o negócio o que a feature precisa entregar", "k23": "e provocar todo mundo a perguntar se aquilo resolve de verdade algum problema", "k24": "interface, arquitetura de informação e usabilidade são peças fundamentais. mas, pra mim, elas são o resultado do processo, e é no processo que está a qualidade do produto.", "k25": "na prática", "k26": "no will bank, descobrimos que estávamos punindo bons clientes: quem estava em dia e previa um aperto não tinha como renegociar. precisava atrasar, sujar o nome e esperar a cobrança. um fake door mostrou que essa demanda era real, e o resultado virou o ajuste de empréstimo:", "k27": "406 contratos", "k28": "+R$ 500 mil gerados", "k29": "5 meses", "k30": "veja o case", "k31": "enfim…", "k32": "processo.", "k33": "e a ia nisso tudo?_", "k34": "uso, e uso bastante. no ajuste de empréstimo, ela me ajudou a clusterizar as respostas da survey, refinar a análise dos dados, criar um novo componente e prototipar a primeira versão do fluxo. trabalho operacional que antes levaria dias saiu em horas, e esse tempo voltou para onde ele faz diferença: conversar com o time, questionar premissas, testar caminhos.", "k35": "mas a IA é parte do processo, não o todo. eu não acredito nessa ideia de que “foi a IA que fez”. fui eu que fiz, com a ajuda de alguma IA. não terceirizo essa responsabilidade e não abro mão de pensar: decidir começar por esticar o prazo em vez do troco, trocar “renegociar” por “ajustar”. cada vez que a gente deixa a IA pensar no nosso lugar, perde um pouco da capacidade de crescer, de criar conexões com as próprias experiências, perde o que nos torna únicos e passa a repetir padrões simplórios. e eu tenho personalidade demais pra deixar isso acontecer comigo.", "k36": "ela entrega telas lindas e pixel perfect.", "k37": "o molho continua com quem entende o produto em profundidade.", "k38": "e agora?", "k39": "case do ajuste →", "k40": "próximo texto", "k41": "content designer também abre planilha", "k42": "fim da página", "k43": "navegue", "k44": "sobre", "k45": "portfólio", "k46": "contato", "k47": "manda um e-mail lá", "k48": "me encontre também", "k49": "feito com talento e IA", "k50": "feito com talento e IA ッ", "k51": "sobre este texto", "k52": "resultado em cinco meses", "k53": "navegação entre textos", "k54": "voltar para os textos", "k55": "LinkedIn da Thais (abre em nova aba)", "__lg": "idioma", "__fl": "idioma"}, "en": {"k1": "about/", "k2": "opinion/", "k3": "opinion/content-and-data.txt", "k4": "opinion/roadmap.txt", "k5": "opinion/ai.txt", "k6": "contact/", "k7": ":~/opinion", "k8": "/ai.txt", "k9": "opinion", "k10": "ai doesn’t make good designers", "k11": "2 min read", "k12": "ai", "k13": "process", "k14": "career", "k15": "ai-doesnt-make-good-designers.txt", "k16": "i don’t spend most of my time designing screens, just like i didn’t spend most of my time writing back when i was a content designer. i started with words, ended up in interfaces and, along the way, realized that neither one stands on its own.", "k17": "a good experience means deeply understanding the pain of the people who use it, the needs of the people who sell it, the challenges of the people who build it and the technical limits along the way. that takes time, maturity and flexibility. and that’s where i like to be:", "k18": "diving into discovery", "k19": "investigating pain points with data and research", "k20": "working out with devs the technical details that change the experience", "k21": "negotiating with other teams when products intertwine", "k22": "understanding with the business what the feature needs to deliver", "k23": "and pushing everyone to ask whether it really solves a problem", "k24": "interface, information architecture and usability are fundamental pieces. but, to me, they’re the result of the process, and the process is where product quality lives.", "k25": "in practice", "k26": "at will bank, we found out we were punishing good customers: people who were up to date on payments and saw a tight month coming had no way to renegotiate. they had to fall behind, hurt their credit and wait for collections. a fake door showed that this demand was real, and the result became loan adjustment:", "k27": "406 contracts", "k28": "+R$ 500k generated", "k29": "5 months", "k30": "see the case", "k31": "in short…", "k32": "process.", "k33": "so where does ai fit in?_", "k34": "i use it, and i use it a lot. on loan adjustment, it helped me cluster the survey answers, refine the data analysis, create a new component and prototype the first version of the flow. operational work that used to take days took hours, and that time went back to where it makes a difference: talking to the team, questioning assumptions, testing paths.", "k35": "but AI is part of the process, not the whole thing. i don’t buy the idea that “the AI did it”. i did it, with help from some AI. i don’t outsource that responsibility and i don’t give up thinking: deciding to start by stretching the term instead of the cash-out, swapping “renegotiate” for “adjust”. every time we let AI think for us, we lose a bit of our ability to grow, to connect things to our own experiences, we lose what makes us unique and start repeating simplistic patterns. and i have way too much personality to let that happen to me.", "k36": "it delivers beautiful, pixel-perfect screens.", "k37": "the secret sauce still belongs to whoever understands the product in depth.", "k38": "what now?", "k39": "loan adjustment case →", "k40": "next piece", "k41": "content designers open spreadsheets too", "k42": "end of page", "k43": "browse", "k44": "about", "k45": "portfolio", "k46": "contact", "k47": "drop me an email", "k48": "find me too", "k49": "made with talent and AI", "k50": "made with talent and AI ッ", "k51": "about this piece", "k52": "results in five months", "k53": "navigation between pieces", "k54": "back to the pieces", "k55": "Thais on LinkedIn (opens in a new tab)", "__lg": "language", "__fl": "language"}};
+var __TITLE = "ai doesn’t make good designers · thais castro";
+var __SKIP = /^(k|cur|value|v|d|l|name|type|tab|cls|.*Cls|id|href|src|key|style|.*Style|path|sub|.*Bg|color|.*Color)$/;
+function __lang() { if (window.__thaisLang) return window.__thaisLang; let l = 'pt'; try { if (localStorage.getItem('thais-lang') === 'en') l = 'en'; } catch (e) {} window.__thaisLang = l; return l; }
+function __t(s) { return __lang() === 'en' && Object.prototype.hasOwnProperty.call(__EN, s) ? __EN[s] : s; }
+function __map(v, d, k) { if (d > 7) return v; if (typeof v === 'string') return k && __SKIP.test(k) ? v : __t(v); if (Array.isArray(v)) return v.map((x) => __map(x, d + 1, k)); if (v && typeof v === 'object' && Object.getPrototypeOf(v) === Object.prototype) { const o = {}; for (const kk in v) o[kk] = __map(v[kk], d + 1, kk); return o; } return v; }
+function __doc(l) { setTimeout(() => { try { document.documentElement.lang = l === 'en' ? 'en' : 'pt-BR'; if (document.getElementById('dc-root') && __TITLE) { if (window.__ptTitle == null) window.__ptTitle = document.title; document.title = l === 'en' ? __TITLE : window.__ptTitle; } } catch (e) {} }, 0); }
+
 class Component extends DCLogic {
+renderVals() { const l = __lang(); if (!this.__docOk) { this.__docOk = 1; __doc(l); } const v0 = this.__rv0() || {}; const v = l === 'en' ? __map(v0, 0) : Object.assign({}, v0); v.T = __T[l]; v.isPt = l !== 'en'; v.isEn = l === 'en'; v.setPt = () => this.__setLang('pt'); v.setEn = () => this.__setLang('en'); return v; }
+__setLang(l) { window.__thaisLang = l; try { localStorage.setItem('thais-lang', l); } catch (e) {} __doc(l); this.setState({ __lang: l }); }
+
 constructor(props) { super(props); this.state = { menuOpen: false }; }
-renderVals() {
+__rv0() {
 const menuOpen = !!this.state.menuOpen;
-return { menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? 'fechar menu' : 'abrir menu',
+return { menuOpen, menuClosed: !menuOpen, menuLabel: menuOpen ? __t('fechar menu') : __t('abrir menu'),
 toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }), closeMenu: () => this.setState({ menuOpen: false }) };
 }
 }
 </script>
-<script src="/assets/dc.js?v=1793316727"></script>
+<script src="/assets/dc.js?v=1793318809"></script>
 </body>
 </html>
