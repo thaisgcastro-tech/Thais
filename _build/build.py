@@ -14,33 +14,50 @@ import os, re, sys, glob, html
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = sys.argv[1]
 VER = os.environ.get('SITE_VER', '1')
+OGV = '2026-10-30'  # troque ao refazer as imagens, para as redes buscarem de novo
 
 SITE = 'https://thais.coffee'
 PAGES = {
     'Prod.dc.html': ('/', 'thais castro · product designer',
-                     'Portfólio de Thais Castro, product designer de crédito e fintech.'),
+                     'portfólio de thais castro, product designer de crédito e fintech.'),
     'Portfolio.dc.html': ('/portfolio/', 'portfólio · thais castro',
-                          'Cases de Thais Castro: do problema ao número que eles moveram.'),
+                          'cases de thais castro: do problema ao número que eles moveram.'),
     'Case-Transparencia.dc.html': ('/cases/transparencia/', 'transparência como regra de produto · case · thais castro',
-                                   'Case: como transparência, segurança e clareza viraram regras de tela nos produtos de crédito.'),
+                                   'case: como transparência, segurança e clareza viraram regras de tela nos produtos de crédito.'),
     'Case-Portfolio-IA.dc.html': ('/cases/este-portfolio/', 'este portfólio, feito com ia · case · thais castro',
-                                  'Case: como Thais Castro desenhou, escreveu e publicou este portfólio usando IA como parceira de produção.'),
+                                  'case: como thais castro desenhou, escreveu e publicou este portfólio usando ia como parceira de produção.'),
     'Case-Refin-vuhc.dc.html': ('/cases/refinanciamento-em-dia/', 'refinanciamento em dia · case · thais castro',
-                                'Case: como bons pagadores passaram a ajustar o próprio empréstimo antes de atrasar.'),
+                                'case: como bons pagadores passaram a ajustar o próprio empréstimo antes de atrasar.'),
     'Case-Lembrete-s1ny.dc.html': ('/cases/lembrete-de-pagamento/', 'lembrete de pagamento · case · thais castro',
-                                   'Case: a mensagem certa, na hora certa, derrubou o saldo em atraso em 64,7%.'),
+                                   'case: a mensagem certa, na hora certa, derrubou o saldo em atraso em 64,7%.'),
     'Opinioes-Lista.dc.html': ('/opiniao/', 'opinião · thais castro',
-                               'Textos de Thais Castro sobre design de produto, dados, processo e IA.'),
+                               'textos de thais castro sobre design de produto, dados, processo e ia.'),
     'Opinioes.dc.html': ('/opiniao/ia/', 'ia não faz bons designers · thais castro',
-                         'Opinião de Thais Castro sobre IA, processo e design de produto.'),
+                         'opinião de thais castro sobre ia, processo e design de produto.'),
     'Opiniao-Conteudo-Dados.dc.html': ('/opiniao/conteudo-e-dados/', 'content designer também abre planilha · thais castro',
-                                       'Opinião de Thais Castro sobre como content designers podem trabalhar com dados e levar métricas para seus estudos de caso.'),
+                                       'opinião de thais castro sobre como content designers podem trabalhar com dados e levar métricas para seus estudos de caso.'),
     'Opiniao-Roadmap.dc.html': ('/opiniao/roadmap/', 'ninguém me chamou pra mesa do roadmap · thais castro',
-                                'Opinião de Thais Castro sobre dados, discovery e como conquistar espaço no roadmap.'),
-    'Contato.dc.html': ('/contato/', 'contato · thais castro', 'Fale com Thais Castro, product designer.'),
+                                'opinião de thais castro sobre dados, discovery e como conquistar espaço no roadmap.'),
+    'Contato.dc.html': ('/contato/', 'contato · thais castro', 'fale com thais castro, product designer.'),
     'Match.dc.html': ('/quiz/', 'eu sou a pessoa certa pra você? · quiz · thais castro',
-                      'Quiz para recrutadores: descubra a porcentagem de match entre a sua vaga e Thais Castro.'),
+                      'quiz para recrutadores: descubra a porcentagem de match entre a sua vaga e thais castro.'),
 }
+# imagem de compartilhamento de cada página (geradas por _build/og.js em /assets/og/)
+OG = {
+    'Prod.dc.html': 'sobre',
+    'Portfolio.dc.html': 'portfolio',
+    'Case-Transparencia.dc.html': 'transparencia',
+    'Case-Portfolio-IA.dc.html': 'este-portfolio',
+    'Case-Refin-vuhc.dc.html': 'refinanciamento-em-dia',
+    'Case-Lembrete-s1ny.dc.html': 'lembrete-de-pagamento',
+    'Opinioes-Lista.dc.html': 'opiniao',
+    'Opinioes.dc.html': 'opiniao-ia',
+    'Opiniao-Conteudo-Dados.dc.html': 'opiniao-conteudo-e-dados',
+    'Opiniao-Roadmap.dc.html': 'opiniao-roadmap',
+    'Contato.dc.html': 'contato',
+    'Match.dc.html': 'quiz',
+}
+
 # links do canvas que apontam para versões antigas das mesmas páginas
 ALIAS = {'Case-Refin.dc.html': '/cases/refinanciamento-em-dia/',
          'Case-Lembrete.dc.html': '/cases/lembrete-de-pagamento/'}
@@ -140,7 +157,22 @@ def convert(name):
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:url" content="{canon}">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="thais castro · product designer">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="{SITE}/assets/og/{OG[name]}.png?v={OGV}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{html.escape(title)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{html.escape(title)}">
+<meta name="twitter:description" content="{html.escape(desc)}">
+<meta name="twitter:image" content="{SITE}/assets/og/{OG[name]}.png?v={OGV}">
 <link rel="icon" href="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/icons/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 <style>html,body{{overflow-x:clip}}#dc-root{{position:relative;overflow:hidden}}@media (max-width:1000px){{.tnav-prompt{{flex-shrink:1!important;min-width:0!important}}}}@media (max-width:760px){{#dc-root p{{width:auto!important;max-width:100%;box-sizing:border-box}}#dc-root div[style*="flex-direction: row"]:has(> div > p.txt){{flex-direction:column!important}}#dc-root div[style*="flex-direction: row"]:has(> div > p.txt) img{{max-width:100%;height:auto}}}}</style>
 {helmet}
 </head>
