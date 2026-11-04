@@ -35,32 +35,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@800&amp;family=Work+Sans:wght@300&amp;display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:"Gokschil";src:url("/assets/93ba42cb1e8b8a10050eb62645b75517.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-body{margin:0;background:#292929;color:#f2f2f5}
-a{color:#f2f2f5;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
-a:hover{color:#ffff8d}
+body{margin:0;background:var(--t-bg2);color:var(--t-fg)}
+a{color:var(--t-fg);text-decoration-color:var(--t-or);text-decoration-thickness:2px;text-underline-offset:4px}
+a:hover{color:var(--t-hl)}
 button{cursor:pointer}
-.cafe{width:144px;height:144px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background-color:#f2f2f5;background-image:linear-gradient(rgba(41,41,41,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(41,41,41,.14) 1px,transparent 1px);background-size:16px 16px;background-position:-1px -1px;border:2px solid #121214;transform:rotate(-4deg);color:#121214}
+.cafe{width:144px;height:144px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background-color:var(--t-surf);background-image:linear-gradient(rgba(41,41,41,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(41,41,41,.14) 1px,transparent 1px);background-size:16px 16px;background-position:-1px -1px;border:2px solid #121214;transform:rotate(-4deg);color:#121214}
 .cafe svg{display:block;image-rendering:pixelated}
-input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #ffff8d;outline-offset:3px}
+input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--t-hl);outline-offset:3px}
 /* menu: linha de comando (igual ao site) */
-.tnav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);margin:0;font-family:'Roboto Mono',monospace;color:#f2f2f5}
-.tnav::before{content:"";position:absolute;z-index:-1;left:calc(50% - 50vw);width:100vw;top:-16px;height:46px;background:#292929;pointer-events:none}
+.tnav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(calc(100% - 32px),1016px);margin:0;font-family:'Roboto Mono',monospace;color:var(--t-fg)}
+.tnav::before{content:"";position:absolute;z-index:-1;left:calc(50% - 50vw);width:100vw;top:-16px;height:46px;background:var(--t-bg2);pointer-events:none}
 .tnav *{box-sizing:border-box}
-.tnav-win{display:flex;flex-direction:column;background:#121214;border:2px solid #f2f2f5;border-radius:16px;box-shadow:none;overflow:hidden;color:#f2f2f5}
+.tnav-win{display:flex;flex-direction:column;background:var(--t-bg);border:2px solid var(--t-fg);border-radius:16px;box-shadow:none;overflow:hidden;color:var(--t-fg)}
 .tnav-line{display:flex;align-items:center;gap:16px;padding:8px 8px 8px 16px;min-height:56px}
 .tnav-dots{display:flex;gap:8px;flex-shrink:0}
-.tnav-dots span{width:12px;height:12px;border-radius:50%;border:1px solid #f2f2f5;display:block}
+.tnav-dots span{width:12px;height:12px;border-radius:50%;border:1px solid var(--t-fg);display:block}
 .tnav-prompt{flex-shrink:0;font-size:14px;white-space:nowrap}
-.tnav-prompt b{font-weight:500;color:#ffff8d}
-.tnav-cmd{color:#e97045;font-size:14px;flex-shrink:0}
+.tnav-prompt b{font-weight:500;color:var(--t-hl)}
+.tnav-cmd{color:var(--t-or);font-size:14px;flex-shrink:0}
 .tnav-list{display:flex;align-items:center;gap:8px;margin:0;padding:0;list-style:none;min-width:0;overflow-x:auto;scrollbar-width:none}
-.tnav-list a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;font-size:14px;font-weight:500;color:#f2f2f5;text-decoration:none;text-transform:lowercase;white-space:nowrap;border:1px dashed transparent}
-.tnav-list a:hover{border-color:#ffff8d;color:#ffff8d}
+.tnav-list a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;font-size:14px;font-weight:500;color:var(--t-fg);text-decoration:none;text-transform:lowercase;white-space:nowrap;border:1px dashed transparent}
+.tnav-list a:hover{border-color:var(--t-hl);color:var(--t-hl)}
 .tnav-ls{display:none;flex-shrink:0;margin-left:auto;width:48px;height:40px;padding:0;align-items:center;justify-content:center;background:#ffff8d;color:#121214;border:0;cursor:pointer}
 .tnav-out{order:2;display:block;margin:0;padding:8px 16px 16px;list-style:none;border-top:1px dashed #a3a3a3;font-size:14px}
-.tnav-out a{display:flex;gap:16px;align-items:center;min-height:44px;color:#f2f2f5;text-decoration:none;text-transform:lowercase}
-.tnav-out a span{color:#a3a3a3;font-size:12px;width:40px;flex-shrink:0}
-.tnav :focus-visible{outline:3px solid #ffff8d;outline-offset:2px}
+.tnav-out a{display:flex;gap:16px;align-items:center;min-height:44px;color:var(--t-fg);text-decoration:none;text-transform:lowercase}
+.tnav-out a span{color:var(--t-mute);font-size:12px;width:40px;flex-shrink:0}
+.tnav :focus-visible{outline:3px solid var(--t-hl);outline-offset:2px}
 @media (min-width:1001px){.tnav-out{display:none}}
 @media (max-width:1000px){
 .tnav::before{top:-8px;height:38px}
@@ -71,28 +71,28 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
 .tnav-ls{display:inline-flex}
 }
 .tnav-list a[aria-current]{background:#ffff8d;color:#121214}
-.tnav-out a[aria-current]{color:#ffff8d}
-.tnav-sub{color:#ffff8d}
-.tnav-soon{display:inline-flex;align-items:center;gap:16px;min-height:44px;padding:0 8px;font-size:14px;font-weight:500;color:#a3a3a3;white-space:nowrap;cursor:default}
+.tnav-out a[aria-current]{color:var(--t-hl)}
+.tnav-sub{color:var(--t-hl)}
+.tnav-soon{display:inline-flex;align-items:center;gap:16px;min-height:44px;padding:0 8px;font-size:14px;font-weight:500;color:var(--t-mute);white-space:nowrap;cursor:default}
 .tnav-out .tnav-soon{padding:0;min-height:44px}
-.tnav-out .tnav-soon span{color:#a3a3a3;font-size:12px;width:40px;flex-shrink:0}
-.tnav-out .tnav-subitem a{min-height:44px;padding-left:16px;color:#d6d6d6}
+.tnav-out .tnav-soon span{color:var(--t-mute);font-size:12px;width:40px;flex-shrink:0}
+.tnav-out .tnav-subitem a{min-height:44px;padding-left:16px;color:var(--t-mute2)}
 /* footer do DS (portfólio thais) */
-.dsf{position:relative;overflow:hidden;background:#292929;color:#f2f2f5}
+.dsf{position:relative;overflow:hidden;background:var(--t-bg2);color:var(--t-fg)}
 .dsf *{box-sizing:border-box}
-.dsf-tape{height:16px;background:repeating-linear-gradient(-45deg,#f2f2f5 0 12px,transparent 12px 24px);border-top:1px solid #f2f2f5;border-bottom:1px solid #f2f2f5}
+.dsf-tape{height:16px;background:repeating-linear-gradient(-45deg,var(--t-fg) 0 12px,transparent 12px 24px);border-top:1px solid var(--t-fg);border-bottom:1px solid var(--t-fg)}
 .dsf-in{position:relative;max-width:1080px;margin:0 auto;padding:64px 32px 48px}
-.dsf-lbl{font:500 14px/1.5 'Roboto Mono',monospace;color:#b9a6f2;text-transform:uppercase;margin:0 0 16px}
+.dsf-lbl{font:500 14px/1.5 'Roboto Mono',monospace;color:var(--t-lil);text-transform:uppercase;margin:0 0 16px}
 .dsf-cta{font:800 clamp(40px,7vw,72px)/.95 'Roboto Mono',monospace;letter-spacing:-.02em;text-transform:lowercase;margin:0 0 48px}
-.dsf-cta a{color:#f2f2f5;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:4px;text-underline-offset:8px}
+.dsf-cta a{color:var(--t-fg);text-decoration:underline;text-decoration-color:var(--t-or);text-decoration-thickness:4px;text-underline-offset:8px}
 .dsf-cta a:hover{background:#ffff8d;color:#121214}
-.dsf-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #f2f2f5}
+.dsf-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--t-fg)}
 .dsf-col{padding:24px 24px 0 0}
-.dsf-col+.dsf-col{border-left:1px solid #f2f2f5;padding-left:24px}
+.dsf-col+.dsf-col{border-left:1px solid var(--t-fg);padding-left:24px}
 .dsf-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
 .dsf-col li{display:flex;gap:16px;align-items:baseline}
-.dsf-n{font:500 12px/1.5 'Roboto Mono',monospace;color:#b9a6f2}
-.dsf-lk{font:400 16px/1.5 'Roboto Mono',monospace;color:#f2f2f5;text-decoration:underline;text-decoration-color:#e97045;text-decoration-thickness:2px;text-underline-offset:4px}
+.dsf-n{font:500 12px/1.5 'Roboto Mono',monospace;color:var(--t-lil)}
+.dsf-lk{font:400 16px/1.5 'Roboto Mono',monospace;color:var(--t-fg);text-decoration:underline;text-decoration-color:var(--t-or);text-decoration-thickness:2px;text-underline-offset:4px}
 .dsf-ic{display:inline-flex;text-decoration:none}
 .dsf-ic svg{display:block}
 .dsf-ic .li-mn{transition:transform .12s ease}
@@ -100,33 +100,56 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
 .dsf-ic:active .li-mn{transform:translate(2px,2px)}
 @media (prefers-reduced-motion:reduce){.dsf-ic .li-mn{transition:none}}
 .dsf-lk:hover{background:#ffff8d;color:#121214}
-.dsf-sig{position:relative;background:#121214;border-top:1px solid #f2f2f5;overflow:hidden;white-space:nowrap}
+.dsf-sig{position:relative;background:var(--t-bg);border-top:1px solid var(--t-fg);overflow:hidden;white-space:nowrap}
 .dsf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .dsf-track{display:flex;justify-content:center;align-items:center;gap:16px;padding:16px 24px}
-.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:#f2f2f5}
-.dsf-cp{background:#121214;color:#f2f2f5;font:300 14px/1.5 'Work Sans',sans-serif;text-align:center;padding:0 24px 16px;margin:0}
-@media (max-width:640px){.dsf-in{padding:48px 16px 32px}.dsf-cols{grid-template-columns:minmax(0,1fr)}.dsf-col+.dsf-col{border-left:0;border-top:1px solid #f2f2f5;padding-left:0;margin-top:24px}}
+.dsf-track span{font:400 16px/1 'Roboto Mono',monospace;color:var(--t-fg)}
+.dsf-cp{background:var(--t-bg);color:var(--t-fg);font:300 14px/1.5 'Work Sans',sans-serif;text-align:center;padding:0 24px 16px;margin:0}
+@media (max-width:640px){.dsf-in{padding:48px 16px 32px}.dsf-cols{grid-template-columns:minmax(0,1fr)}.dsf-col+.dsf-col{border-left:0;border-top:1px solid var(--t-fg);padding-left:0;margin-top:24px}}
 
 @media (max-width:820px){.ct-main{padding:64px 16px !important}}
 /* seletor de idioma (bandeiras em pixel) */
 .lng{display:flex;align-items:center;gap:4px;flex-shrink:0;margin-left:auto}
-.lng-b{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 8px;background:transparent;color:#f2f2f5;border:1px dashed transparent;font:500 14px/1 'Roboto Mono',monospace;text-transform:lowercase;cursor:pointer}
-.lng-b svg{display:block;flex-shrink:0;box-shadow:0 0 0 1px #f2f2f5}
-.lng-b:hover{border-color:#ffff8d;color:#ffff8d}
-.lng-b[aria-pressed="true"]{border:1px solid #f2f2f5}
+.lng-b{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 8px;background:transparent;color:var(--t-fg);border:1px dashed transparent;font:500 14px/1 'Roboto Mono',monospace;text-transform:lowercase;cursor:pointer}
+.lng-b svg{display:block;flex-shrink:0;box-shadow:0 0 0 1px var(--t-fg)}
+.lng-b:hover{border-color:var(--t-hl);color:var(--t-hl)}
+.lng-b[aria-pressed="true"]{border:1px solid var(--t-fg)}
 .tnav-line .lng + .tnav-ls{margin-left:0}
-.dsf-lang{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid #f2f2f5}
+.dsf-lang{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid var(--t-fg)}
 .dsf-lang .dsf-lbl{margin:0}
 .dsf-lang .lng{margin-left:0}
 .dsf-lang .lng-b{font-size:16px}
 @media (max-width:480px){.tnav-line .lng-b span{display:none}.tnav-line .lng-b{padding:0 10px}}
+
+/* tema claro/escuro */
+:root{--t-bg:#121214;--t-bg2:#292929;--t-bg2b:#2b2b2b;--t-bg2c:#1e1e1c;--t-surf:#f2f2f5;--t-fg:#f2f2f5;--t-fg-rgb:242,242,245;--t-hl:#ffff8d;--t-mint:#36d6a5;--t-lil:#b9a6f2;--t-mute:#a3a3a3;--t-mute2:#d6d6d6;--t-mute3:#e2e2e2;--t-or:#e97045}
+:root[data-theme="light"]{--t-bg:#f2f2f5;--t-bg2:#e4e4ea;--t-bg2b:#e4e4ea;--t-bg2c:#e9e9ee;--t-surf:#fffefe;--t-fg:#292929;--t-fg-rgb:41,41,41;--t-hl:#4c1d95;--t-mint:#0d7a59;--t-lil:#4c1d95;--t-mute:#5f5f66;--t-mute2:#45454c;--t-mute3:#3a3a40;--t-or:#b84a1c}
+body{background:var(--t-bg)}
+:root[data-theme="light"] [fill="#f2f2f5" i]{fill:#292929}
+:root[data-theme="light"] [stroke="#f2f2f5" i]{stroke:#292929}
+:root[data-theme="light"] [stroke="#ffff8d" i]{stroke:#4c1d95}
+:root[data-theme="light"] [fill="#36d6a5" i]{fill:#0d7a59}
+:root[data-theme="light"] [stroke="#36d6a5" i]{stroke:#0d7a59}
+:root[data-theme="light"] .lng-b:not(.thb) svg [fill="#f2f2f5" i]{fill:#f2f2f5}
+:root[data-theme="light"] .li-ico [fill="#f2f2f5" i],:root[data-theme="light"] .dsf-ic [fill="#f2f2f5" i]{fill:#fffefe}
+/* faixa de personalização */
+.lng-top{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 16px;min-height:52px;padding:4px max(16px,calc((100% - 1016px)/2));background:var(--t-bg2);color:var(--t-fg);font-family:'Roboto Mono',monospace;box-sizing:border-box;position:relative;z-index:51}
+.lng-top .lng{margin-left:0}
+.cfg{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;text-transform:lowercase;color:var(--t-fg)}
+.cfg-ic{display:block;flex-shrink:0}
+.cfg-sep{width:1px;height:28px;background:currentColor;opacity:.35}
+.thm .lng-b svg{box-shadow:none}
+@media (max-width:600px){.cfg-lbl,.thm .lng-b span{display:none}.lng-top{gap:8px}.lng-top .lng-b{padding:0 8px}}
+.tnav{position:sticky !important;top:16px;left:auto !important;transform:none !important;margin:16px auto 28px !important}
+@media (max-width:1000px){.tnav{top:8px;margin-top:8px !important}}
 </style>
 </head>
 <body>
 <div id="dc-root">
 
-<div id="topo" style="min-height: 100vh; background: rgb(41, 41, 41); color: rgb(242, 242, 245); font-family: &quot;Work Sans&quot;, system-ui, sans-serif; font-size: 16px; line-height: 1.5; display: flex; flex-direction: column; padding-top: 104px;">
+<div id="topo" style="min-height: 100vh; background: var(--t-bg2); color: var(--t-fg); font-family: &quot;Work Sans&quot;, system-ui, sans-serif; font-size: 16px; line-height: 1.5; display: flex; flex-direction: column; padding-top: 0px;">
 
+<div class="lng-top"><span class="cfg" title="personalizar"><svg class="cfg-ic" width="20" height="20" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M0 2h12v1h-12zM7 1h2v3h-2zM0 6h12v1h-12zM2 5h2v3h-2zM0 10h12v1h-12zM8 9h2v3h-2z"></path></svg><span class="cfg-lbl">personalizar</span></span><div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#f2f2f5" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#f2f2f5" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#f2f2f5" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div><span class="cfg-sep" aria-hidden="true"></span><div class="lng thm" role="group" aria-label="tema"><button type="button" class="lng-b thb" aria-pressed="true" aria-label="tema escuro"><svg width="16" height="16" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M4 1h4v1h-4zM2 2h3v1h-3zM1 3h3v1h-3zM1 4h2v4h-2zM1 8h3v1h-3zM2 9h4v1h-4zM4 10h5v1h-5zM8 9h3v1h-3zM10 8h1v1h-1z"></path></svg><span>escuro</span></button><button type="button" class="lng-b thb" aria-pressed="false" aria-label="tema claro"><svg width="16" height="16" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M4 4h4v4h-4zM5 0h2v2h-2zM5 10h2v2h-2zM0 5h2v2h-2zM10 5h2v2h-2zM1 1h2v2h-2zM9 1h2v2h-2zM1 9h2v2h-2zM9 9h2v2h-2z"></path></svg><span>claro</span></button></div></div>
 <nav class="tnav" aria-label="menu">
 <div class="tnav-win">
 
@@ -135,7 +158,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
 <span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>:~/contato $</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
 <ul class="tnav-list"><li><a href="/">sobre/</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/">opiniao/</a></li><li><a href="/contato/" aria-current="page">contato/</a></li><li><a href="/quiz/">quiz/</a></li></ul>
-<div class="lng" role="group" aria-label="idioma"><button type="button" class="lng-b" aria-pressed="true" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#f2f2f5" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" aria-pressed="false" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#f2f2f5" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#f2f2f5" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
+
 <button class="tnav-ls" type="button" aria-expanded="false" aria-controls="tnav-out" aria-label="abrir menu">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
 
@@ -149,7 +172,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
     <div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start;">
       <div style="flex: 1 1 360px; min-width: 0px; display: flex; flex-direction: column; gap: 32px;">
         <div class="cafe" aria-hidden="true"><svg width="96" height="96" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path fill="#121214" d="M6 1h1v1h-1zM10 1h1v1h-1zM5 2h1v1h-1zM9 2h1v1h-1zM6 3h1v1h-1zM10 3h1v1h-1zM5 4h1v1h-1zM9 4h1v1h-1zM2 6h10v1h-10zM2 7h1v1h-1zM11 7h4v1h-4zM2 8h1v1h-1zM11 8h1v1h-1zM14 8h1v1h-1zM2 9h1v1h-1zM11 9h1v1h-1zM14 9h1v1h-1zM2 10h1v1h-1zM11 10h4v1h-4zM2 11h1v1h-1zM11 11h1v1h-1zM3 12h1v1h-1zM10 12h1v1h-1zM4 13h6v1h-6zM1 15h14v1h-14z"></path><path fill="#e97045" d="M3 7h8v1h-8z"></path><path fill="#f2f2f5" d="M3 8h8v4h-8zM4 12h6v1h-6z"></path></svg></div>
-        <p style="margin: 0px; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 14px; font-weight: 500; color: rgb(185, 166, 242); text-transform: uppercase;">contato</p>
+        <p style="margin: 0px; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 14px; font-weight: 500; color: var(--t-lil); text-transform: uppercase;">contato</p>
         <h1 style="margin: 0px; font-family: Gokschil, &quot;Roboto Mono&quot;, monospace; font-weight: 400; font-size: clamp(48px, 7vw, 80px); line-height: 0.95;">vamos conversar</h1>
         <p style="margin: 0px; max-width: 440px; font-size: 20px;">deixe seu e-mail e uma mensagem que eu respondo por lá.</p>
         <ul style="list-style: none; margin: 0px; padding: 0px; display: flex; flex-direction: column; gap: 16px; font-family: &quot;Roboto Mono&quot;, monospace;">
@@ -158,10 +181,10 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
         </ul>
       </div>
 
-      <div style="flex: 999 1 520px; min-width: 0px; max-width: 680px; background: rgb(18, 18, 20); border: 2px solid rgb(242, 242, 245); border-radius: 16px; overflow: hidden; color: rgb(242, 242, 245);">
-        <div style="display: flex; align-items: center; gap: 8px; padding: 16px 24px; background: rgb(41, 41, 41); border-bottom: 2px solid rgb(242, 242, 245); color: rgb(242, 242, 245);">
+      <div style="flex: 999 1 520px; min-width: 0px; max-width: 680px; background: var(--t-bg); border: 2px solid var(--t-fg); border-radius: 16px; overflow: hidden; color: var(--t-fg);">
+        <div style="display: flex; align-items: center; gap: 8px; padding: 16px 24px; background: var(--t-bg2); border-bottom: 2px solid var(--t-fg); color: var(--t-fg);">
           <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); background: rgb(233, 112, 69); color: rgb(18, 18, 20);"></span>
-          <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); background: rgb(255, 255, 141); color: rgb(18, 18, 20);"></span>
+          <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--t-fg); background: rgb(255, 255, 141); color: rgb(18, 18, 20);"></span>
           <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid rgb(242, 242, 245); background: rgb(76, 29, 149);"></span>
           <span style="margin-left: 16px; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 14px;">nova-mensagem.txt</span>
         </div>
@@ -170,16 +193,16 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
           <form action="/contato/enviar.php" method="post" novalidate="" style="padding: 32px; display: flex; flex-direction: column; gap: 24px;">
             <div style="display: flex; flex-direction: column; gap: 8px;">
               <label for="f-nome" style="font-family: &quot;Roboto Mono&quot;, monospace; font-size: 14px; font-weight: 500;">nome</label>
-              <input id="f-nome" autocomplete="name" placeholder="como posso te chamar?" type="text" name="nome" style="min-height: 48px; padding: 0px 16px; border: 2px solid rgb(242, 242, 245); border-radius: 0px; background: rgb(18, 18, 20); font-family: &quot;Work Sans&quot;, sans-serif; font-size: 16px; color: rgb(242, 242, 245);">
+              <input id="f-nome" autocomplete="name" placeholder="como posso te chamar?" type="text" name="nome" style="min-height: 48px; padding: 0px 16px; border: 2px solid var(--t-fg); border-radius: 0px; background: var(--t-bg); font-family: &quot;Work Sans&quot;, sans-serif; font-size: 16px; color: var(--t-fg);">
             </div>
             <div style="display: flex; flex-direction: column; gap: 8px;">
-              <label for="f-email" style="font-family: &quot;Roboto Mono&quot;, monospace; font-size: 14px; font-weight: 500;">e-mail <span style="color: rgb(185, 166, 242);">(obrigatório)</span></label>
-              <input id="f-email" aria-required="true" autocomplete="email" placeholder="voce@empresa.com" aria-invalid="false" aria-describedby="f-email-erro" type="email" value="" name="email" style="min-height: 48px; padding: 0px 16px; border: 2px solid rgb(242, 242, 245); border-radius: 0px; background: rgb(18, 18, 20); font-family: &quot;Work Sans&quot;, sans-serif; font-size: 16px; color: rgb(242, 242, 245);">
+              <label for="f-email" style="font-family: &quot;Roboto Mono&quot;, monospace; font-size: 14px; font-weight: 500;">e-mail <span style="color: var(--t-lil);">(obrigatório)</span></label>
+              <input id="f-email" aria-required="true" autocomplete="email" placeholder="voce@empresa.com" aria-invalid="false" aria-describedby="f-email-erro" type="email" value="" name="email" style="min-height: 48px; padding: 0px 16px; border: 2px solid var(--t-fg); border-radius: 0px; background: var(--t-bg); font-family: &quot;Work Sans&quot;, sans-serif; font-size: 16px; color: var(--t-fg);">
               
             </div>
             <div style="display: flex; flex-direction: column; gap: 8px;">
               <label for="f-msg" style="font-family: &quot;Roboto Mono&quot;, monospace; font-size: 14px; font-weight: 500;">mensagem</label>
-              <textarea id="f-msg" name="mensagem" rows="5" placeholder="conta um pouco sobre o projeto ou a vaga" style="padding: 16px; border: 2px solid rgb(242, 242, 245); border-radius: 0px; background: rgb(18, 18, 20); font-family: &quot;Work Sans&quot;, sans-serif; font-size: 16px; color: rgb(242, 242, 245); resize: vertical;"></textarea>
+              <textarea id="f-msg" name="mensagem" rows="5" placeholder="conta um pouco sobre o projeto ou a vaga" style="padding: 16px; border: 2px solid var(--t-fg); border-radius: 0px; background: var(--t-bg); font-family: &quot;Work Sans&quot;, sans-serif; font-size: 16px; color: var(--t-fg); resize: vertical;"></textarea>
             </div><div aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;"><label for="f-site">não preencha / leave blank</label><input id="f-site" tabindex="-1" autocomplete="off" type="text" name="site"></div>
             <div>
               <button type="submit" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0px 24px; background: rgb(24, 71, 227); color: rgb(242, 242, 245); border: 1px solid rgb(242, 242, 245); box-shadow: rgb(242, 242, 245) 4px 4px 0px; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 16px; font-weight: 500;">enviar mensagem →</button>
@@ -209,8 +232,9 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
 </div>
 <template id="dc-tpl">
 
-<div style="min-height: 100vh; background: #292929; color: #f2f2f5; font-family: 'Work Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.5; display: flex; flex-direction: column; padding-top: 104px;" id="topo">
+<div style="min-height: 100vh; background: var(--t-bg2); color: var(--t-fg); font-family: 'Work Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.5; display: flex; flex-direction: column; padding-top: 0;" id="topo">
 
+<div class="lng-top"><span class="cfg" title="{{cfgLbl}}"><svg class="cfg-ic" width="20" height="20" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M0 2h12v1h-12zM7 1h2v3h-2zM0 6h12v1h-12zM2 5h2v3h-2zM0 10h12v1h-12zM8 9h2v3h-2z"></path></svg><span class="cfg-lbl">{{cfgLbl}}</span></span><div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#f2f2f5" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#f2f2f5" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#f2f2f5" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div><span class="cfg-sep" aria-hidden="true"></span><div class="lng thm" role="group" aria-label="{{thGroup}}"><button type="button" class="lng-b thb" onClick="{{setDark}}" aria-pressed="{{isDark}}" aria-label="{{thDarkL}}"><svg width="16" height="16" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M4 1h4v1h-4zM2 2h3v1h-3zM1 3h3v1h-3zM1 4h2v4h-2zM1 8h3v1h-3zM2 9h4v1h-4zM4 10h5v1h-5zM8 9h3v1h-3zM10 8h1v1h-1z"></path></svg><span>{{thDarkS}}</span></button><button type="button" class="lng-b thb" onClick="{{setLight}}" aria-pressed="{{isLight}}" aria-label="{{thLightL}}"><svg width="16" height="16" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M4 4h4v4h-4zM5 0h2v2h-2zM5 10h2v2h-2zM0 5h2v2h-2zM10 5h2v2h-2zM1 1h2v2h-2zM9 1h2v2h-2zM1 9h2v2h-2zM9 9h2v2h-2z"></path></svg><span>{{thLightS}}</span></button></div></div>
 <nav class="tnav" aria-label="menu">
 <div class="tnav-win">
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
@@ -221,7 +245,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
 <span class="tnav-prompt" aria-hidden="true"><b>thais@coffee</b>{{T.k4}}</span>
 <span class="tnav-cmd" aria-hidden="true">cd</span>
 <ul class="tnav-list"><li><a href="/">{{T.k1}}</a></li><li><a href="/portfolio/">portfolio/</a></li><li><a href="/opiniao/">{{T.k2}}</a></li><li><a href="/contato/" aria-current="page">{{T.k3}}</a></li><li><a href="/quiz/">quiz/</a></li></ul>
-<div class="lng" role="group" aria-label="{{T.__lg}}"><button type="button" class="lng-b" onClick="{{setPt}}" aria-pressed="{{isPt}}" lang="pt-BR" aria-label="português"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#009c3b" d="M0 0h12v8h-12z"></path><path fill="#ffdf00" d="M4 1h4v1h-4zM2 2h8v1h-8zM1 3h10v2h-10zM2 5h8v1h-8zM4 6h4v1h-4z"></path><path fill="#002776" d="M5 2h2v1h-2zM4 3h4v2h-4zM5 5h2v1h-2z"></path><path fill="#f2f2f5" d="M4 3h2v1h-2zM6 4h2v1h-2z"></path></svg><span>pt</span></button><button type="button" class="lng-b" onClick="{{setEn}}" aria-pressed="{{isEn}}" lang="en" aria-label="english"><svg width="24" height="16" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="#f2f2f5" d="M0 0h12v8h-12z"></path><path fill="#b22234" d="M0 0h12v1h-12zM0 2h12v1h-12zM0 4h12v1h-12zM0 6h12v1h-12z"></path><path fill="#3c3b6e" d="M0 0h5v4h-5z"></path><path fill="#f2f2f5" d="M1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1z"></path></svg><span>en</span></button></div>
+
 <button class="tnav-ls" type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuOpen}}" aria-controls="tnav-out" aria-label="{{menuLabel}}">
 <sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></sc-if>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg></sc-if>
@@ -235,7 +259,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
     <div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start;">
       <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 32px;">
         <div class="cafe" aria-hidden="true"><svg width="96" height="96" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path fill="#121214" d="M6 1h1v1h-1zM10 1h1v1h-1zM5 2h1v1h-1zM9 2h1v1h-1zM6 3h1v1h-1zM10 3h1v1h-1zM5 4h1v1h-1zM9 4h1v1h-1zM2 6h10v1h-10zM2 7h1v1h-1zM11 7h4v1h-4zM2 8h1v1h-1zM11 8h1v1h-1zM14 8h1v1h-1zM2 9h1v1h-1zM11 9h1v1h-1zM14 9h1v1h-1zM2 10h1v1h-1zM11 10h4v1h-4zM2 11h1v1h-1zM11 11h1v1h-1zM3 12h1v1h-1zM10 12h1v1h-1zM4 13h6v1h-6zM1 15h14v1h-14z"></path><path fill="#e97045" d="M3 7h8v1h-8z"></path><path fill="#f2f2f5" d="M3 8h8v4h-8zM4 12h6v1h-6z"></path></svg></div>
-        <p style="margin: 0; font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500; color: #b9a6f2; text-transform: uppercase;">{{T.k5}}</p>
+        <p style="margin: 0; font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500; color: var(--t-lil); text-transform: uppercase;">{{T.k5}}</p>
         <h1 style="margin: 0; font-family: 'Gokschil', 'Roboto Mono', monospace; font-weight: 400; font-size: clamp(48px, 7vw, 80px); line-height: 0.95;">{{T.k6}}</h1>
         <p style="margin: 0; max-width: 440px; font-size: 20px;">{{T.k7}}</p>
         <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; font-family: 'Roboto Mono', monospace;">
@@ -244,10 +268,10 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
         </ul>
       </div>
 
-      <div style="flex: 999 1 520px; min-width: 0; max-width: 680px; background: #121214; border: 2px solid #f2f2f5; border-radius: 16px; overflow: hidden; color: #f2f2f5">
-        <div style="display: flex; align-items: center; gap: 8px; padding: 16px 24px; background: #292929; border-bottom: 2px solid #f2f2f5; color: #f2f2f5">
+      <div style="flex: 999 1 520px; min-width: 0; max-width: 680px; background: var(--t-bg); border: 2px solid var(--t-fg); border-radius: 16px; overflow: hidden; color: var(--t-fg)">
+        <div style="display: flex; align-items: center; gap: 8px; padding: 16px 24px; background: var(--t-bg2); border-bottom: 2px solid var(--t-fg); color: var(--t-fg)">
           <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid #f2f2f5; background: #e97045; color: #121214"></span>
-          <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid #f2f2f5; background: #ffff8d; color: #121214"></span>
+          <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--t-fg); background: #ffff8d; color: #121214"></span>
           <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid #f2f2f5; background: #4c1d95;"></span>
           <span style="margin-left: 16px; font-family: 'Roboto Mono', monospace; font-size: 14px;">{{T.k8}}</span>
         </div>
@@ -256,18 +280,18 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
           <form onSubmit="{{ submit }}" action="/contato/enviar.php" method="post" novalidate style="padding: 32px; display: flex; flex-direction: column; gap: 24px;">
             <div style="display: flex; flex-direction: column; gap: 8px;">
               <label for="f-nome" style="font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500;">{{T.k9}}</label>
-              <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="{{T.k26}}" style="min-height: 48px; padding: 0 16px; border: 2px solid #f2f2f5; border-radius: 0; background: #121214; font-family: 'Work Sans', sans-serif; font-size: 16px; color: #f2f2f5;">
+              <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="{{T.k26}}" style="min-height: 48px; padding: 0 16px; border: 2px solid var(--t-fg); border-radius: 0; background: var(--t-bg); font-family: 'Work Sans', sans-serif; font-size: 16px; color: var(--t-fg);">
             </div>
             <div style="display: flex; flex-direction: column; gap: 8px;">
-              <label for="f-email" style="font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500;">{{T.k10}} <span style="color: #b9a6f2;">{{T.k11}}</span></label>
-              <input id="f-email" name="email" type="email" aria-required="true" autocomplete="email" placeholder="{{T.k27}}" value="{{ email }}" onChange="{{ setEmail }}" aria-invalid="{{ emailInvalid }}" aria-describedby="f-email-erro" style="min-height: 48px; padding: 0 16px; border: 2px solid #f2f2f5; border-radius: 0; background: #121214; font-family: 'Work Sans', sans-serif; font-size: 16px; color: #f2f2f5;">
+              <label for="f-email" style="font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500;">{{T.k10}} <span style="color: var(--t-lil);">{{T.k11}}</span></label>
+              <input id="f-email" name="email" type="email" aria-required="true" autocomplete="email" placeholder="{{T.k27}}" value="{{ email }}" onChange="{{ setEmail }}" aria-invalid="{{ emailInvalid }}" aria-describedby="f-email-erro" style="min-height: 48px; padding: 0 16px; border: 2px solid var(--t-fg); border-radius: 0; background: var(--t-bg); font-family: 'Work Sans', sans-serif; font-size: 16px; color: var(--t-fg);">
               <sc-if value="{{ emailInvalid }}" hint-placeholder-val="{{ false }}">
                 <p id="f-email-erro" style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px;"><span aria-hidden="true" style="display: inline-block; width: 8px; height: 8px; background: #e97045; color: #121214"></span>{{T.k12}}</p>
               </sc-if>
             </div>
             <div style="display: flex; flex-direction: column; gap: 8px;">
               <label for="f-msg" style="font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500;">{{T.k13}}</label>
-              <textarea id="f-msg" name="mensagem" rows="5" placeholder="{{T.k28}}" style="padding: 16px; border: 2px solid #f2f2f5; border-radius: 0; background: #121214; font-family: 'Work Sans', sans-serif; font-size: 16px; color: #f2f2f5; resize: vertical;"></textarea>
+              <textarea id="f-msg" name="mensagem" rows="5" placeholder="{{T.k28}}" style="padding: 16px; border: 2px solid var(--t-fg); border-radius: 0; background: var(--t-bg); font-family: 'Work Sans', sans-serif; font-size: 16px; color: var(--t-fg); resize: vertical;"></textarea>
             </div><div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="f-site">não preencha / leave blank</label><input id="f-site" name="site" type="text" tabindex="-1" autocomplete="off"></div><sc-if value="{{ failed }}"><p role="alert" style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px;"><span aria-hidden="true" style="display: inline-block; width: 8px; height: 8px; background: #e97045;"></span><sc-if value="{{ isPt }}">Não consegui enviar agora. Tenta de novo em alguns minutos?</sc-if><sc-if value="{{ isEn }}">I couldn’t send it right now. Try again in a few minutes?</sc-if></p></sc-if>
             <div>
               <button type="submit" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 24px; background: #1847e3; color: #f2f2f5; border: 1px solid #f2f2f5; box-shadow: 4px 4px 0 #f2f2f5; font-family: 'Roboto Mono', monospace; font-size: 16px; font-weight: 500;">{{T.k14}}</button>
@@ -280,7 +304,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
             <svg width="64" height="64" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect><rect x="6" y="1" width="1" height="1" fill="currentColor"></rect><rect x="0" y="2" width="1" height="4" fill="currentColor"></rect><rect x="7" y="2" width="1" height="4" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect><rect x="5" y="2" width="1" height="1" fill="currentColor"></rect><rect x="2" y="4" width="1" height="1" fill="currentColor"></rect><rect x="5" y="4" width="1" height="1" fill="currentColor"></rect><rect x="3" y="5" width="2" height="1" fill="currentColor"></rect><rect x="1" y="6" width="1" height="1" fill="currentColor"></rect><rect x="6" y="6" width="1" height="1" fill="currentColor"></rect><rect x="2" y="7" width="4" height="1" fill="currentColor"></rect><rect x="1" y="1" width="6" height="1" fill="#ffff8d"></rect></svg>
             <h2 style="margin: 0; font-family: 'Roboto Mono', monospace; font-size: 32px; font-weight: 500; line-height: 1.1;">{{T.k15}}</h2>
             <p style="margin: 0;">{{T.k16}}</p>
-            <button type="button" onClick="{{ reset }}" style="min-height: 44px; padding: 0 16px; background: #121214; border: 2px solid #f2f2f5; box-shadow: 2px 2px 0 #f2f2f5; font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500; color: #f2f2f5;">{{T.k17}}</button>
+            <button type="button" onClick="{{ reset }}" style="min-height: 44px; padding: 0 16px; background: var(--t-bg); border: 2px solid var(--t-fg); box-shadow: 2px 2px 0 var(--t-fg); font-family: 'Roboto Mono', monospace; font-size: 14px; font-weight: 500; color: var(--t-fg);">{{T.k17}}</button>
           </div>
         </sc-if>
       </div>
@@ -313,8 +337,15 @@ function __t(s) { return __lang() === 'en' && Object.prototype.hasOwnProperty.ca
 function __map(v, d, k) { if (d > 7) return v; if (typeof v === 'string') return k && __SKIP.test(k) ? v : __t(v); if (Array.isArray(v)) return v.map((x) => __map(x, d + 1, k)); if (v && typeof v === 'object' && Object.getPrototypeOf(v) === Object.prototype) { const o = {}; for (const kk in v) o[kk] = __map(v[kk], d + 1, kk); return o; } return v; }
 function __doc(l) { setTimeout(() => { try { document.documentElement.lang = l === 'en' ? 'en' : 'pt-BR'; if (document.getElementById('dc-root') && __TITLE) { if (window.__ptTitle == null) window.__ptTitle = document.title; document.title = l === 'en' ? __TITLE : window.__ptTitle; } } catch (e) {} }, 0); }
 
+// tema claro/escuro: guardado em localStorage 'thais-theme' (padrão: escuro)
+function __applyTheme(t) { try { document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark'); } catch (e) {} }
+function __theme() { if (window.__thaisTheme) { __applyTheme(window.__thaisTheme); return window.__thaisTheme; } let t = 'dark'; try { if (localStorage.getItem('thais-theme') === 'light') t = 'light'; } catch (e) {} window.__thaisTheme = t; __applyTheme(t); return t; }
+function __setTheme(t, self) { window.__thaisTheme = t; try { localStorage.setItem('thais-theme', t); } catch (e) {} __applyTheme(t); self.setState({ __theme: t }); }
+function __thL(l) { const en = l === 'en'; return { cfgLbl: en ? 'customize' : 'personalizar', thGroup: en ? 'theme' : 'tema', thDarkS: en ? 'dark' : 'escuro', thLightS: en ? 'light' : 'claro', thDarkL: en ? 'dark theme' : 'tema escuro', thLightL: en ? 'light theme' : 'tema claro' }; }
+try { __theme(); } catch (e) {}
+
 class Component extends DCLogic {
-renderVals() { const l = __lang(); if (!this.__docOk) { this.__docOk = 1; __doc(l); } const v0 = this.__rv0() || {}; const v = l === 'en' ? __map(v0, 0) : Object.assign({}, v0); v.T = __T[l]; v.isPt = l !== 'en'; v.isEn = l === 'en'; v.setPt = () => this.__setLang('pt'); v.setEn = () => this.__setLang('en'); return v; }
+renderVals() { const l = __lang(); if (!this.__docOk) { this.__docOk = 1; __doc(l); } const v0 = this.__rv0() || {}; const v = l === 'en' ? __map(v0, 0) : Object.assign({}, v0); v.T = __T[l]; v.isPt = l !== 'en'; v.isEn = l === 'en'; v.setPt = () => this.__setLang('pt'); v.setEn = () => this.__setLang('en'); const th = __theme(); v.isDark = th !== 'light'; v.isLight = th === 'light'; v.setDark = () => __setTheme('dark', this); v.setLight = () => __setTheme('light', this); Object.assign(v, __thL(l)); return v; }
 __setLang(l) { window.__thaisLang = l; try { localStorage.setItem('thais-lang', l); } catch (e) {} __doc(l); this.setState({ __lang: l }); }
 
   constructor(props) {
@@ -343,6 +374,6 @@ __setLang(l) { window.__thaisLang = l; try { localStorage.setItem('thais-lang', 
   }
 }
 </script>
-<script src="/assets/dc.js?v=1793378985"></script>
+<script src="/assets/dc.js?v=1793802240"></script>
 </body>
 </html>

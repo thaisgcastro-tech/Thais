@@ -140,8 +140,13 @@ def convert(name):
     extra = ''
     for imp in sorted(set(re.findall(r'<dc-import\s+name="([A-Za-z0-9_-]+)"', tpl))):
         ih, it, ij = parts(imp + '.dc.html')
-        ih = '\n'.join(l for l in ih.splitlines() if l.strip() and l.strip() not in helmet and l.strip() != 'body{margin:0}')
-        helmet += '\n' + ih
+        # mantém cada <style> do componente inteiro; só pula linhas que a página já tem
+        def dedupe(txt):
+            return '\n'.join(l for l in txt.splitlines() if l.strip() and l.strip() not in helmet and l.strip() != 'body{margin:0}')
+        styles = re.findall(r'<style>(.*?)</style>', ih, re.S)
+        rest = dedupe(re.sub(r'<style>.*?</style>', '', ih, flags=re.S))
+        css = '\n'.join(c for c in (dedupe(s) for s in styles) if c)
+        helmet += ('\n' + rest if rest else '') + (f'\n<style>\n{css}\n</style>' if css else '')
         extra += f'\n<template id="dc-tpl-{imp}">{it}</template>\n<script type="text/plain" id="dc-logic-{imp}">{ij}</script>'
     canon = SITE + url
     out = f'''<!doctype html>
