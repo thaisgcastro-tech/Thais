@@ -174,7 +174,7 @@ def convert(name):
 <meta name="twitter:title" content="{html.escape(title)}">
 <meta name="twitter:description" content="{html.escape(desc)}">
 <meta name="twitter:image" content="{SITE}/assets/og/{OG[name]}.png?v={OGV}">
-<link rel="icon" href="/assets/1e45b3ff62f20ec79a7daa2df025733b.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/icons/favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/assets/icons/favicon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
